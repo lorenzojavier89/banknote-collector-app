@@ -1,0 +1,16 @@
+a.navbar-brand {
+    * {
+        height: 35px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    text-align: center;
+    font-size: 12px;
+
+    .brand-text {
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
