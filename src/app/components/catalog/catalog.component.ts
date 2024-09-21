@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CatalogService } from '../../services/catalog.service';
 
 @Component({
   selector: 'app-catalog',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class CatalogComponent {
 
+  constructor(private catalogService: CatalogService) {
+    this.catalogService.getBanknotes().subscribe(data => {
+      console.log(data);
+    });
+  }
 }
