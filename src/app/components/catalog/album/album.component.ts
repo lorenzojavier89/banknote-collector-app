@@ -4,13 +4,13 @@ import { Banknote } from '../../../models/banknote.model';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-catalog-album',
+  selector: 'app-album',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './catalog-album.component.html',
-  styleUrl: './catalog-album.component.scss'
+  templateUrl: './album.component.html',
+  styleUrl: './album.component.scss'
 })
-export class CatalogAlbumComponent {
+export class AlbumComponent {
   banknotes: Banknote[] = [];
 
   constructor(private catalogService: CatalogService) {

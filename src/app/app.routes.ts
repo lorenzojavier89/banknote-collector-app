@@ -3,7 +3,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { WorldMapComponent } from './components/world-map/world-map.component';
 import { BanknoteComponent } from './components/catalog/banknote/banknote.component';
-import { CatalogAlbumComponent } from './components/catalog/catalog-album/catalog-album.component';
+import { AlbumComponent } from './components/catalog/album/album.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,7 +12,7 @@ export const routes: Routes = [
     path: 'catalog',
     component: CatalogComponent,
     children: [
-        { path: '', component: CatalogAlbumComponent },
+        { path: '', component: AlbumComponent },
         { path: ':id', component: BanknoteComponent }],
   },
   { path: 'world-map', component: WorldMapComponent },
