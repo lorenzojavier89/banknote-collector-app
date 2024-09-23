@@ -139,7 +139,7 @@
         },
         {
           "code": "WAS",
-          "name": "Asia Occidental",
+          "name": "Asia Occidental (Oriente medio)",
           "countries": [
             { "code": "TUR", "name": "Turquía" },
             { "code": "ISR", "name": "Israel" },
