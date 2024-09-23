@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CatalogService } from '../../../services/catalog.service';
-import { Banknote } from '../../../models/banknote.model';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -11,11 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './album.component.scss'
 })
 export class AlbumComponent {
-  banknotes: Banknote[] = [];
-
-  constructor(private catalogService: CatalogService) {
-    this.catalogService.getBanknotes().subscribe(data => {
-      this.banknotes = data;
-    });
-  }
+  private catalogService: CatalogService = inject(CatalogService);
+  banknotes = this.catalogService.banknotes;
+  
 }

@@ -1,12 +1,14 @@
 <ul>
-    @for (b of banknotes; track b.id) {
-        <li>
-            <a [routerLink]="['/catalog', b.id]">
-                <span>{{ b.issuer }}[{{ b.issueDate }}]-{{b.denomination}}</span>
-            </a>
-        </li>
+    @for (b of banknotes(); track b.id) {
+    <li>
+        <a [routerLink]="['/catalog', b.id]">
+        <span
+            >{{ b.issuer }}[{{ b.issueDate }}]-{{ b.denomination }}</span
+        >
+        </a>
+    </li>
     } @empty {
-        <p>No banknotes available.</p>
-    }
+    <p>No banknotes available in the catalog.</p>
+}
 </ul>
-  
+

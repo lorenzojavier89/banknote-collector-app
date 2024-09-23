@@ -1,18 +1,15 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Banknote } from '../models/banknote.model';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CatalogService {
-
+  private http: HttpClient = inject(HttpClient);
   private jsonUrl = 'assets/data/catalog.json';
 
-  constructor(private http: HttpClient) { }
-  
-  getBanknotes(): Observable<Banknote[]> {
-    return this.http.get<Banknote[]>(this.jsonUrl);
-  }
+  private banknotes$ = this.http.get<Banknote[]>(this.jsonUrl);
+  banknotes = toSignal(this.banknotes$, { initialValue: [] });
 }
