@@ -1,28 +1,44 @@
 {
-  "regions": [
+  "continents": [
     {
       "code": "AF",
       "name": "África",
       "subregions": [
         {
           "code": "NAF",
-          "name": "África del Norte"
+          "name": "África del Norte",
+          "countries": [
+            { "code": "MAR", "name": "Marruecos" },
+            { "code": "EGY", "name": "Egipto" }
+          ]
         },
         {
           "code": "EAF",
-          "name": "África Oriental"
+          "name": "África Oriental",
+          "countries": []
         },
         {
           "code": "CAF",
-          "name": "África Central o África Media"
+          "name": "África Central o África Media",
+          "countries": [
+            { "code": "COD", "name": "República Democrática del Congo" }
+          ]
         },
         {
           "code": "SAF",
-          "name": "África Austral"
+          "name": "África Austral",
+          "countries": [
+            { "code": "ZAF", "name": "Sudáfrica" },
+            { "code": "ZMB", "name": "Zambia" }
+          ]
         },
         {
           "code": "WAF",
-          "name": "África Occidental"
+          "name": "África Occidental",
+          "countries": [
+            { "code": "GNB", "name": "Guinea-Bisáu" },
+            { "code": "GIN", "name": "Guinea" }
+          ]
         }
       ]
     },
@@ -32,19 +48,47 @@
       "subregions": [
         {
           "code": "NAM",
-          "name": "América del Norte"
+          "name": "América del Norte",
+          "countries": [
+            { "code": "USA", "name": "Estados Unidos" },
+            { "code": "CAN", "name": "Canadá" }
+          ]
         },
         {
           "code": "CAM",
-          "name": "América Central"
+          "name": "América Central",
+          "countries": [
+            { "code": "MEX", "name": "México" },
+            { "code": "GTM", "name": "Guatemala" },
+            { "code": "NIC", "name": "Nicaragua" },
+            { "code": "HND", "name": "Honduras" }
+          ]
         },
         {
           "code": "IAM",
-          "name": "América Insular o Islas del Caribe"
+          "name": "América Insular o Islas del Caribe",
+          "countries": [
+            { "code": "CUB", "name": "Cuba" },
+            { "code": "DOM", "name": "República Dominicana" },
+            { "code": "OEC", "name": "Estados del Caribe Oriental" }
+          ]
         },
         {
           "code": "SAM",
-          "name": "América del Sur"
+          "name": "América del Sur",
+          "countries": [
+            { "code": "ARG", "name": "Argentina" },
+            { "code": "BOL", "name": "Bolivia" },
+            { "code": "BRA", "name": "Brasil" },
+            { "code": "CHL", "name": "Chile" },
+            { "code": "COL", "name": "Colombia" },
+            { "code": "ECU", "name": "Ecuador" },
+            { "code": "GUY", "name": "Guyana" },
+            { "code": "PRY", "name": "Paraguay" },
+            { "code": "PER", "name": "Perú" },
+            { "code": "URY", "name": "Uruguay" },
+            { "code": "VEN", "name": "Venezuela" }
+          ]
         }
       ]
     },
@@ -54,23 +98,55 @@
       "subregions": [
         {
           "code": "CAS",
-          "name": "Asia Central"
+          "name": "Asia Central",
+          "countries": [
+            { "code": "UZB", "name": "Uzbekistán" },
+            { "code": "TKM", "name": "Turkmenistán" },
+            { "code": "TJK", "name": "Tajikistán" }
+          ]
         },
         {
           "code": "EAS",
-          "name": "Asia Oriental"
+          "name": "Asia Oriental",
+          "countries": [
+            { "code": "CHN", "name": "China" },
+            { "code": "JPN", "name": "Japón" },
+            { "code": "MNG", "name": "Mongolia" }
+          ]
         },
         {
           "code": "SAS",
-          "name": "Asia del Sur"
+          "name": "Asia del Sur",
+          "countries": [
+            { "code": "AFG", "name": "Afganistán" },
+            { "code": "IND", "name": "India" },
+            { "code": "NPL", "name": "Nepal" },
+            { "code": "BTN", "name": "Bután" },
+            { "code": "PAK", "name": "Pakistán" }
+          ]
         },
         {
           "code": "SEA",
-          "name": "Sudeste Asiático"
+          "name": "Sudeste Asiático",
+          "countries": [
+            { "code": "THA", "name": "Tailandia" },
+            { "code": "VNM", "name": "Vietnam" },
+            { "code": "KHM", "name": "Camboya" },
+            { "code": "IDN", "name": "Indonesia" },
+            { "code": "MMR", "name": "Myanmar" },
+            { "code": "LAO", "name": "Laos" }
+          ]
         },
         {
           "code": "WAS",
-          "name": "Asia Occidental"
+          "name": "Asia Occidental",
+          "countries": [
+            { "code": "TUR", "name": "Turquía" },
+            { "code": "ISR", "name": "Israel" },
+            { "code": "JOR", "name": "Jordania" },
+            { "code": "ARE", "name": "Emiratos Árabes Unidos" },
+            { "code": "QAT", "name": "Catar" }
+          ]
         }
       ]
     },
@@ -80,19 +156,49 @@
       "subregions": [
         {
           "code": "EEU",
-          "name": "Europa Oriental"
+          "name": "Europa Oriental",
+          "countries": [
+            { "code": "HUN", "name": "Hungría" },
+            { "code": "POL", "name": "Polonia" },
+            { "code": "UKR", "name": "Ucrania" },
+            { "code": "ROU", "name": "Rumania" },
+            { "code": "RUS", "name": "Rusia" },
+            { "code": "GEO", "name": "Georgia" }
+          ]
         },
         {
           "code": "NEU",
-          "name": "Europa del Norte"
+          "name": "Europa del Norte",
+          "countries": [
+            { "code": "GBR", "name": "Reino Unido" },
+            { "code": "NOR", "name": "Noruega" },
+            { "code": "LTU", "name": "Lituania" },
+            { "code": "EST", "name": "Estonia" }
+          ]
         },
         {
           "code": "SEU",
-          "name": "Europa del Sur"
+          "name": "Europa del Sur",
+          "countries": [
+            { "code": "ESP", "name": "España" },
+            { "code": "ITA", "name": "Italia" },
+            { "code": "GRC", "name": "Grecia" },
+            { "code": "MKD", "name": "Macedonia del Norte" },
+            { "code": "HRV", "name": "Croacia" },
+            { "code": "ALB", "name": "Albania" }
+          ]
         },
         {
           "code": "WEU",
-          "name": "Europa Occidental"
+          "name": "Europa Occidental",
+          "countries": [
+            { "code": "FRA", "name": "Francia" },
+            { "code": "BEL", "name": "Bélgica" },
+            { "code": "LIE", "name": "Liechtenstein" },
+            { "code": "CHE", "name": "Suiza" },
+            { "code": "DEU", "name": "Alemania" },
+            { "code": "AUT", "name": "Austria" }
+          ]
         }
       ]
     },
@@ -102,19 +208,23 @@
       "subregions": [
         {
           "code": "AUS",
-          "name": "Australasia"
+          "name": "Australasia",
+          "countries": []
         },
         {
           "code": "MEL",
-          "name": "Melanesia"
+          "name": "Melanesia",
+          "countries": []
         },
         {
           "code": "MIC",
-          "name": "Micronesia"
+          "name": "Micronesia",
+          "countries": []
         },
         {
           "code": "POL",
-          "name": "Polinesia"
+          "name": "Polinesia",
+          "countries": []
         }
       ]
     }
