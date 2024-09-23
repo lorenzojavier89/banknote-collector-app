@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-banknote',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './banknote.component.scss'
 })
 export class BanknoteComponent {
-
+  id = input.required<string>();
 }
