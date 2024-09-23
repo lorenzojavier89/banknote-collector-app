@@ -1,0 +1,122 @@
+{
+  "regions": [
+    {
+      "code": "AF",
+      "name": "África",
+      "subregions": [
+        {
+          "code": "NAF",
+          "name": "África del Norte"
+        },
+        {
+          "code": "EAF",
+          "name": "África Oriental"
+        },
+        {
+          "code": "CAF",
+          "name": "África Central o África Media"
+        },
+        {
+          "code": "SAF",
+          "name": "África Austral"
+        },
+        {
+          "code": "WAF",
+          "name": "África Occidental"
+        }
+      ]
+    },
+    {
+      "code": "AM",
+      "name": "América",
+      "subregions": [
+        {
+          "code": "NAM",
+          "name": "América del Norte"
+        },
+        {
+          "code": "CAM",
+          "name": "América Central"
+        },
+        {
+          "code": "IAM",
+          "name": "América Insular o Islas del Caribe"
+        },
+        {
+          "code": "SAM",
+          "name": "América del Sur"
+        }
+      ]
+    },
+    {
+      "code": "AS",
+      "name": "Asia",
+      "subregions": [
+        {
+          "code": "CAS",
+          "name": "Asia Central"
+        },
+        {
+          "code": "EAS",
+          "name": "Asia Oriental"
+        },
+        {
+          "code": "SAS",
+          "name": "Asia del Sur"
+        },
+        {
+          "code": "SEA",
+          "name": "Sudeste Asiático"
+        },
+        {
+          "code": "WAS",
+          "name": "Asia Occidental"
+        }
+      ]
+    },
+    {
+      "code": "EU",
+      "name": "Europa",
+      "subregions": [
+        {
+          "code": "EEU",
+          "name": "Europa Oriental"
+        },
+        {
+          "code": "NEU",
+          "name": "Europa del Norte"
+        },
+        {
+          "code": "SEU",
+          "name": "Europa del Sur"
+        },
+        {
+          "code": "WEU",
+          "name": "Europa Occidental"
+        }
+      ]
+    },
+    {
+      "code": "OC",
+      "name": "Oceanía",
+      "subregions": [
+        {
+          "code": "AUS",
+          "name": "Australasia"
+        },
+        {
+          "code": "MEL",
+          "name": "Melanesia"
+        },
+        {
+          "code": "MIC",
+          "name": "Micronesia"
+        },
+        {
+          "code": "POL",
+          "name": "Polinesia"
+        }
+      ]
+    }
+  ]
+}
