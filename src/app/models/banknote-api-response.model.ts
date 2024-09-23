@@ -1,10 +1,9 @@
-export interface Banknote {
+export interface BanknoteApiResponse {
   id: string;
   order: number;
   volume: string;
-  region: string;
-  subregion: string;
-  issuer: string;
+  issuerCode: string;
+  subgroup: string;
   historicalPeriod?: string;
   issueDate: string;
   denomination: string;

@@ -3,57 +3,52 @@
         "id": "ARG0001",
         "order": 1,
         "volume": "Negro",
-        "issuer": "ARG",
+        "issuerCode": "ARG",
         "issueDate": "1949-1950",
         "denomination": "1 peso",
-        "onlineCatalog": "https://es.numista.com/catalogue/note203152.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note203152.html"
     },
     {
         "id": "ARG0002",
         "order": 2,
         "volume": "Negro",
-        "issuer": "ARG",
+        "issuerCode": "ARG",
         "issueDate": "1952-1955",
         "denomination": "5 pesos",
-        "onlineCatalog": "https://es.numista.com/catalogue/note212841.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note212841.html"
     },
     {
         "id": "ARG0015",
         "order": 15,
         "volume": "Negro",
-        "issuer": "ARG",
+        "issuerCode": "ARG",
         "issueDate": "1983-1984",
         "denomination": "5 pesos",
-        "onlineCatalog": "https://es.numista.com/catalogue/note202440.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note202440.html"
     },
     {
         "id": "ARG0022",
         "order": 22,
         "volume": "Negro",
-        "issuer": "ARG",
+        "issuerCode": "ARG",
         "issueDate": "1992-1993",
         "denomination": "1 Peso",
-        "onlineCatalog": "https://es.numista.com/catalogue/note203647.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note203647.html"
     },
     {
         "id": "ARG0044",
         "order": 44,
         "volume": "Negro",
-        "issuer": "ARG",
+        "issuerCode": "ARG",
         "issueDate": "2001",
         "denomination": "5 Pesos (Bono Lecop)",
-        "onlineCatalog": "https://es.numista.com/catalogue/note222582.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note222582.html"
     },
     {
         "id": "PAR0105",
         "order": 105,
         "volume": "Negro",
-        "issuer": "PRY",
+        "issuerCode": "PRY",
         "issueDate": "2017",
         "denomination": "20000 Guaranies",
         "onlineCatalog": "https://es.numista.com/catalogue/note222524.html",
@@ -63,18 +58,17 @@
         "id": "ALE0160",
         "order": 160,
         "volume": "Rojo",
-        "issuer": "DEU",
+        "issuerCode": "DEU",
         "historicalPeriod": "[1918-1933] República de Weimar",
         "issueDate": "1922",
         "denomination": "50.000 Mark",
-        "onlineCatalog": "https://es.numista.com/catalogue/note207354.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note207354.html"
     },
     {
         "id": "COL0238",
         "order": 238,
         "volume": "Verde",
-        "issuer": "COL",
+        "issuerCode": "COL",
         "issueDate": "2016",
         "denomination": "1000 Pesos",
         "onlineCatalog": "https://es.numista.com/catalogue/note205282.html",
@@ -84,27 +78,25 @@
         "id": "VEN0254",
         "order": 254,
         "volume": "Verde",
-        "issuer": "VEN",
+        "issuerCode": "VEN",
         "issueDate": "1992",
         "denomination": "10 Bolívares",
-        "onlineCatalog": "https://es.numista.com/catalogue/note204523.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note204523.html"
     },
     {
         "id": "NIC0265",
         "order": 265,
         "volume": "Verde",
-        "issuer": "NIC",
+        "issuerCode": "NIC",
         "issueDate": "1991",
         "denomination": "25 Centavos de Córdoba",
-        "onlineCatalog": "https://es.numista.com/catalogue/note202962.html",
-        "comment": null
+        "onlineCatalog": "https://es.numista.com/catalogue/note202962.html"
     },
     {
         "id": "JAP0342",
         "order": 342,
         "volume": "Verde",
-        "issuer": "JPN",
+        "issuerCode": "JPN",
         "issueDate": "1930",
         "denomination": "5 Yen",
         "onlineCatalog": "https://es.numista.com/catalogue/note206987.html",

@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Banknote } from '../models/banknote.model';
+import { BanknoteApiResponse } from '../models/banknote-api-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
@@ -8,11 +8,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 })
 export class CatalogService {
   private http: HttpClient = inject(HttpClient);
-  private jsonUrl = 'assets/data/catalog.json';
+  private jsonUrl = 'assets/data/banknotes.json';
 
-  private banknotes$ = this.http.get<Banknote[]>(this.jsonUrl);
+  private banknotes$ = this.http.get<BanknoteApiResponse[]>(this.jsonUrl);
   banknotes = toSignal(this.banknotes$, { initialValue: [] });
-  selectedBanknote = signal<Banknote | undefined>(undefined);
+  selectedBanknote = signal<BanknoteApiResponse | undefined>(undefined);
 
   setSelectedBanknote(id: string) {
     const foundBanknote = this.banknotes().find(x => x.id === id); 
