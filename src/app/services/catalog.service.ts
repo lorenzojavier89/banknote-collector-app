@@ -30,16 +30,10 @@ export class CatalogService {
                 code: country.code,
                 name: country.name,
               },
-              subregion: {
-                code: subregion.code,
-                name: subregion.name,
-                countries: [],
-              },
-              region: {
-                code: region.code,
-                name: region.name,
-                subregions: []
-              }
+              subregionCode: subregion.code,
+              subregionName: subregion.name,
+              regionCode: region.code,
+              regionName: region.name
             });
           });
         });
