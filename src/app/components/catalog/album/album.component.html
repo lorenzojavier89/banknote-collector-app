@@ -3,7 +3,7 @@
     <li>
         <a [routerLink]="['/catalog', b.id]">
         <span
-            >{{ b.issuerCode }}[{{ b.issueDate }}]-{{ b.denomination }}</span
+            >{{ b.issuer.country.name }} [{{ b.issueDate }}]-{{ b.denomination }}</span
         >
         </a>
     </li>
