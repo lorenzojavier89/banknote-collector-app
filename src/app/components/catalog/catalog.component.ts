@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { CatalogService } from '../../services/catalog.service';
 
 @Component({
   selector: 'app-catalog',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterLink],
   templateUrl: './catalog.component.html',
-  styleUrl: './catalog.component.scss'
+  styleUrl: './catalog.component.scss',
 })
 export class CatalogComponent {
-
-  
+  private catalogService: CatalogService = inject(CatalogService);
+  banknotes = this.catalogService.banknotes;
 }
