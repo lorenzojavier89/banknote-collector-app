@@ -1,0 +1,18 @@
+.card {
+    width: 450px;
+
+    .card-body {
+        .card-title {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .card-title:hover {
+            text-decoration: underline;
+        }
+
+        .card-text {
+            margin-bottom: 2px;
+        }
+    }
+}

@@ -8,33 +8,20 @@
     <hr />
     <div class="row">
         @for (b of banknotes(); track b.id) {
-            <div class="col">
-                <div class="card text-bg-light" style="width: 450px">
+            <div class="col-4" style="margin-bottom: 15px;">
+                <div class="card text-bg-light">
                   <img
                     [src]="b.imageUrl"
                     class="card-img-top"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">{{ b.issuer.country.name }} - {{ b.denomination }} [{{ b.issueDate }}]</h5>
-                    <p class="card-text" style="margin-bottom: 2px;">#{{b.order}} - Tomo {{ b.volume }}</p>
+                    <a class="card-title" [routerLink]="['/catalog', b.id]">{{ b.issuer.country.name }} - {{ b.denomination }} [{{ b.issueDate }}]</a>
+                    <p class="card-text">#{{b.order}} - Tomo {{ b.volume }}</p>
                     <small class="text-body-secondary">{{ b.comment }}</small>
                   </div>
                 </div>
             </div>
         }
     </div>
-    <!-- <ul>
-            @for (b of banknotes(); track b.id) {
-            <li>
-                <a [routerLink]="['/catalog', b.id]">
-                <span
-                    >{{ b.issuer.country.name }} [{{ b.issueDate }}]-{{ b.denomination }}</span
-                >
-                </a>
-            </li>
-            } @empty {
-            <p>No banknotes available in the catalog.</p>
-        }
-        </ul> -->
   </section>
 </section>
