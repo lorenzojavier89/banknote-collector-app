@@ -1,12 +1,23 @@
 <section class="row">
-    <aside id="filters" class="col-2">
-        <h3>Filters</h3>
-    </aside>
-    <section id="catalog" class="col-10">
-        <h3>Catalog</h3>
-        <h6>Current filters</h6>
-        <hr>
-        <ul>
+  <aside id="filters" class="col-2">
+    <h3>Filters</h3>
+  </aside>
+  <section id="catalog" class="col-10">
+    <h3>Catalog</h3>
+    <h6>Current filters</h6>
+    <hr />
+    <div class="card text-bg-light" style="width: 400px">
+      <img
+        src="https://es.numista.com/catalogue/photos/argentine/661980efb9a0e3.77784273-original.jpg"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Argentina - 1 Peso [1949-1950]</h5>
+        <p class="card-text" style="margin-bottom: 8px;">Tomo negro</p>
+        <small class="text-body-secondary">#1</small>
+      </div>
+    </div>
+    <!-- <ul>
             @for (b of banknotes(); track b.id) {
             <li>
                 <a [routerLink]="['/catalog', b.id]">
@@ -18,9 +29,6 @@
             } @empty {
             <p>No banknotes available in the catalog.</p>
         }
-        </ul>
-    </section>
+        </ul> -->
+  </section>
 </section>
-
-
-
