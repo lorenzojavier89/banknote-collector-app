@@ -59,7 +59,7 @@
         "countries": [
           { "code": "MEX", "name": "México" },
           { "code": "GTM", "name": "Guatemala" },
-          { "code": "NIC", "name": "Nicaragua" },
+          { "code": "NIC", "name": "Nicaragua", "flagIcon": "assets/images/flags/4x3/ni.svg"  },
           { "code": "HND", "name": "Honduras" }
         ]
       },
@@ -76,17 +76,17 @@
         "code": "SAM",
         "name": "América del Sur",
         "countries": [
-          { "code": "ARG", "name": "Argentina" },
+          { "code": "ARG", "name": "Argentina", "flagIcon": "assets/images/flags/4x3/ar.svg" },
           { "code": "BOL", "name": "Bolivia" },
           { "code": "BRA", "name": "Brasil" },
           { "code": "CHL", "name": "Chile" },
-          { "code": "COL", "name": "Colombia" },
+          { "code": "COL", "name": "Colombia", "flagIcon": "assets/images/flags/4x3/co.svg" },
           { "code": "ECU", "name": "Ecuador" },
           { "code": "GUY", "name": "Guyana" },
-          { "code": "PRY", "name": "Paraguay" },
+          { "code": "PRY", "name": "Paraguay", "flagIcon": "assets/images/flags/4x3/py.svg" },
           { "code": "PER", "name": "Perú" },
           { "code": "URY", "name": "Uruguay" },
-          { "code": "VEN", "name": "Venezuela" }
+          { "code": "VEN", "name": "Venezuela", "flagIcon": "assets/images/flags/4x3/ve.svg" }
         ]
       }
     ]
@@ -109,7 +109,7 @@
         "name": "Asia Oriental",
         "countries": [
           { "code": "CHN", "name": "China" },
-          { "code": "JPN", "name": "Japón" },
+          { "code": "JPN", "name": "Japón", "flagIcon": "assets/images/flags/4x3/jp.svg" },
           { "code": "MNG", "name": "Mongolia" }
         ]
       },
@@ -195,7 +195,7 @@
           { "code": "BEL", "name": "Bélgica" },
           { "code": "LIE", "name": "Liechtenstein" },
           { "code": "CHE", "name": "Suiza" },
-          { "code": "DEU", "name": "Alemania" },
+          { "code": "DEU", "name": "Alemania", "flagIcon": "assets/images/flags/4x3/de.svg" },
           { "code": "AUT", "name": "Austria" }
         ]
       }

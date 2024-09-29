@@ -28,6 +28,7 @@ export class CatalogService {
               country: {
                 code: country.code,
                 name: country.name,
+                flagIcon: country.flagIcon
               },
               subregionCode: subregion.code,
               subregionName: subregion.name,
