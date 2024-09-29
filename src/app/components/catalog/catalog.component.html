@@ -3,8 +3,8 @@
     <h3>Filters</h3>
   </aside>
   <section id="catalog" class="col-10">
-    <h3>Catalog</h3>
-    <h6>Current filters</h6>
+    <h3>{{ count() }} billetes</h3>
+    <h6>Sin filtros aplicados</h6>
     <hr />
     <div class="row">
         @for (b of banknotes(); track b.id) {

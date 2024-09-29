@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CatalogService } from '../../services/catalog.service';
 
@@ -12,4 +12,5 @@ import { CatalogService } from '../../services/catalog.service';
 export class CatalogComponent {
   private catalogService: CatalogService = inject(CatalogService);
   banknotes = this.catalogService.banknotes;
+  count = computed(() => this.banknotes().length);
 }
