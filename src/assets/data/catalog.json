@@ -7,7 +7,7 @@
         "issueDate": "1949-1950",
         "denomination": "1 peso",
         "onlineCatalog": "https://es.numista.com/catalogue/note203152.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/argentine/661980efb9a0e3.77784273-original.jpg"
+        "imageUrl": "assets/images/banknotes/ARG0001-sm-front.jpg"
     },
     {
         "id": "ARG0002",
@@ -17,7 +17,7 @@
         "issueDate": "1952-1955",
         "denomination": "5 pesos",
         "onlineCatalog": "https://es.numista.com/catalogue/note212841.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/argentine/6046a01295f1b7.81714469-original.jpg"
+        "imageUrl": "assets/images/banknotes/ARG0002-sm-front.jpg"
     },
     {
         "id": "ARG0015",
@@ -27,7 +27,7 @@
         "issueDate": "1983-1984",
         "denomination": "5 pesos",
         "onlineCatalog": "https://es.numista.com/catalogue/note202440.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/argentine/62ff501ae64cd5.80351150-original.jpg"
+        "imageUrl": "assets/images/banknotes/ARG0015-sm-front.jpg"
     },
     {
         "id": "ARG0022",
@@ -37,7 +37,7 @@
         "issueDate": "1992-1993",
         "denomination": "1 Peso",
         "onlineCatalog": "https://es.numista.com/catalogue/note203647.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/argentine/64c66bb6d6d097.47101107-original.jpg"
+        "imageUrl": "assets/images/banknotes/ARG0022-sm-front.jpg"
     },
     {
         "id": "ARG0044",
@@ -47,21 +47,21 @@
         "issueDate": "2001",
         "denomination": "5 Pesos (Bono Lecop)",
         "onlineCatalog": "https://es.numista.com/catalogue/note222582.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/argentine/5eeaadefd6e9f8.89867858-original.jpg"
+        "imageUrl": "assets/images/banknotes/ARG0044-sm-front.jpg"
     },
     {
-        "id": "PAR0105",
+        "id": "PRY0008",
         "order": 105,
         "volume": "Negro",
         "issuerCode": "PRY",
         "issueDate": "2017",
         "denomination": "20000 Guaranies",
         "onlineCatalog": "https://es.numista.com/catalogue/note222524.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/paraguay/6614ff4d5acde6.94428416-original.jpg",
+        "imageUrl": "assets/images/banknotes/PRY0008-sm-front.jpg",
         "comment": "Me lo trajo la Caro de su viaje a Paraguay (2023)"
     },
     {
-        "id": "ALE0160",
+        "id": "DEU0001",
         "order": 160,
         "volume": "Rojo",
         "issuerCode": "DEU",
@@ -69,48 +69,48 @@
         "issueDate": "1922",
         "denomination": "50.000 Mark",
         "onlineCatalog": "https://es.numista.com/catalogue/note207354.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/allemagne-pre1945/5ea3989d8b5c27.25640979-original.jpg"
+        "imageUrl": "assets/images/banknotes/DEU0001-sm-front.jpg"
     },
     {
-        "id": "COL0238",
+        "id": "COL0001",
         "order": 238,
         "volume": "Verde",
         "issuerCode": "COL",
         "issueDate": "2016",
         "denomination": "1000 Pesos",
         "onlineCatalog": "https://es.numista.com/catalogue/note205282.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/colombie/62cae14a578e94.44715318-original.jpg",
+        "imageUrl": "assets/images/banknotes/COL0001-sm-front.jpg",
         "comment": "Creo que me lo trajo el Juli"
     },
     {
-        "id": "VEN0254",
+        "id": "VEN0003",
         "order": 254,
         "volume": "Verde",
         "issuerCode": "VEN",
         "issueDate": "1992",
         "denomination": "10 Bolívares",
         "onlineCatalog": "https://es.numista.com/catalogue/note204523.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/venezuela/63dbd7cdf0f774.88394094-original.jpg"
+        "imageUrl": "assets/images/banknotes/VEN0003-sm-front.jpg"
     },
     {
-        "id": "NIC0265",
+        "id": "NIC0003",
         "order": 265,
         "volume": "Verde",
         "issuerCode": "NIC",
         "issueDate": "1991",
         "denomination": "25 Centavos de Córdoba",
         "onlineCatalog": "https://es.numista.com/catalogue/note202962.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/nicaragua/62736384471c19.85764859-original.jpg"
+        "imageUrl": "assets/images/banknotes/NIC0003-sm-front.jpg"
     },
     {
-        "id": "JAP0342",
+        "id": "JPN0001",
         "order": 342,
         "volume": "Verde",
         "issuerCode": "JPN",
         "issueDate": "1930",
         "denomination": "5 Yen",
         "onlineCatalog": "https://es.numista.com/catalogue/note206987.html",
-        "imageUrl": "https://es.numista.com/catalogue/photos/japon/5ea26886087f21.11493028-original.jpg",
+        "imageUrl": "assets/images/banknotes/JPN0001-sm-front.jpg",
         "comment": "Era parte de la primera colección de billetes."
     }
 ]
