@@ -4,7 +4,7 @@
 
     .card-body {
         border-top: 1px solid rgba(0,0,0, 0.175);
-        
+
         .card-title {
             text-decoration: none;
             font-weight: 600;
@@ -16,6 +16,10 @@
 
         .card-text {
             margin-bottom: 2px;
+        }
+
+        .card-comment {
+            font-style: italic;
         }
     }
 }

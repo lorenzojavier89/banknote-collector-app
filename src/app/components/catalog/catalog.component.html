@@ -8,7 +8,7 @@
     <hr />
     <div class="row">
         @for (b of banknotes(); track b.id) {
-            <div class="col-4" style="margin-bottom: 15px;">
+            <div class="col-4 mb-3">
                 <div class="card text-bg-light">
                   <img
                     [src]="b.imageUrl"
@@ -17,7 +17,7 @@
                   <div class="card-body">
                     <a class="card-title" [routerLink]="['/catalog', b.id]">{{ b.issuer.country.name }} - {{ b.denomination }} [{{ b.issueDate }}]</a>
                     <p class="card-text">#{{b.order}} - Tomo {{ b.volume }}</p>
-                    <small class="text-body-secondary">{{ b.comment }}</small>
+                    <small class="text-body-secondary card-comment">{{ b.comment }}</small>
                   </div>
                 </div>
             </div>
