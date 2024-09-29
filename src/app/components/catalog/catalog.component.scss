@@ -1,7 +1,10 @@
 .card {
     width: 450px;
+    animation: fadeIn 1s;
 
     .card-body {
+        border-top: 1px solid rgba(0,0,0, 0.175);
+        
         .card-title {
             text-decoration: none;
             font-weight: 600;
@@ -15,4 +18,9 @@
             margin-bottom: 2px;
         }
     }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
