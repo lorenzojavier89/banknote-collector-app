@@ -8,5 +8,6 @@ export interface Banknote {
   issueDate: string;
   denomination: string;
   onlineCatalog: string;
+  imageUrl: string;
   comment?: string;
 }

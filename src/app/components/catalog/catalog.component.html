@@ -7,19 +7,21 @@
     <h6>Current filters</h6>
     <hr />
     <div class="row">
-        <div class="col">
-            <div class="card text-bg-light" style="width: 400px">
-              <img
-                src="https://es.numista.com/catalogue/photos/argentine/661980efb9a0e3.77784273-original.jpg"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Argentina - 1 Peso [1949-1950]</h5>
-                <p class="card-text" style="margin-bottom: 2px;">Tomo negro</p>
-                <small class="text-body-secondary">#1</small>
-              </div>
+        @for (b of banknotes(); track b.id) {
+            <div class="col">
+                <div class="card text-bg-light" style="width: 400px">
+                  <img
+                    [src]="b.imageUrl"
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ b.issuer.country.name }} - {{ b.denomination }} [{{ b.issueDate }}]</h5>
+                    <p class="card-text" style="margin-bottom: 2px;">#{{b.order}} - Tomo {{ b.volume }}</p>
+                    <small class="text-body-secondary">{{ b.comment }}</small>
+                  </div>
+                </div>
             </div>
-        </div>
+        }
     </div>
     <!-- <ul>
             @for (b of banknotes(); track b.id) {

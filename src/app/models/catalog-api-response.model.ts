@@ -1,4 +1,4 @@
-export interface BanknoteApiResponse {
+export interface CatalogApiResponse {
   id: string;
   order: number;
   volume: string;
@@ -8,5 +8,6 @@ export interface BanknoteApiResponse {
   issueDate: string;
   denomination: string;
   onlineCatalog: string;
+  imageUrl: string;
   comment?: string;
 }

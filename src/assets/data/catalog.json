@@ -6,7 +6,8 @@
         "issuerCode": "ARG",
         "issueDate": "1949-1950",
         "denomination": "1 peso",
-        "onlineCatalog": "https://es.numista.com/catalogue/note203152.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note203152.html",
+        "imageUrl": "https://es.numista.com/catalogue/photos/argentine/661980efb9a0e3.77784273-original.jpg"
     },
     {
         "id": "ARG0002",
@@ -15,7 +16,8 @@
         "issuerCode": "ARG",
         "issueDate": "1952-1955",
         "denomination": "5 pesos",
-        "onlineCatalog": "https://es.numista.com/catalogue/note212841.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note212841.html",
+        "imageUrl": ""
     },
     {
         "id": "ARG0015",
@@ -24,7 +26,8 @@
         "issuerCode": "ARG",
         "issueDate": "1983-1984",
         "denomination": "5 pesos",
-        "onlineCatalog": "https://es.numista.com/catalogue/note202440.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note202440.html",
+        "imageUrl": ""
     },
     {
         "id": "ARG0022",
@@ -33,7 +36,8 @@
         "issuerCode": "ARG",
         "issueDate": "1992-1993",
         "denomination": "1 Peso",
-        "onlineCatalog": "https://es.numista.com/catalogue/note203647.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note203647.html",
+        "imageUrl": ""
     },
     {
         "id": "ARG0044",
@@ -42,7 +46,8 @@
         "issuerCode": "ARG",
         "issueDate": "2001",
         "denomination": "5 Pesos (Bono Lecop)",
-        "onlineCatalog": "https://es.numista.com/catalogue/note222582.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note222582.html",
+        "imageUrl": ""
     },
     {
         "id": "PAR0105",
@@ -52,6 +57,7 @@
         "issueDate": "2017",
         "denomination": "20000 Guaranies",
         "onlineCatalog": "https://es.numista.com/catalogue/note222524.html",
+        "imageUrl": "",
         "comment": "Me lo trajo la Caro de su viaje a Paraguay (2023)"
     },
     {
@@ -62,7 +68,8 @@
         "historicalPeriod": "[1918-1933] República de Weimar",
         "issueDate": "1922",
         "denomination": "50.000 Mark",
-        "onlineCatalog": "https://es.numista.com/catalogue/note207354.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note207354.html",
+        "imageUrl": ""
     },
     {
         "id": "COL0238",
@@ -72,6 +79,7 @@
         "issueDate": "2016",
         "denomination": "1000 Pesos",
         "onlineCatalog": "https://es.numista.com/catalogue/note205282.html",
+        "imageUrl": "",
         "comment": "Creo que me lo trajo el Juli"
     },
     {
@@ -81,7 +89,8 @@
         "issuerCode": "VEN",
         "issueDate": "1992",
         "denomination": "10 Bolívares",
-        "onlineCatalog": "https://es.numista.com/catalogue/note204523.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note204523.html",
+        "imageUrl": ""
     },
     {
         "id": "NIC0265",
@@ -90,7 +99,8 @@
         "issuerCode": "NIC",
         "issueDate": "1991",
         "denomination": "25 Centavos de Córdoba",
-        "onlineCatalog": "https://es.numista.com/catalogue/note202962.html"
+        "onlineCatalog": "https://es.numista.com/catalogue/note202962.html",
+        "imageUrl": ""
     },
     {
         "id": "JAP0342",
@@ -100,6 +110,7 @@
         "issueDate": "1930",
         "denomination": "5 Yen",
         "onlineCatalog": "https://es.numista.com/catalogue/note206987.html",
+        "imageUrl": "",
         "comment": "Era parte de la primera colección de billetes."
     }
 ]

@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BanknoteApiResponse } from '../models/banknote-api-response.model';
+import { CatalogApiResponse } from '../models/catalog-api-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 import { Region } from '../models/region.model';
@@ -13,7 +13,7 @@ import { Banknote } from '../models/banknote.model';
 })
 export class CatalogService {
   private http: HttpClient = inject(HttpClient);
-  private banknotesJsonUrl = 'assets/data/banknotes.json';
+  private catalogJsonUrl = 'assets/data/catalog.json';
   private countriesJsonUrl = 'assets/data/countries.json';
 
   private regions$ = this.http.get<Region[]>(this.countriesJsonUrl);
@@ -42,10 +42,10 @@ export class CatalogService {
     })
   );
 
-  private banknotesApiResponse$ = this.http.get<BanknoteApiResponse[]>(this.banknotesJsonUrl);
-  private banknotes$ = forkJoin([
+  private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
+  private catalog$ = forkJoin([
     this.issuersLookup$,
-    this.banknotesApiResponse$,
+    this.catalogApiResponse$,
   ])
     .pipe<Banknote[]>(
       map(([issuerLookup, apiResponse]) => {
@@ -59,13 +59,14 @@ export class CatalogService {
             issueDate: item.issueDate,
             denomination: item.denomination,
             onlineCatalog: item.onlineCatalog,
+            imageUrl: item.imageUrl,
             comment: item.comment
           } as Banknote;
         });
       })
     );
 
-  banknotes = toSignal(this.banknotes$, { initialValue: [] });
+  banknotes = toSignal(this.catalog$, { initialValue: [] });
   selectedBanknote = signal<Banknote | undefined>(undefined);
 
   setSelectedBanknote(id: string) {
