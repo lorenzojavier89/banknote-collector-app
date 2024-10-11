@@ -2,7 +2,7 @@ import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CatalogApiResponse } from '../models/catalog-api-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 import { Region } from '../models/region.model';
 import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
@@ -16,7 +16,7 @@ export class CatalogService {
   private catalogJsonUrl = 'assets/data/catalog.json';
   private countriesJsonUrl = 'assets/data/countries.json';
 
-  private regions$ = this.http.get<Region[]>(this.countriesJsonUrl);
+  private regions$ = this.http.get<Region[]>(this.countriesJsonUrl).pipe(shareReplay(1));
   private issuersLookup$ = this.regions$.pipe<Map<string, Issuer>>(
     map((data) => {
       const issuerLookup = new Map<string, Issuer>();
@@ -68,8 +68,8 @@ export class CatalogService {
     );
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
-  
-  
+  regions = toSignal(this.regions$, { initialValue: []});
+    
   private selectedBanknoteSignal = signal<Banknote | undefined>(undefined);
   readonly selectedBanknote = this.selectedBanknoteSignal.asReadonly();
 

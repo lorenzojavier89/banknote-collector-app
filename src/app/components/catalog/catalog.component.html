@@ -1,6 +1,19 @@
 <section class="row">
   <aside id="filters" class="col-2">
     <h3>Filters</h3>
+    <hr />
+    <ul>
+      @for (r of regions(); track r.code) {
+        <li>
+          {{ r.name }}
+          <ul>
+            @for (sr of r.subregions; track sr.code) {
+              <li> {{ sr.name }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ul>
   </aside>
   <section id="catalog" class="col-10">
     <h3>{{ count() }} billetes</h3>
