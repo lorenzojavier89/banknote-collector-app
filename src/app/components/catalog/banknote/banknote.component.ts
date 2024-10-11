@@ -16,6 +16,6 @@ export class BanknoteComponent implements OnInit {
   selectedBanknote = this.catalogService.selectedBanknote;
 
   ngOnInit(): void {
-    this.catalogService.setSelectedBanknote(this.id());
+    this.catalogService.selectBanknote(this.id());
   }
 }

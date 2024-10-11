@@ -68,10 +68,13 @@ export class CatalogService {
     );
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
-  selectedBanknote = signal<Banknote | undefined>(undefined);
+  
+  
+  private selectedBanknoteSignal = signal<Banknote | undefined>(undefined);
+  readonly selectedBanknote = this.selectedBanknoteSignal.asReadonly();
 
-  setSelectedBanknote(id: string) {
+  selectBanknote(id: string) {
     const foundBanknote = this.banknotes().find((x) => x.id === id);
-    this.selectedBanknote.set(foundBanknote);
+    this.selectedBanknoteSignal.set(foundBanknote);
   }
 }
