@@ -17,7 +17,7 @@ export class CatalogService {
   private countriesJsonUrl = 'assets/data/countries.json';
 
   private regions$ = this.http.get<Region[]>(this.countriesJsonUrl).pipe(shareReplay(1));
-  private issuersLookup$ = this.regions$.pipe<Map<string, Issuer>>(
+  private issuers$ = this.regions$.pipe<Map<string, Issuer>>(
     map((data) => {
       const issuerLookup = new Map<string, Issuer>();
 
@@ -45,7 +45,7 @@ export class CatalogService {
 
   private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
   private catalog$ = forkJoin([
-    this.issuersLookup$,
+    this.issuers$,
     this.catalogApiResponse$,
   ])
     .pipe<Banknote[]>(
