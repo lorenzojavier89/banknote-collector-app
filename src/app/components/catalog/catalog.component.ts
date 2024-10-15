@@ -13,7 +13,5 @@ import { FiltersComponent } from "./filters/filters.component";
 export class CatalogComponent {
   private catalogService: CatalogService = inject(CatalogService);
   banknotes = this.catalogService.banknotes;
-  regions = this.catalogService.regions;
-
   count = computed(() => this.banknotes().length);
 }

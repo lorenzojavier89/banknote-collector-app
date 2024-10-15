@@ -1,17 +1,18 @@
-import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { CatalogService } from '../../../services/catalog.service';
 
 @Component({
   selector: 'app-filters',
   standalone: true,
-  imports: [NgClass],
+  imports: [MatExpansionModule],
   templateUrl: './filters.component.html',
   styleUrl: './filters.component.scss'
 })
 export class FiltersComponent {
-  public isOpen: boolean = false;
+  private catalogService: CatalogService = inject(CatalogService);
+  readonly panelOpenState = signal(false);
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
+  regions = this.catalogService.regions;
+
 }
