@@ -1,18 +1,17 @@
-import { Component, inject, signal } from '@angular/core';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { Component, inject } from '@angular/core';
 import { CatalogService } from '../../../services/catalog.service';
+import { FilterExpansionPanelComponent } from "./filter-expansion-panel/filter-expansion-panel.component";
 
 @Component({
   selector: 'app-filters',
   standalone: true,
-  imports: [MatExpansionModule],
+  imports: [FilterExpansionPanelComponent],
   templateUrl: './filters.component.html',
   styleUrl: './filters.component.scss'
 })
 export class FiltersComponent {
   private catalogService: CatalogService = inject(CatalogService);
-  readonly panelOpenState = signal(false);
-
+  
   regions = this.catalogService.regions;
 
 }

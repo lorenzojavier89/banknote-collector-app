@@ -1,0 +1,8 @@
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+            <mat-panel-title> {{ title() }} </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-content />
+    </mat-expansion-panel>
+</mat-accordion>
