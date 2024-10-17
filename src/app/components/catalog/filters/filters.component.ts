@@ -1,6 +1,7 @@
 import { Component, computed, inject } from '@angular/core';
 import { CatalogService } from '../../../services/catalog.service';
 import { FilterExpansionPanelComponent } from "./filter-expansion-panel/filter-expansion-panel.component";
+import { FiltersService } from '../../../services/filters.service';
 
 @Component({
   selector: 'app-filters',
@@ -11,8 +12,9 @@ import { FilterExpansionPanelComponent } from "./filter-expansion-panel/filter-e
 })
 export class FiltersComponent {
   private catalogService: CatalogService = inject(CatalogService);
+  private filtersService: FiltersService = inject(FiltersService);
   
-  regions = this.catalogService.regions;
+  regionsFilter = this.filtersService.regionsFilter;
   issuers = computed(() => 
     Array.from(this.catalogService.issuers().values())
       .sort((a, b) => a.country.name.localeCompare(b.country.name)));
