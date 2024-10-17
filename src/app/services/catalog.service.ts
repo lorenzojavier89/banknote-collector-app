@@ -17,7 +17,7 @@ export class CatalogService {
   private countriesJsonUrl = 'assets/data/countries.json';
 
   private regions$ = this.http.get<Region[]>(this.countriesJsonUrl).pipe(shareReplay(1));
-  private issuers$ = this.regions$.pipe<Map<string, Issuer>>(
+  private issuers$ = this.regions$.pipe(
     map((data) => {
       const issuerLookup = new Map<string, Issuer>();
 
@@ -40,9 +40,10 @@ export class CatalogService {
       });
 
       return issuerLookup;
-    })
+    }),
+    shareReplay(1)
   );
-
+  
   private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
   private catalog$ = forkJoin([
     this.issuers$,
@@ -69,6 +70,7 @@ export class CatalogService {
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
   regions = toSignal(this.regions$, { initialValue: []});
+  issuers = toSignal(this.issuers$, { initialValue: new Map<string, Issuer>()});
     
   private selectedBanknoteSignal = signal<Banknote | undefined>(undefined);
   readonly selectedBanknote = this.selectedBanknoteSignal.asReadonly();
