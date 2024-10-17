@@ -3,6 +3,8 @@
         <mat-expansion-panel-header>
             <mat-panel-title> {{ title() }} </mat-panel-title>
         </mat-expansion-panel-header>
-        <ng-content />
+        <ng-template matExpansionPanelContent>
+            <ng-content />
+        </ng-template>
     </mat-expansion-panel>
 </mat-accordion>
