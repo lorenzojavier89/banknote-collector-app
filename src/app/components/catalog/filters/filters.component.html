@@ -1,23 +1,27 @@
-<app-filter-expansion-panel title="Regiones">
-  <ul>
-    @for (r of regions(); track r.code) {
-      <li>
-        {{ r.name }}
-        <ul>
-          @for (sr of r.subregions; track sr.code) {
-            <li> {{ sr.name }}</li>
-          }
-        </ul>
-      </li>
-    }
-  </ul>
-</app-filter-expansion-panel>
-<app-filter-expansion-panel title="Emisores">
-  <ul>
-    @for (issuer of issuers(); track issuer.country.code) {
-      <li>{{ issuer.country.name }}</li>
-    }
-  </ul>
-</app-filter-expansion-panel>
+<div class="filter-expansion-panel">
+  <app-filter-expansion-panel title="Regiones">
+    <ul>
+      @for (r of regions(); track r.code) {
+        <li>
+          {{ r.name }}
+          <ul>
+            @for (sr of r.subregions; track sr.code) {
+              <li> {{ sr.name }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ul>
+  </app-filter-expansion-panel>
+</div>
+<div class="filter-expansion-panel">
+  <app-filter-expansion-panel title="Emisores">
+    <ul>
+      @for (issuer of issuers(); track issuer.country.code) {
+        <li>{{ issuer.country.name }}</li>
+      }
+    </ul>
+  </app-filter-expansion-panel>
+</div>
 
 
