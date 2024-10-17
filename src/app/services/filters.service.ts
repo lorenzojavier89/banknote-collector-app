@@ -10,15 +10,13 @@ export class FiltersService {
 
   regionsFilter = computed<FilterItem[]>(() =>
     this.catalogService.regions().map<FilterItem>((r) => ({
+      ...r,
       selected: false,
       highlighted: false,
-      code: r.code,
-      name: r.name,
       subItems: r.subregions.map<FilterItem>((sr) => ({
+        ...sr,
         selected: false,
         highlighted: false,
-        code: sr.code,
-        name: sr.name
       })),
     }))
   );
