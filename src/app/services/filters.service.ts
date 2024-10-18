@@ -14,7 +14,7 @@ export class FiltersService {
 
   constructor() {
     effect(() => {
-      console.log(this._appliedFilter().anyFilterApplied());
+      console.log(this._appliedFilter());
     });
   }
 
