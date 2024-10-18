@@ -1,4 +1,4 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal, effect } from '@angular/core';
 import { CatalogService } from './catalog.service';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
@@ -15,6 +15,12 @@ export class FiltersService {
     subregionCode: '',
     countryCode: ''
   });
+
+  constructor() {
+    effect(() => {
+      console.log(this._appliedFilter());
+    });
+  }
 
   regionsFilter = computed<FilterItem[]>(() =>{
     const { regionCode, subregionCode } = { ...this._appliedFilter() };
