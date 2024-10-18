@@ -1,7 +1,7 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { CatalogService } from './catalog.service';
 import { FilterItem } from '../models/filters/filter-item.model';
-import { Filter } from '../models/filters/filter.model';
+import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Banknote } from '../models/banknote.model';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { Banknote } from '../models/banknote.model';
 export class FiltersService {
   private catalogService: CatalogService = inject(CatalogService);
 
-  private readonly _appliedFilter = signal<Filter>({
+  private readonly _appliedFilter = signal<AppliedFilter>({
     regionCode: '',
     subregionCode: '',
     countryCode: ''
