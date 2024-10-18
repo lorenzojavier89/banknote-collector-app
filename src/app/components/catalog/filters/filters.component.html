@@ -8,7 +8,11 @@
           </mat-checkbox>
           <ul>
             @for (sr of r.subItems; track sr.code) {
-              <li> {{ sr.name }}</li>
+              <li> 
+                <mat-checkbox [checked]="sr.selected" (change)="applySubregionFilter($event.checked, sr.code)">
+                  {{ sr.name }}
+                </mat-checkbox>
+              </li>
             }
           </ul>
         </li>
@@ -21,7 +25,9 @@
     <ul>
       @for (i of issuersFilter(); track i.code) {
         <li>
-          {{ i.name }}
+          <mat-checkbox [checked]="i.selected" (change)="applyCountryFilter($event.checked, i.code)">
+            {{ i.name }}
+          </mat-checkbox>
         </li>
       }
     </ul>

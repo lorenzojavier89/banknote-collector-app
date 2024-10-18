@@ -13,6 +13,8 @@ export class FiltersService {
 
   private readonly _appliedFilter = signal<Filter>({
     regionCode: '',
+    subregionCode: '',
+    countryCode: ''
   });
 
   regionsFilter = computed<FilterItem[]>(() =>
@@ -22,7 +24,7 @@ export class FiltersService {
       highlighted: false,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: false,
+        selected: this._appliedFilter().subregionCode === sr.code,
         highlighted: false,
       })),
     }))
@@ -35,7 +37,7 @@ export class FiltersService {
   issuersFilter = computed<FilterItem[]>(() => 
     this._issuers().map<FilterItem>(i => ({
       ...i.country,
-      selected: false,
+      selected: this._appliedFilter().countryCode === i.country.code,
       highlighted: false
     }))
   );
@@ -50,7 +52,33 @@ export class FiltersService {
     return this.catalogService.banknotes();
   });
 
-  applyRegionFilter(selected: boolean, regionCode: string) {
-    this._appliedFilter.set({ regionCode: selected ? regionCode : '' });
+  applyRegionFilter(selected: boolean, code: string) {
+    const regionCode = selected ? code : '';
+    
+    this._appliedFilter.set({ 
+      regionCode,
+      subregionCode: '',
+      countryCode: '' 
+    });
+  }
+
+  applySubregionFilter(selected: boolean, code: string) {
+    const subregionCode = selected ? code : '';
+    
+    this._appliedFilter.set({ 
+      regionCode: '',
+      subregionCode,
+      countryCode: '' 
+    });
+  }
+
+  applyCountryFilter(selected: boolean, code: string) {
+    const countryCode = selected ? code : '';
+    
+    this._appliedFilter.set({ 
+      regionCode: '',
+      subregionCode: '',
+      countryCode 
+    });
   }
 }

@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from "./filter-expansion-panel/filter-expansion-panel.component";
 import { FiltersService } from '../../../services/filters.service';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -16,7 +16,15 @@ export class FiltersComponent {
   regionsFilter = this.filtersService.regionsFilter;
   issuersFilter = this.filtersService.issuersFilter;
 
-  applyRegionFilter(selected: boolean, regionCode: string) {
-    this.filtersService.applyRegionFilter(selected, regionCode);
+  applyRegionFilter(selected: boolean, code: string) {
+    this.filtersService.applyRegionFilter(selected, code);
+  }
+
+  applySubregionFilter(selected: boolean, code: string) {
+    this.filtersService.applySubregionFilter(selected, code);
+  }
+
+  applyCountryFilter(selected: boolean, code: string) {
+    this.filtersService.applyCountryFilter(selected, code);
   }
 }
