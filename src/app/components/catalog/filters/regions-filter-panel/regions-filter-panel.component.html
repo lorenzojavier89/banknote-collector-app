@@ -1,15 +1,15 @@
 <app-filter-expansion-panel title="Regiones">
     <ul>
       @for (r of regionsFilter(); track r.code) {
-        <li>
+        <li class="region-section">
           <mat-checkbox [checked]="r.selected" (change)="applyRegionFilter($event.checked, r)">
-            {{ r.name }}
+            <span class="region-title">{{ r.name }}</span>
           </mat-checkbox>
           <ul>
             @for (sr of r.subItems; track sr.code) {
-              <li> 
+              <li class="subregion-section"> 
                 <mat-checkbox [checked]="sr.selected" (change)="applySubregionFilter($event.checked, r, sr)">
-                  {{ sr.name }}
+                  <span class="subregion-title">{{ sr.name }}</span>
                 </mat-checkbox>
               </li>
             }
