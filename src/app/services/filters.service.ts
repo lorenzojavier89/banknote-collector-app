@@ -60,35 +60,33 @@ export class FiltersService {
     });
   });
 
-  applyRegionFilter(selected: boolean, regionCode: string, subregionCodes: string[]) {
-    let rCodesResult = this._appliedFilter().regionCodes;
-    let srCodesResult = this._appliedFilter().subregionCodes;
+  applyRegionFilter(selected: boolean, regionFilterCode: string, subregionFilterCodes: string[]) {
+    let { regionCodes, subregionCodes } = { ...this._appliedFilter() };
     
     if(selected) {
-      rCodesResult.push(regionCode);
-      srCodesResult.push(...subregionCodes);
+      regionCodes.push(regionFilterCode);
+      subregionCodes.push(...subregionFilterCodes);
     }
     else {
-      rCodesResult = rCodesResult.filter(rCode => rCode != regionCode)
-      srCodesResult = srCodesResult.filter(srCode => !subregionCodes.includes(srCode));
+      regionCodes = regionCodes.filter(rCode => rCode != regionFilterCode)
+      subregionCodes = subregionCodes.filter(srCode => !subregionFilterCodes.includes(srCode));
     }
     
-    this._appliedFilter.set(new AppliedFilter(rCodesResult, srCodesResult));
+    this._appliedFilter.set(new AppliedFilter(regionCodes, subregionCodes));
   }
 
-  applySubregionFilter(selected: boolean, regionCode: string, subregionCode: string) {
-    let rCodesResult = this._appliedFilter().regionCodes;
-    let srCodesResult = this._appliedFilter().subregionCodes;
+  applySubregionFilter(selected: boolean, regionFilterCode: string, subregionFilterCode: string) {
+    let { regionCodes, subregionCodes } = { ...this._appliedFilter() };
     
     if(selected) {
-      srCodesResult.push(subregionCode);
+      subregionCodes.push(subregionFilterCode);
     }
     else {
-      rCodesResult = rCodesResult.filter(rCode => rCode != regionCode);
-      srCodesResult = srCodesResult.filter(srCode => srCode != subregionCode);
+      regionCodes = regionCodes.filter(rCode => rCode != regionFilterCode);
+      subregionCodes = subregionCodes.filter(srCode => srCode != subregionFilterCode);
     }
 
-    this._appliedFilter.set(new AppliedFilter(rCodesResult, srCodesResult));
+    this._appliedFilter.set(new AppliedFilter(regionCodes, subregionCodes));
   }
 
   applyCountryFilter(selected: boolean, code: string) {
