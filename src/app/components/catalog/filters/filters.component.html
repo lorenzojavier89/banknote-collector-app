@@ -3,7 +3,9 @@
     <ul>
       @for (r of regionsFilter(); track r.code) {
         <li>
-          {{ r.name }}
+          <mat-checkbox [checked]="r.selected" (change)="applyRegionFilter($event.checked, r.code)">
+            {{ r.name }}
+          </mat-checkbox>
           <ul>
             @for (sr of r.subItems; track sr.code) {
               <li> {{ sr.name }}</li>

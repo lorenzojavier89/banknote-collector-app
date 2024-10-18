@@ -2,6 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CatalogService } from '../../services/catalog.service';
 import { FiltersComponent } from "./filters/filters.component";
+import { FiltersService } from '../../services/filters.service';
 
 @Component({
   selector: 'app-catalog',
@@ -11,7 +12,8 @@ import { FiltersComponent } from "./filters/filters.component";
   styleUrl: './catalog.component.scss',
 })
 export class CatalogComponent {
-  private catalogService: CatalogService = inject(CatalogService);
-  banknotes = this.catalogService.banknotes;
-  count = computed(() => this.banknotes().length);
+  private filtersService: FiltersService = inject(FiltersService);
+  
+  filteredBanknotes = this.filtersService.filteredBanknotes;
+  count = computed(() => this.filteredBanknotes().length);
 }

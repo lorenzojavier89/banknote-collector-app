@@ -7,7 +7,7 @@
     <h6>Sin filtros aplicados</h6>
     <hr />
     <div class="row">
-        @for (b of banknotes(); track b.id) {
+        @for (b of filteredBanknotes(); track b.id) {
             <div class="col-4 mb-3">
                 <div class="card text-bg-light">
                   <img
