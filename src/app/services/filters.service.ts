@@ -43,13 +43,22 @@ export class FiltersService {
   );
 
   filteredBanknotes = computed<Banknote[]>(() => {
-    if (this._appliedFilter().regionCode) {
-      return this.catalogService
-        .banknotes()
-        .filter((b) => b.issuer.regionCode === this._appliedFilter().regionCode);
+    const appliedFilter = this._appliedFilter();
+    const banknotes = this.catalogService.banknotes();
+    
+    if(appliedFilter.regionCode){
+      return banknotes.filter((b) => b.issuer.regionCode === appliedFilter.regionCode);
     }
 
-    return this.catalogService.banknotes();
+    if(appliedFilter.subregionCode){
+      return banknotes.filter((b) => b.issuer.subregionCode === appliedFilter.subregionCode);
+    }
+
+    if(appliedFilter.countryCode){
+      return banknotes.filter((b) => b.issuer.country.code === appliedFilter.countryCode);
+    }   
+
+    return banknotes;
   });
 
   applyRegionFilter(selected: boolean, code: string) {
