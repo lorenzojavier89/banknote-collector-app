@@ -1,5 +1,5 @@
 export interface AppliedFilter {
-    regionCode: string;
-    subregionCode: string;
+    regionCodes: string[];
+    subregionCodes: string[];
     countryCode: string;
 }

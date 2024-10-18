@@ -11,8 +11,8 @@ export class FiltersService {
   private catalogService: CatalogService = inject(CatalogService);
 
   private readonly _appliedFilter = signal<AppliedFilter>({
-    regionCode: '',
-    subregionCode: '',
+    regionCodes: [],
+    subregionCodes: [],
     countryCode: ''
   });
 
@@ -23,15 +23,15 @@ export class FiltersService {
   }
 
   regionsFilter = computed<FilterItem[]>(() =>{
-    const { regionCode, subregionCode } = { ...this._appliedFilter() };
+    const { regionCodes, subregionCodes } = { ...this._appliedFilter() };
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
-      selected: regionCode === r.code,
+      selected: regionCodes.includes(r.code),
       highlighted: false,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: subregionCode === sr.code,
+        selected: subregionCodes.includes(sr.code),
         highlighted: false,
       })),
     }))
@@ -52,30 +52,44 @@ export class FiltersService {
     const banknotes = this.catalogService.banknotes();
 
     return banknotes.filter((b) => {
-        const matchesRegion = !appliedFilter.regionCode || b.issuer.regionCode === appliedFilter.regionCode;
-        const matchesSubregion = !appliedFilter.subregionCode || b.issuer.subregionCode === appliedFilter.subregionCode;
-        const matchesCountry = !appliedFilter.countryCode || b.issuer.country.code === appliedFilter.countryCode;
+        const matchesRegion = appliedFilter.regionCodes && appliedFilter.regionCodes.includes(b.issuer.regionCode);
+        const matchesSubregion = appliedFilter.subregionCodes && appliedFilter.subregionCodes.includes(b.issuer.subregionCode);
+        const matchesCountry = appliedFilter.countryCode && appliedFilter.countryCode === b.issuer.country.code;
 
-        return matchesRegion && matchesSubregion && matchesCountry;
+        return matchesRegion || matchesSubregion || matchesCountry;
     });
   });
 
   applyRegionFilter(selected: boolean, code: string) {
-    const regionCode = selected ? code : '';
+    let regionCodes = this._appliedFilter().regionCodes;
+    let subregionCodes = this._appliedFilter().subregionCodes;
+    
+    if(selected) {
+      regionCodes.push(code);
+      subregionCodes.push(...this.getSubregionCodes(code));
+    }
+    else {
+      regionCodes = regionCodes.filter(rCode => rCode != code)
+      subregionCodes = subregionCodes.filter(srCode => !this.getSubregionCodes(code).includes(srCode));
+    }
     
     this._appliedFilter.set({ 
-      regionCode,
-      subregionCode: '',
+      regionCodes,
+      subregionCodes,
       countryCode: '' 
     });
+  }
+
+  private getSubregionCodes(regionCode: string): string[] {
+    return this.regionsFilter().find(r => r.code === regionCode)?.subItems?.map(sr => sr.code) || [];
   }
 
   applySubregionFilter(selected: boolean, code: string) {
     const subregionCode = selected ? code : '';
     
     this._appliedFilter.set({ 
-      regionCode: '',
-      subregionCode,
+      regionCodes: [],
+      subregionCodes: [],
       countryCode: '' 
     });
   }
@@ -84,8 +98,8 @@ export class FiltersService {
     const countryCode = selected ? code : '';
     
     this._appliedFilter.set({ 
-      regionCode: '',
-      subregionCode: '',
+      regionCodes: [],
+      subregionCodes: [],
       countryCode 
     });
   }
