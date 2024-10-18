@@ -72,11 +72,11 @@ export class CatalogService {
   regions = toSignal(this.regions$, { initialValue: []});
   issuers = toSignal(this.issuers$, { initialValue: new Map<string, Issuer>()});
     
-  private selectedBanknoteSignal = signal<Banknote | undefined>(undefined);
-  readonly selectedBanknote = this.selectedBanknoteSignal.asReadonly();
+  private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
+  readonly selectedBanknote = this._selectedBanknote.asReadonly();
 
   selectBanknote(id: string) {
     const foundBanknote = this.banknotes().find((x) => x.id === id);
-    this.selectedBanknoteSignal.set(foundBanknote);
+    this._selectedBanknote.set(foundBanknote);
   }
 }
