@@ -61,35 +61,39 @@ export class FiltersService {
   });
 
   applyRegionFilter(selected: boolean, code: string) {
-    let regionCodes = this._appliedFilter().regionCodes;
-    let subregionCodes = this._appliedFilter().subregionCodes;
+    let rCodesResult = this._appliedFilter().regionCodes;
+    let srCodesResult = this._appliedFilter().subregionCodes;
     
     if(selected) {
-      regionCodes.push(code);
-      subregionCodes.push(...this.getSubregionCodes(code));
+      rCodesResult.push(code);
+      srCodesResult.push(...this.getSubregionCodes(code));
     }
     else {
-      regionCodes = regionCodes.filter(rCode => rCode != code)
-      subregionCodes = subregionCodes.filter(srCode => !this.getSubregionCodes(code).includes(srCode));
+      rCodesResult = rCodesResult.filter(rCode => rCode != code)
+      srCodesResult = srCodesResult.filter(srCode => !this.getSubregionCodes(code).includes(srCode));
     }
     
     this._appliedFilter.set({ 
-      regionCodes,
-      subregionCodes,
+      regionCodes: [...new Set(rCodesResult)],
+      subregionCodes: [...new Set(srCodesResult)],
       countryCode: '' 
     });
   }
 
-  private getSubregionCodes(regionCode: string): string[] {
-    return this.regionsFilter().find(r => r.code === regionCode)?.subItems?.map(sr => sr.code) || [];
-  }
-
   applySubregionFilter(selected: boolean, code: string) {
-    const subregionCode = selected ? code : '';
+    let rCodesResult = this._appliedFilter().regionCodes;
+    let srCodesResult = this._appliedFilter().subregionCodes;
     
+    if(selected) {
+      srCodesResult.push(code);
+    }
+    else {
+      srCodesResult = srCodesResult.filter(srCode => srCode != code);
+    }
+
     this._appliedFilter.set({ 
-      regionCodes: [],
-      subregionCodes: [],
+      regionCodes: [...new Set(rCodesResult)],
+      subregionCodes: [...new Set(srCodesResult)],
       countryCode: '' 
     });
   }
@@ -103,4 +107,9 @@ export class FiltersService {
       countryCode 
     });
   }
+
+  private getSubregionCodes(regionCode: string): string[] {
+    return this.regionsFilter().find(r => r.code === regionCode)?.subItems?.map(sr => sr.code) || [];
+  }
+
 }
