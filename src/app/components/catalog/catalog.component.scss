@@ -1,10 +1,12 @@
+@import '../../../styles_constants.scss';
+
 .card {
   width: 450px;
-  box-shadow: 2px 2px 4px lightgray;
+  box-shadow: $appboxshadow;
   animation: fadeIn 1s;
 
   .card-body {
-    border-top: 1px solid rgba(0, 0, 0, 0.175);
+    border-top: $appborder;
 
     .card-title {
       text-decoration: none;

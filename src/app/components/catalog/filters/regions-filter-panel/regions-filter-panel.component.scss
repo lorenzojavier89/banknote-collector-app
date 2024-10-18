@@ -1,3 +1,5 @@
+@import '../../../../../styles_constants.scss';
+
 ul {
   list-style-type: none;
   padding-left: 0px;
@@ -8,6 +10,6 @@ ul {
 }
 
 .region-section {
-  border-top: 1px solid;
+  border-top: $appborder;
   margin-bottom: 20px;
 }
