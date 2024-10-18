@@ -3,6 +3,7 @@ import { CatalogService } from './catalog.service';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { Filter } from '../models/filters/filter.model';
 import { Banknote } from '../models/banknote.model';
+import { Issuer } from '../models/issuer.model';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +25,18 @@ export class FiltersService {
         selected: false,
         highlighted: false,
       })),
+    }))
+  );
+
+  private _issuers = computed<Issuer[]>(() => 
+    Array.from(this.catalogService.issuers().values())
+      .sort((a, b) => a.country.name.localeCompare(b.country.name)));
+  
+  issuersFilter = computed<FilterItem[]>(() => 
+    this._issuers().map<FilterItem>(i => ({
+      ...i.country,
+      selected: false,
+      highlighted: false
     }))
   );
 

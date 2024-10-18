@@ -19,8 +19,10 @@
 <div class="filter-expansion-panel">
   <app-filter-expansion-panel title="Emisores">
     <ul>
-      @for (issuer of issuers(); track issuer.country.code) {
-        <li>{{ issuer.country.name }}</li>
+      @for (i of issuersFilter(); track i.code) {
+        <li>
+          {{ i.name }}
+        </li>
       }
     </ul>
   </app-filter-expansion-panel>
