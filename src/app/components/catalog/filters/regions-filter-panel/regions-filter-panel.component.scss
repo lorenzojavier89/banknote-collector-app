@@ -12,4 +12,8 @@ ul {
 .region-section {
   border-top: $appborder;
   margin-bottom: 20px;
+
+  .region-title {
+    font-size: 18px;
+  }
 }
