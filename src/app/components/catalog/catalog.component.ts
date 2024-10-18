@@ -1,6 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CatalogService } from '../../services/catalog.service';
 import { FiltersComponent } from "./filters/filters.component";
 import { FiltersService } from '../../services/filters.service';
 
