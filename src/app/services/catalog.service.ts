@@ -1,4 +1,4 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CatalogApiResponse } from '../models/catalog-api-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -70,7 +70,10 @@ export class CatalogService {
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
   regions = toSignal(this.regions$, { initialValue: []});
-  issuers = toSignal(this.issuers$, { initialValue: new Map<string, Issuer>()});
+  issuersLookup = toSignal(this.issuers$, { initialValue: new Map<string, Issuer>()});
+  issuers = computed<Issuer[]>(() => 
+    Array.from(this.issuersLookup().values())
+    .sort((a, b) => a.country.name.localeCompare(b.country.name)));
     
   private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
   readonly selectedBanknote = this._selectedBanknote.asReadonly();
