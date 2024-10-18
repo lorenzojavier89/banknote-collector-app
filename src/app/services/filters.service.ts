@@ -45,20 +45,14 @@ export class FiltersService {
   filteredBanknotes = computed<Banknote[]>(() => {
     const appliedFilter = this._appliedFilter();
     const banknotes = this.catalogService.banknotes();
-    
-    if(appliedFilter.regionCode){
-      return banknotes.filter((b) => b.issuer.regionCode === appliedFilter.regionCode);
-    }
 
-    if(appliedFilter.subregionCode){
-      return banknotes.filter((b) => b.issuer.subregionCode === appliedFilter.subregionCode);
-    }
+    return banknotes.filter((b) => {
+        const matchesRegion = !appliedFilter.regionCode || b.issuer.regionCode === appliedFilter.regionCode;
+        const matchesSubregion = !appliedFilter.subregionCode || b.issuer.subregionCode === appliedFilter.subregionCode;
+        const matchesCountry = !appliedFilter.countryCode || b.issuer.country.code === appliedFilter.countryCode;
 
-    if(appliedFilter.countryCode){
-      return banknotes.filter((b) => b.issuer.country.code === appliedFilter.countryCode);
-    }   
-
-    return banknotes;
+        return matchesRegion && matchesSubregion && matchesCountry;
+    });
   });
 
   applyRegionFilter(selected: boolean, code: string) {
