@@ -1,34 +1,6 @@
-<app-filter-expansion-panel title="Regiones">
-  <ul>
-    @for (r of regionsFilter(); track r.code) {
-      <li>
-        <mat-checkbox [checked]="r.selected" (change)="applyRegionFilter($event.checked, r.code)">
-          {{ r.name }}
-        </mat-checkbox>
-        <ul>
-          @for (sr of r.subItems; track sr.code) {
-            <li> 
-              <mat-checkbox [checked]="sr.selected" (change)="applySubregionFilter($event.checked, sr.code)">
-                {{ sr.name }}
-              </mat-checkbox>
-            </li>
-          }
-        </ul>
-      </li>
-    }
-  </ul>
-</app-filter-expansion-panel>
-<app-filter-expansion-panel title="Emisores">
-  <ul>
-    @for (i of issuersFilter(); track i.code) {
-      <li>
-        <mat-checkbox [checked]="i.selected" (change)="applyCountryFilter($event.checked, i.code)">
-          {{ i.name }}
-        </mat-checkbox>
-      </li>
-    }
-  </ul>
-</app-filter-expansion-panel>
+<app-regions-filter-panel></app-regions-filter-panel>
+<app-issuers-filter-panel></app-issuers-filter-panel>
+
 
 
 
