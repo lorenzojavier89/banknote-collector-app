@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../services/filters.service';
+import { FilterItem } from '../../../../models/filters/filter-item.model';
 
 @Component({
   selector: 'app-regions-filter-panel',
@@ -15,11 +16,11 @@ export class RegionsFilterPanelComponent {
 
   regionsFilter = this.filtersService.regionsFilter;
 
-  applyRegionFilter(selected: boolean, code: string) {
-    this.filtersService.applyRegionFilter(selected, code);
+  applyRegionFilter(selected: boolean, regionFilterItem: FilterItem) {
+    this.filtersService.applyRegionFilter(selected, regionFilterItem.code, regionFilterItem.subItems?.map(sr => sr.code) || []);
   }
 
-  applySubregionFilter(selected: boolean, code: string) {
-    this.filtersService.applySubregionFilter(selected, code);
+  applySubregionFilter(selected: boolean, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+    this.filtersService.applySubregionFilter(selected, regionFilterItem.code, subregionFilterItem.code);
   }
 }

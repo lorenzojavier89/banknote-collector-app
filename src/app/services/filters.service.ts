@@ -60,17 +60,17 @@ export class FiltersService {
     });
   });
 
-  applyRegionFilter(selected: boolean, code: string) {
+  applyRegionFilter(selected: boolean, regionCode: string, subregionCodes: string[]) {
     let rCodesResult = this._appliedFilter().regionCodes;
     let srCodesResult = this._appliedFilter().subregionCodes;
     
     if(selected) {
-      rCodesResult.push(code);
-      srCodesResult.push(...this.getSubregionCodes(code));
+      rCodesResult.push(regionCode);
+      srCodesResult.push(...subregionCodes);
     }
     else {
-      rCodesResult = rCodesResult.filter(rCode => rCode != code)
-      srCodesResult = srCodesResult.filter(srCode => !this.getSubregionCodes(code).includes(srCode));
+      rCodesResult = rCodesResult.filter(rCode => rCode != regionCode)
+      srCodesResult = srCodesResult.filter(srCode => !subregionCodes.includes(srCode));
     }
     
     this._appliedFilter.set({ 
@@ -80,15 +80,16 @@ export class FiltersService {
     });
   }
 
-  applySubregionFilter(selected: boolean, code: string) {
+  applySubregionFilter(selected: boolean, regionCode: string, subregionCode: string) {
     let rCodesResult = this._appliedFilter().regionCodes;
     let srCodesResult = this._appliedFilter().subregionCodes;
     
     if(selected) {
-      srCodesResult.push(code);
+      srCodesResult.push(subregionCode);
     }
     else {
-      srCodesResult = srCodesResult.filter(srCode => srCode != code);
+      rCodesResult = rCodesResult.filter(rCode => rCode != regionCode);
+      srCodesResult = srCodesResult.filter(srCode => srCode != subregionCode);
     }
 
     this._appliedFilter.set({ 
@@ -107,9 +108,4 @@ export class FiltersService {
       countryCode 
     });
   }
-
-  private getSubregionCodes(regionCode: string): string[] {
-    return this.regionsFilter().find(r => r.code === regionCode)?.subItems?.map(sr => sr.code) || [];
-  }
-
 }

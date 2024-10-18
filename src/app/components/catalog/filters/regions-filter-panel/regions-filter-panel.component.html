@@ -2,13 +2,13 @@
     <ul>
       @for (r of regionsFilter(); track r.code) {
         <li>
-          <mat-checkbox [checked]="r.selected" (change)="applyRegionFilter($event.checked, r.code)">
+          <mat-checkbox [checked]="r.selected" (change)="applyRegionFilter($event.checked, r)">
             {{ r.name }}
           </mat-checkbox>
           <ul>
             @for (sr of r.subItems; track sr.code) {
               <li> 
-                <mat-checkbox [checked]="sr.selected" (change)="applySubregionFilter($event.checked, sr.code)">
+                <mat-checkbox [checked]="sr.selected" (change)="applySubregionFilter($event.checked, r, sr)">
                   {{ sr.name }}
                 </mat-checkbox>
               </li>
