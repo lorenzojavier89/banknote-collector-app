@@ -10,15 +10,11 @@ import { Banknote } from '../models/banknote.model';
 export class FiltersService {
   private catalogService: CatalogService = inject(CatalogService);
 
-  private readonly _appliedFilter = signal<AppliedFilter>({
-    regionCodes: [],
-    subregionCodes: [],
-    countryCode: ''
-  });
+  private readonly _appliedFilter = signal<AppliedFilter>(new AppliedFilter());
 
   constructor() {
     effect(() => {
-      console.log(this._appliedFilter());
+      console.log(this._appliedFilter().anyFilterApplied());
     });
   }
 
@@ -51,6 +47,10 @@ export class FiltersService {
     const appliedFilter = this._appliedFilter();
     const banknotes = this.catalogService.banknotes();
 
+    if(!appliedFilter.anyFilterApplied()) {
+      return banknotes;
+    }
+
     return banknotes.filter((b) => {
         const matchesRegion = appliedFilter.regionCodes && appliedFilter.regionCodes.includes(b.issuer.regionCode);
         const matchesSubregion = appliedFilter.subregionCodes && appliedFilter.subregionCodes.includes(b.issuer.subregionCode);
@@ -73,11 +73,7 @@ export class FiltersService {
       srCodesResult = srCodesResult.filter(srCode => !subregionCodes.includes(srCode));
     }
     
-    this._appliedFilter.set({ 
-      regionCodes: [...new Set(rCodesResult)],
-      subregionCodes: [...new Set(srCodesResult)],
-      countryCode: '' 
-    });
+    this._appliedFilter.set(new AppliedFilter(rCodesResult, srCodesResult));
   }
 
   applySubregionFilter(selected: boolean, regionCode: string, subregionCode: string) {
@@ -92,20 +88,12 @@ export class FiltersService {
       srCodesResult = srCodesResult.filter(srCode => srCode != subregionCode);
     }
 
-    this._appliedFilter.set({ 
-      regionCodes: [...new Set(rCodesResult)],
-      subregionCodes: [...new Set(srCodesResult)],
-      countryCode: '' 
-    });
+    this._appliedFilter.set(new AppliedFilter(rCodesResult, srCodesResult));
   }
 
   applyCountryFilter(selected: boolean, code: string) {
     const countryCode = selected ? code : '';
     
-    this._appliedFilter.set({ 
-      regionCodes: [],
-      subregionCodes: [],
-      countryCode 
-    });
+    this._appliedFilter.set(new AppliedFilter([], [], countryCode));
   }
 }
