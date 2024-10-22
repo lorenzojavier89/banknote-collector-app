@@ -3,7 +3,6 @@
 .card {
   width: 450px;
   box-shadow: $appboxshadow;
-  animation: fadeIn 1s;
 
   .card-body {
     border-top: $appborder;
@@ -29,14 +28,5 @@
     .card-comment {
       font-style: italic;
     }
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
