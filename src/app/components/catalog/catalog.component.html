@@ -8,22 +8,9 @@
     <hr />
     <div class="row">
         @for (b of filteredBanknotes(); track b.id) {
-            <div class="col-4 mb-3">
-                <div class="card text-bg-light">
-                  <img
-                    [src]="b.imageUrl"
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <a class="card-title" [routerLink]="['/catalog', b.id]">
-                        <img [src]="b.issuer.country.flagIcon" width="24"> 
-                        <span>{{ b.issuer.country.name }} - {{ b.denomination }} [{{ b.issueDate }}]</span>
-                    </a>
-                    <p class="card-text">#{{b.order}} - Tomo {{ b.volume }}</p>
-                    <small class="text-body-secondary card-comment">{{ b.comment }}</small>
-                  </div>
-                </div>
-            </div>
+          <div class="col-4 mb-3">
+            <app-banknote-card [banknote]="b" />
+          </div>  
         }
     </div>
   </section>

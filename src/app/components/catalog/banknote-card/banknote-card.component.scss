@@ -1,0 +1,42 @@
+@import '../../../../styles_constants.scss';
+
+.card {
+  width: 450px;
+  box-shadow: $appboxshadow;
+  animation: fadeIn 1s;
+
+  .card-body {
+    border-top: $appborder;
+
+    .card-title {
+      text-decoration: none;
+
+      span {
+        margin-left: 5px;
+        font-weight: 600;
+      }
+
+      span:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .card-text {
+      margin-top: 5px;
+      margin-bottom: 2px;
+    }
+
+    .card-comment {
+      font-style: italic;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
