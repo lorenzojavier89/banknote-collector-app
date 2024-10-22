@@ -8,9 +8,7 @@
     <hr />
     <div class="row">
         @for (b of filteredBanknotes(); track b.id) {
-          <div class="col-4 mb-3">
-            <app-banknote-card [banknote]="b" />
-          </div>  
+          <app-banknote-card class="col-4 mb-3" [banknote]="b" />
         }
     </div>
   </section>
