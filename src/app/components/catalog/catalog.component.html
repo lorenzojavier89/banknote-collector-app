@@ -7,9 +7,7 @@
     <h6>Sin filtros aplicados</h6>
     <hr />
     <div class="row">
-        @for (b of filteredBanknotes(); track b.id) {
-          <app-banknote-card class="col-4 mb-3" [banknote]="b" />
-        }
+      <app-banknote-card class="col-4 mb-3" *ngFor="let b of filteredBanknotes()" [banknote]="b" @fadeInOut />
     </div>
   </section>
 </section>
