@@ -10,9 +10,8 @@ import { trigger, transition, style, animate } from '@angular/animations';
   templateUrl: './banknote-card.component.html',
   styleUrl: './banknote-card.component.scss',
   animations: [
-    trigger('fadeInOut', [
+    trigger('fadeIn', [
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
-      transition(':leave', [animate('1s', style({opacity: 0}))]),
     ]),
   ]
 })
