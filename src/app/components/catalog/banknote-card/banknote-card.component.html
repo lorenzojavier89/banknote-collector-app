@@ -1,8 +1,5 @@
 <div class="card text-bg-light">
-    <img
-    [src]="banknote().imageUrl"
-    class="card-img-top"
-    />
+    <app-image-loader class="card-img-top" [src]="banknote().imageUrl" />
     <div class="card-body">
         <a class="card-title" [routerLink]="['/catalog', banknote().id]">
             <img [src]="banknote().issuer.country.flagIcon" width="24"> 
