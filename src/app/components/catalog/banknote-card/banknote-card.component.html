@@ -4,12 +4,12 @@
     class="card-img-top"
     />
     <div class="card-body">
-    <a class="card-title" [routerLink]="['/catalog', banknote().id]">
-        <img [src]="banknote().issuer.country.flagIcon" width="24"> 
-        <span>{{ banknote().issuer.country.name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
-    </a>
-    <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
-    <small class="text-body-secondary card-comment">{{ banknote().comment }}</small>
+        <a class="card-title" [routerLink]="['/catalog', banknote().id]">
+            <img [src]="banknote().issuer.country.flagIcon" width="24"> 
+            <span>{{ banknote().issuer.country.name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
+        </a>
+        <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
+        <small class="text-body-secondary card-comment">{{ banknote().comment }}</small>
     </div>
 </div>
 

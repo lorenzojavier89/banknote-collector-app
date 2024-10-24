@@ -4,6 +4,10 @@
   width: 450px;
   box-shadow: $appboxshadow;
 
+  .card-img-top {
+    min-height: 150px;
+  }
+
   .card-body {
     border-top: $appborder;
 
