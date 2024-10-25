@@ -40,14 +40,14 @@
         "imageUrl": "assets/images/banknotes/ARG0022-sm-front.jpg"
     },
     {
-        "id": "ARG0044",
+        "id": "ARGLECOP0044",
         "order": 44,
         "volume": "Negro",
         "issuerCode": "ARG",
         "issueDate": "2001",
         "denomination": "5 Pesos (Bono Lecop)",
         "onlineCatalog": "https://es.numista.com/catalogue/note222582.html",
-        "imageUrl": "assets/images/banknotes/ARG0044-sm-front.jpg"
+        "imageUrl": "assets/images/banknotes/ARGLECOP0044-sm-front.jpg"
     },
     {
         "id": "PRY0008",
