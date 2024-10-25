@@ -162,7 +162,8 @@
           { "code": "UKR", "name": "Ucrania" },
           { "code": "ROU", "name": "Rumania" },
           { "code": "RUS", "name": "Rusia" },
-          { "code": "GEO", "name": "Georgia" }
+          { "code": "GEO", "name": "Georgia" },
+          { "code": "SVK", "name": "Eslovaquia" }
         ]
       },
       {
