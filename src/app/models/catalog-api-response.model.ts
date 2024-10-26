@@ -4,10 +4,10 @@ export interface CatalogApiResponse {
   volume: string;
   issuerCode: string;
   subgroup: string;
-  historicalPeriod?: string;
+  historicalPeriod: string;
   issueDate: string;
   denomination: string;
   onlineCatalog: string;
   imageUrl: string;
-  comment?: string;
+  comment: string;
 }
