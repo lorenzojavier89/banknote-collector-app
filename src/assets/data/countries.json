@@ -512,46 +512,22 @@
       {
         "code": "AUS",
         "name": "Australasia",
-        "countries": [
-          {
-            "code": "",
-            "name": "",
-            "flagIcon": ""
-          }
-        ]
+        "countries": []
       },
       {
         "code": "MEL",
         "name": "Melanesia",
-        "countries": [
-          {
-            "code": "",
-            "name": "",
-            "flagIcon": ""
-          }
-        ]
+        "countries": []
       },
       {
         "code": "MIC",
         "name": "Micronesia",
-        "countries": [
-          {
-            "code": "",
-            "name": "",
-            "flagIcon": ""
-          }
-        ]
+        "countries": []
       },
       {
         "code": "POL",
         "name": "Polinesia",
-        "countries": [
-          {
-            "code": "",
-            "name": "",
-            "flagIcon": ""
-          }
-        ]
+        "countries": []
       }
     ]
   }
