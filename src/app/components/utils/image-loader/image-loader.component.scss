@@ -1,3 +1,9 @@
-img.default {
-    opacity: 0.2;
+img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    &.default {
+        opacity: 0.2;
+    }
+
 }
