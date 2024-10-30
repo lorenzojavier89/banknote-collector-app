@@ -533,8 +533,21 @@
     "comment": ""
   },
   {
-    "id": "ARG-PAT0042",
+    "id": "ARG-CHACH0045",
     "order": 42,
+    "volume": "Negro",
+    "issuerCode": "ARG",
+    "subgroup": "Cuasimonedas Argentinas (Provincia de La Rioja)",
+    "historicalPeriod": "",
+    "issueDate": "2024",
+    "denomination": "2.000 Chachos",
+    "onlineCatalog": "https://es.numista.com/catalogue/note423419.html",
+    "imageUrl": "assets/images/banknotes/ARG-CHACH0045-sm-front.jpg",
+    "comment": "Me lo trajo mi Gazpacha de Buenos Aires (Octubre 2024). Lo compró en la Numismática Kurchan"
+  },
+  {
+    "id": "ARG-PAT0042",
+    "order": 43,
     "volume": "Negro",
     "issuerCode": "ARG",
     "subgroup": "Cuasimonedas Argentinas (Provincia de Buenos Aires)",
@@ -547,7 +560,7 @@
   },
   {
     "id": "ARG-PAT0043",
-    "order": 43,
+    "order": 44,
     "volume": "Negro",
     "issuerCode": "ARG",
     "subgroup": "Cuasimonedas Argentinas (Provincia de Buenos Aires)",
@@ -560,7 +573,7 @@
   },
   {
     "id": "ARG-LECOP0044",
-    "order": 44,
+    "order": 45,
     "volume": "Negro",
     "issuerCode": "ARG",
     "subgroup": "Cuasimonedas Argentinas",
@@ -573,7 +586,7 @@
   },
   {
     "id": "BOL0001",
-    "order": 45,
+    "order": 46,
     "volume": "Negro",
     "issuerCode": "BOL",
     "subgroup": "",
@@ -586,7 +599,7 @@
   },
   {
     "id": "BOL0002",
-    "order": 46,
+    "order": 47,
     "volume": "Negro",
     "issuerCode": "BOL",
     "subgroup": "",
@@ -599,7 +612,7 @@
   },
   {
     "id": "BOL0003",
-    "order": 47,
+    "order": 48,
     "volume": "Negro",
     "issuerCode": "BOL",
     "subgroup": "",
@@ -612,7 +625,7 @@
   },
   {
     "id": "BRA0001",
-    "order": 48,
+    "order": 49,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -625,7 +638,7 @@
   },
   {
     "id": "BRA0002",
-    "order": 49,
+    "order": 50,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -638,7 +651,7 @@
   },
   {
     "id": "BRA0003",
-    "order": 50,
+    "order": 51,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -651,7 +664,7 @@
   },
   {
     "id": "BRA0004",
-    "order": 51,
+    "order": 52,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -664,7 +677,7 @@
   },
   {
     "id": "BRA0005",
-    "order": 52,
+    "order": 53,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -677,7 +690,7 @@
   },
   {
     "id": "BRA0006",
-    "order": 53,
+    "order": 54,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -690,7 +703,7 @@
   },
   {
     "id": "BRA0007",
-    "order": 54,
+    "order": 55,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -703,7 +716,7 @@
   },
   {
     "id": "BRA0008",
-    "order": 55,
+    "order": 56,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -716,7 +729,7 @@
   },
   {
     "id": "BRA0009",
-    "order": 56,
+    "order": 57,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -729,7 +742,7 @@
   },
   {
     "id": "BRA0010",
-    "order": 57,
+    "order": 58,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -742,7 +755,7 @@
   },
   {
     "id": "BRA0011",
-    "order": 58,
+    "order": 59,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -755,7 +768,7 @@
   },
   {
     "id": "BRA0012",
-    "order": 59,
+    "order": 60,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -767,21 +780,21 @@
     "comment": ""
   },
   {
-    "id": "BRA0013",
-    "order": 60,
+    "id": "BOL0004",
+    "order": 61,
     "volume": "Negro",
-    "issuerCode": "BRA",
+    "issuerCode": "BOL",
     "subgroup": "",
     "historicalPeriod": "",
     "issueDate": "1962",
     "denomination": "5 Pesos bolivianos",
     "onlineCatalog": "https://es.numista.com/catalogue/note232850.html",
-    "imageUrl": "assets/images/banknotes/BRA0013-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BOL0004-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0014",
-    "order": 61,
+    "id": "BRA0013",
+    "order": 62,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -789,12 +802,12 @@
     "issueDate": "1990",
     "denomination": "500 Cruzeiros (500 Cruzados Novos)",
     "onlineCatalog": "https://es.numista.com/catalogue/note202105.html",
-    "imageUrl": "assets/images/banknotes/BRA0014-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0013-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0015",
-    "order": 62,
+    "id": "BRA0014",
+    "order": 63,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -802,12 +815,12 @@
     "issueDate": "1989",
     "denomination": "5 Cruzados Novos (5000 Cruzados)",
     "onlineCatalog": "https://es.numista.com/catalogue/note206089.html",
-    "imageUrl": "assets/images/banknotes/BRA0015-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0014-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0016",
-    "order": 63,
+    "id": "BRA0015",
+    "order": 64,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -815,12 +828,12 @@
     "issueDate": "1990-1991",
     "denomination": "1000 Cruzeiros",
     "onlineCatalog": "https://es.numista.com/catalogue/note206098.html",
-    "imageUrl": "assets/images/banknotes/BRA0016-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0015-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0017",
-    "order": 64,
+    "id": "BRA0016",
+    "order": 65,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -828,12 +841,12 @@
     "issueDate": "1990-1993",
     "denomination": "5000 Cruzeiros",
     "onlineCatalog": "https://es.numista.com/catalogue/note206099.html",
-    "imageUrl": "assets/images/banknotes/BRA0017-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0016-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0018",
-    "order": 65,
+    "id": "BRA0017",
+    "order": 66,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -841,12 +854,12 @@
     "issueDate": "1998",
     "denomination": "1 Real",
     "onlineCatalog": "https://es.numista.com/catalogue/note203534.html",
-    "imageUrl": "assets/images/banknotes/BRA0018-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0017-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0019",
-    "order": 66,
+    "id": "BRA0018",
+    "order": 67,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -854,12 +867,12 @@
     "issueDate": "2009",
     "denomination": "2 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note205028.html",
-    "imageUrl": "assets/images/banknotes/BRA0019-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0018-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0020",
-    "order": 67,
+    "id": "BRA0019",
+    "order": 68,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -867,12 +880,12 @@
     "issueDate": "2009",
     "denomination": "5 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note212656.html",
-    "imageUrl": "assets/images/banknotes/BRA0020-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0019-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0021",
-    "order": 68,
+    "id": "BRA0020",
+    "order": 69,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -880,12 +893,12 @@
     "issueDate": "2008",
     "denomination": "10 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note209797.html",
-    "imageUrl": "assets/images/banknotes/BRA0021-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0020-sm-front.jpg",
     "comment": ""
   },
   {
-    "id": "BRA0022",
-    "order": 69,
+    "id": "BRA0021",
+    "order": 70,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -893,12 +906,12 @@
     "issueDate": "2000-2001",
     "denomination": "10 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202403.html",
-    "imageUrl": "assets/images/banknotes/BRA0022-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0021-sm-front.jpg",
     "comment": "Billete conmemorativo por los 500 años del descubrimiento de Brasil"
   },
   {
-    "id": "BRA0023",
-    "order": 70,
+    "id": "BRA0022",
+    "order": 71,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -906,12 +919,12 @@
     "issueDate": "2013",
     "denomination": "2 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202197.html",
-    "imageUrl": "assets/images/banknotes/BRA0023-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0022-sm-front.jpg",
     "comment": "Lo traje de mi viaje a Río de Janeiro con el Emi"
   },
   {
-    "id": "BRA0024",
-    "order": 71,
+    "id": "BRA0023",
+    "order": 72,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -919,12 +932,12 @@
     "issueDate": "2015",
     "denomination": "5 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note201713.html",
-    "imageUrl": "assets/images/banknotes/BRA0024-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0023-sm-front.jpg",
     "comment": "Lo traje de mi viaje a Río de Janeiro con el Emi"
   },
   {
-    "id": "BRA0025",
-    "order": 72,
+    "id": "BRA0024",
+    "order": 73,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -932,12 +945,12 @@
     "issueDate": "2014",
     "denomination": "10 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202203.html",
-    "imageUrl": "assets/images/banknotes/BRA0025-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0024-sm-front.jpg",
     "comment": "Lo traje de mi viaje a Río de Janeiro con el Emi"
   },
   {
-    "id": "BRA0026",
-    "order": 73,
+    "id": "BRA0025",
+    "order": 74,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -945,12 +958,12 @@
     "issueDate": "2014-2015",
     "denomination": "20 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202208.html",
-    "imageUrl": "assets/images/banknotes/BRA0026-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0025-sm-front.jpg",
     "comment": "Lo traje de mi viaje a Río de Janeiro con el Emi"
   },
   {
-    "id": "BRA0027",
-    "order": 74,
+    "id": "BRA0026",
+    "order": 75,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -958,12 +971,12 @@
     "issueDate": "2011-2014",
     "denomination": "50 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202212.html",
-    "imageUrl": "assets/images/banknotes/BRA0027-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0026-sm-front.jpg",
     "comment": "Lo traje de mi viaje a Río de Janeiro con el Emi"
   },
   {
-    "id": "BRA0028",
-    "order": 75,
+    "id": "BRA0027",
+    "order": 76,
     "volume": "Negro",
     "issuerCode": "BRA",
     "subgroup": "",
@@ -971,12 +984,12 @@
     "issueDate": "2014-2015",
     "denomination": "100 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202214.html",
-    "imageUrl": "assets/images/banknotes/BRA0028-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/BRA0027-sm-front.jpg",
     "comment": "Lo traje de mi viaje a Río de Janeiro con el Emi"
   },
   {
     "id": "CHL0001",
-    "order": 76,
+    "order": 77,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -989,7 +1002,7 @@
   },
   {
     "id": "CHL0002",
-    "order": 77,
+    "order": 78,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1002,7 +1015,7 @@
   },
   {
     "id": "CHL0003",
-    "order": 78,
+    "order": 79,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1015,7 +1028,7 @@
   },
   {
     "id": "CHL0004",
-    "order": 79,
+    "order": 80,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1028,7 +1041,7 @@
   },
   {
     "id": "CHL0005",
-    "order": 80,
+    "order": 81,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1041,7 +1054,7 @@
   },
   {
     "id": "CHL0006",
-    "order": 81,
+    "order": 82,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1054,7 +1067,7 @@
   },
   {
     "id": "CHL0007",
-    "order": 82,
+    "order": 83,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1067,7 +1080,7 @@
   },
   {
     "id": "CHL0008",
-    "order": 83,
+    "order": 84,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1080,7 +1093,7 @@
   },
   {
     "id": "CHL0009",
-    "order": 84,
+    "order": 85,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1093,7 +1106,7 @@
   },
   {
     "id": "CHL0010",
-    "order": 85,
+    "order": 86,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1106,7 +1119,7 @@
   },
   {
     "id": "CHL0011",
-    "order": 86,
+    "order": 87,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1119,7 +1132,7 @@
   },
   {
     "id": "CHL0012",
-    "order": 87,
+    "order": 88,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1132,7 +1145,7 @@
   },
   {
     "id": "CHL0013",
-    "order": 88,
+    "order": 89,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1145,7 +1158,7 @@
   },
   {
     "id": "CHL0014",
-    "order": 89,
+    "order": 90,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1158,7 +1171,7 @@
   },
   {
     "id": "CHL0015",
-    "order": 90,
+    "order": 91,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1171,7 +1184,7 @@
   },
   {
     "id": "CHL0016",
-    "order": 91,
+    "order": 92,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1184,7 +1197,7 @@
   },
   {
     "id": "CHL0017",
-    "order": 92,
+    "order": 93,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1197,7 +1210,7 @@
   },
   {
     "id": "CHL0018",
-    "order": 93,
+    "order": 94,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1210,7 +1223,7 @@
   },
   {
     "id": "CHL0019",
-    "order": 94,
+    "order": 95,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1223,7 +1236,7 @@
   },
   {
     "id": "CHL0020",
-    "order": 95,
+    "order": 96,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1236,7 +1249,7 @@
   },
   {
     "id": "CHL0021",
-    "order": 96,
+    "order": 97,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1249,7 +1262,7 @@
   },
   {
     "id": "CHL0022",
-    "order": 97,
+    "order": 98,
     "volume": "Negro",
     "issuerCode": "CHL",
     "subgroup": "",
@@ -1262,7 +1275,7 @@
   },
   {
     "id": "PRY0001",
-    "order": 98,
+    "order": 99,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1275,7 +1288,7 @@
   },
   {
     "id": "PRY0002",
-    "order": 99,
+    "order": 100,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1288,7 +1301,7 @@
   },
   {
     "id": "PRY0003",
-    "order": 100,
+    "order": 101,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1301,7 +1314,7 @@
   },
   {
     "id": "PRY0004",
-    "order": 101,
+    "order": 102,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1314,7 +1327,7 @@
   },
   {
     "id": "PRY0005",
-    "order": 102,
+    "order": 103,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1327,7 +1340,7 @@
   },
   {
     "id": "PRY0006",
-    "order": 103,
+    "order": 104,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1340,7 +1353,7 @@
   },
   {
     "id": "PRY0007",
-    "order": 104,
+    "order": 105,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1353,7 +1366,7 @@
   },
   {
     "id": "PRY0008",
-    "order": 105,
+    "order": 106,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1366,7 +1379,7 @@
   },
   {
     "id": "PRY0009",
-    "order": 106,
+    "order": 107,
     "volume": "Negro",
     "issuerCode": "PRY",
     "subgroup": "",
@@ -1379,7 +1392,7 @@
   },
   {
     "id": "PER0001",
-    "order": 107,
+    "order": 108,
     "volume": "Negro",
     "issuerCode": "PER",
     "subgroup": "",
@@ -1392,7 +1405,7 @@
   },
   {
     "id": "PER0002",
-    "order": 108,
+    "order": 109,
     "volume": "Negro",
     "issuerCode": "PER",
     "subgroup": "",
@@ -1405,7 +1418,7 @@
   },
   {
     "id": "PER0003",
-    "order": 109,
+    "order": 110,
     "volume": "Negro",
     "issuerCode": "PER",
     "subgroup": "",
@@ -1418,7 +1431,7 @@
   },
   {
     "id": "PER0004",
-    "order": 110,
+    "order": 111,
     "volume": "Negro",
     "issuerCode": "PER",
     "subgroup": "",
@@ -1431,7 +1444,7 @@
   },
   {
     "id": "PER0005",
-    "order": 111,
+    "order": 112,
     "volume": "Negro",
     "issuerCode": "PER",
     "subgroup": "",
@@ -1444,7 +1457,7 @@
   },
   {
     "id": "URY0001",
-    "order": 112,
+    "order": 113,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1457,7 +1470,7 @@
   },
   {
     "id": "URY0002",
-    "order": 113,
+    "order": 114,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1470,7 +1483,7 @@
   },
   {
     "id": "URY0003",
-    "order": 114,
+    "order": 115,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1483,7 +1496,7 @@
   },
   {
     "id": "URY0004",
-    "order": 115,
+    "order": 116,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1496,7 +1509,7 @@
   },
   {
     "id": "URY0005",
-    "order": 116,
+    "order": 117,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1509,7 +1522,7 @@
   },
   {
     "id": "URY0006",
-    "order": 117,
+    "order": 118,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1522,7 +1535,7 @@
   },
   {
     "id": "URY0007",
-    "order": 118,
+    "order": 119,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1535,7 +1548,7 @@
   },
   {
     "id": "URY0008",
-    "order": 119,
+    "order": 120,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1548,7 +1561,7 @@
   },
   {
     "id": "URY0009",
-    "order": 120,
+    "order": 121,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1561,7 +1574,7 @@
   },
   {
     "id": "URY0010",
-    "order": 121,
+    "order": 122,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1574,7 +1587,7 @@
   },
   {
     "id": "URY0011",
-    "order": 122,
+    "order": 123,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1587,7 +1600,7 @@
   },
   {
     "id": "URY0012",
-    "order": 123,
+    "order": 124,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1600,7 +1613,7 @@
   },
   {
     "id": "URY0013",
-    "order": 124,
+    "order": 125,
     "volume": "Negro",
     "issuerCode": "URY",
     "subgroup": "",
@@ -1613,7 +1626,7 @@
   },
   {
     "id": "GBR-ENG0001",
-    "order": 125,
+    "order": 126,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Inglaterra",
@@ -1626,7 +1639,7 @@
   },
   {
     "id": "GBR-ENG0002",
-    "order": 126,
+    "order": 127,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Inglaterra",
@@ -1639,7 +1652,7 @@
   },
   {
     "id": "GBR-ENG0003",
-    "order": 127,
+    "order": 128,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Inglaterra",
@@ -1652,7 +1665,7 @@
   },
   {
     "id": "GBR-SCT0004",
-    "order": 128,
+    "order": 129,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Escocia",
@@ -1665,7 +1678,7 @@
   },
   {
     "id": "GBR-SCT0005",
-    "order": 129,
+    "order": 130,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Escocia",
@@ -1678,7 +1691,7 @@
   },
   {
     "id": "GBR-SCT0006",
-    "order": 130,
+    "order": 131,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Escocia",
@@ -1691,7 +1704,7 @@
   },
   {
     "id": "GBR-BAF0007",
-    "order": 131,
+    "order": 132,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "subgroup": "Fuerzas Armadas Británicas",
@@ -1704,7 +1717,7 @@
   },
   {
     "id": "NOR0001",
-    "order": 132,
+    "order": 133,
     "volume": "Rojo",
     "issuerCode": "NOR",
     "subgroup": "",
@@ -1717,7 +1730,7 @@
   },
   {
     "id": "NOR0002",
-    "order": 133,
+    "order": 134,
     "volume": "Rojo",
     "issuerCode": "NOR",
     "subgroup": "",
@@ -1730,7 +1743,7 @@
   },
   {
     "id": "ESP0001",
-    "order": 134,
+    "order": 135,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1743,7 +1756,7 @@
   },
   {
     "id": "ESP0002",
-    "order": 135,
+    "order": 136,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1756,7 +1769,7 @@
   },
   {
     "id": "ESP0003",
-    "order": 136,
+    "order": 137,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1769,7 +1782,7 @@
   },
   {
     "id": "ESP0004",
-    "order": 137,
+    "order": 138,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1782,7 +1795,7 @@
   },
   {
     "id": "ESP0005",
-    "order": 138,
+    "order": 139,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1795,7 +1808,7 @@
   },
   {
     "id": "ESP0006",
-    "order": 139,
+    "order": 140,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1808,7 +1821,7 @@
   },
   {
     "id": "ESP0007",
-    "order": 140,
+    "order": 141,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1821,7 +1834,7 @@
   },
   {
     "id": "ESP0008",
-    "order": 141,
+    "order": 142,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1834,7 +1847,7 @@
   },
   {
     "id": "FRA0001",
-    "order": 142,
+    "order": 143,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "subgroup": "",
@@ -1847,7 +1860,7 @@
   },
   {
     "id": "FRA0002",
-    "order": 143,
+    "order": 144,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "subgroup": "",
@@ -1860,7 +1873,7 @@
   },
   {
     "id": "FRA0003",
-    "order": 144,
+    "order": 145,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "subgroup": "",
@@ -1873,7 +1886,7 @@
   },
   {
     "id": "FRA0004",
-    "order": 145,
+    "order": 146,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "subgroup": "",
@@ -1886,7 +1899,7 @@
   },
   {
     "id": "BEL0001",
-    "order": 146,
+    "order": 147,
     "volume": "Rojo",
     "issuerCode": "BEL",
     "subgroup": "",
@@ -1899,7 +1912,7 @@
   },
   {
     "id": "BEL0002",
-    "order": 147,
+    "order": 148,
     "volume": "Rojo",
     "issuerCode": "BEL",
     "subgroup": "",
@@ -1912,7 +1925,7 @@
   },
   {
     "id": "ITA0001",
-    "order": 148,
+    "order": 149,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -1925,7 +1938,7 @@
   },
   {
     "id": "ESP0009",
-    "order": 149,
+    "order": 150,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1938,7 +1951,7 @@
   },
   {
     "id": "ESP0010",
-    "order": 150,
+    "order": 151,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "subgroup": "",
@@ -1951,7 +1964,7 @@
   },
   {
     "id": "ITA0002",
-    "order": 151,
+    "order": 152,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -1964,7 +1977,7 @@
   },
   {
     "id": "ITA0003",
-    "order": 152,
+    "order": 153,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -1977,7 +1990,7 @@
   },
   {
     "id": "ITA0004",
-    "order": 153,
+    "order": 154,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -1990,7 +2003,7 @@
   },
   {
     "id": "ITA0005",
-    "order": 154,
+    "order": 155,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -2003,7 +2016,7 @@
   },
   {
     "id": "ITA0006",
-    "order": 155,
+    "order": 156,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -2016,7 +2029,7 @@
   },
   {
     "id": "ITA0007",
-    "order": 156,
+    "order": 157,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "subgroup": "",
@@ -2029,7 +2042,7 @@
   },
   {
     "id": "LIE0001",
-    "order": 157,
+    "order": 158,
     "volume": "Rojo",
     "issuerCode": "LIE",
     "subgroup": "",
@@ -2042,7 +2055,7 @@
   },
   {
     "id": "CHE0001",
-    "order": 158,
+    "order": 159,
     "volume": "Rojo",
     "issuerCode": "CHE",
     "subgroup": "",
@@ -2055,7 +2068,7 @@
   },
   {
     "id": "CHE0002",
-    "order": 159,
+    "order": 160,
     "volume": "Rojo",
     "issuerCode": "CHE",
     "subgroup": "",
@@ -2068,7 +2081,7 @@
   },
   {
     "id": "DEU0001",
-    "order": 160,
+    "order": 161,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "subgroup": "",
@@ -2081,7 +2094,7 @@
   },
   {
     "id": "DEU0002",
-    "order": 161,
+    "order": 162,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "subgroup": "",
@@ -2094,7 +2107,7 @@
   },
   {
     "id": "DEU0003",
-    "order": 162,
+    "order": 163,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "subgroup": "",
@@ -2107,7 +2120,7 @@
   },
   {
     "id": "DEU0004",
-    "order": 163,
+    "order": 164,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "subgroup": "",
@@ -2120,7 +2133,7 @@
   },
   {
     "id": "DEU0005",
-    "order": 164,
+    "order": 165,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "subgroup": "",
@@ -2133,7 +2146,7 @@
   },
   {
     "id": "DEU0006",
-    "order": 165,
+    "order": 166,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "subgroup": "",
@@ -2146,7 +2159,7 @@
   },
   {
     "id": "AUT0001",
-    "order": 166,
+    "order": 167,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "subgroup": "",
@@ -2159,7 +2172,7 @@
   },
   {
     "id": "AUT0002",
-    "order": 167,
+    "order": 168,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "subgroup": "",
@@ -2172,7 +2185,7 @@
   },
   {
     "id": "AUT0003",
-    "order": 168,
+    "order": 169,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "subgroup": "",
@@ -2185,7 +2198,7 @@
   },
   {
     "id": "AUT0004",
-    "order": 169,
+    "order": 170,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "subgroup": "",
@@ -2198,7 +2211,7 @@
   },
   {
     "id": "AUT0005",
-    "order": 170,
+    "order": 171,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "subgroup": "",
@@ -2211,7 +2224,7 @@
   },
   {
     "id": "HUN0001",
-    "order": 171,
+    "order": 172,
     "volume": "Rojo",
     "issuerCode": "HUN",
     "subgroup": "",
@@ -2224,7 +2237,7 @@
   },
   {
     "id": "RUS0001",
-    "order": 172,
+    "order": 173,
     "volume": "Rojo",
     "issuerCode": "RUS",
     "subgroup": "",
@@ -2237,7 +2250,7 @@
   },
   {
     "id": "SVK0001",
-    "order": 173,
+    "order": 174,
     "volume": "Rojo",
     "issuerCode": "SVK",
     "subgroup": "",
@@ -2250,7 +2263,7 @@
   },
   {
     "id": "CSHH0001",
-    "order": 174,
+    "order": 175,
     "volume": "Rojo",
     "issuerCode": "CSHH",
     "subgroup": "",
@@ -2263,7 +2276,7 @@
   },
   {
     "id": "CSHH0002",
-    "order": 175,
+    "order": 176,
     "volume": "Rojo",
     "issuerCode": "CSHH",
     "subgroup": "",
@@ -2276,7 +2289,7 @@
   },
   {
     "id": "POL0001",
-    "order": 176,
+    "order": 177,
     "volume": "Rojo",
     "issuerCode": "POL",
     "subgroup": "",
@@ -2289,7 +2302,7 @@
   },
   {
     "id": "POL0002",
-    "order": 177,
+    "order": 178,
     "volume": "Rojo",
     "issuerCode": "POL",
     "subgroup": "",
@@ -2302,7 +2315,7 @@
   },
   {
     "id": "POL0003",
-    "order": 178,
+    "order": 179,
     "volume": "Rojo",
     "issuerCode": "POL",
     "subgroup": "",
@@ -2315,7 +2328,7 @@
   },
   {
     "id": "GRC0001",
-    "order": 179,
+    "order": 180,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "subgroup": "",
@@ -2328,7 +2341,7 @@
   },
   {
     "id": "GRC0002",
-    "order": 180,
+    "order": 181,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "subgroup": "",
@@ -2341,7 +2354,7 @@
   },
   {
     "id": "GRC0003",
-    "order": 181,
+    "order": 182,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "subgroup": "",
@@ -2354,7 +2367,7 @@
   },
   {
     "id": "GRC0004",
-    "order": 182,
+    "order": 183,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "subgroup": "",
@@ -2367,7 +2380,7 @@
   },
   {
     "id": "MKD0001",
-    "order": 183,
+    "order": 184,
     "volume": "Rojo",
     "issuerCode": "MKD",
     "subgroup": "",
@@ -2380,7 +2393,7 @@
   },
   {
     "id": "MKD0002",
-    "order": 184,
+    "order": 185,
     "volume": "Rojo",
     "issuerCode": "MKD",
     "subgroup": "",
@@ -2393,7 +2406,7 @@
   },
   {
     "id": "GRC0005",
-    "order": 185,
+    "order": 186,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "subgroup": "",
@@ -2406,7 +2419,7 @@
   },
   {
     "id": "LTU0001",
-    "order": 186,
+    "order": 187,
     "volume": "Rojo",
     "issuerCode": "LTU",
     "subgroup": "",
@@ -2419,7 +2432,7 @@
   },
   {
     "id": "LTU0002",
-    "order": 187,
+    "order": 188,
     "volume": "Rojo",
     "issuerCode": "LTU",
     "subgroup": "",
@@ -2432,7 +2445,7 @@
   },
   {
     "id": "HRV0001",
-    "order": 188,
+    "order": 189,
     "volume": "Rojo",
     "issuerCode": "HRV",
     "subgroup": "",
@@ -2445,7 +2458,7 @@
   },
   {
     "id": "ALB0001",
-    "order": 189,
+    "order": 190,
     "volume": "Rojo",
     "issuerCode": "ALB",
     "subgroup": "",
@@ -2458,7 +2471,7 @@
   },
   {
     "id": "YUCS0001",
-    "order": 190,
+    "order": 191,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "subgroup": "",
@@ -2471,7 +2484,7 @@
   },
   {
     "id": "POL0004",
-    "order": 191,
+    "order": 192,
     "volume": "Rojo",
     "issuerCode": "POL",
     "subgroup": "",
@@ -2484,7 +2497,7 @@
   },
   {
     "id": "GRC0006",
-    "order": 192,
+    "order": 193,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "subgroup": "",
@@ -2497,7 +2510,7 @@
   },
   {
     "id": "HUN0002",
-    "order": 193,
+    "order": 194,
     "volume": "Rojo",
     "issuerCode": "HUN",
     "subgroup": "",
@@ -2510,7 +2523,7 @@
   },
   {
     "id": "BGR0001",
-    "order": 194,
+    "order": 195,
     "volume": "Rojo",
     "issuerCode": "BGR",
     "subgroup": "",
@@ -2523,7 +2536,7 @@
   },
   {
     "id": "MDA-TRAN0001",
-    "order": 195,
+    "order": 196,
     "volume": "Rojo",
     "issuerCode": "MDA",
     "subgroup": "",
@@ -2536,7 +2549,7 @@
   },
   {
     "id": "MDA-TRAN0002",
-    "order": 196,
+    "order": 197,
     "volume": "Rojo",
     "issuerCode": "MDA",
     "subgroup": "",
@@ -2549,7 +2562,7 @@
   },
   {
     "id": "UKR0001",
-    "order": 197,
+    "order": 198,
     "volume": "Rojo",
     "issuerCode": "UKR",
     "subgroup": "",
@@ -2562,7 +2575,7 @@
   },
   {
     "id": "UKR0002",
-    "order": 198,
+    "order": 199,
     "volume": "Rojo",
     "issuerCode": "UKR",
     "subgroup": "",
@@ -2575,7 +2588,7 @@
   },
   {
     "id": "RUS0002",
-    "order": 199,
+    "order": 200,
     "volume": "Rojo",
     "issuerCode": "RUS",
     "subgroup": "",
@@ -2588,7 +2601,7 @@
   },
   {
     "id": "EST0001",
-    "order": 200,
+    "order": 201,
     "volume": "Rojo",
     "issuerCode": "EST",
     "subgroup": "",
@@ -2601,7 +2614,7 @@
   },
   {
     "id": "GEO0001",
-    "order": 201,
+    "order": 202,
     "volume": "Rojo",
     "issuerCode": "GEO",
     "subgroup": "",
@@ -2614,7 +2627,7 @@
   },
   {
     "id": "RUS0003",
-    "order": 202,
+    "order": 203,
     "volume": "Rojo",
     "issuerCode": "RUS",
     "subgroup": "",
@@ -2627,7 +2640,7 @@
   },
   {
     "id": "YUCS0002",
-    "order": 203,
+    "order": 204,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "subgroup": "",
@@ -2640,7 +2653,7 @@
   },
   {
     "id": "YUCS0003",
-    "order": 204,
+    "order": 205,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "subgroup": "",
@@ -2653,7 +2666,7 @@
   },
   {
     "id": "YUCS0004",
-    "order": 205,
+    "order": 206,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "subgroup": "",
@@ -2666,7 +2679,7 @@
   },
   {
     "id": "ROU0001",
-    "order": 206,
+    "order": 207,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2679,7 +2692,7 @@
   },
   {
     "id": "ROU0002",
-    "order": 207,
+    "order": 208,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2692,7 +2705,7 @@
   },
   {
     "id": "ROU0003",
-    "order": 208,
+    "order": 209,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2705,7 +2718,7 @@
   },
   {
     "id": "ROU0004",
-    "order": 209,
+    "order": 210,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2718,7 +2731,7 @@
   },
   {
     "id": "ROU0005",
-    "order": 210,
+    "order": 211,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2731,7 +2744,7 @@
   },
   {
     "id": "ROU0006",
-    "order": 211,
+    "order": 212,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2744,7 +2757,7 @@
   },
   {
     "id": "ROU0007",
-    "order": 212,
+    "order": 213,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2757,7 +2770,7 @@
   },
   {
     "id": "ROU0008",
-    "order": 213,
+    "order": 214,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2770,7 +2783,7 @@
   },
   {
     "id": "ROU0009",
-    "order": 214,
+    "order": 215,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2783,7 +2796,7 @@
   },
   {
     "id": "ROU0010",
-    "order": 215,
+    "order": 216,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2796,7 +2809,7 @@
   },
   {
     "id": "ROU0011",
-    "order": 216,
+    "order": 217,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2809,7 +2822,7 @@
   },
   {
     "id": "ROU0012",
-    "order": 217,
+    "order": 218,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2822,7 +2835,7 @@
   },
   {
     "id": "ROU0013",
-    "order": 218,
+    "order": 219,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2835,7 +2848,7 @@
   },
   {
     "id": "ROU0014",
-    "order": 219,
+    "order": 220,
     "volume": "Rojo",
     "issuerCode": "ROU",
     "subgroup": "",
@@ -2848,7 +2861,7 @@
   },
   {
     "id": "TUR0001",
-    "order": 220,
+    "order": 221,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2861,7 +2874,7 @@
   },
   {
     "id": "TUR0002",
-    "order": 221,
+    "order": 222,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2874,7 +2887,7 @@
   },
   {
     "id": "TUR0003",
-    "order": 222,
+    "order": 223,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2887,7 +2900,7 @@
   },
   {
     "id": "TUR0004",
-    "order": 223,
+    "order": 224,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2900,7 +2913,7 @@
   },
   {
     "id": "TUR0005",
-    "order": 224,
+    "order": 225,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2913,7 +2926,7 @@
   },
   {
     "id": "TUR0006",
-    "order": 225,
+    "order": 226,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2926,7 +2939,7 @@
   },
   {
     "id": "TUR0007",
-    "order": 226,
+    "order": 227,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2939,7 +2952,7 @@
   },
   {
     "id": "TUR0008",
-    "order": 227,
+    "order": 228,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2952,7 +2965,7 @@
   },
   {
     "id": "TUR0009",
-    "order": 228,
+    "order": 229,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2965,7 +2978,7 @@
   },
   {
     "id": "TUR0010",
-    "order": 229,
+    "order": 230,
     "volume": "Rojo",
     "issuerCode": "TUR",
     "subgroup": "",
@@ -2978,7 +2991,7 @@
   },
   {
     "id": "COL0012",
-    "order": 230,
+    "order": 231,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -2991,7 +3004,7 @@
   },
   {
     "id": "COL0013",
-    "order": 231,
+    "order": 232,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3004,7 +3017,7 @@
   },
   {
     "id": "COL0014",
-    "order": 232,
+    "order": 233,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3017,7 +3030,7 @@
   },
   {
     "id": "COL0015",
-    "order": 233,
+    "order": 234,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3030,7 +3043,7 @@
   },
   {
     "id": "COL0016",
-    "order": 234,
+    "order": 235,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3043,7 +3056,7 @@
   },
   {
     "id": "COL0017",
-    "order": 235,
+    "order": 236,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3056,7 +3069,7 @@
   },
   {
     "id": "COL0018",
-    "order": 236,
+    "order": 237,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3069,7 +3082,7 @@
   },
   {
     "id": "COL0019",
-    "order": 237,
+    "order": 238,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3082,7 +3095,7 @@
   },
   {
     "id": "COL0001",
-    "order": 238,
+    "order": 239,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3095,7 +3108,7 @@
   },
   {
     "id": "COL0002",
-    "order": 239,
+    "order": 240,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3108,7 +3121,7 @@
   },
   {
     "id": "COL0003",
-    "order": 240,
+    "order": 241,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3121,7 +3134,7 @@
   },
   {
     "id": "COL0004",
-    "order": 241,
+    "order": 242,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3134,7 +3147,7 @@
   },
   {
     "id": "COL0005",
-    "order": 242,
+    "order": 243,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3147,7 +3160,7 @@
   },
   {
     "id": "COL0006",
-    "order": 243,
+    "order": 244,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3160,7 +3173,7 @@
   },
   {
     "id": "COL0007",
-    "order": 244,
+    "order": 245,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3173,7 +3186,7 @@
   },
   {
     "id": "COL0008",
-    "order": 245,
+    "order": 246,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3186,7 +3199,7 @@
   },
   {
     "id": "COL0009",
-    "order": 246,
+    "order": 247,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3199,7 +3212,7 @@
   },
   {
     "id": "COL0010",
-    "order": 247,
+    "order": 248,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3212,7 +3225,7 @@
   },
   {
     "id": "COL0011",
-    "order": 248,
+    "order": 249,
     "volume": "Verde",
     "issuerCode": "COL",
     "subgroup": "",
@@ -3225,7 +3238,7 @@
   },
   {
     "id": "ECU0001",
-    "order": 249,
+    "order": 250,
     "volume": "Verde",
     "issuerCode": "ECU",
     "subgroup": "",
@@ -3238,7 +3251,7 @@
   },
   {
     "id": "GUY0001",
-    "order": 250,
+    "order": 251,
     "volume": "Verde",
     "issuerCode": "GUY",
     "subgroup": "",
@@ -3251,7 +3264,7 @@
   },
   {
     "id": "GUY0002",
-    "order": 251,
+    "order": 252,
     "volume": "Verde",
     "issuerCode": "GUY",
     "subgroup": "",
@@ -3264,7 +3277,7 @@
   },
   {
     "id": "VEN0001",
-    "order": 252,
+    "order": 253,
     "volume": "Verde",
     "issuerCode": "VEN",
     "subgroup": "",
@@ -3277,7 +3290,7 @@
   },
   {
     "id": "VEN0002",
-    "order": 253,
+    "order": 254,
     "volume": "Verde",
     "issuerCode": "VEN",
     "subgroup": "",
@@ -3290,7 +3303,7 @@
   },
   {
     "id": "VEN0003",
-    "order": 254,
+    "order": 255,
     "volume": "Verde",
     "issuerCode": "VEN",
     "subgroup": "",
@@ -3303,7 +3316,7 @@
   },
   {
     "id": "VEN0004",
-    "order": 255,
+    "order": 256,
     "volume": "Verde",
     "issuerCode": "VEN",
     "subgroup": "",
@@ -3316,7 +3329,7 @@
   },
   {
     "id": "VEN0005",
-    "order": 256,
+    "order": 257,
     "volume": "Verde",
     "issuerCode": "VEN",
     "subgroup": "",
@@ -3329,7 +3342,7 @@
   },
   {
     "id": "VEN0006",
-    "order": 257,
+    "order": 258,
     "volume": "Verde",
     "issuerCode": "VEN",
     "subgroup": "",
@@ -3342,7 +3355,7 @@
   },
   {
     "id": "CUB0001",
-    "order": 258,
+    "order": 259,
     "volume": "Verde",
     "issuerCode": "CUB",
     "subgroup": "",
@@ -3355,7 +3368,7 @@
   },
   {
     "id": "CUB0002",
-    "order": 259,
+    "order": 260,
     "volume": "Verde",
     "issuerCode": "CUB",
     "subgroup": "",
@@ -3368,7 +3381,7 @@
   },
   {
     "id": "CUB0003",
-    "order": 260,
+    "order": 261,
     "volume": "Verde",
     "issuerCode": "CUB",
     "subgroup": "",
@@ -3381,7 +3394,7 @@
   },
   {
     "id": "CUB0004",
-    "order": 261,
+    "order": 262,
     "volume": "Verde",
     "issuerCode": "CUB",
     "subgroup": "",
@@ -3394,7 +3407,7 @@
   },
   {
     "id": "CUB0005",
-    "order": 262,
+    "order": 263,
     "volume": "Verde",
     "issuerCode": "CUB",
     "subgroup": "",
@@ -3407,7 +3420,7 @@
   },
   {
     "id": "NIC0001",
-    "order": 263,
+    "order": 264,
     "volume": "Verde",
     "issuerCode": "NIC",
     "subgroup": "",
@@ -3420,7 +3433,7 @@
   },
   {
     "id": "NIC0002",
-    "order": 264,
+    "order": 265,
     "volume": "Verde",
     "issuerCode": "NIC",
     "subgroup": "",
@@ -3433,7 +3446,7 @@
   },
   {
     "id": "NIC0003",
-    "order": 265,
+    "order": 266,
     "volume": "Verde",
     "issuerCode": "NIC",
     "subgroup": "",
@@ -3446,7 +3459,7 @@
   },
   {
     "id": "DOM0001",
-    "order": 266,
+    "order": 267,
     "volume": "Verde",
     "issuerCode": "DOM",
     "subgroup": "",
@@ -3459,7 +3472,7 @@
   },
   {
     "id": "DOM0002",
-    "order": 267,
+    "order": 268,
     "volume": "Verde",
     "issuerCode": "DOM",
     "subgroup": "",
@@ -3472,7 +3485,7 @@
   },
   {
     "id": "DOM0003",
-    "order": 268,
+    "order": 269,
     "volume": "Verde",
     "issuerCode": "DOM",
     "subgroup": "",
@@ -3485,7 +3498,7 @@
   },
   {
     "id": "DOM0004",
-    "order": 269,
+    "order": 270,
     "volume": "Verde",
     "issuerCode": "DOM",
     "subgroup": "",
@@ -3498,7 +3511,7 @@
   },
   {
     "id": "GTM0001",
-    "order": 270,
+    "order": 271,
     "volume": "Verde",
     "issuerCode": "GTM",
     "subgroup": "",
@@ -3511,7 +3524,7 @@
   },
   {
     "id": "GTM0002",
-    "order": 271,
+    "order": 272,
     "volume": "Verde",
     "issuerCode": "GTM",
     "subgroup": "",
@@ -3524,7 +3537,7 @@
   },
   {
     "id": "MEX0001",
-    "order": 272,
+    "order": 273,
     "volume": "Verde",
     "issuerCode": "MEX",
     "subgroup": "",
@@ -3537,7 +3550,7 @@
   },
   {
     "id": "MEX0002",
-    "order": 273,
+    "order": 274,
     "volume": "Verde",
     "issuerCode": "MEX",
     "subgroup": "",
@@ -3550,7 +3563,7 @@
   },
   {
     "id": "MEX0003",
-    "order": 274,
+    "order": 275,
     "volume": "Verde",
     "issuerCode": "MEX",
     "subgroup": "",
@@ -3563,7 +3576,7 @@
   },
   {
     "id": "MEX0004",
-    "order": 275,
+    "order": 276,
     "volume": "Verde",
     "issuerCode": "MEX",
     "subgroup": "",
@@ -3576,7 +3589,7 @@
   },
   {
     "id": "HND0001",
-    "order": 276,
+    "order": 277,
     "volume": "Verde",
     "issuerCode": "HND",
     "subgroup": "",
@@ -3589,7 +3602,7 @@
   },
   {
     "id": "USA0001",
-    "order": 277,
+    "order": 278,
     "volume": "Verde",
     "issuerCode": "USA",
     "subgroup": "",
@@ -3602,7 +3615,7 @@
   },
   {
     "id": "USA0002",
-    "order": 278,
+    "order": 279,
     "volume": "Verde",
     "issuerCode": "USA",
     "subgroup": "",
@@ -3615,7 +3628,7 @@
   },
   {
     "id": "USA0003",
-    "order": 279,
+    "order": 280,
     "volume": "Verde",
     "issuerCode": "USA",
     "subgroup": "",
@@ -3628,7 +3641,7 @@
   },
   {
     "id": "USA0004",
-    "order": 280,
+    "order": 281,
     "volume": "Verde",
     "issuerCode": "USA",
     "subgroup": "",
@@ -3641,7 +3654,7 @@
   },
   {
     "id": "CAN0001",
-    "order": 281,
+    "order": 282,
     "volume": "Verde",
     "issuerCode": "CAN",
     "subgroup": "",
@@ -3654,7 +3667,7 @@
   },
   {
     "id": "EASTCAR0001",
-    "order": 282,
+    "order": 283,
     "volume": "Verde",
     "issuerCode": "EASTCAR",
     "subgroup": "",
@@ -3667,7 +3680,7 @@
   },
   {
     "id": "EASTCAR0002",
-    "order": 283,
+    "order": 284,
     "volume": "Verde",
     "issuerCode": "EASTCAR",
     "subgroup": "",
@@ -3680,7 +3693,7 @@
   },
   {
     "id": "MAR0001",
-    "order": 284,
+    "order": 285,
     "volume": "Verde",
     "issuerCode": "MAR",
     "subgroup": "",
@@ -3693,7 +3706,7 @@
   },
   {
     "id": "MAR0002",
-    "order": 285,
+    "order": 286,
     "volume": "Verde",
     "issuerCode": "MAR",
     "subgroup": "",
@@ -3706,7 +3719,7 @@
   },
   {
     "id": "MAR0003",
-    "order": 286,
+    "order": 287,
     "volume": "Verde",
     "issuerCode": "MAR",
     "subgroup": "",
@@ -3719,7 +3732,7 @@
   },
   {
     "id": "ZMB0001",
-    "order": 287,
+    "order": 288,
     "volume": "Verde",
     "issuerCode": "ZMB",
     "subgroup": "",
@@ -3732,7 +3745,7 @@
   },
   {
     "id": "ZMB0002",
-    "order": 288,
+    "order": 289,
     "volume": "Verde",
     "issuerCode": "ZMB",
     "subgroup": "",
@@ -3745,7 +3758,7 @@
   },
   {
     "id": "MAR0004",
-    "order": 289,
+    "order": 290,
     "volume": "Verde",
     "issuerCode": "MAR",
     "subgroup": "",
@@ -3758,7 +3771,7 @@
   },
   {
     "id": "COD0001",
-    "order": 290,
+    "order": 291,
     "volume": "Verde",
     "issuerCode": "COD",
     "subgroup": "",
@@ -3771,7 +3784,7 @@
   },
   {
     "id": "GNB0001",
-    "order": 291,
+    "order": 292,
     "volume": "Verde",
     "issuerCode": "GNB",
     "subgroup": "",
@@ -3784,7 +3797,7 @@
   },
   {
     "id": "GIN0001",
-    "order": 292,
+    "order": 293,
     "volume": "Verde",
     "issuerCode": "GIN",
     "subgroup": "",
@@ -3797,7 +3810,7 @@
   },
   {
     "id": "EGY0001",
-    "order": 293,
+    "order": 294,
     "volume": "Verde",
     "issuerCode": "EGY",
     "subgroup": "",
@@ -3810,7 +3823,7 @@
   },
   {
     "id": "ZAF0001",
-    "order": 294,
+    "order": 295,
     "volume": "Verde",
     "issuerCode": "ZAF",
     "subgroup": "",
@@ -3822,8 +3835,21 @@
     "comment": "Lo compré en la feria de Rosario de calle Oroño (Julio 2024)."
   },
   {
+    "id": "DJI0001",
+    "order": 296,
+    "volume": "Verde",
+    "issuerCode": "DJI",
+    "subgroup": "",
+    "historicalPeriod": "",
+    "issueDate": "2017",
+    "denomination": "40 Francs",
+    "onlineCatalog": "https://es.numista.com/catalogue/note203433.html",
+    "imageUrl": "assets/images/banknotes/DJI0001-sm-front.jpg",
+    "comment": "Billete conmemorativo por los 40 años de la independencia.\nMe lo trajo mi Gazpacha de Buenos Aires (Octubre 2024). Lo compró en la Numismática Kurchan."
+  },
+  {
     "id": "ARE0001",
-    "order": 295,
+    "order": 297,
     "volume": "Verde",
     "issuerCode": "ARE",
     "subgroup": "",
@@ -3836,7 +3862,7 @@
   },
   {
     "id": "JOR0001",
-    "order": 296,
+    "order": 298,
     "volume": "Verde",
     "issuerCode": "JOR",
     "subgroup": "",
@@ -3849,7 +3875,7 @@
   },
   {
     "id": "JOR0002",
-    "order": 297,
+    "order": 299,
     "volume": "Verde",
     "issuerCode": "JOR",
     "subgroup": "",
@@ -3861,8 +3887,21 @@
     "comment": "Me lo regaló Ana Rodriguez cuando vivía en Madrid (2017-2019). Lo trajo de su viaje a Israel y Palestina"
   },
   {
+    "id": "MDV0001",
+    "order": 300,
+    "volume": "Verde",
+    "issuerCode": "MDV",
+    "subgroup": "",
+    "historicalPeriod": "",
+    "issueDate": "2017",
+    "denomination": "5 Rufiyaa",
+    "onlineCatalog": "https://es.numista.com/catalogue/note202014.html",
+    "imageUrl": "assets/images/banknotes/MDV0001-sm-front.jpg",
+    "comment": "Me lo trajo mi Gazpacha de Buenos Aires (Octubre 2024). Lo compró en la Numismática Kurchan."
+  },
+  {
     "id": "ISR0001",
-    "order": 298,
+    "order": 301,
     "volume": "Verde",
     "issuerCode": "ISR",
     "subgroup": "",
@@ -3875,7 +3914,7 @@
   },
   {
     "id": "ISR0002",
-    "order": 299,
+    "order": 302,
     "volume": "Verde",
     "issuerCode": "ISR",
     "subgroup": "",
@@ -3888,7 +3927,7 @@
   },
   {
     "id": "ISR0003",
-    "order": 300,
+    "order": 303,
     "volume": "Verde",
     "issuerCode": "ISR",
     "subgroup": "",
@@ -3901,7 +3940,7 @@
   },
   {
     "id": "ISR0004",
-    "order": 301,
+    "order": 304,
     "volume": "Verde",
     "issuerCode": "ISR",
     "subgroup": "",
@@ -3914,7 +3953,7 @@
   },
   {
     "id": "ISR0005",
-    "order": 302,
+    "order": 305,
     "volume": "Verde",
     "issuerCode": "ISR",
     "subgroup": "",
@@ -3927,7 +3966,7 @@
   },
   {
     "id": "QAT0001",
-    "order": 303,
+    "order": 306,
     "volume": "Verde",
     "issuerCode": "QAT",
     "subgroup": "",
@@ -3940,7 +3979,7 @@
   },
   {
     "id": "QAT0002",
-    "order": 304,
+    "order": 307,
     "volume": "Verde",
     "issuerCode": "QAT",
     "subgroup": "",
@@ -3953,7 +3992,7 @@
   },
   {
     "id": "QAT0003",
-    "order": 305,
+    "order": 308,
     "volume": "Verde",
     "issuerCode": "QAT",
     "subgroup": "",
@@ -3966,7 +4005,7 @@
   },
   {
     "id": "AFG0001",
-    "order": 306,
+    "order": 309,
     "volume": "Verde",
     "issuerCode": "AFG",
     "subgroup": "",
@@ -3979,7 +4018,7 @@
   },
   {
     "id": "AFG0002",
-    "order": 307,
+    "order": 310,
     "volume": "Verde",
     "issuerCode": "AFG",
     "subgroup": "",
@@ -3992,7 +4031,7 @@
   },
   {
     "id": "AFG0003",
-    "order": 308,
+    "order": 311,
     "volume": "Verde",
     "issuerCode": "AFG",
     "subgroup": "",
@@ -4005,7 +4044,7 @@
   },
   {
     "id": "UZB0001",
-    "order": 309,
+    "order": 312,
     "volume": "Verde",
     "issuerCode": "UZB",
     "subgroup": "",
@@ -4018,7 +4057,7 @@
   },
   {
     "id": "TKM0001",
-    "order": 310,
+    "order": 313,
     "volume": "Verde",
     "issuerCode": "TKM",
     "subgroup": "",
@@ -4031,7 +4070,7 @@
   },
   {
     "id": "TJK0001",
-    "order": 311,
+    "order": 314,
     "volume": "Verde",
     "issuerCode": "TJK",
     "subgroup": "",
@@ -4044,7 +4083,7 @@
   },
   {
     "id": "TJK0002",
-    "order": 312,
+    "order": 315,
     "volume": "Verde",
     "issuerCode": "TJK",
     "subgroup": "",
@@ -4057,7 +4096,7 @@
   },
   {
     "id": "PAK0001",
-    "order": 313,
+    "order": 316,
     "volume": "Verde",
     "issuerCode": "PAK",
     "subgroup": "",
@@ -4070,7 +4109,7 @@
   },
   {
     "id": "PAK0002",
-    "order": 314,
+    "order": 317,
     "volume": "Verde",
     "issuerCode": "PAK",
     "subgroup": "",
@@ -4083,7 +4122,7 @@
   },
   {
     "id": "IND0001",
-    "order": 315,
+    "order": 318,
     "volume": "Verde",
     "issuerCode": "IND",
     "subgroup": "",
@@ -4096,7 +4135,7 @@
   },
   {
     "id": "IND0002",
-    "order": 316,
+    "order": 319,
     "volume": "Verde",
     "issuerCode": "IND",
     "subgroup": "",
@@ -4109,7 +4148,7 @@
   },
   {
     "id": "NPL0001",
-    "order": 317,
+    "order": 320,
     "volume": "Verde",
     "issuerCode": "NPL",
     "subgroup": "",
@@ -4122,7 +4161,7 @@
   },
   {
     "id": "NPL0002",
-    "order": 318,
+    "order": 321,
     "volume": "Verde",
     "issuerCode": "NPL",
     "subgroup": "",
@@ -4135,7 +4174,7 @@
   },
   {
     "id": "NPL0003",
-    "order": 319,
+    "order": 322,
     "volume": "Verde",
     "issuerCode": "NPL",
     "subgroup": "",
@@ -4148,7 +4187,7 @@
   },
   {
     "id": "NPL0004",
-    "order": 320,
+    "order": 323,
     "volume": "Verde",
     "issuerCode": "NPL",
     "subgroup": "",
@@ -4161,7 +4200,7 @@
   },
   {
     "id": "BTN0001",
-    "order": 321,
+    "order": 324,
     "volume": "Verde",
     "issuerCode": "BTN",
     "subgroup": "",
@@ -4174,7 +4213,7 @@
   },
   {
     "id": "MMR0001",
-    "order": 322,
+    "order": 325,
     "volume": "Verde",
     "issuerCode": "MMR",
     "subgroup": "",
@@ -4187,7 +4226,7 @@
   },
   {
     "id": "LAO0001",
-    "order": 323,
+    "order": 326,
     "volume": "Verde",
     "issuerCode": "LAO",
     "subgroup": "",
@@ -4200,7 +4239,7 @@
   },
   {
     "id": "MNG0001",
-    "order": 324,
+    "order": 327,
     "volume": "Verde",
     "issuerCode": "MNG",
     "subgroup": "",
@@ -4213,7 +4252,7 @@
   },
   {
     "id": "MNG0002",
-    "order": 325,
+    "order": 328,
     "volume": "Verde",
     "issuerCode": "MNG",
     "subgroup": "",
@@ -4226,7 +4265,7 @@
   },
   {
     "id": "MNG0003",
-    "order": 326,
+    "order": 329,
     "volume": "Verde",
     "issuerCode": "MNG",
     "subgroup": "",
@@ -4239,7 +4278,7 @@
   },
   {
     "id": "THA0001",
-    "order": 327,
+    "order": 330,
     "volume": "Verde",
     "issuerCode": "THA",
     "subgroup": "",
@@ -4252,7 +4291,7 @@
   },
   {
     "id": "THA0002",
-    "order": 328,
+    "order": 331,
     "volume": "Verde",
     "issuerCode": "THA",
     "subgroup": "",
@@ -4265,7 +4304,7 @@
   },
   {
     "id": "VNM0001",
-    "order": 329,
+    "order": 332,
     "volume": "Verde",
     "issuerCode": "VNM",
     "subgroup": "",
@@ -4278,7 +4317,7 @@
   },
   {
     "id": "VNM0002",
-    "order": 330,
+    "order": 333,
     "volume": "Verde",
     "issuerCode": "VNM",
     "subgroup": "",
@@ -4291,7 +4330,7 @@
   },
   {
     "id": "VNM0003",
-    "order": 331,
+    "order": 334,
     "volume": "Verde",
     "issuerCode": "VNM",
     "subgroup": "",
@@ -4304,7 +4343,7 @@
   },
   {
     "id": "VNM0004",
-    "order": 332,
+    "order": 335,
     "volume": "Verde",
     "issuerCode": "VNM",
     "subgroup": "",
@@ -4317,7 +4356,7 @@
   },
   {
     "id": "KHM0001",
-    "order": 333,
+    "order": 336,
     "volume": "Verde",
     "issuerCode": "KHM",
     "subgroup": "",
@@ -4330,7 +4369,7 @@
   },
   {
     "id": "KHM0002",
-    "order": 334,
+    "order": 337,
     "volume": "Verde",
     "issuerCode": "KHM",
     "subgroup": "",
@@ -4343,7 +4382,7 @@
   },
   {
     "id": "KHM0003",
-    "order": 335,
+    "order": 338,
     "volume": "Verde",
     "issuerCode": "KHM",
     "subgroup": "",
@@ -4356,7 +4395,7 @@
   },
   {
     "id": "IDN0001",
-    "order": 336,
+    "order": 339,
     "volume": "Verde",
     "issuerCode": "IDN",
     "subgroup": "",
@@ -4369,7 +4408,7 @@
   },
   {
     "id": "CHN0001",
-    "order": 337,
+    "order": 340,
     "volume": "Verde",
     "issuerCode": "CHN",
     "subgroup": "",
@@ -4382,7 +4421,7 @@
   },
   {
     "id": "CHN0002",
-    "order": 338,
+    "order": 341,
     "volume": "Verde",
     "issuerCode": "CHN",
     "subgroup": "",
@@ -4395,7 +4434,7 @@
   },
   {
     "id": "CHN0003",
-    "order": 339,
+    "order": 342,
     "volume": "Verde",
     "issuerCode": "CHN",
     "subgroup": "",
@@ -4408,7 +4447,7 @@
   },
   {
     "id": "JPN0002",
-    "order": 340,
+    "order": 343,
     "volume": "Verde",
     "issuerCode": "JPN",
     "subgroup": "",
@@ -4421,7 +4460,7 @@
   },
   {
     "id": "CHN0004",
-    "order": 341,
+    "order": 344,
     "volume": "Verde",
     "issuerCode": "CHN",
     "subgroup": "",
@@ -4434,7 +4473,7 @@
   },
   {
     "id": "JPN0001",
-    "order": 342,
+    "order": 345,
     "volume": "Verde",
     "issuerCode": "JPN",
     "subgroup": "",
@@ -4447,7 +4486,7 @@
   },
   {
     "id": "CHN0005",
-    "order": 343,
+    "order": 346,
     "volume": "Verde",
     "issuerCode": "CHN",
     "subgroup": "",

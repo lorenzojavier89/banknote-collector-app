@@ -50,12 +50,12 @@
           {
             "code": "ECU",
             "name": "Ecuador",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ec.svg"
           },
           {
             "code": "GUY",
             "name": "Guyana",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/gy.svg"
           },
           {
             "code": "VEN",
@@ -71,12 +71,12 @@
           {
             "code": "CUB",
             "name": "Cuba",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/cu.svg"
           },
           {
             "code": "DOM",
             "name": "República Dominicana",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/do.svg"
           },
           {
             "code": "EASTCAR",
@@ -97,17 +97,17 @@
           {
             "code": "GTM",
             "name": "Guatemala",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/gt.svg"
           },
           {
             "code": "MEX",
             "name": "México",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/mx.svg"
           },
           {
             "code": "HND",
             "name": "Honduras",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/hn.svg"
           }
         ]
       },
@@ -118,12 +118,12 @@
           {
             "code": "USA",
             "name": "Estados Unidos",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/us.svg"
           },
           {
             "code": "CAN",
             "name": "Canadá",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ca.svg"
           }
         ]
       }
@@ -150,12 +150,12 @@
           {
             "code": "LTU",
             "name": "Lituania",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/lt.svg"
           },
           {
             "code": "EST",
             "name": "Estonia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ee.svg"
           }
         ]
       },
@@ -176,22 +176,22 @@
           {
             "code": "GRC",
             "name": "Grecia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/gr.svg"
           },
           {
             "code": "MKD",
             "name": "Macedonia del Norte",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/mk.svg"
           },
           {
             "code": "HRV",
             "name": "Croacia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/hr.svg"
           },
           {
             "code": "ALB",
             "name": "Albania",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/al.svg"
           },
           {
             "code": "YUCS",
@@ -243,17 +243,17 @@
           {
             "code": "HUN",
             "name": "Hungría",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/hu.svg"
           },
           {
             "code": "RUS",
             "name": "Rusia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ru.svg"
           },
           {
             "code": "SVK",
             "name": "Eslovaquia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/sk.svg"
           },
           {
             "code": "CSHH",
@@ -263,12 +263,12 @@
           {
             "code": "POL",
             "name": "Polonia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/pl.svg"
           },
           {
             "code": "BGR",
             "name": "Bulgaria",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/bg.svg"
           },
           {
             "code": "MDA",
@@ -278,17 +278,17 @@
           {
             "code": "UKR",
             "name": "Ucrania",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ua.svg"
           },
           {
             "code": "GEO",
             "name": "Georgia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ge.svg"
           },
           {
             "code": "ROU",
             "name": "Rumania",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ro.svg"
           }
         ]
       }
@@ -305,7 +305,7 @@
           {
             "code": "TUR",
             "name": "Turquía",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/tr.svg"
           },
           {
             "code": "ARE",
@@ -333,6 +333,11 @@
         "code": "SAS",
         "name": "Asia Meridional",
         "countries": [
+          {
+            "code": "MDV",
+            "name": "Islas Maldivas",
+            "flagIcon": "assets/images/flags/4x3/mv.svg"
+          },
           {
             "code": "AFG",
             "name": "Afganistán",
@@ -500,6 +505,17 @@
             "code": "GIN",
             "name": "Guinea",
             "flagIcon": ""
+          }
+        ]
+      },
+      {
+        "code": "EAF",
+        "name": "África Oriental",
+        "countries": [
+          {
+            "code": "DJI",
+            "name": "Yibuti",
+            "flagIcon": "assets/images/flags/4x3/dj.svg"
           }
         ]
       }
