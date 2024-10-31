@@ -6,7 +6,7 @@
     <div class="catalog-header">
       <app-catalog-header></app-catalog-header>
     </div>
-    <div class="row">
+    <div class="row catalog-body">
       <app-banknote-card class="col-4 mb-3" *ngFor="let b of filteredBanknotes()" [banknote]="b" @fadeInOut />
     </div>
   </section>
