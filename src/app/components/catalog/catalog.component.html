@@ -3,9 +3,7 @@
     <app-filters></app-filters>
   </section>
   <section id="catalog" class="col-10 offset-2">
-    <div class="catalog-header">
-      <app-catalog-header></app-catalog-header>
-    </div>
+    <app-catalog-header></app-catalog-header>
     <div class="row catalog-body">
       <app-banknote-card class="col-4 mb-3" *ngFor="let b of filteredBanknotes()" [banknote]="b" @fadeInOut />
     </div>
