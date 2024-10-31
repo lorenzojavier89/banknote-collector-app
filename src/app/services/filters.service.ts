@@ -11,6 +11,7 @@ export class FiltersService {
   private catalogService: CatalogService = inject(CatalogService);
 
   private readonly _appliedFilter = signal<AppliedFilter>(new AppliedFilter());
+  readonly appliedFilter = this._appliedFilter.asReadonly();
 
   constructor() {
     effect(() => {

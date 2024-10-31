@@ -13,5 +13,7 @@ export class CatalogHeaderComponent {
   private filtersService: FiltersService = inject(FiltersService);
 
   filteredBanknotes = this.filtersService.filteredBanknotes;
+  appliedFilter = this.filtersService.appliedFilter;
+  
   count = computed(() => this.filteredBanknotes().length);
 }
