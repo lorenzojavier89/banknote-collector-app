@@ -4,11 +4,12 @@ import { FiltersService } from '../../services/filters.service';
 import { BanknoteCardComponent } from './banknote-card/banknote-card.component';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { NgFor } from '@angular/common';
+import { CatalogHeaderComponent } from "./catalog-header/catalog-header.component";
 
 @Component({
   selector: 'app-catalog',
   standalone: true,
-  imports: [BanknoteCardComponent, FiltersComponent, NgFor],
+  imports: [BanknoteCardComponent, FiltersComponent, NgFor, CatalogHeaderComponent],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.scss',
   animations: [
@@ -20,7 +21,6 @@ import { NgFor } from '@angular/common';
 })
 export class CatalogComponent {
   private filtersService: FiltersService = inject(FiltersService);
-  
+
   filteredBanknotes = this.filtersService.filteredBanknotes;
-  count = computed(() => this.filteredBanknotes().length);
 }

@@ -3,9 +3,9 @@
     <app-filters></app-filters>
   </section>
   <section id="catalog" class="col-10 offset-2">
-    <h3>{{ count() }} billetes</h3>
-    <h6>Sin filtros aplicados</h6>
-    <hr />
+    <div class="catalog-header">
+      <app-catalog-header></app-catalog-header>
+    </div>
     <div class="row">
       <app-banknote-card class="col-4 mb-3" *ngFor="let b of filteredBanknotes()" [banknote]="b" @fadeInOut />
     </div>
