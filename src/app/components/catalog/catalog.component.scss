@@ -1,4 +1,9 @@
-.catalog-body {
+#filters {
+  overflow-y: auto;
+  height: 90vh;
+}
+
+#catalog-body {
   overflow-y: auto;
   height: 85vh;
   margin-right: 0px;
