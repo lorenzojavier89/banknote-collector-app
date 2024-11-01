@@ -20,15 +20,15 @@ export class FiltersService {
   }
 
   regionsFilter = computed<FilterItem[]>(() =>{
-    const { regionCodes, subregionCodes } = { ...this._appliedFilter() };
+    const { regionFilterCodes, subregionFilterCodes } = { ...this._appliedFilter() };
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
-      selected: regionCodes.includes(r.code),
+      selected: regionFilterCodes.includes(r.code),
       highlighted: false,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: subregionCodes.includes(sr.code),
+        selected: subregionFilterCodes.includes(sr.code),
         highlighted: false,
       })),
     }))
@@ -53,41 +53,41 @@ export class FiltersService {
     }
 
     return banknotes.filter((b) => {
-        const matchesRegion = appliedFilter.regionCodes && appliedFilter.regionCodes.includes(b.issuer.regionCode);
-        const matchesSubregion = appliedFilter.subregionCodes && appliedFilter.subregionCodes.includes(b.issuer.subregionCode);
+        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.issuer.regionCode);
+        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.issuer.subregionCode);
         const matchesCountry = appliedFilter.countryCode && appliedFilter.countryCode === b.issuer.country.code;
 
         return matchesRegion || matchesSubregion || matchesCountry;
     });
   });
 
-  applyRegionFilter(selected: boolean, regionFilterCode: string, subregionFilterCodes: string[]) {
-    let { regionCodes, subregionCodes } = { ...this._appliedFilter() };
+  applyRegionFilter(selected: boolean, clickedRegionFilter: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this._appliedFilter() };
     
     if(selected) {
-      regionCodes.push(regionFilterCode);
-      subregionCodes.push(...subregionFilterCodes);
+      regionFilters.push(clickedRegionFilter);
+      subregionFilters.push(...clickedRegionFilter.subItems || []);
     }
     else {
-      regionCodes = regionCodes.filter(rCode => rCode != regionFilterCode)
-      subregionCodes = subregionCodes.filter(srCode => !subregionFilterCodes.includes(srCode));
+      regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code)
+      subregionFilters = subregionFilters.filter(srf => !clickedRegionFilter.subItems?.map(i => i.code).includes(srf.code));
     }
     
-    this._appliedFilter.set(new AppliedFilter(regionCodes, subregionCodes));
+    this._appliedFilter.set(new AppliedFilter(regionFilters, subregionFilters));
   }
 
-  applySubregionFilter(selected: boolean, regionFilterCode: string, subregionFilterCode: string) {
-    let { regionCodes, subregionCodes } = { ...this._appliedFilter() };
+  applySubregionFilter(selected: boolean, clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this._appliedFilter() };
     
     if(selected) {
-      subregionCodes.push(subregionFilterCode);
+      subregionFilters.push(clickedSubregionFilter);
     }
     else {
-      regionCodes = regionCodes.filter(rCode => rCode != regionFilterCode);
-      subregionCodes = subregionCodes.filter(srCode => srCode != subregionFilterCode);
+      regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code);
+      subregionFilters = subregionFilters.filter(srf => srf.code != clickedSubregionFilter.code);
     }
 
-    this._appliedFilter.set(new AppliedFilter(regionCodes, subregionCodes));
+    this._appliedFilter.set(new AppliedFilter(regionFilters, subregionFilters));
   }
 
   applyCountryFilter(selected: boolean, code: string) {

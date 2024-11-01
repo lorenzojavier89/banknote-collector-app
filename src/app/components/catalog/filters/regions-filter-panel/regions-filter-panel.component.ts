@@ -17,10 +17,10 @@ export class RegionsFilterPanelComponent {
   regionsFilter = this.filtersService.regionsFilter;
 
   applyRegionFilter(selected: boolean, regionFilterItem: FilterItem) {
-    this.filtersService.applyRegionFilter(selected, regionFilterItem.code, regionFilterItem.subItems?.map(sr => sr.code) || []);
+    this.filtersService.applyRegionFilter(selected, regionFilterItem);
   }
 
   applySubregionFilter(selected: boolean, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
-    this.filtersService.applySubregionFilter(selected, regionFilterItem.code, subregionFilterItem.code);
+    this.filtersService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
   }
 }

@@ -1,12 +1,21 @@
-export class AppliedFilter {
-    regionCodes: string[];
-    subregionCodes: string[];
-    countryCode: string;
-    anyFilterApplied = () => !!(this.regionCodes.length || this.subregionCodes.length || this.countryCode);
+import { FilterItem } from "./filter-item.model";
 
-    constructor(regionCodes: string[] = [], subregionCodes: string[] = [], countryCode: string = ''){
-        this.regionCodes = [...new Set(regionCodes)];
-        this.subregionCodes = [...new Set(subregionCodes)];
+export class AppliedFilter {
+    readonly regionFilters: FilterItem[];
+    readonly regionFilterCodes: string[];
+    readonly subregionFilters: FilterItem[];
+    readonly subregionFilterCodes: string[];
+
+    countryCode: string;
+    anyFilterApplied = () => !!(this.regionFilters.length || this.subregionFilters.length || this.countryCode);
+
+    constructor(regionFilters: FilterItem[] = [], subregionFilters: FilterItem[] = [], countryCode: string = ''){
+        this.regionFilters = [...new Set(regionFilters)];
+        this.regionFilterCodes = regionFilters.map(rf => rf.code);
+
+        this.subregionFilters = [...new Set(subregionFilters)];
+        this.subregionFilterCodes = subregionFilters.map(srf => srf.code);
+
         this.countryCode = countryCode;
     }
 }
