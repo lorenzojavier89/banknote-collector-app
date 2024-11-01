@@ -3,14 +3,25 @@ hr {
 }
 
 .badge-row {
-    display: flex;
-  
-    h6 {
-      margin-right: 10px; 
-  
-      &:last-child {
-        margin-right: 0;
-      }
+  display: flex;
+
+  h6 {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
-  
+}
+
+.badge-region, .badge-subregion {
+    color: white;
+}
+
+.badge-region {
+  background-color: #f4a261;
+}
+
+.badge-subregion {
+  background-color: #3260a8;
+}
