@@ -14,14 +14,20 @@ hr {
   }
 }
 
-.badge-region, .badge-subregion {
+.badge-region, 
+.badge-subregion,
+.badge-issuer {
     color: white;
 }
 
 .badge-region {
-  background-color: #f4a261;
+  background-color: #3260a8;
 }
 
 .badge-subregion {
-  background-color: #3260a8;
+  background-color: #4b9ddb;
+}
+
+.badge-issuer {
+  background-color: #35a2b5;
 }
