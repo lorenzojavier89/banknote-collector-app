@@ -310,22 +310,22 @@
           {
             "code": "ARE",
             "name": "Emiratos Árabes Unidos",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ae.svg"
           },
           {
             "code": "JOR",
             "name": "Jordania",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/jo.svg"
           },
           {
             "code": "ISR",
             "name": "Israel",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/il.svg"
           },
           {
             "code": "QAT",
             "name": "Catar",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/qa.svg"
           }
         ]
       },
@@ -341,27 +341,27 @@
           {
             "code": "AFG",
             "name": "Afganistán",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/af.svg"
           },
           {
             "code": "PAK",
             "name": "Pakistán",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/pk.svg"
           },
           {
             "code": "IND",
             "name": "India",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/in.svg"
           },
           {
             "code": "NPL",
             "name": "Nepal",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/np.svg"
           },
           {
             "code": "BTN",
             "name": "Bután",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/bt.svg"
           }
         ]
       },
@@ -372,17 +372,17 @@
           {
             "code": "UZB",
             "name": "Uzbekistán",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/uz.svg"
           },
           {
             "code": "TKM",
             "name": "Turkmenistán",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/tm.svg"
           },
           {
             "code": "TJK",
             "name": "Tajikistán",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/tj.svg"
           }
         ]
       },
@@ -393,32 +393,32 @@
           {
             "code": "MMR",
             "name": "Myanmar",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/mm.svg"
           },
           {
             "code": "LAO",
             "name": "Laos",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/la.svg"
           },
           {
             "code": "THA",
             "name": "Tailandia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/th.svg"
           },
           {
             "code": "VNM",
             "name": "Vietnam",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/vn.svg"
           },
           {
             "code": "KHM",
             "name": "Camboya",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/kh.svg"
           },
           {
             "code": "IDN",
             "name": "Indonesia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/id.svg"
           }
         ]
       },
@@ -429,12 +429,12 @@
           {
             "code": "MNG",
             "name": "Mongolia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/mn.svg"
           },
           {
             "code": "CHN",
             "name": "China",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/cn.svg"
           },
           {
             "code": "JPN",
@@ -456,12 +456,12 @@
           {
             "code": "MAR",
             "name": "Marruecos",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/ma.svg"
           },
           {
             "code": "EGY",
             "name": "Egipto",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/eg.svg"
           }
         ]
       },
@@ -472,12 +472,12 @@
           {
             "code": "ZMB",
             "name": "Zambia",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/zm.svg"
           },
           {
             "code": "ZAF",
             "name": "Sudáfrica",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/za.svg"
           }
         ]
       },
@@ -488,7 +488,7 @@
           {
             "code": "COD",
             "name": "República Democrática del Congo",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/cd.svg"
           }
         ]
       },
@@ -499,12 +499,12 @@
           {
             "code": "GNB",
             "name": "Guinea-Bisáu",
-            "flagIcon": ""
+            "flagIcon": "assets/images/flags/4x3/gw.svg"
           },
           {
             "code": "GIN",
-            "name": "Guinea",
-            "flagIcon": ""
+            "name": "Guinea (Guinea-Conakri)",
+            "flagIcon": "assets/images/flags/4x3/gn.svg"
           }
         ]
       },
