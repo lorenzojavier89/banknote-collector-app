@@ -3,17 +3,17 @@ import { FilterItem } from "./filter-item.model";
 export class AppliedFilter {
     readonly regionFilters: FilterItem[];
     readonly subregionFilters: FilterItem[];
-    
+    readonly issuerFilter: FilterItem | null;
 
-    countryCode: string;
-    anyFilterApplied = () => !!(this.regionFilters.length || this.subregionFilters.length || this.countryCode);
+    anyFilterApplied = () => !!(this.regionFilters.length || this.subregionFilters.length || this.issuerFilter);
     regionFilterCodes = () => this.regionFilters.map(rf => rf.code);
     subregionFilterCodes = () => this.subregionFilters.map(srf => srf.code);
+    issuerFilterCode = () => this.issuerFilter?.code;
 
-    constructor(regionFilters: FilterItem[] = [], subregionFilters: FilterItem[] = [], countryCode: string = ''){
+    constructor(regionFilters: FilterItem[] = [], subregionFilters: FilterItem[] = [], issuerFilter: FilterItem | null = null){
         this.regionFilters = this.Distinct(regionFilters);
         this.subregionFilters = this.Distinct(subregionFilters);
-        this.countryCode = countryCode;
+        this.issuerFilter = issuerFilter;
     }
 
     private Distinct(filters: FilterItem[]): FilterItem[] {

@@ -35,11 +35,11 @@ export class FiltersService {
   });
 
   issuersFilter = computed<FilterItem[]>(() => {
-    const { countryCode } = { ...this._appliedFilter() };
+    const { issuerFilterCode } = { ...this._appliedFilter() };
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
-      selected: countryCode === i.country.code,
+      selected: issuerFilterCode() === i.country.code,
       highlighted: false
     }))
   });
@@ -55,7 +55,7 @@ export class FiltersService {
     return banknotes.filter((b) => {
         const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes().includes(b.issuer.regionCode);
         const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes().includes(b.issuer.subregionCode);
-        const matchesCountry = appliedFilter.countryCode && appliedFilter.countryCode === b.issuer.country.code;
+        const matchesCountry = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode() === b.issuer.country.code;
 
         return matchesRegion || matchesSubregion || matchesCountry;
     });
@@ -90,9 +90,9 @@ export class FiltersService {
     this._appliedFilter.set(new AppliedFilter(regionFilters, subregionFilters));
   }
 
-  applyCountryFilter(selected: boolean, code: string) {
-    const countryCode = selected ? code : '';
+  applyCountryFilter(selected: boolean, issuerFilterItem: FilterItem) {
+    const issuerFilter = selected ? issuerFilterItem : null;
     
-    this._appliedFilter.set(new AppliedFilter([], [], countryCode));
+    this._appliedFilter.set(new AppliedFilter([], [], issuerFilter));
   }
 }

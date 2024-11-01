@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../services/filters.service';
+import { FilterItem } from '../../../../models/filters/filter-item.model';
 
 @Component({
   selector: 'app-issuers-filter-panel',
@@ -15,7 +16,7 @@ export class IssuersFilterPanelComponent {
   
   issuersFilter = this.filtersService.issuersFilter;
 
-  applyCountryFilter(selected: boolean, code: string) {
-    this.filtersService.applyCountryFilter(selected, code);
+  applyCountryFilter(selected: boolean, issuerFilterItem: FilterItem) {
+    this.filtersService.applyCountryFilter(selected, issuerFilterItem);
   }
 }
