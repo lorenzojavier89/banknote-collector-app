@@ -1,3 +1,16 @@
 hr {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
+
+.badge-row {
+    display: flex;
+  
+    h6 {
+      margin-right: 10px; 
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
