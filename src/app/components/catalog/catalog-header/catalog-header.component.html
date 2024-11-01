@@ -14,8 +14,15 @@
               <span class="badge badge-subregion">{{ f.name }}</span>
             </h6>
           </div>
+          <div class="badge-row">
+            <h5 *ngIf="appliedFilter().issuerFilter !== null">
+              <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
+            </h5>
+          </div>
         } @else {
+          <div class="badge-row">
             <h5><span class="badge badge-no-filter">Sin filtros aplicados</span></h5>
+          </div>
         }
     </mat-card-content>
   </mat-card>
