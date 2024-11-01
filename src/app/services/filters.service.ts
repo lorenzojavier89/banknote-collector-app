@@ -24,11 +24,11 @@ export class FiltersService {
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
-      selected: regionFilterCodes.includes(r.code),
+      selected: regionFilterCodes().includes(r.code),
       highlighted: false,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: subregionFilterCodes.includes(sr.code),
+        selected: subregionFilterCodes().includes(sr.code),
         highlighted: false,
       })),
     }))
@@ -53,8 +53,8 @@ export class FiltersService {
     }
 
     return banknotes.filter((b) => {
-        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.issuer.regionCode);
-        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.issuer.subregionCode);
+        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes().includes(b.issuer.regionCode);
+        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes().includes(b.issuer.subregionCode);
         const matchesCountry = appliedFilter.countryCode && appliedFilter.countryCode === b.issuer.country.code;
 
         return matchesRegion || matchesSubregion || matchesCountry;
