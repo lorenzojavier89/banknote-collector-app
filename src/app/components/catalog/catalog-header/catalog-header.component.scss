@@ -16,7 +16,8 @@ hr {
 
 .badge-region, 
 .badge-subregion,
-.badge-issuer {
+.badge-issuer,
+.badge-no-filter {
     color: white;
 }
 
@@ -30,4 +31,8 @@ hr {
 
 .badge-issuer {
   background-color: #35a2b5;
+}
+
+.badge-no-filter {
+  background-color: #6c757d;
 }
