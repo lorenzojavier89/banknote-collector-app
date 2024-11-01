@@ -5,10 +5,14 @@
         @if (appliedFilter().anyFilterApplied())
         {
           <div class="badge-row">
-            <h6><span class="badge badge-region">Region</span></h6>
+            <h6 *ngFor="let f of appliedFilter().regionFilters">
+              <span class="badge badge-region">{{ f.name }}</span>
+            </h6>
           </div>
           <div class="badge-row">
-            <h6><span class="badge badge-subregion">Subregion</span></h6>
+            <h6 *ngFor="let f of appliedFilter().subregionFilters">
+              <span class="badge badge-subregion">{{ f.name }}</span>
+            </h6>
           </div>
         } @else {
             <h5><span class="badge badge-no-filter">Sin filtros aplicados</span></h5>
