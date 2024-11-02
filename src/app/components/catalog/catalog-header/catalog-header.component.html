@@ -1,30 +1,30 @@
 <div class="catalog-header">
-  <mat-card appearance="outlined">
-    <mat-card-header><h5>Mostrando {{ count() }} billetes</h5></mat-card-header>
-    <mat-card-content>
-        @if (appliedFilter().anyFilterApplied())
-        {
-          <div class="badge-row">
-            <h6 *ngFor="let f of appliedFilter().regionFilters">
-              <span class="badge badge-region">{{ f.name }}</span>
-            </h6>
-          </div>
-          <div class="badge-row">
-            <h6 *ngFor="let f of appliedFilter().subregionFilters">
-              <span class="badge badge-subregion">{{ f.name }}</span>
-            </h6>
-          </div>
-          <div class="badge-row">
-            <h5 *ngIf="appliedFilter().issuerFilter !== null">
-              <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
-            </h5>
-          </div>
-        } @else {
-          <div class="badge-row">
-            <h5><span class="badge badge-no-filter">Sin filtros aplicados</span></h5>
-          </div>
-        }
-    </mat-card-content>
-  </mat-card>
+  <mat-expansion-panel class="outlined-expansion-panel" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Mostrando {{ count() }} billetes</mat-panel-title>
+    </mat-expansion-panel-header>
+    @if (appliedFilter().anyFilterApplied())
+      {
+        <div class="badge-row">
+          <h6 *ngFor="let f of appliedFilter().regionFilters">
+            <span class="badge badge-region">{{ f.name }}</span>
+          </h6>
+        </div>
+        <div class="badge-row">
+          <h6 *ngFor="let f of appliedFilter().subregionFilters">
+            <span class="badge badge-subregion">{{ f.name }}</span>
+          </h6>
+        </div>
+        <div class="badge-row">
+          <h5 *ngIf="appliedFilter().issuerFilter !== null">
+            <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
+          </h5>
+        </div>
+      } @else {
+        <div class="badge-row">
+          <h5><span class="badge badge-no-filter">Sin filtros aplicados</span></h5>
+        </div>
+      }
+  </mat-expansion-panel>
   <hr />
 </div>

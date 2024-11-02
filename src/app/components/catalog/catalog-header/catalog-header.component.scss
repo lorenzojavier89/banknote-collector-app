@@ -37,3 +37,13 @@ hr {
 .badge-no-filter {
   background-color: #6c757d;
 }
+
+mat-expansion-panel.outlined-expansion-panel {
+  border: 1px solid #c4c6d0;
+  box-shadow: none !important;
+  background-color: #faf9fd !important;
+
+  mat-panel-title {
+    font-size: 18px;
+  }
+}

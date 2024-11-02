@@ -1,12 +1,12 @@
 import { Component, computed, inject } from '@angular/core';
 import { FiltersService } from '../../../services/filters.service';
-import { MatCardModule } from '@angular/material/card';
 import { NgFor, NgIf } from '@angular/common';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-catalog-header',
   standalone: true,
-  imports: [MatCardModule, NgFor, NgIf],
+  imports: [MatExpansionModule, NgFor, NgIf],
   templateUrl: './catalog-header.component.html',
   styleUrl: './catalog-header.component.scss'
 })
