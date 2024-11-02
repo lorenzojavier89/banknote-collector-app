@@ -95,4 +95,8 @@ export class FiltersService {
     
     this._appliedFilter.set(new AppliedFilter([], [], issuerFilter));
   }
+
+  removeAllFilters() {
+    this._appliedFilter.set(new AppliedFilter());
+  }
 }

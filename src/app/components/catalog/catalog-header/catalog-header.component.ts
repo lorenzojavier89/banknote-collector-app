@@ -13,6 +13,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './catalog-header.component.scss'
 })
 export class CatalogHeaderComponent {
+
   private filtersService: FiltersService = inject(FiltersService);
 
   noFiltersAppliedMssg = "Sin filtros aplicados";
@@ -22,4 +23,9 @@ export class CatalogHeaderComponent {
   appliedFilter = this.filtersService.appliedFilter;
   
   count = computed(() => this.filteredBanknotes().length);
+
+  onRemoveFiltersClick(event: MouseEvent) {
+    event.stopPropagation();
+    this.filtersService.removeAllFilters();
+  }
 }
