@@ -3,9 +3,9 @@
     <mat-expansion-panel-header>
       <mat-panel-title>Mostrando {{ count() }} billetes</mat-panel-title>
       @if (appliedFilter().noFiltersApplied()) {
-        <mat-icon class="material-symbols-outlined">filter_alt</mat-icon>
+        <mat-icon class="material-symbols-outlined" [matTooltip]="noFiltersAppliedMssg">filter_alt</mat-icon>
       } @else {
-        <mat-icon class="icon-remove-filter">filter_alt</mat-icon>
+        <mat-icon class="icon-remove-filter" [matTooltip]="removeAppliedFiltersMssg">filter_alt</mat-icon>
       }  
     </mat-expansion-panel-header>
     @if (appliedFilter().someFiltersApplied())
@@ -27,7 +27,7 @@
         </div>
       } @else {
         <div class="badge-row">
-          <h5><span class="badge badge-no-filter">Sin filtros aplicados</span></h5>
+          <h5><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h5>
         </div>
       }
   </mat-expansion-panel>
