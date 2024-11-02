@@ -2,6 +2,14 @@ hr {
   margin-bottom: 0px;
 }
 
+.icon-remove-filter {
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(206, 0, 0);
+  }
+}
+
 .badge-row {
   display: flex;
   overflow: hidden;
