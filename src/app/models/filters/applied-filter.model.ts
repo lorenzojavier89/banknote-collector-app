@@ -5,7 +5,8 @@ export class AppliedFilter {
     readonly subregionFilters: FilterItem[];
     readonly issuerFilter: FilterItem | null;
 
-    anyFilterApplied = () => !!(this.regionFilters.length || this.subregionFilters.length || this.issuerFilter);
+    someFiltersApplied = () => !!(this.regionFilters.length || this.subregionFilters.length || this.issuerFilter);
+    noFiltersApplied = () => !(this.regionFilters.length || this.subregionFilters.length || this.issuerFilter);
     regionFilterCodes = () => this.regionFilters.map(rf => rf.code);
     subregionFilterCodes = () => this.subregionFilters.map(srf => srf.code);
     issuerFilterCode = () => this.issuerFilter?.code;

@@ -48,7 +48,7 @@ export class FiltersService {
     const appliedFilter = this._appliedFilter();
     const banknotes = this.catalogService.banknotes();
 
-    if(!appliedFilter.anyFilterApplied()) {
+    if(appliedFilter.noFiltersApplied()) {
       return banknotes;
     }
 
