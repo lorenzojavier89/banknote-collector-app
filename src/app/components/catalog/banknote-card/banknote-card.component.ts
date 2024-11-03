@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
@@ -12,4 +12,10 @@ import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.comp
 })
 export class BanknoteCardComponent {
   banknote = input.required<Banknote>();
+
+  collapsed = signal<boolean>(true);
+  onCommentClick() {
+    this.collapsed.set(!this.collapsed());
+  }
+
 }
