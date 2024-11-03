@@ -6,6 +6,11 @@
             <span>{{ banknote().issuer.country.name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
         </a>
         <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
-        <small class="text-body-secondary card-comment" [class.collapsed]="collapsed()" (click)="onCommentClick()">{{ banknote().comment }}</small>
+        <small #cardComment 
+            class="text-body-secondary card-comment" 
+            [class.overflowed]="overflowed()" 
+            (click)="onCommentClick()">
+            {{ banknote().comment }}
+        </small>
     </div>
 </div>
