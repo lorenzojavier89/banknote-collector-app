@@ -13,16 +13,17 @@ import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.comp
 export class BanknoteCardComponent implements AfterViewInit {
   banknote = input.required<Banknote>();
   private cardCommentEl = viewChild<ElementRef<HTMLElement>>('cardComment');
-  overflowed = signal<boolean>(false);
+  collapsible = signal<boolean>(false);
+  collapsed = signal<boolean>(true);
 
   ngAfterViewInit(): void {
     const element = this.cardCommentEl()?.nativeElement;
-    const overflowed = !!element && element.scrollHeight > element.clientHeight;
-    this.overflowed.set(overflowed);
+    const collapsible = !!element && element.scrollHeight > element.clientHeight;
+    this.collapsible.set(collapsible);
   }
     
   onCommentClick() {
-    this.overflowed.set(!this.overflowed());
+    this.collapsed.set(!this.collapsed());
   }
 
 }

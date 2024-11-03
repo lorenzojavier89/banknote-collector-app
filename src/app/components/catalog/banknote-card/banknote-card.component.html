@@ -8,7 +8,8 @@
         <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
         <small #cardComment 
             class="text-body-secondary card-comment" 
-            [class.overflowed]="overflowed()" 
+            [class.collapsible]="collapsible()"
+            [class.collapsed]="collapsed()" 
             (click)="onCommentClick()">
             {{ banknote().comment }}
         </small>
