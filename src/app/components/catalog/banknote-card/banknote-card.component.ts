@@ -23,7 +23,8 @@ export class BanknoteCardComponent implements AfterViewInit {
   }
     
   onCommentClick() {
-    this.collapsed.set(!this.collapsed());
+    if(this.collapsible()){
+      this.collapsed.set(!this.collapsed());
+    }
   }
-
 }
