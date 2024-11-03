@@ -6,7 +6,7 @@
             <span>{{ banknote().issuer.country.name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
         </a>
         <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
-        <small class="text-body-secondary card-comment">{{ banknote().comment }}</small>
+        <small class="text-body-secondary card-comment collapsed">{{ banknote().comment }}</small>
     </div>
 </div>
 
