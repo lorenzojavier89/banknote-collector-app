@@ -14,16 +14,16 @@ import { Banknote } from '../models/banknote.model';
 export class CatalogService {
   private http: HttpClient = inject(HttpClient);
   private catalogJsonUrl = 'assets/data/catalog.json';
-  private countriesJsonUrl = 'assets/data/countries.json';
+  private issuersJsonUrl = 'assets/data/issuers.json';
 
-  private regions$ = this.http.get<Region[]>(this.countriesJsonUrl).pipe(shareReplay(1));
+  private regions$ = this.http.get<Region[]>(this.issuersJsonUrl).pipe(shareReplay(1));
   private issuers$ = this.regions$.pipe(
     map((data) => {
       const issuerLookup = new Map<string, Issuer>();
 
       data.forEach((region) => {
         region.subregions.forEach((subregion) => {
-          subregion.countries.forEach((country) => {
+          subregion.issuers.forEach((country) => {
             issuerLookup.set(country.code, {
               country: {
                 code: country.code,
