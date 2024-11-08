@@ -49,24 +49,7 @@ export class CatalogService {
       map(([issuerLookup, apiResponse]) => {
         return apiResponse.map((item) => {
           const issuer = issuerLookup.get(item.issuerCode);
-          
-          let name = '';
-          let flagIcon = '';
-
-          if(item.issuerSubcode) {
-            if(item.issuerSubcode.startsWith(item.issuerCode)) {
-              const historicalPeriod = issuer?.country.historicalPeriods.find(x => x.code === item.issuerSubcode);
-              name = historicalPeriod?.name ?? '';
-              flagIcon = historicalPeriod?.flagIcon ?? '';
-            } else {
-              const subgroup = issuer?.country.subgroups.find(x => x.code == item.issuerSubcode);
-              name = subgroup?.name ?? '';
-              flagIcon = subgroup?.flagIcon ?? '';
-            }
-          } else {
-            name = issuer?.country.name ?? '';
-            flagIcon = issuer?.country.flagIcon ?? '';
-          }
+          const { name, flagIcon } = this.getNameAndFlag(issuer,item.issuerCode,item.issuerSubcode);
 
           return {
             id: item.id,
@@ -87,6 +70,37 @@ export class CatalogService {
         });
       })
     );
+
+  private getNameAndFlag(
+    issuer: Issuer | undefined,
+    issuerCode: string,
+    issuerSubcode?: string
+  ): { name: string; flagIcon: string } {
+    if (!issuer) {
+      return { name: '', flagIcon: '' };
+    }
+  
+    if (!issuerSubcode) {
+      return {
+        name: issuer.country.name,
+        flagIcon: issuer.country.flagIcon,
+      };
+    }
+  
+    if (issuerSubcode.startsWith(issuerCode)) {
+      const historicalPeriod = issuer.country.historicalPeriods.find((x) => x.code === issuerSubcode);
+      return {
+        name: historicalPeriod?.name ?? '',
+        flagIcon: historicalPeriod?.flagIcon ?? '',
+      };
+    }
+  
+    const subgroup = issuer.country.subgroups.find((x) => x.code === issuerSubcode);
+    return {
+      name: subgroup?.name ?? '',
+      flagIcon: subgroup?.flagIcon ?? '',
+    };
+  }  
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
   regions = toSignal(this.regions$, { initialValue: []});
