@@ -12,17 +12,19 @@ export class FiltersService {
   private catalogService: CatalogService = inject(CatalogService);
   private builderService: FiltersBuilderService = inject(FiltersBuilderService);
 
-  private readonly _appliedFilter = signal<AppliedFilter>(this.builderService.buildEmtpy());
-  readonly appliedFilter = this._appliedFilter.asReadonly();
+  private readonly _appliedFilter = signal<AppliedFilter>(JSON.parse(localStorage.getItem('appliedFilter')!) as AppliedFilter);
+  readonly appliedFilter = computed<AppliedFilter>(() => {
+    return this._appliedFilter() ?? this.builderService.buildEmtpy();
+  })
 
   constructor() {
     effect(() => {
-      console.log(this._appliedFilter());
+      localStorage.setItem('appliedFilter', JSON.stringify(this.appliedFilter()));
     });
   }
 
   regionsFilter = computed<FilterItem[]>(() =>{
-    const { regionFilterCodes, subregionFilterCodes } = { ...this._appliedFilter() };
+    const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
@@ -37,7 +39,7 @@ export class FiltersService {
   });
 
   issuersFilter = computed<FilterItem[]>(() => {
-    const { issuerFilterCode } = { ...this._appliedFilter() };
+    const { issuerFilterCode } = { ...this.appliedFilter() };
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
@@ -47,7 +49,7 @@ export class FiltersService {
   });
 
   filteredBanknotes = computed<Banknote[]>(() => {
-    const appliedFilter = this._appliedFilter();
+    const appliedFilter = this.appliedFilter();
     const banknotes = this.catalogService.banknotes();
 
     if(appliedFilter.noFiltersApplied) {
@@ -64,7 +66,7 @@ export class FiltersService {
   });
 
   applyRegionFilter(selected: boolean, clickedRegionFilter: FilterItem) {
-    let { regionFilters, subregionFilters } = { ...this._appliedFilter() };
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
     if(selected) {
       regionFilters.push(clickedRegionFilter);
@@ -79,7 +81,7 @@ export class FiltersService {
   }
 
   applySubregionFilter(selected: boolean, clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
-    let { regionFilters, subregionFilters } = { ...this._appliedFilter() };
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
     if(selected) {
       subregionFilters.push(clickedSubregionFilter);
