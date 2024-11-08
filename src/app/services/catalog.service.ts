@@ -52,20 +52,11 @@ export class CatalogService {
           const { name, flagIcon } = this.getNameAndFlag(issuer,item.issuerCode,item.issuerSubcode);
 
           return {
-            id: item.id,
-            order: item.order,
-            volume: item.volume,
+            ...item,
             name,
             flagIcon,
             regionCode: issuer?.regionCode,
             subregionCode: issuer?.subregionCode,
-            issuerCode: item.issuerCode,
-            issuerSubcode: item.issuerSubcode,
-            issueDate: item.issueDate,
-            denomination: item.denomination,
-            onlineCatalog: item.onlineCatalog,
-            imageUrl: item.imageUrl,
-            comment: item.comment
           } as Banknote;
         });
       })
