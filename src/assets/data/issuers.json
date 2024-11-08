@@ -769,7 +769,7 @@
               {
                 "code": "DEU1871",
                 "name": "[1871-1918] Imperio Alemán",
-                "flagIcon": ""
+                "flagIcon": "assets/images/flags/4x3/de1871.svg"
               },
               {
                 "code": "DEU1918",
@@ -779,7 +779,7 @@
               {
                 "code": "DEU1933",
                 "name": "[1933-1945] Tercer Reich / Alemania Nazi",
-                "flagIcon": ""
+                "flagIcon": "assets/images/flags/4x3/de1933.svg"
               }
             ]
           },
