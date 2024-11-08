@@ -25,13 +25,7 @@ export class CatalogService {
         region.subregions.forEach((subregion) => {
           subregion.issuers.forEach((country) => {
             issuerLookup.set(country.code, {
-              country: {
-                code: country.code,
-                name: country.name,
-                flagIcon: country.flagIcon,
-                subgroups: country.subgroups,
-                historicalPeriods: country.historicalPeriods
-              },
+              country,
               subregionCode: subregion.code,
               subregionName: subregion.name,
               regionCode: region.code,
