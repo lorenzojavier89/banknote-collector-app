@@ -4,7 +4,12 @@ export interface Banknote {
   id: string;
   order: number;
   volume: string;
-  issuer: Issuer;
+  name: string;
+  flagIcon: string;
+  regionCode: string;
+  subregionCode: string;
+  issuerCode: string;
+  issuerSubcode: string;
   issueDate: string;
   denomination: string;
   onlineCatalog: string;

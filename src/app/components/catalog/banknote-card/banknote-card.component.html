@@ -2,8 +2,8 @@
     <app-image-loader class="card-img-top" [src]="banknote().imageUrl" />
     <div class="card-body">
         <a class="card-title" [routerLink]="['/catalog', banknote().id]">
-            <img [src]="banknote().issuer.country.flagIcon" width="24"> 
-            <span>{{ banknote().issuer.country.name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
+            <img [src]="banknote().flagIcon" width="24"> 
+            <span>{{ banknote().name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
         </a>
         <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
         <small #cardComment 

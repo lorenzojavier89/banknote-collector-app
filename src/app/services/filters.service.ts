@@ -57,9 +57,9 @@ export class FiltersService {
     }
 
     return banknotes.filter((b) => {
-        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.issuer.regionCode);
-        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.issuer.subregionCode);
-        const matchesCountry = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuer.country.code;
+        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.regionCode);
+        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.subregionCode);
+        const matchesCountry = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuerCode;
 
         return matchesRegion || matchesSubregion || matchesCountry;
     });

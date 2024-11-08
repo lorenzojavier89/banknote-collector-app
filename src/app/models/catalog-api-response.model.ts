@@ -3,8 +3,7 @@ export interface CatalogApiResponse {
   order: number;
   volume: string;
   issuerCode: string;
-  subgroup: string;
-  historicalPeriod: string;
+  issuerSubcode: string;
   issueDate: string;
   denomination: string;
   onlineCatalog: string;
