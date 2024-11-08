@@ -10,7 +10,7 @@ import { Banknote } from '../models/banknote.model';
 export class FiltersService {
   private catalogService: CatalogService = inject(CatalogService);
 
-  private readonly _appliedFilter = signal<AppliedFilter>(new AppliedFilter());
+  private readonly _appliedFilter = signal<AppliedFilter>(this.buildEmtpy());
   readonly appliedFilter = this._appliedFilter.asReadonly();
 
   constructor() {
@@ -24,11 +24,11 @@ export class FiltersService {
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
-      selected: regionFilterCodes().includes(r.code),
+      selected: regionFilterCodes.includes(r.code),
       highlighted: false,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: subregionFilterCodes().includes(sr.code),
+        selected: subregionFilterCodes.includes(sr.code),
         highlighted: false,
       })),
     }))
@@ -39,7 +39,7 @@ export class FiltersService {
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
-      selected: issuerFilterCode() === i.country.code,
+      selected: issuerFilterCode === i.country.code,
       highlighted: false
     }))
   });
@@ -48,14 +48,14 @@ export class FiltersService {
     const appliedFilter = this._appliedFilter();
     const banknotes = this.catalogService.banknotes();
 
-    if(appliedFilter.noFiltersApplied()) {
+    if(appliedFilter.noFiltersApplied) {
       return banknotes;
     }
 
     return banknotes.filter((b) => {
-        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes().includes(b.issuer.regionCode);
-        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes().includes(b.issuer.subregionCode);
-        const matchesCountry = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode() === b.issuer.country.code;
+        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.issuer.regionCode);
+        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.issuer.subregionCode);
+        const matchesCountry = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuer.country.code;
 
         return matchesRegion || matchesSubregion || matchesCountry;
     });
@@ -73,7 +73,7 @@ export class FiltersService {
       subregionFilters = subregionFilters.filter(srf => !clickedRegionFilter.subItems?.map(i => i.code).includes(srf.code));
     }
     
-    this._appliedFilter.set(new AppliedFilter(regionFilters, subregionFilters));
+    this._appliedFilter.set(this.buildFromRegions(regionFilters, subregionFilters));
   }
 
   applySubregionFilter(selected: boolean, clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
@@ -87,16 +87,74 @@ export class FiltersService {
       subregionFilters = subregionFilters.filter(srf => srf.code != clickedSubregionFilter.code);
     }
 
-    this._appliedFilter.set(new AppliedFilter(regionFilters, subregionFilters));
+    this._appliedFilter.set(this.buildFromRegions(regionFilters, subregionFilters));
   }
 
   applyCountryFilter(selected: boolean, issuerFilterItem: FilterItem) {
     const issuerFilter = selected ? issuerFilterItem : null;
     
-    this._appliedFilter.set(new AppliedFilter([], [], issuerFilter));
+    this._appliedFilter.set(this.buildFromIssuer(issuerFilter));
   }
 
   removeAllFilters() {
-    this._appliedFilter.set(new AppliedFilter());
+    this._appliedFilter.set(this.buildEmtpy());
+  }
+
+  private buildFromRegions(regionFilters: FilterItem[], subregionFilters: FilterItem[]): AppliedFilter {
+    const dRegionFilters = this.Distinct(regionFilters);
+    const dSubregionFilters = this.Distinct(subregionFilters);
+    const someFiltersApplied = dRegionFilters.length > 0 || dSubregionFilters.length > 0;
+    const noFiltersApplied = !someFiltersApplied;
+        
+    return {
+      regionFilters: dRegionFilters,
+      regionFilterCodes: dRegionFilters.map(rf => rf.code),
+      subregionFilters: dSubregionFilters,
+      subregionFilterCodes: dSubregionFilters.map(srf => srf.code),
+      issuerFilter: null,
+      issuerFilterCode: null,
+      someFiltersApplied,
+      noFiltersApplied
+    }    
+  }
+
+  private buildFromIssuer(issuerFilterItem: FilterItem | null): AppliedFilter {
+    return {
+      regionFilters: [],
+      regionFilterCodes: [],
+      subregionFilters: [],
+      subregionFilterCodes: [],
+      issuerFilter: issuerFilterItem,
+      issuerFilterCode: issuerFilterItem? issuerFilterItem.code : null,
+      someFiltersApplied: issuerFilterItem !== null,
+      noFiltersApplied: issuerFilterItem === null
+    }    
+  }
+
+  private buildEmtpy(): AppliedFilter {
+    return {
+      regionFilters: [],
+      regionFilterCodes: [],
+      subregionFilters: [],
+      subregionFilterCodes: [],
+      issuerFilter: null,
+      issuerFilterCode: null,
+      someFiltersApplied: false,
+      noFiltersApplied: true
+    }  
+  }
+
+  private Distinct(filters: FilterItem[]): FilterItem[] {
+    let codes = new Set<string>();
+    let results: FilterItem[] = []; 
+
+    filters.forEach(f => {
+        if(!codes.has(f.code)) {
+            codes.add(f.code);
+            results.push(f);
+        }
+    });
+
+    return results;
   }
 }
