@@ -94,7 +94,7 @@ export class FiltersService {
     this._appliedFilter.set(this.builderService.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  applyCountryFilter(selected: boolean, issuerFilterItem: FilterItem) {
+  applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
     const issuerFilter = selected ? issuerFilterItem : null;
     
     this._appliedFilter.set(this.builderService.buildFromIssuer(issuerFilter));

@@ -2,7 +2,7 @@
     <ul>
         @for (i of issuers(); track i.code) {
         <li>
-            <mat-checkbox [checked]="i.selected" (change)="applyCountryFilter($event.checked, i)">
+            <mat-checkbox [checked]="i.selected" (change)="applyIssuerFilter($event.checked, i)">
             {{ i.name }}
             </mat-checkbox>
         </li>

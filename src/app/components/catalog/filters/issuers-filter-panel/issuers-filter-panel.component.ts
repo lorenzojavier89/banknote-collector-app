@@ -16,7 +16,7 @@ export class IssuersFilterPanelComponent {
   
   issuers = this.filtersService.issuers;
 
-  applyCountryFilter(selected: boolean, issuerFilterItem: FilterItem) {
-    this.filtersService.applyCountryFilter(selected, issuerFilterItem);
+  applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
+    this.filtersService.applyIssuerFilter(selected, issuerFilterItem);
   }
 }
