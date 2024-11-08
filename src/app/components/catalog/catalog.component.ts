@@ -22,5 +22,5 @@ import { CatalogHeaderComponent } from "./catalog-header/catalog-header.componen
 export class CatalogComponent {
   private filtersService: FiltersService = inject(FiltersService);
 
-  filteredBanknotes = this.filtersService.filteredBanknotes;
+  banknotes = this.filtersService.banknotes;
 }

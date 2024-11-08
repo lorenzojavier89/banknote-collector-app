@@ -14,7 +14,7 @@ import { FilterItem } from '../../../../models/filters/filter-item.model';
 export class RegionsFilterPanelComponent {
   private filtersService: FiltersService = inject(FiltersService);
 
-  regionsFilter = this.filtersService.regionsFilter;
+  regions = this.filtersService.regions;
 
   applyRegionFilter(selected: boolean, regionFilterItem: FilterItem) {
     this.filtersService.applyRegionFilter(selected, regionFilterItem);

@@ -13,17 +13,17 @@ export class FiltersService {
   private builderService: FiltersBuilderService = inject(FiltersBuilderService);
 
   private readonly _appliedFilter = signal<AppliedFilter>(JSON.parse(localStorage.getItem('appliedFilter')!) as AppliedFilter);
-  readonly appliedFilter = computed<AppliedFilter>(() => {
+  appliedFilter = computed<AppliedFilter>(() => {
     return this._appliedFilter() ?? this.builderService.buildEmtpy();
-  })
-
+  });
+  
   constructor() {
     effect(() => {
       localStorage.setItem('appliedFilter', JSON.stringify(this.appliedFilter()));
     });
   }
 
-  regionsFilter = computed<FilterItem[]>(() =>{
+  regions = computed<FilterItem[]>(() =>{
     const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
@@ -38,7 +38,7 @@ export class FiltersService {
     }))
   });
 
-  issuersFilter = computed<FilterItem[]>(() => {
+  issuers = computed<FilterItem[]>(() => {
     const { issuerFilterCode } = { ...this.appliedFilter() };
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
@@ -48,7 +48,7 @@ export class FiltersService {
     }))
   });
 
-  filteredBanknotes = computed<Banknote[]>(() => {
+  banknotes = computed<Banknote[]>(() => {
     const appliedFilter = this.appliedFilter();
     const banknotes = this.catalogService.banknotes();
 

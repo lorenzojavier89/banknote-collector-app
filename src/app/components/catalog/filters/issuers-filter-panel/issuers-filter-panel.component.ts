@@ -14,7 +14,7 @@ import { FilterItem } from '../../../../models/filters/filter-item.model';
 export class IssuersFilterPanelComponent {
   private filtersService: FiltersService = inject(FiltersService);
   
-  issuersFilter = this.filtersService.issuersFilter;
+  issuers = this.filtersService.issuers;
 
   applyCountryFilter(selected: boolean, issuerFilterItem: FilterItem) {
     this.filtersService.applyCountryFilter(selected, issuerFilterItem);

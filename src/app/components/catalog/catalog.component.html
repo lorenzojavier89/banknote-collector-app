@@ -5,7 +5,7 @@
   <section id="catalog" class="col-10 offset-2">
     <app-catalog-header></app-catalog-header>
     <div id="catalog-body" class="row">
-      <app-banknote-card class="col-4 mb-3" *ngFor="let b of filteredBanknotes()" [banknote]="b" @fadeInOut />
+      <app-banknote-card class="col-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b" @fadeInOut />
     </div>
   </section>
 </section>

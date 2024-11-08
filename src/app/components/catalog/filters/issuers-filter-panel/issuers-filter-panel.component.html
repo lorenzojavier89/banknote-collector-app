@@ -1,6 +1,6 @@
 <app-filter-expansion-panel title="Emisores">
     <ul>
-        @for (i of issuersFilter(); track i.code) {
+        @for (i of issuers(); track i.code) {
         <li>
             <mat-checkbox [checked]="i.selected" (change)="applyCountryFilter($event.checked, i)">
             {{ i.name }}

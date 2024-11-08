@@ -19,10 +19,10 @@ export class CatalogHeaderComponent {
   noFiltersAppliedMssg = "Sin filtros aplicados";
   removeAppliedFiltersMssg = "Quitar todos los filtros";
 
-  filteredBanknotes = this.filtersService.filteredBanknotes;
+  banknotes = this.filtersService.banknotes;
   appliedFilter = this.filtersService.appliedFilter;
   
-  count = computed(() => this.filteredBanknotes().length);
+  count = computed(() => this.banknotes().length);
 
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();
