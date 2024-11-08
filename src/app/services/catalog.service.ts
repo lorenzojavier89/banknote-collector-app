@@ -28,7 +28,9 @@ export class CatalogService {
               country: {
                 code: country.code,
                 name: country.name,
-                flagIcon: country.flagIcon
+                flagIcon: country.flagIcon,
+                subgroups: country.subgroups,
+                historicalPeriods: country.historicalPeriods
               },
               subregionCode: subregion.code,
               subregionName: subregion.name,

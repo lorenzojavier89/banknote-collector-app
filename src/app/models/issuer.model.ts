@@ -6,6 +6,4 @@ export interface Issuer {
   subregionName: string;
   regionCode: string;
   regionName: string;
-  historicalPeriod?: string;
-  subgroup?: string;
 }
