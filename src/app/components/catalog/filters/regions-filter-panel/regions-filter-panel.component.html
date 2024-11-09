@@ -2,13 +2,13 @@
     <ul>
       @for (r of regions(); track r.code) {
         <li class="region-section">
-          <mat-checkbox [checked]="r.selected" (change)="applyRegionFilter($event.checked, r)">
+          <mat-checkbox [checked]="r.selected" [disabled]="r.counter === 0" (change)="applyRegionFilter($event.checked, r)">
             <span class="region-title">{{ r.name }} ({{ r.counter }})</span>
           </mat-checkbox>
           <ul>
             @for (sr of r.subItems; track sr.code) {
               <li class="subregion-section"> 
-                <mat-checkbox [checked]="sr.selected" (change)="applySubregionFilter($event.checked, r, sr)">
+                <mat-checkbox [checked]="sr.selected" [disabled]="sr.counter === 0" (change)="applySubregionFilter($event.checked, r, sr)">
                   <span class="subregion-title">{{ sr.name }} ({{ sr.counter }})</span>
                 </mat-checkbox>
               </li>

@@ -102,11 +102,18 @@ export class CatalogService {
 
   counters = computed<Map<string,number>>(() => {
     const countMap = new Map<string, number>();
+    
     this.banknotes().forEach(b => {
-      countMap.set(b.regionCode, (countMap.get(b.regionCode) || 0) + 1);
-      countMap.set(b.subregionCode, (countMap.get(b.subregionCode) || 0) + 1);
-      countMap.set(b.issuerCode, (countMap.get(b.issuerCode) || 0) + 1);
-      countMap.set(b.issuerSubcode, (countMap.get(b.issuerSubcode) || 0) + 1);
+
+      const regionKey = `rc_${b.regionCode}`;
+      const subregionKey = `src_${b.subregionCode}`;
+      const issuerKey = `ic_${b.issuerCode}`;
+      const issuerSubkey = `isc_${b.issuerSubcode}`;
+
+      countMap.set(regionKey, (countMap.get(regionKey) || 0) + 1);
+      countMap.set(subregionKey, (countMap.get(subregionKey) || 0) + 1);
+      countMap.set(issuerKey, (countMap.get(issuerKey) || 0) + 1);
+      countMap.set(issuerSubkey, (countMap.get(issuerSubkey) || 0) + 1);
     });
 
     return countMap;
