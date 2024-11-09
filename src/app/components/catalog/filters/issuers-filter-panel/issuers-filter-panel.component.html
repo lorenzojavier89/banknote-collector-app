@@ -15,9 +15,7 @@
                 <span class="issuer-name">{{ i.name }}</span>
                 <small class="text-body-secondary">{{ i.counter }}</small>
               </div>
-              <!-- <p class="mb-1">Some placeholder content in a paragraph.</p> -->
-              <p class="text-body-secondary issuer-subgroup">And some small print.</p>
-              <p class="text-body-secondary issuer-subgroup">And some small print.</p>
+              <p *ngFor="let si of i.subItems" class="text-body-secondary issuer-subgroup">{{ si.name }}</p>
             </li>
         }
       </ul>

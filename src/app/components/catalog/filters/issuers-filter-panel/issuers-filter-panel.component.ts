@@ -3,11 +3,12 @@ import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../services/filters.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-issuers-filter-panel',
   standalone: true,
-  imports: [FilterExpansionPanelComponent, MatCheckboxModule],
+  imports: [FilterExpansionPanelComponent, MatCheckboxModule, NgFor],
   templateUrl: './issuers-filter-panel.component.html',
   styleUrl: './issuers-filter-panel.component.scss'
 })

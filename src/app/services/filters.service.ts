@@ -59,6 +59,12 @@ export class FiltersService {
       ...i.country,
       selected: false,
       counter: counters.get(this.catalogService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
+      subItems: i.country.historicalPeriods.map<FilterItem>(hp => ({
+        ...hp,
+        selected: false,
+        counter: 0
+        }
+      ))
     }))  
   });
 
