@@ -29,11 +29,9 @@ export class FiltersService {
     
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
-      selected: false,
       counter: counters.get(this.catalogService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: false,
         counter: counters.get(this.catalogService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
       })),
     }))
@@ -57,12 +55,9 @@ export class FiltersService {
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
-      selected: false,
       counter: counters.get(this.catalogService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
       subItems: i.country.historicalPeriods.map<FilterItem>(hp => ({
         ...hp,
-        selected: false,
-        counter: 0
         }
       ))
     }))  
