@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../services/filters.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 import { NgFor } from '@angular/common';
@@ -8,7 +7,7 @@ import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-issuers-filter-panel',
   standalone: true,
-  imports: [FilterExpansionPanelComponent, MatCheckboxModule, NgFor],
+  imports: [FilterExpansionPanelComponent, NgFor],
   templateUrl: './issuers-filter-panel.component.html',
   styleUrl: './issuers-filter-panel.component.scss'
 })

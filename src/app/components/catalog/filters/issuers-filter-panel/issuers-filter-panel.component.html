@@ -1,13 +1,4 @@
 <app-filter-expansion-panel title="Emisores">
-    <!-- <ul>
-        @for (i of issuers(); track i.code) {
-        <li>
-            <mat-checkbox [checked]="i.selected" (change)="applyIssuerFilter($event.checked, i)">
-            {{ i.name }} ({{ i.counter }})
-            </mat-checkbox>
-        </li>
-        }
-    </ul> -->
     <ul class="list-group">
         @for (i of issuers(); track i.code) {
             <li class="list-group-item list-group-item-action">
@@ -18,5 +9,5 @@
               <p *ngFor="let si of i.subItems" class="text-body-secondary issuer-subgroup">{{ si.name }}</p>
             </li>
         }
-      </ul>
+    </ul>
 </app-filter-expansion-panel>
