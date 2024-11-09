@@ -99,6 +99,18 @@ export class CatalogService {
   issuers = computed<Issuer[]>(() => 
     Array.from(this.issuersLookup().values())
     .sort((a, b) => a.country.name.localeCompare(b.country.name)));
+
+  counters = computed<Map<string,number>>(() => {
+    const countMap = new Map<string, number>();
+    this.banknotes().forEach(b => {
+      countMap.set(b.regionCode, (countMap.get(b.regionCode) || 0) + 1);
+      countMap.set(b.subregionCode, (countMap.get(b.subregionCode) || 0) + 1);
+      countMap.set(b.issuerCode, (countMap.get(b.issuerCode) || 0) + 1);
+      countMap.set(b.issuerSubcode, (countMap.get(b.issuerSubcode) || 0) + 1);
+    });
+
+    return countMap;
+  });
     
   private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
   readonly selectedBanknote = this._selectedBanknote.asReadonly();

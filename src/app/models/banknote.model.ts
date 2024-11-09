@@ -1,5 +1,3 @@
-import { Issuer } from "./issuer.model";
-
 export interface Banknote {
   id: string;
   order: number;
