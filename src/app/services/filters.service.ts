@@ -24,30 +24,50 @@ export class FiltersService {
     });
   }
 
-  regions = computed<FilterItem[]>(() =>{
-    const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
+  private _loadedRegions = computed<FilterItem[]>(() => {
     const counters = this.catalogService.counters();
-
+    
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
-      selected: regionFilterCodes.includes(r.code),
+      selected: false,
       counter: counters.get(this.catalogService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        selected: subregionFilterCodes.includes(sr.code),
+        selected: false,
         counter: counters.get(this.catalogService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
       })),
     }))
   });
 
-  issuers = computed<FilterItem[]>(() => {
-    const { issuerFilterCode } = { ...this.appliedFilter() };
+  regions = computed<FilterItem[]>(() =>{
+    const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
+
+    return this._loadedRegions().map((r) => ({
+      ...r,
+      selected: regionFilterCodes.includes(r.code),
+      subItems: r.subItems?.map<FilterItem>((si) => ({ 
+        ...si,
+        selected: subregionFilterCodes.includes(si.code)
+      }))
+    }))
+  });
+
+  private _loadedIssuers = computed<FilterItem[]>(() => {
     const counters = this.catalogService.counters();
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
-      selected: issuerFilterCode === i.country.code,
+      selected: false,
       counter: counters.get(this.catalogService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
+    }))  
+  });
+
+  issuers = computed<FilterItem[]>(() => {
+    const { issuerFilterCode } = { ...this.appliedFilter() };
+
+    return this._loadedIssuers().map<FilterItem>(i => ({
+      ...i,
+      selected: issuerFilterCode === i.code,
     }))  
   });
 
