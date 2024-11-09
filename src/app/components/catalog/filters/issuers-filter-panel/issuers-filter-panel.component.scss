@@ -4,6 +4,15 @@ ul {
   li {
     padding-left: 12px;
     cursor: pointer;
+
+    &.active {
+      background-color: #ebf2ff;
+      border-color: #b6c7e0;
+
+      .issuer-name {
+        color: black;
+      }
+    }
   }
 }
 
