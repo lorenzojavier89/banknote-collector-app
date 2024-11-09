@@ -2,6 +2,10 @@
 
 .filter-expansion-panel {
   margin-bottom: 10px;
+
+  ::ng-deep .mat-expansion-panel-body {
+    padding: 0px !important;
+  }
 }
 
 mat-expansion-panel {
