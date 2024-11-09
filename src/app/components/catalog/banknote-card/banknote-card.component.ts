@@ -2,11 +2,12 @@ import { AfterViewInit, Component, ElementRef, input, signal, viewChild } from '
 import { RouterLink } from '@angular/router';
 import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-banknote-card',
   standalone: true,
-  imports: [RouterLink, ImageLoaderComponent],
+  imports: [RouterLink, ImageLoaderComponent, NgFor],
   templateUrl: './banknote-card.component.html',
   styleUrl: './banknote-card.component.scss',
 })

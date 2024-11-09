@@ -10,14 +10,18 @@
           {
             "code": "COD",
             "name": "República Democrática del Congo",
-            "flagIcon": "assets/images/flags/4x3/cd.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "COD1971",
                 "name": "[1971-1997] República del Zaire",
-                "flagIcon": ""
+                "flagIcons": [
+                  "assets/images/flags/4x3/cd1971.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/cd.svg"
             ]
           }
         ]
@@ -29,9 +33,11 @@
           {
             "code": "DJI",
             "name": "Yibuti",
-            "flagIcon": "assets/images/flags/4x3/dj.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/dj.svg"
+            ]
           }
         ]
       },
@@ -42,16 +48,20 @@
           {
             "code": "MAR",
             "name": "Marruecos",
-            "flagIcon": "assets/images/flags/4x3/ma.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ma.svg"
+            ]
           },
           {
             "code": "EGY",
             "name": "Egipto",
-            "flagIcon": "assets/images/flags/4x3/eg.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/eg.svg"
+            ]
           }
         ]
       },
@@ -62,16 +72,20 @@
           {
             "code": "ZMB",
             "name": "Zambia",
-            "flagIcon": "assets/images/flags/4x3/zm.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/zm.svg"
+            ]
           },
           {
             "code": "ZAF",
             "name": "Sudáfrica",
-            "flagIcon": "assets/images/flags/4x3/za.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/za.svg"
+            ]
           }
         ]
       },
@@ -82,16 +96,20 @@
           {
             "code": "GNB",
             "name": "Guinea-Bisáu",
-            "flagIcon": "assets/images/flags/4x3/gw.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/gw.svg"
+            ]
           },
           {
             "code": "GIN",
             "name": "Guinea (Guinea-Conakri)",
-            "flagIcon": "assets/images/flags/4x3/gn.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/gn.svg"
+            ]
           }
         ]
       }
@@ -108,30 +126,38 @@
           {
             "code": "NIC",
             "name": "Nicaragua",
-            "flagIcon": "assets/images/flags/4x3/ni.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ni.svg"
+            ]
           },
           {
             "code": "GTM",
             "name": "Guatemala",
-            "flagIcon": "assets/images/flags/4x3/gt.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/gt.svg"
+            ]
           },
           {
             "code": "MEX",
             "name": "México",
-            "flagIcon": "assets/images/flags/4x3/mx.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mx.svg"
+            ]
           },
           {
             "code": "HND",
             "name": "Honduras",
-            "flagIcon": "assets/images/flags/4x3/hn.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/hn.svg"
+            ]
           }
         ]
       },
@@ -142,34 +168,44 @@
           {
             "code": "CUB",
             "name": "Cuba",
-            "flagIcon": "assets/images/flags/4x3/cu.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "CUB1902",
                 "name": "[1902-1959] Primera República",
-                "flagIcon": ""
+                "flagIcons": [
+                  "assets/images/flags/4x3/cu1902.svg"
+                ]
               },
               {
                 "code": "CUB1959",
                 "name": "[1959-Presente] Segunda República",
-                "flagIcon": "assets/images/flags/4x3/cu.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/cu.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/cu.svg"
             ]
           },
           {
             "code": "DOM",
             "name": "República Dominicana",
-            "flagIcon": "assets/images/flags/4x3/do.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/do.svg"
+            ]
           },
           {
             "code": "EASTCAR",
             "name": "Estados del Caribe Oriental",
-            "flagIcon": "",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/.svg"
+            ]
           }
         ]
       },
@@ -180,16 +216,20 @@
           {
             "code": "USA",
             "name": "Estados Unidos",
-            "flagIcon": "assets/images/flags/4x3/us.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/us.svg"
+            ]
           },
           {
             "code": "CAN",
             "name": "Canadá",
-            "flagIcon": "assets/images/flags/4x3/ca.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ca.svg"
+            ]
           }
         ]
       },
@@ -200,101 +240,131 @@
           {
             "code": "ARG",
             "name": "Argentina",
-            "flagIcon": "assets/images/flags/4x3/ar.svg",
             "subgroups": [
               {
                 "code": "LECOP",
                 "name": "Cuasimonedas Argentinas",
-                "flagIcon": "assets/images/flags/4x3/ar.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/ar.svg"
+                ]
               },
               {
                 "code": "PAT",
                 "name": "Cuasimonedas Argentinas (Buenos Aires)",
-                "flagIcon": "assets/images/flags/4x3/ar-ba.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/ar-ba.svg"
+                ]
               },
               {
                 "code": "CHACHO",
-                "name": "Cuasimonedas Argentinas (Provincia de La Rioja)",
-                "flagIcon": "assets/images/flags/4x3/ar-lr.svg"
+                "name": "Cuasimonedas Argentinas (La Rioja)",
+                "flagIcons": [
+                  "assets/images/flags/4x3/ar-lr.svg"
+                ]
               }
             ],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ar.svg"
+            ]
           },
           {
             "code": "BOL",
             "name": "Bolivia",
-            "flagIcon": "assets/images/flags/4x3/bo.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/bo.svg"
+            ]
           },
           {
             "code": "BRA",
             "name": "Brasil",
-            "flagIcon": "assets/images/flags/4x3/br.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "BRA1889",
                 "name": "[1889-1968] Estados Unidos del Brasil",
-                "flagIcon": "assets/images/flags/4x3/br.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/br.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/br.svg"
             ]
           },
           {
             "code": "CHL",
             "name": "Chile",
-            "flagIcon": "assets/images/flags/4x3/cl.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/cl.svg"
+            ]
           },
           {
             "code": "PRY",
             "name": "Paraguay",
-            "flagIcon": "assets/images/flags/4x3/py.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/py.svg"
+            ]
           },
           {
             "code": "PER",
             "name": "Perú",
-            "flagIcon": "assets/images/flags/4x3/pe.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/pe.svg"
+            ]
           },
           {
             "code": "URY",
             "name": "Uruguay",
-            "flagIcon": "assets/images/flags/4x3/uy.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/uy.svg"
+            ]
           },
           {
             "code": "COL",
             "name": "Colombia",
-            "flagIcon": "assets/images/flags/4x3/co.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/co.svg"
+            ]
           },
           {
             "code": "ECU",
             "name": "Ecuador",
-            "flagIcon": "assets/images/flags/4x3/ec.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ec.svg"
+            ]
           },
           {
             "code": "GUY",
             "name": "Guyana",
-            "flagIcon": "assets/images/flags/4x3/gy.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/gy.svg"
+            ]
           },
           {
             "code": "VEN",
             "name": "Venezuela",
-            "flagIcon": "assets/images/flags/4x3/ve.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ve.svg"
+            ]
           }
         ]
       }
@@ -311,23 +381,29 @@
           {
             "code": "UZB",
             "name": "Uzbekistán",
-            "flagIcon": "assets/images/flags/4x3/uz.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/uz.svg"
+            ]
           },
           {
             "code": "TKM",
             "name": "Turkmenistán",
-            "flagIcon": "assets/images/flags/4x3/tm.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/tm.svg"
+            ]
           },
           {
             "code": "TJK",
             "name": "Tajikistán",
-            "flagIcon": "assets/images/flags/4x3/tj.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/tj.svg"
+            ]
           }
         ]
       },
@@ -338,34 +414,45 @@
           {
             "code": "MNG",
             "name": "Mongolia",
-            "flagIcon": "assets/images/flags/4x3/mn.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mn.svg"
+            ]
           },
           {
             "code": "CHN",
             "name": "China",
-            "flagIcon": "assets/images/flags/4x3/cn.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "CHN1912",
                 "name": "[1912-1949] República China",
-                "flagIcon": "assets/images/flags/4x3/cn.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/cn1912.svg",
+                  "assets/images/flags/4x3/cn1928.svg"
+                ]
               },
               {
                 "code": "CHN1949",
                 "name": "[1949-Presente] República Popular China",
-                "flagIcon": "assets/images/flags/4x3/cn.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/cn.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/cn.svg"
             ]
           },
           {
             "code": "JPN",
             "name": "Japón",
-            "flagIcon": "assets/images/flags/4x3/jp.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/jp.svg"
+            ]
           }
         ]
       },
@@ -376,50 +463,64 @@
           {
             "code": "MDV",
             "name": "Islas Maldivas",
-            "flagIcon": "assets/images/flags/4x3/mv.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mv.svg"
+            ]
           },
           {
             "code": "AFG",
             "name": "Afganistán",
-            "flagIcon": "assets/images/flags/4x3/af.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "AFG1978",
                 "name": "[1978-1992] República Democrática",
-                "flagIcon": "assets/images/flags/4x3/af.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/af.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/af.svg"
             ]
           },
           {
             "code": "PAK",
             "name": "Pakistán",
-            "flagIcon": "assets/images/flags/4x3/pk.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/pk.svg"
+            ]
           },
           {
             "code": "IND",
             "name": "India",
-            "flagIcon": "assets/images/flags/4x3/in.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/in.svg"
+            ]
           },
           {
             "code": "NPL",
             "name": "Nepal",
-            "flagIcon": "assets/images/flags/4x3/np.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/np.svg"
+            ]
           },
           {
             "code": "BTN",
             "name": "Bután",
-            "flagIcon": "assets/images/flags/4x3/bt.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/bt.svg"
+            ]
           }
         ]
       },
@@ -430,55 +531,71 @@
           {
             "code": "MMR",
             "name": "Myanmar",
-            "flagIcon": "assets/images/flags/4x3/mm.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mm.svg"
+            ]
           },
           {
             "code": "LAO",
             "name": "Laos",
-            "flagIcon": "assets/images/flags/4x3/la.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/la.svg"
+            ]
           },
           {
             "code": "THA",
             "name": "Tailandia",
-            "flagIcon": "assets/images/flags/4x3/th.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/th.svg"
+            ]
           },
           {
             "code": "VNM",
             "name": "Vietnam",
-            "flagIcon": "assets/images/flags/4x3/vn.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/vn.svg"
+            ]
           },
           {
             "code": "KHM",
             "name": "Camboya",
-            "flagIcon": "assets/images/flags/4x3/kh.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "KHM1970",
                 "name": "[1970-1975] República Jemer",
-                "flagIcon": "assets/images/flags/4x3/kh.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/kh.svg"
+                ]
               },
               {
                 "code": "KHM1979",
                 "name": "[1979-1990] República Popular de Kampuchea",
-                "flagIcon": "assets/images/flags/4x3/kh.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/kh.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/kh.svg"
             ]
           },
           {
             "code": "IDN",
             "name": "Indonesia",
-            "flagIcon": "assets/images/flags/4x3/id.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/id.svg"
+            ]
           }
         ]
       },
@@ -489,37 +606,47 @@
           {
             "code": "TUR",
             "name": "Turquía",
-            "flagIcon": "assets/images/flags/4x3/tr.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/tr.svg"
+            ]
           },
           {
             "code": "ARE",
             "name": "Emiratos Árabes Unidos",
-            "flagIcon": "assets/images/flags/4x3/ae.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ae.svg"
+            ]
           },
           {
             "code": "JOR",
             "name": "Jordania",
-            "flagIcon": "assets/images/flags/4x3/jo.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/jo.svg"
+            ]
           },
           {
             "code": "ISR",
             "name": "Israel",
-            "flagIcon": "assets/images/flags/4x3/il.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/il.svg"
+            ]
           },
           {
             "code": "QAT",
             "name": "Catar",
-            "flagIcon": "assets/images/flags/4x3/qa.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/qa.svg"
+            ]
           }
         ]
       }
@@ -536,89 +663,115 @@
           {
             "code": "HUN",
             "name": "Hungría",
-            "flagIcon": "assets/images/flags/4x3/hu.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/hu.svg"
+            ]
           },
           {
             "code": "RUS",
             "name": "Rusia",
-            "flagIcon": "assets/images/flags/4x3/ru.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "RUS1919",
                 "name": "[1919-1920] Fuerzas Armadas de Rusia del Sur",
-                "flagIcon": "assets/images/flags/4x3/ru.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/ru.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/ru.svg"
             ]
           },
           {
             "code": "SVK",
             "name": "Eslovaquia",
-            "flagIcon": "assets/images/flags/4x3/sk.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/sk.svg"
+            ]
           },
           {
             "code": "CSHH",
             "name": "[1918-1992] Checolosvaquia",
-            "flagIcon": "",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "CSHH1960",
                 "name": "[1960-1990] República Socialista Checoslovaca",
-                "flagIcon": ""
+                "flagIcons": [
+                  "assets/images/flags/4x3/cz.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/cz.svg"
             ]
           },
           {
             "code": "POL",
             "name": "Polonia",
-            "flagIcon": "assets/images/flags/4x3/pl.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/pl.svg"
+            ]
           },
           {
             "code": "BGR",
             "name": "Bulgaria",
-            "flagIcon": "assets/images/flags/4x3/bg.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/bg.svg"
+            ]
           },
           {
             "code": "MDA-TRAN",
             "name": "República Moldava Pridnestroviana (Transnistria)",
-            "flagIcon": "",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mda-tran.svg"
+            ]
           },
           {
             "code": "UKR",
             "name": "Ucrania",
-            "flagIcon": "assets/images/flags/4x3/ua.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ua.svg"
+            ]
           },
           {
             "code": "GEO",
             "name": "Georgia",
-            "flagIcon": "assets/images/flags/4x3/ge.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ge.svg"
+            ]
           },
           {
             "code": "ROU",
             "name": "Rumania",
-            "flagIcon": "assets/images/flags/4x3/ro.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "ROU1965",
                 "name": "[1965-1989] República Socialista",
-                "flagIcon": ""
+                "flagIcons": [
+                  "assets/images/flags/4x3/ro1965.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/ro.svg"
             ]
           }
         ]
@@ -630,46 +783,60 @@
           {
             "code": "GBR",
             "name": "Reino Unido",
-            "flagIcon": "assets/images/flags/4x3/gb.svg",
             "subgroups": [
               {
                 "code": "ENG",
                 "name": "Inglaterra",
-                "flagIcon": "assets/images/flags/4x3/gb-eng.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/gb-eng.svg"
+                ]
               },
               {
                 "code": "SCT",
                 "name": "Escocia",
-                "flagIcon": "assets/images/flags/4x3/gb-sct.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/gb-sct.svg"
+                ]
               },
               {
                 "code": "BAF",
                 "name": "Fuerzas Armadas Británicas",
-                "flagIcon": "assets/images/flags/4x3/gb.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/gb.svg"
+                ]
               }
             ],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/gb.svg"
+            ]
           },
           {
             "code": "NOR",
             "name": "Noruega",
-            "flagIcon": "assets/images/flags/4x3/no.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/no.svg"
+            ]
           },
           {
             "code": "LTU",
             "name": "Lituania",
-            "flagIcon": "assets/images/flags/4x3/lt.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/lt.svg"
+            ]
           },
           {
             "code": "EST",
             "name": "Estonia",
-            "flagIcon": "assets/images/flags/4x3/ee.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ee.svg"
+            ]
           }
         ]
       },
@@ -680,51 +847,66 @@
           {
             "code": "ESP",
             "name": "España",
-            "flagIcon": "assets/images/flags/4x3/es.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/es.svg"
+            ]
           },
           {
             "code": "ITA",
             "name": "Italia",
-            "flagIcon": "assets/images/flags/4x3/it.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/it.svg"
+            ]
           },
           {
             "code": "GRC",
             "name": "Grecia",
-            "flagIcon": "assets/images/flags/4x3/gr.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/gr.svg"
+            ]
           },
           {
             "code": "MKD",
             "name": "Macedonia del Norte",
-            "flagIcon": "assets/images/flags/4x3/mk.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mk.svg"
+            ]
           },
           {
             "code": "HRV",
             "name": "Croacia",
-            "flagIcon": "assets/images/flags/4x3/hr.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/hr.svg"
+            ]
           },
           {
             "code": "ALB",
             "name": "Albania",
-            "flagIcon": "assets/images/flags/4x3/al.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/al.svg"
+            ]
           },
           {
             "code": "YUCS",
             "name": "[1918-1992] Yugoslavia",
-            "flagIcon": "",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/yu1918.svg",
+              "assets/images/flags/4x3/yu1946.svg"
+            ]
           }
         ]
       },
@@ -735,65 +917,85 @@
           {
             "code": "FRA",
             "name": "Francia",
-            "flagIcon": "assets/images/flags/4x3/fr.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/fr.svg"
+            ]
           },
           {
             "code": "BEL",
             "name": "Bélgica",
-            "flagIcon": "assets/images/flags/4x3/be.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/be.svg"
+            ]
           },
           {
             "code": "LIE",
             "name": "Liechtestein (Otros)",
-            "flagIcon": "assets/images/flags/4x3/li.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/li.svg"
+            ]
           },
           {
             "code": "CHE",
             "name": "Suiza",
-            "flagIcon": "assets/images/flags/4x3/ch.svg",
             "subgroups": [],
-            "historicalPeriods": []
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ch.svg"
+            ]
           },
           {
             "code": "DEU",
             "name": "Alemania",
-            "flagIcon": "assets/images/flags/4x3/de.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "DEU1871",
                 "name": "[1871-1918] Imperio Alemán",
-                "flagIcon": "assets/images/flags/4x3/de1871.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/de1871.svg"
+                ]
               },
               {
                 "code": "DEU1918",
                 "name": "[1918-1933] República de Weimar",
-                "flagIcon": "assets/images/flags/4x3/de.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/de.svg"
+                ]
               },
               {
                 "code": "DEU1933",
                 "name": "[1933-1945] Tercer Reich / Alemania Nazi",
-                "flagIcon": "assets/images/flags/4x3/de1933.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/de1933.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/de.svg"
             ]
           },
           {
             "code": "AUT",
             "name": "Austria",
-            "flagIcon": "assets/images/flags/4x3/at.svg",
             "subgroups": [],
             "historicalPeriods": [
               {
                 "code": "AUT1918",
                 "name": "[1918-1919] República de Austria Alemana",
-                "flagIcon": "assets/images/flags/4x3/at.svg"
+                "flagIcons": [
+                  "assets/images/flags/4x3/at.svg"
+                ]
               }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/at.svg"
             ]
           }
         ]

@@ -5,7 +5,7 @@ export interface Banknote {
   order: number;
   volume: string;
   name: string;
-  flagIcon: string;
+  flagIcons: string[];
   regionCode: string;
   subregionCode: string;
   issuerCode: string;

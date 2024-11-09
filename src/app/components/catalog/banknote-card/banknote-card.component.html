@@ -2,7 +2,7 @@
     <app-image-loader class="card-img-top" [src]="banknote().imageUrl" />
     <div class="card-body">
         <a class="card-title" [routerLink]="['/catalog', banknote().id]">
-            <img [src]="banknote().flagIcon" width="24"> 
+            <img *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
             <span>{{ banknote().name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
         </a>
         <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>

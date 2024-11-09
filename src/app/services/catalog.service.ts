@@ -49,12 +49,12 @@ export class CatalogService {
       map(([issuerLookup, apiResponse]) => {
         return apiResponse.map((item) => {
           const issuer = issuerLookup.get(item.issuerCode);
-          const { name, flagIcon } = this.getNameAndFlag(issuer,item.issuerCode,item.issuerSubcode);
+          const { name, flagIcons } = this.getNameAndFlags(issuer,item.issuerCode,item.issuerSubcode);
 
           return {
             ...item,
             name,
-            flagIcon,
+            flagIcons,
             regionCode: issuer?.regionCode,
             subregionCode: issuer?.subregionCode,
           } as Banknote;
@@ -62,19 +62,19 @@ export class CatalogService {
       })
     );
 
-  private getNameAndFlag(
+  private getNameAndFlags(
     issuer: Issuer | undefined,
     issuerCode: string,
     issuerSubcode?: string
-  ): { name: string; flagIcon: string } {
+  ): { name: string; flagIcons: string[] } {
     if (!issuer) {
-      return { name: '', flagIcon: '' };
+      return { name: '', flagIcons: [] };
     }
   
     if (!issuerSubcode) {
       return {
         name: issuer.country.name,
-        flagIcon: issuer.country.flagIcon,
+        flagIcons: issuer.country.flagIcons,
       };
     }
   
@@ -82,14 +82,14 @@ export class CatalogService {
       const historicalPeriod = issuer.country.historicalPeriods.find((x) => x.code === issuerSubcode);
       return {
         name: historicalPeriod?.name ?? '',
-        flagIcon: historicalPeriod?.flagIcon ?? '',
+        flagIcons: historicalPeriod?.flagIcons ?? [],
       };
     }
   
     const subgroup = issuer.country.subgroups.find((x) => x.code === issuerSubcode);
     return {
       name: subgroup?.name ?? '',
-      flagIcon: subgroup?.flagIcon ?? '',
+      flagIcons: subgroup?.flagIcons ?? [],
     };
   }  
 

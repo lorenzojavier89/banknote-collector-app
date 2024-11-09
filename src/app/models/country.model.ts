@@ -4,7 +4,7 @@ import { Subgroup } from "./subgroup.model";
 export interface Country {
   code: string;
   name: string;
-  flagIcon: string;
+  flagIcons: string[];
   subgroups: Subgroup[];
   historicalPeriods: HistoricalPeriod[];
 }
