@@ -56,10 +56,10 @@ export class FiltersService {
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
       counter: counters.get(this.catalogService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
-      subItems: i.country.historicalPeriods.map<FilterItem>(hp => ({
-        ...hp,
-        }
-      ))
+      subItems: [
+        ...i.country.historicalPeriods.map<FilterItem>(hp => ({ ...hp })),
+        ...i.country.subgroups.map<FilterItem>(sg => ({ ...sg }))
+      ]
     }))  
   });
 
