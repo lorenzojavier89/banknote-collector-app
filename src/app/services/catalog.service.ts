@@ -7,6 +7,7 @@ import { Region } from '../models/region.model';
 import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
 import { Banknote } from '../models/banknote.model';
+import { CounterType } from '../models/counter-type.model';
 
 @Injectable({
   providedIn: 'root',
@@ -105,19 +106,28 @@ export class CatalogService {
     
     this.banknotes().forEach(b => {
 
-      const regionKey = `rc_${b.regionCode}`;
-      const subregionKey = `src_${b.subregionCode}`;
-      const issuerKey = `ic_${b.issuerCode}`;
-      const issuerSubkey = `isc_${b.issuerSubcode}`;
+      const regionKey = this.getCounterKey(CounterType.RegionCode, b.regionCode);
+      const subregionKey = this.getCounterKey(CounterType.SubregionCode, b.subregionCode);
+      const issuerKey = this.getCounterKey(CounterType.IssuerCode, b.issuerCode);
+      const issuerSubcodeKey = this.getCounterKey(CounterType.IssuerSubcode, b.issuerSubcode);
 
       countMap.set(regionKey, (countMap.get(regionKey) || 0) + 1);
       countMap.set(subregionKey, (countMap.get(subregionKey) || 0) + 1);
       countMap.set(issuerKey, (countMap.get(issuerKey) || 0) + 1);
-      countMap.set(issuerSubkey, (countMap.get(issuerSubkey) || 0) + 1);
+      countMap.set(issuerSubcodeKey, (countMap.get(issuerSubcodeKey) || 0) + 1);
     });
 
     return countMap;
   });
+
+  getCounterKey(type: CounterType, code: string): string {
+    switch(type) {
+      case CounterType.RegionCode: return `rc_${code}`;
+      case CounterType.SubregionCode: return `src_${code}`;
+      case CounterType.IssuerCode: return `ic_${code}`;
+      case CounterType.IssuerSubcode: return `isc_${code}`;
+    }  
+  }
     
   private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
   readonly selectedBanknote = this._selectedBanknote.asReadonly();

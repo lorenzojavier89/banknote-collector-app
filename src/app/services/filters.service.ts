@@ -4,6 +4,7 @@ import { FiltersBuilderService } from './filters-builder.service';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Banknote } from '../models/banknote.model';
+import { CounterType } from '../models/counter-type.model';
 
 @Injectable({
   providedIn: 'root',
@@ -30,11 +31,11 @@ export class FiltersService {
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
       selected: regionFilterCodes.includes(r.code),
-      counter: counters.get(`rc_${r.code}`) ?? 0,
+      counter: counters.get(this.catalogService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
         selected: subregionFilterCodes.includes(sr.code),
-        counter: counters.get(`src_${sr.code}`) ?? 0,
+        counter: counters.get(this.catalogService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
       })),
     }))
   });
@@ -46,7 +47,7 @@ export class FiltersService {
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
       selected: issuerFilterCode === i.country.code,
-      counter: counters.get(`ic_${i.country.code}`) ?? 0,
+      counter: counters.get(this.catalogService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
     }))  
   });
 
