@@ -25,27 +25,29 @@ export class FiltersService {
 
   regions = computed<FilterItem[]>(() =>{
     const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
+    const counters = this.catalogService.counters();
 
     return this.catalogService.regions().map<FilterItem>((r) => ({
       ...r,
       selected: regionFilterCodes.includes(r.code),
-      highlighted: false,
+      counter: counters.get(r.code) ?? 0,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
         selected: subregionFilterCodes.includes(sr.code),
-        highlighted: false,
+        counter: counters.get(sr.code) ?? 0,
       })),
     }))
   });
 
   issuers = computed<FilterItem[]>(() => {
     const { issuerFilterCode } = { ...this.appliedFilter() };
+    const counters = this.catalogService.counters();
 
     return this.catalogService.issuers().map<FilterItem>(i => ({
       ...i.country,
       selected: issuerFilterCode === i.country.code,
-      highlighted: false
-    }))
+      counter: counters.get(i.country.code) ?? 0,
+    }))  
   });
 
   banknotes = computed<Banknote[]>(() => {
