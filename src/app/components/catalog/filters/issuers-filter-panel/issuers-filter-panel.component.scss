@@ -8,5 +8,17 @@
 // }
 
 ul {
-    padding: 5px;
+  padding: 5px;
+
+  li {
+    padding-left: 12px;
+  }
+}
+
+.issuer-name {
+  font-size: 14px;
+}
+
+.issuer-subgroup {
+  font-size: 13px;
 }
