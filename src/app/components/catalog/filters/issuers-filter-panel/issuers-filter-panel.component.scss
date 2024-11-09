@@ -1,17 +1,9 @@
-// ul {
-//   list-style-type: none;
-//   padding-left: 0px;
-
-//   ul {
-//     padding-left: 32px;
-//   }
-// }
-
 ul {
   padding: 5px;
 
   li {
     padding-left: 12px;
+    cursor: pointer;
   }
 }
 
