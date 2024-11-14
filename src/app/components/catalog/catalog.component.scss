@@ -11,3 +11,11 @@
   padding-top: 16px;
   padding-bottom: 50px;
 }
+
+@media (max-width: 768px) {
+  #filters {
+    overflow-y: visible;
+    position: static !important;
+    height: auto;
+  }
+}
