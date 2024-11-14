@@ -10,6 +10,12 @@
   margin-right: 0px;
   padding-top: 16px;
   padding-bottom: 50px;
+
+  .catalog-card {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+  }
 }
 
 @media (max-width: 768px) {
