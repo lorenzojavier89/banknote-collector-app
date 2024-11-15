@@ -2,19 +2,51 @@
 
 ul {
   list-style-type: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px;
 
-  ul {
-    padding-left: 10px;
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+
+    &.active {
+      background-color: $appActiveFilterBackgroudColor;
+      border-color: $appActiveFilterBorderColor;
+
+      label {
+        color: black;
+      }
+    }
+
+    &.partially-active {
+      background-color: $appPartialActiveFilterBackgroundColor;
+      border-color: $appActiveFilterBorderColor;
+    }
+
+    ul {
+      padding-left: 15px;
+    }
   }
+  
 }
 
 .region-section {
-  border-top: $appborder;
-  margin-bottom: 20px;
+  .form-check-input {
+    cursor: pointer;
+    margin-top: 0px;
+    margin-right: 4px;
+    
+    label.region-name {
+      font-size: 14px;
+    }
+  }
 
-  .region-title {
-    font-size: 18px;
+  .subregion-section {
+    .form-check-input {
+      margin-top: 4px;
+    }
+
+    label.subregion-name {
+      font-size: 12px;
+    }
   }
 }

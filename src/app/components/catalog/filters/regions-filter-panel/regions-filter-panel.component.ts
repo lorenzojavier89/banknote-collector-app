@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../services/filters.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 
 @Component({
   selector: 'app-regions-filter-panel',
   standalone: true,
-  imports: [FilterExpansionPanelComponent, MatCheckboxModule],
+  imports: [FilterExpansionPanelComponent],
   templateUrl: './regions-filter-panel.component.html',
   styleUrl: './regions-filter-panel.component.scss'
 })
@@ -16,11 +15,25 @@ export class RegionsFilterPanelComponent {
 
   regions = this.filtersService.regions;
 
-  applyRegionFilter(selected: boolean, regionFilterItem: FilterItem) {
+  applyRegionFilter(ev: Event, regionFilterItem: FilterItem) {
+    const selected = (ev.target as HTMLInputElement).checked;
     this.filtersService.applyRegionFilter(selected, regionFilterItem);
   }
 
-  applySubregionFilter(selected: boolean, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+  applySubregionFilter(ev: Event, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+    const selected = (ev.target as HTMLInputElement).checked;
     this.filtersService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
+  }
+
+  isActive(regionFilterItem: FilterItem): boolean {
+    return !!regionFilterItem.selected;
+  }
+
+  isPartiallyActive(regionFilterItem: FilterItem): boolean {
+    return !!(!regionFilterItem.selected && regionFilterItem.subItems?.some(si => si.selected));
+  }
+
+  isDisabled(filterItem: FilterItem): boolean {
+    return filterItem.counter === 0;
   }
 }
