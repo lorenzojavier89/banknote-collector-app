@@ -10,8 +10,13 @@ ul {
 }
 
 .region-section {
-  label {
-    font-size: 14px;
+  .form-check-input {
+    margin-top: 0px;
+    margin-right: 2px;
+    
+    label {
+      font-size: 14px;
+    }
   }
 
   .subregion-section {
