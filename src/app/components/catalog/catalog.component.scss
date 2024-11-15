@@ -1,6 +1,5 @@
 #filters {
   overflow-y: auto;
-  position: fixed !important;
   height: 90vh;
 }
 
@@ -21,7 +20,6 @@
 @media (max-width: 768px) {
   #filters {
     overflow-y: visible;
-    position: static !important;
     height: auto;
   }
 }
