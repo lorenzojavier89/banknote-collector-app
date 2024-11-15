@@ -1,34 +1,36 @@
 <app-filter-expansion-panel title="Regiones">
-    <ul>
-      @for (r of regions(); track r.code) {
-        <li class="region-section">
-          <!-- <mat-checkbox [checked]="r.selected" [disabled]="r.counter === 0" (change)="applyRegionFilter($event.checked, r)">
-            <span class="region-title">{{ r.name }} ({{ r.counter }})</span>
-          </mat-checkbox> -->
-            <input class="form-check-input me-1" 
-                type="checkbox" 
-                [checked]="r.selected"
-                [disabled]="r.counter === 0" 
-                (change)="applyRegionFilter($event, r)" 
-                [id]="'reg_'+r.code">
-            <label class="form-check-label" [for]="'reg_'+r.code">{{ r.name }} ({{ r.counter }})</label>
-          <ul>
-            @for (sr of r.subItems; track sr.code) {
-              <li class="subregion-section"> 
-                <!-- <mat-checkbox [checked]="sr.selected" [disabled]="sr.counter === 0" (change)="applySubregionFilter($event.checked, r, sr)">
-                  <span class="subregion-title">{{ sr.name }} ({{ sr.counter }})</span>
-                </mat-checkbox> -->
-                <input class="form-check-input me-1" 
-                  type="checkbox" 
-                  [checked]="sr.selected"
-                  [disabled]="sr.counter === 0" 
-                  (change)="applySubregionFilter($event, r, sr)" 
-                  [id]="'sreg_'+sr.code">
-                <label class="form-check-label" [for]="'sreg_'+sr.code">{{ sr.name }} ({{ sr.counter }})</label>
-              </li>
-            }
-          </ul>
+  <ul class="list-group">
+    @for (r of regions(); track r.code) {
+    <li class="list-group-item">
+      <input
+        class="form-check-input me-1"
+        type="checkbox"
+        [checked]="r.selected"
+        [disabled]="r.counter === 0"
+        (change)="applyRegionFilter($event, r)"
+        [id]="'reg_' + r.code"
+      />
+      <label class="form-check-label" [for]="'reg_' + r.code"
+        >{{ r.name }} ({{ r.counter }})</label
+      >
+      <ul>
+        @for (sr of r.subItems; track sr.code) {
+        <li class="subregion-section">
+          <input
+            class="form-check-input me-1"
+            type="checkbox"
+            [checked]="sr.selected"
+            [disabled]="sr.counter === 0"
+            (change)="applySubregionFilter($event, r, sr)"
+            [id]="'sreg_' + sr.code"
+          />
+          <label class="form-check-label" [for]="'sreg_' + sr.code"
+            >{{ sr.name }} ({{ sr.counter }})</label
+          >
         </li>
-      }
-    </ul>
-  </app-filter-expansion-panel>
+        }
+      </ul>
+    </li>
+    }
+  </ul>
+</app-filter-expansion-panel>

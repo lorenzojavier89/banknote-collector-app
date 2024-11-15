@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../../../../services/filters.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 
 @Component({
   selector: 'app-regions-filter-panel',
   standalone: true,
-  imports: [FilterExpansionPanelComponent, MatCheckboxModule],
+  imports: [FilterExpansionPanelComponent],
   templateUrl: './regions-filter-panel.component.html',
   styleUrl: './regions-filter-panel.component.scss'
 })
