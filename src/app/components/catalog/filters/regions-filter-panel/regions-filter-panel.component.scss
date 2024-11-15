@@ -2,8 +2,21 @@
 
 ul {
   list-style-type: none;
+  padding: 5px;
   
   ul {
     padding-left: 15px;
+  }
+}
+
+.region-section {
+  label {
+    font-size: 14px;
+  }
+
+  .subregion-section {
+    label {
+      font-size: 12px;
+    }
   }
 }
