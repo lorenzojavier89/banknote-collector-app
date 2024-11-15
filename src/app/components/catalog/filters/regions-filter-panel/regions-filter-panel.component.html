@@ -10,7 +10,7 @@
           [checked]="r.selected"
           [disabled]="r.counter === 0"
           (change)="applyRegionFilter($event, r)"/>  
-          <span class="issuer-name">{{ r.name }}</span>
+          <label class="form-check-label">{{ r.name }}</label>
         </div>
         <small class="text-body-secondary">{{ r.counter }}</small>
       </div>
