@@ -1,7 +1,7 @@
 <app-filter-expansion-panel title="Regiones">
   <ul class="list-group">
     @for (r of regions(); track r.code) {
-    <li class="list-group-item list-group-item-action region-section">
+    <li class="list-group-item list-group-item-action region-section" [class.active]="r.selected">
       <div class="d-flex w-100 justify-content-between">
         <div class="d-flex align-items-center">
           <input
@@ -10,7 +10,7 @@
           [checked]="r.selected"
           [disabled]="r.counter === 0"
           (change)="applyRegionFilter($event, r)"/>  
-          <label class="form-check-label">{{ r.name }}</label>
+          <label class="form-check-label region-name">{{ r.name }}</label>
         </div>
         <small class="text-body-secondary">{{ r.counter }}</small>
       </div>
@@ -23,7 +23,7 @@
             [checked]="sr.selected"
             [disabled]="sr.counter === 0"
             (change)="applySubregionFilter($event, r, sr)"/>
-          <label class="form-check-label">{{ sr.name }} ({{ sr.counter }})</label>
+          <label class="form-check-label subregion-name">{{ sr.name }} ({{ sr.counter }})</label>
         </li>
         }
       </ul>

@@ -5,6 +5,16 @@ ul {
   padding: 5px;
 
   li {
+
+    &.active {
+      background-color: #ebf2ff;
+      border-color: #b6c7e0;
+
+      label {
+        color: black;
+      }
+    }
+
     ul {
       padding-left: 15px;
     }
@@ -18,7 +28,7 @@ ul {
     margin-top: 0px;
     margin-right: 4px;
     
-    label {
+    label.region-name {
       font-size: 14px;
     }
   }
@@ -28,7 +38,7 @@ ul {
       margin-top: 4px;
     }
 
-    label {
+    label.subregion-name {
       font-size: 12px;
     }
   }
