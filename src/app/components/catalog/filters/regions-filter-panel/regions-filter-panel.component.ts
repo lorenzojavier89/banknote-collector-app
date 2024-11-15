@@ -16,11 +16,13 @@ export class RegionsFilterPanelComponent {
 
   regions = this.filtersService.regions;
 
-  applyRegionFilter(selected: boolean, regionFilterItem: FilterItem) {
+  applyRegionFilter(ev: Event, regionFilterItem: FilterItem) {
+    const selected = (ev.target as HTMLInputElement).checked;
     this.filtersService.applyRegionFilter(selected, regionFilterItem);
   }
 
-  applySubregionFilter(selected: boolean, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+  applySubregionFilter(ev: Event, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+    const selected = (ev.target as HTMLInputElement).checked;
     this.filtersService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
   }
 }
