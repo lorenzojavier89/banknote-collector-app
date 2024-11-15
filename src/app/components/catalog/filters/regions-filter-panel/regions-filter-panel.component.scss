@@ -3,14 +3,18 @@
 ul {
   list-style-type: none;
   padding: 5px;
-  
-  ul {
-    padding-left: 15px;
+
+  li {
+    ul {
+      padding-left: 15px;
+    }
   }
+  
 }
 
 .region-section {
   .form-check-input {
+    cursor: pointer;
     margin-top: 0px;
     margin-right: 4px;
     
