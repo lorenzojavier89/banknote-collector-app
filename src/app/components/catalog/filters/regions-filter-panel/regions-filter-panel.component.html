@@ -1,7 +1,9 @@
 <app-filter-expansion-panel title="Regiones">
   <ul class="list-group">
     @for (r of regions(); track r.code) {
-    <li class="list-group-item list-group-item-action region-section" [class.active]="r.selected">
+    <li class="list-group-item list-group-item-action region-section" 
+      [class.active]="isActive(r)"
+      [class.partially-active]="isPartiallyActive(r)">
       <div class="d-flex w-100 justify-content-between">
         <div class="d-flex align-items-center">
           <input

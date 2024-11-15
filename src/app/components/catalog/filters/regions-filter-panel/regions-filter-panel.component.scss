@@ -9,12 +9,17 @@ ul {
     overflow: hidden;
 
     &.active {
-      background-color: $appactivefilterbackgroudcolor;
-      border-color: $appactivefilterbordercolor;
+      background-color: $appActiveFilterBackgroudColor;
+      border-color: $appActiveFilterBorderColor;
 
       label {
         color: black;
       }
+    }
+
+    &.partially-active {
+      background-color: $appPartialActiveFilterBackgroundColor;
+      border-color: $appActiveFilterBorderColor;
     }
 
     ul {

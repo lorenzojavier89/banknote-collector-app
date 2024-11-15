@@ -24,4 +24,12 @@ export class RegionsFilterPanelComponent {
     const selected = (ev.target as HTMLInputElement).checked;
     this.filtersService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
   }
+
+  isActive(regionFilterItem: FilterItem): boolean {
+    return !!regionFilterItem.selected;
+  }
+
+  isPartiallyActive(regionFilterItem: FilterItem): boolean {
+    return !!(!regionFilterItem.selected && regionFilterItem.subItems?.some(si => si.selected));
+  }
 }
