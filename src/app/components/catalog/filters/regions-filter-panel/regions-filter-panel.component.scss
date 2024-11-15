@@ -5,6 +5,8 @@ ul {
   padding: 5px;
 
   li {
+    white-space: nowrap;
+    overflow: hidden;
 
     &.active {
       background-color: #ebf2ff;
