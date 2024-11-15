@@ -204,7 +204,14 @@
             "subgroups": [],
             "historicalPeriods": [],
             "flagIcons": [
-              "assets/images/flags/4x3/.svg"
+              "assets/images/flags/4x3/ag.svg",
+              "assets/images/flags/4x3/gd.svg",
+              "assets/images/flags/4x3/kn.svg",
+              "assets/images/flags/4x3/dm.svg",
+              "assets/images/flags/4x3/lc.svg",
+              "assets/images/flags/4x3/vc.svg",
+              "assets/images/flags/4x3/ai.svg",
+              "assets/images/flags/4x3/ms.svg"
             ]
           }
         ]
@@ -601,7 +608,7 @@
       },
       {
         "code": "WAS",
-        "name": "Asia Occidental (Oriente Medio)",
+        "name": "Oriente Medio",
         "issuers": [
           {
             "code": "TUR",
