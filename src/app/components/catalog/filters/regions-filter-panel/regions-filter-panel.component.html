@@ -18,16 +18,12 @@
         @for (sr of r.subItems; track sr.code) {
         <li class="subregion-section">
           <input
-            class="form-check-input me-1"
+            class="form-check-input"
             type="checkbox"
             [checked]="sr.selected"
             [disabled]="sr.counter === 0"
-            (change)="applySubregionFilter($event, r, sr)"
-            [id]="'sreg_' + sr.code"
-          />
-          <label class="form-check-label" [for]="'sreg_' + sr.code"
-            >{{ sr.name }} ({{ sr.counter }})</label
-          >
+            (change)="applySubregionFilter($event, r, sr)"/>
+          <label class="form-check-label">{{ sr.name }} ({{ sr.counter }})</label>
         </li>
         }
       </ul>
