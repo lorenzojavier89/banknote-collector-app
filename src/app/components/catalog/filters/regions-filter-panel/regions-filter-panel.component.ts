@@ -32,4 +32,8 @@ export class RegionsFilterPanelComponent {
   isPartiallyActive(regionFilterItem: FilterItem): boolean {
     return !!(!regionFilterItem.selected && regionFilterItem.subItems?.some(si => si.selected));
   }
+
+  isDisabled(filterItem: FilterItem): boolean {
+    return filterItem.counter === 0;
+  }
 }
