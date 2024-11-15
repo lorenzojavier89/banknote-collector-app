@@ -1,8 +1,8 @@
 <section class="row">
-  <section id="filters" class="col-12 col-md-4 col-lg-3 col-xxl-2">
+  <section id="filters" class="col-12 col-md-4 col-xl-3 col-xxl-2">
     <app-filters></app-filters>
   </section>
-  <section id="catalog" class="col-12 col-md-8 offset-md-4 col-lg-9 offset-lg-3 col-xxl-10 offset-xxl-2">
+  <section id="catalog" class="col-12 col-md-8 offset-md-4 col-xl-9 offset-xl-3 col-xxl-10 offset-xxl-2">
     <app-catalog-header></app-catalog-header>
     <div id="catalog-body" class="row">
       <app-banknote-card class="catalog-card col-12 col-xl-6 col-xxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b" @fadeInOut />
