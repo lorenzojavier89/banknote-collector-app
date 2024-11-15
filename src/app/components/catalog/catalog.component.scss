@@ -1,3 +1,5 @@
+@import '../../../styles_constants.scss';
+
 #filters {
   overflow-y: auto;
   height: 90vh;
@@ -17,7 +19,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $mediumWidth) {
   #filters {
     overflow-y: visible;
     height: auto;

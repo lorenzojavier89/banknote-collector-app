@@ -18,7 +18,7 @@ body {
   'opsz' 24
 }
 
-@media (max-width: 768px) {
+@media (max-width: $mediumWidth) {
   body {
     overflow: auto;
   }
