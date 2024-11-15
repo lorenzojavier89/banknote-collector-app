@@ -1,3 +1,5 @@
+@import '../../../../../styles_constants.scss';
+
 ul {
   padding: 5px;
 
@@ -6,8 +8,8 @@ ul {
     cursor: pointer;
 
     &.active {
-      background-color: #ebf2ff;
-      border-color: #b6c7e0;
+      background-color: $appactivefilterbackgroudcolor;
+      border-color: $appactivefilterbordercolor;
 
       .issuer-name {
         color: black;

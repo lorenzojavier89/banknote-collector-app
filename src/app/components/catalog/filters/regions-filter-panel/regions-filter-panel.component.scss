@@ -9,8 +9,8 @@ ul {
     overflow: hidden;
 
     &.active {
-      background-color: #ebf2ff;
-      border-color: #b6c7e0;
+      background-color: $appactivefilterbackgroudcolor;
+      border-color: $appactivefilterbordercolor;
 
       label {
         color: black;
