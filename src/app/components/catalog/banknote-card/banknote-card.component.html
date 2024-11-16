@@ -1,7 +1,7 @@
 <div class="card text-bg-light">
     <app-image-loader class="card-img-top" [src]="banknote().imageUrl" />
     <div class="card-body">
-        <div class="d-flex w-100 justify-content-between">
+        <div class="d-flex w-100 justify-content-between align-items-center">
             <div class="d-flex align-items-center">
                 <span class="badge text-bg-primary">#{{banknote().order}}</span>
                 <a class="card-title" [routerLink]="['/catalog', banknote().id]">
