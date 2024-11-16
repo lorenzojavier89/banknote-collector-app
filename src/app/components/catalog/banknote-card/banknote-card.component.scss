@@ -13,10 +13,7 @@
 
     .card-title {
       text-decoration: none;
-
-      img {
-        margin-right: 3px;
-      }
+      margin-bottom: 0px;
 
       span {
         margin-left: 5px;
@@ -28,9 +25,14 @@
       }
     }
 
-    .card-text {
+    .card-subtitle {
       margin-top: 5px;
       margin-bottom: 2px;
+      padding-left: 3px;
+
+      img {
+        margin-right: 3px;
+      }
     }
 
     .card-comment {
