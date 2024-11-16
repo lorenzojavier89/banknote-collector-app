@@ -27,11 +27,15 @@
 
     .card-subtitle {
       margin-top: 5px;
-      margin-bottom: 2px;
+      margin-bottom: 5px;
       padding-left: 3px;
-
+      
       img {
         margin-right: 3px;
+      }
+
+      span {
+        font-family: cursive;
       }
     }
 

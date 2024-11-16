@@ -10,7 +10,7 @@
             </div>
             <small class="text-body-secondary">{{ banknote().issueDate }}</small>
         </div>
-        <div class="card-subtitle">
+        <div class="d-flex align-items-center card-subtitle">
             <img *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
             <span>{{ banknote().name }}</span>
         </div>
