@@ -43,10 +43,8 @@
                     </div>
                     <div class="vcard-desc-column-row d-flex flex-wrap align-items-center">
                         <img class="vcard-flags" *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
+                        <span class="vcard-subtitle">{{ banknote().name }}</span>
                     </div>
-                    <div class="vcard-desc-column-row d-flex flex-wrap align-items-center vcard-subtitle">
-                        <span>{{ banknote().name }}</span>
-                    </div>         
                     <small #cardComment class="text-body-secondary card-comment">
                         {{ banknote().comment }}
                     </small>
