@@ -71,6 +71,28 @@
           height: 100%;
         }
       }
+
+      .desc-column {
+        .desc-column-row {
+          margin-bottom: 5px;
+
+          .card-title {
+            span {
+              margin-left: 0px;
+            }
+          }
+
+          .vcard-flags {
+            margin-right: 3px;
+          }
+        }
+
+        .vcard-subtitle {
+          span {
+            font-family: cursive;
+          }
+        }
+      }
     }
   }
 }
