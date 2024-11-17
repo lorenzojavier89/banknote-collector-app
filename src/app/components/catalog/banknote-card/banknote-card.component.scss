@@ -10,13 +10,11 @@
 
   .card-body {
     border-top: $appborder;
+    padding-top: 10px;
 
     .card-title {
       text-decoration: none;
-
-      img {
-        margin-right: 3px;
-      }
+      margin-bottom: 0px;
 
       span {
         margin-left: 5px;
@@ -28,9 +26,18 @@
       }
     }
 
-    .card-text {
+    .card-subtitle {
       margin-top: 5px;
-      margin-bottom: 2px;
+      margin-bottom: 5px;
+      padding-left: 3px;
+      
+      img {
+        margin-right: 3px;
+      }
+
+      span {
+        font-family: cursive;
+      }
     }
 
     .card-comment {

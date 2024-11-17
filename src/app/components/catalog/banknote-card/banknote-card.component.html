@@ -1,11 +1,19 @@
 <div class="card text-bg-light">
     <app-image-loader class="card-img-top" [src]="banknote().imageUrl" />
     <div class="card-body">
-        <a class="card-title" [routerLink]="['/catalog', banknote().id]">
+        <div class="d-flex w-100 justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>
+                <a class="card-title" [routerLink]="['/catalog', banknote().id]">
+                    <span>{{ banknote().denomination }}</span>
+                </a>
+            </div>
+            <small class="text-body-secondary">{{ banknote().issueDate }}</small>
+        </div>
+        <div class="d-flex flex-wrap align-items-center card-subtitle">
             <img *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
-            <span>{{ banknote().name }} - {{ banknote().denomination }} [{{ banknote().issueDate }}]</span>
-        </a>
-        <p class="card-text">#{{banknote().order}} - Tomo {{ banknote().volume }}</p>
+            <span>{{ banknote().name }}</span>
+        </div>
         <small #cardComment 
             class="text-body-secondary card-comment" 
             [class.collapsible]="collapsible()"

@@ -8,6 +8,7 @@ import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
+import { Volume } from '../models/volume.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -50,11 +51,13 @@ export class CatalogService {
       map(([issuerLookup, apiResponse]) => {
         return apiResponse.map((item) => {
           const issuer = issuerLookup.get(item.issuerCode);
+          const volume = this.getVolume(item.volume);
           const { name, flagIcons } = this.getNameAndFlags(issuer,item.issuerCode,item.issuerSubcode);
 
           return {
             ...item,
             name,
+            volume,
             flagIcons,
             regionCode: issuer?.regionCode,
             subregionCode: issuer?.subregionCode,
@@ -92,7 +95,16 @@ export class CatalogService {
       name: subgroup?.name ?? '',
       flagIcons: subgroup?.flagIcons ?? [],
     };
-  }  
+  }
+  
+  private getVolume(value: string): Volume | undefined {
+    const isValidStatus = Object.values(Volume).includes(value as Volume);
+    if(isValidStatus) {
+      return value as Volume;
+    }
+
+    return undefined;
+  }
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
   regions = toSignal(this.regions$, { initialValue: []});

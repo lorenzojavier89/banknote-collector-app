@@ -1,7 +1,9 @@
+import { Volume } from "./volume.enum";
+
 export interface Banknote {
   id: string;
   order: number;
-  volume: string;
+  volume: Volume | undefined;
   name: string;
   flagIcons: string[];
   regionCode: string;
