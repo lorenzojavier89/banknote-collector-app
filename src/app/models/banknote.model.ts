@@ -1,4 +1,5 @@
 import { Volume } from "./volume.enum";
+import { Orientation } from './orientation.enum';
 
 export interface Banknote {
   id: string;
@@ -15,4 +16,5 @@ export interface Banknote {
   onlineCatalog: string;
   imageUrl: string;
   comment?: string;
+  orientation: Orientation
 }

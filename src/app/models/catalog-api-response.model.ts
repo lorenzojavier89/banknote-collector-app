@@ -9,4 +9,5 @@ export interface CatalogApiResponse {
   onlineCatalog: string;
   imageUrl: string;
   comment: string;
+  orientation: string;
 }

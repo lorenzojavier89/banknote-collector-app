@@ -9,6 +9,7 @@ import { forkJoin } from 'rxjs';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
 import { Volume } from '../models/volume.enum';
+import { Orientation } from '../models/orientation.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -52,6 +53,7 @@ export class CatalogService {
         return apiResponse.map((item) => {
           const issuer = issuerLookup.get(item.issuerCode);
           const volume = this.getVolume(item.volume);
+          const orientation = this.getOrientation(item.orientation);
           const { name, flagIcons } = this.getNameAndFlags(issuer,item.issuerCode,item.issuerSubcode);
 
           return {
@@ -61,6 +63,7 @@ export class CatalogService {
             flagIcons,
             regionCode: issuer?.regionCode,
             subregionCode: issuer?.subregionCode,
+            orientation
           } as Banknote;
         });
       })
@@ -95,6 +98,10 @@ export class CatalogService {
       name: subgroup?.name ?? '',
       flagIcons: subgroup?.flagIcons ?? [],
     };
+  }
+
+  private getOrientation(value: string): Orientation {
+    return value === 'v'? Orientation.Vertical : Orientation.Horizontal;
   }
   
   private getVolume(value: string): Volume | undefined {
