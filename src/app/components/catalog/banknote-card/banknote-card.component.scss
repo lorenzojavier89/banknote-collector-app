@@ -61,13 +61,16 @@
 
 .card {
   &.vertical {
-    height: 450px;
+    height: 452px;
 
-    // img {
-    //   height: 100%;        
-    //   width: auto;         
-    //   display: block;      
-    //   object-fit: contain; 
-    // }
+    div.row {
+      height: 100%;
+
+      .img-column {
+        img {
+          height: 100%;
+        }
+      }
+    }
   }
 }
