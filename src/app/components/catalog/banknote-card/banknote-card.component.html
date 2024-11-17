@@ -31,10 +31,24 @@
                 <img src="assets/images/banknotes/test-v-sm.jpg" class="img-fluid rounded-start">
             </div>
             <div class="col-md-7">
-            <div class="card-body">
-                <h5 class="card-title">{{ banknote().denomination }}</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+                <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>
+                            <a class="card-title" [routerLink]="['/catalog', banknote().id]">
+                                <span>{{ banknote().denomination }}</span>
+                            </a>
+                        </div>
+                        <small class="text-body-secondary">{{ banknote().issueDate }}</small>
+                    </div>
+                    <div class="d-flex flex-wrap align-items-center card-subtitle">
+                        <img *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
+                        <span>{{ banknote().name }}</span>
+                    </div>
+                    <small #cardComment class="text-body-secondary card-comment">
+                        {{ banknote().comment }}
+                    </small>
+                </div>
             </div>
         </div>
     </div>
