@@ -172,14 +172,14 @@
             "historicalPeriods": [
               {
                 "code": "CUB1902",
-                "name": "[1902-1959] Primera República",
+                "name": "[1902-1959] Primera República de Cuba",
                 "flagIcons": [
                   "assets/images/flags/4x3/cu1902.svg"
                 ]
               },
               {
                 "code": "CUB1959",
-                "name": "[1959-Presente] Segunda República",
+                "name": "[1959-Presente] República de Cuba",
                 "flagIcons": [
                   "assets/images/flags/4x3/cu.svg"
                 ]
@@ -483,7 +483,7 @@
             "historicalPeriods": [
               {
                 "code": "AFG1978",
-                "name": "[1978-1992] República Democrática",
+                "name": "[1978-1992] República Democrática de Afganistán",
                 "flagIcons": [
                   "assets/images/flags/4x3/af.svg"
                 ]
@@ -771,7 +771,7 @@
             "historicalPeriods": [
               {
                 "code": "ROU1965",
-                "name": "[1965-1989] República Socialista",
+                "name": "[1965-1989] República Socialista de Rumania",
                 "flagIcons": [
                   "assets/images/flags/4x3/ro1965.svg"
                 ]
