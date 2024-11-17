@@ -58,3 +58,16 @@
     }
   }
 }
+
+.card {
+  &.vertical {
+    height: 450px;
+
+    // img {
+    //   height: 100%;        
+    //   width: auto;         
+    //   display: block;      
+    //   object-fit: contain; 
+    // }
+  }
+}
