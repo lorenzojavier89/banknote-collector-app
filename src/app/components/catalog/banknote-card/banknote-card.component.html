@@ -36,18 +36,20 @@
                         <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>           
                         <small class="text-body-secondary">{{ banknote().issueDate }}</small>
                     </div>
-                    <div class="vcard-desc-column-row d-flex align-items-center">
+                    <div class="vcard-desc-column-row vcard-desc-column-row-title d-flex justify-content-center align-items-center">
                         <a class="card-title" [routerLink]="['/catalog', banknote().id]">
                             <span>{{ banknote().denomination }}</span>
                         </a>
                     </div>
-                    <div class="vcard-desc-column-row d-flex flex-wrap align-items-center">
+                    <div class="vcard-desc-column-row d-flex flex-wrap justify-content-center align-items-center">
                         <img class="vcard-flags" *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
                         <span class="vcard-subtitle">{{ banknote().name }}</span>
                     </div>
-                    <small #cardComment class="text-body-secondary card-comment">
-                        {{ banknote().comment }}
-                    </small>
+                    <div class="vcard-desc-column-row vcard-desc-column-row-comment">
+                        <small #cardComment class="text-body-secondary card-comment">
+                            {{ banknote().comment }}
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
