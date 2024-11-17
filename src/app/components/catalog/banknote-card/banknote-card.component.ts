@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, input, signal, viewChild } from '@angular/core';
+import { AfterViewInit, Component, computed, ElementRef, input, signal, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
 import { NgFor } from '@angular/common';
+import { Volume } from '../../../models/volume.enum';
 
 @Component({
   selector: 'app-banknote-card',
@@ -16,6 +17,15 @@ export class BanknoteCardComponent implements AfterViewInit {
   private cardCommentEl = viewChild<ElementRef<HTMLElement>>('cardComment');
   collapsible = signal<boolean>(false);
   collapsed = signal<boolean>(true);
+
+  badgeClass = computed(() => {
+    switch (this.banknote().volume) {
+      case Volume.Black: return 'text-bg-dark';
+      case Volume.Red: return 'text-bg-danger';
+      case Volume.Green: return 'text-bg-success';
+      default: return 'text-bg-secondary';
+    }
+  })  
 
   ngAfterViewInit(): void {
     const element = this.cardCommentEl()?.nativeElement;

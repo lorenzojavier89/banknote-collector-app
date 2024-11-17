@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="d-flex w-100 justify-content-between align-items-center">
             <div class="d-flex align-items-center">
-                <span class="badge text-bg-primary">#{{banknote().order}}</span>
+                <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>
                 <a class="card-title" [routerLink]="['/catalog', banknote().id]">
                     <span>{{ banknote().denomination }}</span>
                 </a>
