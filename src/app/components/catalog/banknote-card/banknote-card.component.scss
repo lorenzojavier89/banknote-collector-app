@@ -60,20 +60,20 @@
 }
 
 .card {
-  &.vertical {
+  &.vcard {
     height: 452px;
 
     div.row {
       height: 100%;
 
-      .img-column {
+      .vcard-img-column {
         img {
           height: 100%;
         }
       }
 
-      .desc-column {
-        .desc-column-row {
+      .vcard-desc-column {
+        .vcard-desc-column-row {
           margin-bottom: 5px;
 
           .card-title {
