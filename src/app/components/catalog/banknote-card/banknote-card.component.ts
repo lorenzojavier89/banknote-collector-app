@@ -4,6 +4,7 @@ import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
 import { NgFor } from '@angular/common';
 import { Volume } from '../../../models/volume.enum';
+import { Orientation } from '../../../models/orientation.enum';
 
 @Component({
   selector: 'app-banknote-card',
@@ -18,7 +19,11 @@ export class BanknoteCardComponent implements AfterViewInit {
   collapsible = signal<boolean>(false);
   collapsed = signal<boolean>(true);
 
-  badgeClass = computed(() => {
+  horizontalDisplay = computed<boolean>(() => {
+    return this.banknote().orientation === Orientation.Horizontal;
+  });
+
+  badgeClass = computed<string>(() => {
     switch (this.banknote().volume) {
       case Volume.Black: return 'text-bg-dark';
       case Volume.Red: return 'text-bg-danger';
