@@ -4,6 +4,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Volume } from '../../../models/volume.enum';
 
 @Component({
   selector: 'app-catalog-header',
@@ -23,6 +24,15 @@ export class CatalogHeaderComponent {
   appliedFilter = this.filtersService.appliedFilter;
   
   count = computed(() => this.banknotes().length);
+
+  badgeClass(code: string | null): string  {
+    switch (code as Volume) {
+      case Volume.Black: return 'text-bg-dark';
+      case Volume.Red: return 'text-bg-danger';
+      case Volume.Green: return 'text-bg-success';
+      default: return 'text-bg-secondary';
+    }
+  }  
 
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();

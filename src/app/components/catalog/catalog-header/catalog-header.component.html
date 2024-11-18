@@ -25,6 +25,13 @@
             <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
           </h5>
         </div>
+        <div class="badge-row">
+          <h5 *ngIf="appliedFilter().volumeFilter !== null">
+            <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
+              {{ "Álbum " + appliedFilter().volumeFilter?.name }}
+            </span>
+          </h5>
+        </div>
       } @else {
         <div class="badge-row">
           <h5><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h5>
