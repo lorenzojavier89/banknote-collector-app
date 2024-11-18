@@ -72,13 +72,15 @@
 
       .vcard-img-column {
         border-right: $appborder;
-        
+
         img {
           height: 100%;
         }
       }
 
       .vcard-desc-column {
+        background-color: #F8F9FA;
+        
         .vcard-desc-column-row {
           margin-bottom: 5px;
 
@@ -102,6 +104,7 @@
         }
 
         .vcard-desc-column-row-comment {
+          margin-top: 15px;
           text-align: center;
         }
       }
