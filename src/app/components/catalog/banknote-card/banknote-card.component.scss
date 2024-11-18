@@ -61,7 +61,7 @@
 
 .card {
   &.vcard {
-    height: 452px;
+    height: 400px;
 
     .card-body {
       border-top: none;
@@ -71,6 +71,7 @@
       height: 100%;
 
       .vcard-img-column {
+        height: 100%;
         border-right: $appborder;
 
         img {
