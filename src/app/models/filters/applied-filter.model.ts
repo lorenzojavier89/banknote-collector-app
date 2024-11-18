@@ -7,6 +7,8 @@ export interface AppliedFilter {
     subregionFilterCodes: string[];
     issuerFilter: FilterItem | null;
     issuerFilterCode: string | null;
+    volumeFilter: FilterItem | null;
+    volumeFilterCode: string | null;
     someFiltersApplied: boolean;
     noFiltersApplied: boolean;
 }

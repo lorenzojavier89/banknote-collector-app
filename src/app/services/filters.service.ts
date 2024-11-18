@@ -101,9 +101,10 @@ export class FiltersService {
     return banknotes.filter((b) => {
         const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.regionCode);
         const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.subregionCode);
-        const matchesCountry = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuerCode;
+        const matchesIssuer = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuerCode;
+        const matchesVolume = appliedFilter.volumeFilter && appliedFilter.volumeFilterCode === b.volume;
 
-        return matchesRegion || matchesSubregion || matchesCountry;
+        return matchesRegion || matchesSubregion || matchesIssuer || matchesVolume;
     });
   });
 
@@ -140,6 +141,10 @@ export class FiltersService {
     const issuerFilter = selected ? issuerFilterItem : null;
     
     this._appliedFilter.set(this.builderService.buildFromIssuer(issuerFilter));
+  }
+
+  applyVolumeFilter(volumeFilterItem: FilterItem) {
+    this._appliedFilter.set(this.builderService.buildFromVolume(volumeFilterItem))
   }
 
   removeAllFilters() {

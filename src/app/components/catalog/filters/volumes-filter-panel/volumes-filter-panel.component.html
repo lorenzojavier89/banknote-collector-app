@@ -1,11 +1,11 @@
 <app-filter-expansion-panel title="Albums">
     <ul class="list-group">
-        @for (i of volumes(); track i.code) {
+        @for (v of volumes(); track v.code) {
             <li class="list-group-item list-group-item-action"
-                [class.active]="i.selected" (click)="applyVolumeFilter(true, i)">
+                [class.active]="v.selected" (click)="applyVolumeFilter(v)">
               <div class="d-flex w-100 align-items-center justify-content-between">
-                <span class="badge" [class]="badgeClass(i.code)">{{ i.name }}</span>
-                <span class="text-body-secondary">{{ i.counter }}</span>
+                <span class="badge" [class]="badgeClass(v.code)">{{ v.name }}</span>
+                <span class="text-body-secondary">{{ v.counter }}</span>
               </div>
             </li>
         }

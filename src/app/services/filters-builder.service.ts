@@ -20,6 +20,8 @@ export class FiltersBuilderService {
       subregionFilterCodes: dSubregionFilters.map(srf => srf.code),
       issuerFilter: null,
       issuerFilterCode: null,
+      volumeFilter: null,
+      volumeFilterCode: null,
       someFiltersApplied,
       noFiltersApplied
     }    
@@ -33,9 +35,26 @@ export class FiltersBuilderService {
       subregionFilterCodes: [],
       issuerFilter: issuerFilterItem,
       issuerFilterCode: issuerFilterItem? issuerFilterItem.code : null,
+      volumeFilter: null,
+      volumeFilterCode: null,
       someFiltersApplied: issuerFilterItem !== null,
       noFiltersApplied: issuerFilterItem === null
     }    
+  }
+
+  buildFromVolume(volumeFilterItem: FilterItem): AppliedFilter {
+    return {
+      regionFilters: [],
+      regionFilterCodes: [],
+      subregionFilters: [],
+      subregionFilterCodes: [],
+      issuerFilter: null,
+      issuerFilterCode: null,
+      volumeFilter: volumeFilterItem,
+      volumeFilterCode: volumeFilterItem.code,
+      someFiltersApplied: true,
+      noFiltersApplied: false
+    }  
   }
 
   buildEmtpy(): AppliedFilter {
@@ -46,6 +65,8 @@ export class FiltersBuilderService {
       subregionFilterCodes: [],
       issuerFilter: null,
       issuerFilterCode: null,
+      volumeFilter: null,
+      volumeFilterCode: null,
       someFiltersApplied: false,
       noFiltersApplied: true
     }  

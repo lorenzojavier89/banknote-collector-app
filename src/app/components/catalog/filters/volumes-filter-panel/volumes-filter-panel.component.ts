@@ -25,7 +25,7 @@ export class VolumesFilterPanelComponent {
     }
   }  
 
-  applyVolumeFilter(selected: boolean, volumeFilterItem: FilterItem) {
-    console.log(volumeFilterItem.name);
+  applyVolumeFilter(volumeFilterItem: FilterItem) {
+    this.filtersService.applyVolumeFilter(volumeFilterItem);
   }
 }
