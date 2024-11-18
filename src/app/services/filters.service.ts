@@ -5,6 +5,7 @@ import { FilterItem } from '../models/filters/filter-item.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
+import { Volume } from '../models/volume.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -69,6 +70,23 @@ export class FiltersService {
     return this._loadedIssuers().map<FilterItem>(i => ({
       ...i,
       selected: issuerFilterCode === i.code,
+    }))  
+  });
+
+  private _loadedVolumes = computed<FilterItem[]>(() => {
+    const counters = this.catalogService.counters();
+    
+    return Object.values(Volume).map<FilterItem>(v => ({
+      code: v,
+      name: v,
+      counter: 0
+    }));
+  });
+
+  volumes = computed<FilterItem[]>(() => { 
+    return this._loadedVolumes().map<FilterItem>(i => ({
+      ...i,
+      selected: false,
     }))  
   });
 
