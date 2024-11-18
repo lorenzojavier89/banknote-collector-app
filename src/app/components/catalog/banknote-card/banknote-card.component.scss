@@ -70,8 +70,11 @@
     div.row {
       height: 100%;
 
-      .vcard-img-column {
+      .vcard-img-column, .vcard-desc-column {
         height: 100%;
+      }
+
+      .vcard-img-column {
         border-right: $appborder;
 
         img {
