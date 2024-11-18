@@ -3,4 +3,5 @@ export enum CounterType {
   SubregionCode,
   IssuerCode,
   IssuerSubcode,
+  VolumeCode
 }

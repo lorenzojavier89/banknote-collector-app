@@ -129,11 +129,13 @@ export class CatalogService {
       const subregionKey = this.getCounterKey(CounterType.SubregionCode, b.subregionCode);
       const issuerKey = this.getCounterKey(CounterType.IssuerCode, b.issuerCode);
       const issuerSubcodeKey = this.getCounterKey(CounterType.IssuerSubcode, b.issuerSubcode);
+      const volumeKey = this.getCounterKey(CounterType.VolumeCode, b.volume ?? "unclassified");
 
       countMap.set(regionKey, (countMap.get(regionKey) || 0) + 1);
       countMap.set(subregionKey, (countMap.get(subregionKey) || 0) + 1);
       countMap.set(issuerKey, (countMap.get(issuerKey) || 0) + 1);
       countMap.set(issuerSubcodeKey, (countMap.get(issuerSubcodeKey) || 0) + 1);
+      countMap.set(volumeKey, (countMap.get(volumeKey) || 0) + 1)
     });
 
     return countMap;
@@ -145,6 +147,7 @@ export class CatalogService {
       case CounterType.SubregionCode: return `src_${code}`;
       case CounterType.IssuerCode: return `ic_${code}`;
       case CounterType.IssuerSubcode: return `isc_${code}`;
+      case CounterType.VolumeCode: return `vc_${code}`;
     }  
   }
     

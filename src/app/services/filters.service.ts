@@ -79,7 +79,7 @@ export class FiltersService {
     return Object.values(Volume).map<FilterItem>(v => ({
       code: v,
       name: v,
-      counter: 0
+      counter: counters.get(this.catalogService.getCounterKey(CounterType.VolumeCode, v)) ?? 0
     }));
   });
 
