@@ -1,7 +1,18 @@
+@import '../../../../../styles_constants.scss';
+
 ul {
   padding: 5px;
 
   li {
     cursor: pointer;
+
+    &.active {
+      background-color: $appActiveFilterBackgroudColor;
+      border-color: $appActiveFilterBorderColor;
+
+      .issuer-name {
+        color: black;
+      }
+    }
   }
 }

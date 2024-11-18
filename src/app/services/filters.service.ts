@@ -84,9 +84,11 @@ export class FiltersService {
   });
 
   volumes = computed<FilterItem[]>(() => { 
+    const { volumeFilterCode } = { ...this.appliedFilter() };
+
     return this._loadedVolumes().map<FilterItem>(i => ({
       ...i,
-      selected: false,
+      selected: volumeFilterCode === i.code,
     }))  
   });
 
