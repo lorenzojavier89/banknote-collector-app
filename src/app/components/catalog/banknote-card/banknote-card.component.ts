@@ -5,11 +5,12 @@ import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.comp
 import { NgFor } from '@angular/common';
 import { Volume } from '../../../models/volume.enum';
 import { Orientation } from '../../../models/orientation.enum';
+import { BanknoteVCardComponent } from './banknote-vcard/banknote-vcard.component';
 
 @Component({
   selector: 'app-banknote-card',
   standalone: true,
-  imports: [RouterLink, ImageLoaderComponent, NgFor],
+  imports: [RouterLink, BanknoteVCardComponent, ImageLoaderComponent, NgFor],
   templateUrl: './banknote-card.component.html',
   styleUrl: './banknote-card.component.scss',
 })

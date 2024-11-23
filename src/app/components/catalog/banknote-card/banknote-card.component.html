@@ -25,34 +25,6 @@
         </div>
     </div>
 } @else {
-    <div class="card vcard">
-        <div class="row g-0">
-            <div class="vcard-img-column col-auto">
-                <img class="img-fluid rounded-start" [src]="banknote().imageUrl">
-            </div>
-            <div class="vcard-desc-column col">
-                <div class="card-body">
-                    <div class="vcard-desc-column-row d-flex w-100 justify-content-between align-items-center">
-                        <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>           
-                        <small class="text-body-secondary">{{ banknote().issueDate }}</small>
-                    </div>
-                    <div class="vcard-desc-column-row vcard-desc-column-row-title d-flex justify-content-center align-items-center">
-                        <a class="card-title" [routerLink]="['/catalog', banknote().id]">
-                            <span>{{ banknote().denomination }}</span>
-                        </a>
-                    </div>
-                    <div class="vcard-desc-column-row d-flex flex-wrap justify-content-center align-items-center">
-                        <img class="vcard-flags" *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
-                        <span class="vcard-subtitle">{{ banknote().name }}</span>
-                    </div>
-                    <div class="vcard-desc-column-row vcard-desc-column-row-comment">
-                        <small #cardComment class="text-body-secondary card-comment">
-                            {{ banknote().comment }}
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-banknote-vcard />
 }
 

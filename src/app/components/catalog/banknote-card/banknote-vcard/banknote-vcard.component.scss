@@ -1,0 +1,60 @@
+.card {
+    &.vcard {
+      height: 400px;
+  
+      div.row {
+        height: 100%;
+  
+        .vcard-img-column, .vcard-desc-column {
+          height: 100%;
+        }
+  
+        .vcard-img-column {
+          border-right: $appborder;
+  
+          img {
+            height: 100%;
+          }
+        }
+  
+        .vcard-desc-column {
+          background-color: #F8F9FA;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+  
+          .card-body {
+            border-top: none;
+            overflow: hidden;
+            height: 100%;
+  
+            .vcard-desc-column-row {
+              margin-bottom: 5px;
+    
+              .card-title {
+                span {
+                  margin-left: 0px;
+                }
+              }
+    
+              img.vcard-flags {
+                margin-right: 3px;
+              }
+              
+              span.vcard-subtitle {
+                font-family: cursive;
+              }
+            }
+    
+            .vcard-desc-column-row-title {
+              margin-top: 15px;
+            }
+    
+            .vcard-desc-column-row-comment {
+              margin-top: 15px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
