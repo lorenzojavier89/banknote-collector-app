@@ -20,7 +20,7 @@ export class BanknoteCardComponent implements AfterViewInit {
   collapsible = signal<boolean>(false);
   collapsed = signal<boolean>(true);
 
-  horizontalDisplay = computed<boolean>(() => {
+  regularDisplay = computed<boolean>(() => {
     return this.banknote().orientation === Orientation.Horizontal;
   });
 
