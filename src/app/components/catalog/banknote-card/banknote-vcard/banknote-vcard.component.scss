@@ -2,6 +2,9 @@
 
 
 .card {
+  width: 452px;
+  box-shadow: $appboxshadow;
+
   &.vcard {
     height: 400px;
 
@@ -35,8 +38,15 @@
             margin-bottom: 5px;
 
             .card-title {
+              text-decoration: none;
+
               span {
                 margin-left: 0px;
+                font-weight: 600;
+              }
+
+              span:hover {
+                text-decoration: underline;
               }
             }
 
