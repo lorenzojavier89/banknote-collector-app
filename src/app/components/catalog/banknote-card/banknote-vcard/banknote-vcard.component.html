@@ -11,12 +11,12 @@
                 </div>
                 <div class="vcard-desc-column-row vcard-desc-column-row-title d-flex justify-content-center align-items-center">
                     <a class="card-title" [routerLink]="['/catalog', banknote().id]">
-                        <span>{{ banknote().denomination }}</span>
+                        <span class="card-text">{{ banknote().denomination }}</span>
                     </a>
                 </div>
                 <div class="vcard-desc-column-row d-flex flex-wrap justify-content-center align-items-center">
                     <img class="vcard-flags" *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
-                    <span class="vcard-subtitle">{{ banknote().name }}</span>
+                    <span class="vcard-subtitle card-text">{{ banknote().name }}</span>
                 </div>
                 <div class="vcard-desc-column-row vcard-desc-column-row-comment">
                     <small #cardComment class="text-body-secondary card-comment">

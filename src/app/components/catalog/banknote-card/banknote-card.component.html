@@ -6,14 +6,14 @@
                 <div class="d-flex align-items-center">
                     <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>
                     <a class="card-title" [routerLink]="['/catalog', banknote().id]">
-                        <span>{{ banknote().denomination }}</span>
+                        <span class="card-text">{{ banknote().denomination }}</span>
                     </a>
                 </div>
                 <small class="text-body-secondary">{{ banknote().issueDate }}</small>
             </div>
             <div class="d-flex flex-wrap align-items-center card-subtitle">
                 <img *ngFor="let icon of banknote().flagIcons" [src]="icon" width="24">
-                <span>{{ banknote().name }}</span>
+                <span class="card-text">{{ banknote().name }}</span>
             </div>
             <small #cardComment 
                 class="text-body-secondary card-comment" 
