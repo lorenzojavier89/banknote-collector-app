@@ -12,11 +12,16 @@
     border-top: $appborder;
     padding-top: 10px;
 
+    span, small {
+     cursor: default; 
+    }
+
     .card-title {
       text-decoration: none;
       margin-bottom: 0px;
 
       span {
+        cursor: pointer;
         margin-left: 5px;
         font-weight: 600;
       }
