@@ -1,5 +1,4 @@
-@import '../../../../../styles_constants.scss';
-
+@import "../../../../../styles_constants.scss";
 
 .card {
   width: 452px;
@@ -25,7 +24,7 @@
       }
 
       .vcard-desc-column {
-        background-color: #F8F9FA;
+        background-color: #f8f9fa;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
 
@@ -34,6 +33,11 @@
           overflow: hidden;
           height: 100%;
 
+          span,
+          small {
+            cursor: default;
+          }
+
           .vcard-desc-column-row {
             margin-bottom: 5px;
 
@@ -41,6 +45,7 @@
               text-decoration: none;
 
               span {
+                cursor: pointer;
                 margin-left: 0px;
                 font-weight: 600;
               }

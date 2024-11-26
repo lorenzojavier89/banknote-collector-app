@@ -1,4 +1,4 @@
-@import '../../../../styles_constants.scss';
+@import "../../../../styles_constants.scss";
 
 .card {
   width: 452px;
@@ -12,8 +12,9 @@
     border-top: $appborder;
     padding-top: 10px;
 
-    span, small {
-     cursor: default; 
+    span,
+    small {
+      cursor: default;
     }
 
     .card-title {
@@ -35,7 +36,7 @@
       margin-top: 5px;
       margin-bottom: 5px;
       padding-left: 3px;
-      
+
       img {
         margin-right: 3px;
       }
@@ -52,13 +53,13 @@
       &.collapsible {
         cursor: pointer;
       }
-      
+
       &.collapsed {
-        display: -webkit-box;                 
-        -webkit-box-orient: vertical;         
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-        line-clamp: 2;                 
-        overflow: hidden;                     
+        line-clamp: 2;
+        overflow: hidden;
         text-overflow: ellipsis;
       }
     }
