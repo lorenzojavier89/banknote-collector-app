@@ -71,6 +71,11 @@
           .vcard-desc-column-row-comment {
             margin-top: 15px;
             text-align: center;
+
+            .card-comment {
+              font-style: italic;
+              font-size: 12px;
+            }
           }
 
           .card-text {
