@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, ElementRef, input, signal, viewChild } from '@angular/core';
+import { AfterViewInit, Component, computed, ElementRef, inject, input, signal, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
@@ -6,6 +6,7 @@ import { NgFor } from '@angular/common';
 import { Volume } from '../../../models/volume.enum';
 import { Orientation } from '../../../models/orientation.enum';
 import { BanknoteVCardComponent } from './banknote-vcard/banknote-vcard.component';
+import { VolumesService } from '../../../services/volumes.service';
 
 @Component({
   selector: 'app-banknote-card',
@@ -15,23 +16,18 @@ import { BanknoteVCardComponent } from './banknote-vcard/banknote-vcard.componen
   styleUrl: './banknote-card.component.scss',
 })
 export class BanknoteCardComponent implements AfterViewInit {
-  banknote = input.required<Banknote>();
+  private volumesService: VolumesService = inject(VolumesService);
   private cardCommentEl = viewChild<ElementRef<HTMLElement>>('cardComment');
+  
+  banknote = input.required<Banknote>();
   collapsible = signal<boolean>(false);
   collapsed = signal<boolean>(true);
-
   regularDisplay = computed<boolean>(() => {
     return this.banknote().orientation === Orientation.Horizontal;
   });
-
-  badgeClass = computed<string>(() => {
-    switch (this.banknote().volume) {
-      case Volume.Black: return 'text-bg-dark';
-      case Volume.Red: return 'text-bg-danger';
-      case Volume.Green: return 'text-bg-success';
-      default: return 'text-bg-secondary';
-    }
-  })  
+  badgeClass = computed<string>(() => { 
+    return this.volumesService.getBadgeClass(this.banknote().volume);
+  }); 
 
   ngAfterViewInit(): void {
     const element = this.cardCommentEl()?.nativeElement;

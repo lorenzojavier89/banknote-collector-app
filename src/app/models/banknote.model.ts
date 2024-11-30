@@ -4,7 +4,7 @@ import { Orientation } from './orientation.enum';
 export interface Banknote {
   id: string;
   order: number;
-  volume: Volume | undefined;
+  volume: Volume | null;
   name: string;
   flagIcons: string[];
   regionCode: string;

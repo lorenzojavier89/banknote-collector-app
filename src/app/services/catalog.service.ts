@@ -104,13 +104,13 @@ export class CatalogService {
     return value === 'v'? Orientation.Vertical : Orientation.Horizontal;
   }
   
-  private getVolume(value: string): Volume | undefined {
+  private getVolume(value: string): Volume | null {
     const isValidStatus = Object.values(Volume).includes(value as Volume);
     if(isValidStatus) {
       return value as Volume;
     }
 
-    return undefined;
+    return null;
   }
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });

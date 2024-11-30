@@ -5,6 +5,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Volume } from '../../../models/volume.enum';
+import { VolumesService } from '../../../services/volumes.service';
 
 @Component({
   selector: 'app-catalog-header',
@@ -14,7 +15,7 @@ import { Volume } from '../../../models/volume.enum';
   styleUrl: './catalog-header.component.scss'
 })
 export class CatalogHeaderComponent {
-
+  private volumesService: VolumesService = inject(VolumesService);
   private filtersService: FiltersService = inject(FiltersService);
 
   noFiltersAppliedMssg = "Sin filtros aplicados";
@@ -26,12 +27,7 @@ export class CatalogHeaderComponent {
   count = computed(() => this.banknotes().length);
 
   badgeClass(code: string | null): string  {
-    switch (code as Volume) {
-      case Volume.Black: return 'text-bg-dark';
-      case Volume.Red: return 'text-bg-danger';
-      case Volume.Green: return 'text-bg-success';
-      default: return 'text-bg-secondary';
-    }
+    return this.volumesService.getBadgeClass(code);
   }  
 
   onRemoveFiltersClick(event: MouseEvent) {

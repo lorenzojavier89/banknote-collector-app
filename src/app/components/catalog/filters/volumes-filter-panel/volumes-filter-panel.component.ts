@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 import { FiltersService } from '../../../../services/filters.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
-import { Volume } from '../../../../models/volume.enum';
+import { VolumesService } from '../../../../services/volumes.service';
 
 @Component({
   selector: 'app-volumes-filter-panel',
@@ -13,16 +13,12 @@ import { Volume } from '../../../../models/volume.enum';
 })
 export class VolumesFilterPanelComponent {
   private filtersService: FiltersService = inject(FiltersService);
+  private volumesService: VolumesService = inject(VolumesService);
   
   volumes = this.filtersService.volumes;
 
   badgeClass(code: string): string  {
-    switch (code as Volume) {
-      case Volume.Black: return 'text-bg-dark';
-      case Volume.Red: return 'text-bg-danger';
-      case Volume.Green: return 'text-bg-success';
-      default: return 'text-bg-secondary';
-    }
+    return this.volumesService.getBadgeClass(code);
   }  
 
   applyVolumeFilter(volumeFilterItem: FilterItem) {
