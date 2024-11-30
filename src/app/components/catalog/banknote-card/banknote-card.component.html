@@ -7,7 +7,7 @@
                     <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>
                     <a class="card-title" [routerLink]="['/catalog', banknote().id]">
                         <span class="card-text">{{ banknote().denomination }}</span>
-                        <mat-icon [matTooltip]="'test'">info</mat-icon>
+                        <mat-icon class="material-symbols-outlined" [matTooltip]="'test'">info</mat-icon>
                     </a>
                 </div>
                 <small class="text-body-secondary">{{ banknote().issueDate }}</small>
