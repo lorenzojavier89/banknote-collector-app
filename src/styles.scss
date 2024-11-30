@@ -24,3 +24,24 @@ body {
   }
 }
 
+// Import Bootstrap SCSS source with custom breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  customxxl: 1775px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  customxxl: 1680px
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
