@@ -9,6 +9,7 @@
   }
 
   .card-body {
+    position: relative;
     border-top: $appborder;
     padding-top: 10px;
 
@@ -33,6 +34,9 @@
     }
 
     .card-info {
+      position: absolute;
+      top: 0px;
+      right: -8px;
       font-size: 15px;
       margin-left: 2px;
       color: $appblack;
