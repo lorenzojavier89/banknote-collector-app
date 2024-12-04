@@ -1,8 +1,10 @@
-@if (regularDisplay()){
+@if (regularDisplay()) {
     <div class="card text-bg-light">
         <app-image-loader class="card-img-top" [src]="banknote().imageUrl" />
         <div class="card-body">
-            <mat-icon class="material-symbols-outlined card-info" [matTooltip]="'test'">info</mat-icon>
+            @if (banknote().info) {
+                <mat-icon class="material-symbols-outlined card-info" [matTooltip]="banknote().info">info</mat-icon>
+            }
             <div class="d-flex w-100 justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
                     <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>
