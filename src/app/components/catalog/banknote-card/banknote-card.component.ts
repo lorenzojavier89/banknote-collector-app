@@ -3,15 +3,16 @@ import { RouterLink } from '@angular/router';
 import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
 import { NgFor } from '@angular/common';
-import { Volume } from '../../../models/volume.enum';
 import { Orientation } from '../../../models/orientation.enum';
 import { BanknoteVCardComponent } from './banknote-vcard/banknote-vcard.component';
 import { VolumesService } from '../../../services/volumes.service';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-banknote-card',
   standalone: true,
-  imports: [RouterLink, BanknoteVCardComponent, ImageLoaderComponent, NgFor],
+  imports: [RouterLink, MatIconModule, MatTooltipModule, BanknoteVCardComponent, ImageLoaderComponent, NgFor],
   templateUrl: './banknote-card.component.html',
   styleUrl: './banknote-card.component.scss',
 })

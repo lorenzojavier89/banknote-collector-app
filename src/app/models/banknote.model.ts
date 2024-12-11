@@ -15,6 +15,7 @@ export interface Banknote {
   denomination: string;
   onlineCatalog: string;
   imageUrl: string;
-  comment?: string;
+  comment: string;
+  info: string;
   orientation: Orientation
 }

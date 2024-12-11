@@ -38,6 +38,21 @@
             cursor: default;
           }
 
+          .card-info {
+            position: absolute;
+            top: 0px;
+            right: -8px;
+            font-size: 15px;
+            margin-left: 2px;
+            color: rgba(33, 37, 41, 0.75);
+            opacity: 0.2;
+            cursor: help;
+      
+            &:hover {
+              opacity: 1;
+            }
+          }
+
           .vcard-desc-column-row {
             margin-bottom: 5px;
 
