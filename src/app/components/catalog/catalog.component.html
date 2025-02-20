@@ -5,7 +5,11 @@
   <section id="catalog" class="col-12 col-md-8 col-xl-9 col-xxl-9 col-customxxl-10">
     <app-catalog-header [(viewMode)]="viewMode"></app-catalog-header>
     <div id="catalog-body" class="row">
-      <app-banknote-card class="catalog-card col-12 col-xl-6 col-customxxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b" @fadeInOut />
+      @if(displayGridViewMode()) {
+        <app-banknote-card class="catalog-card col-12 col-xl-6 col-customxxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b" @fadeInOut />
+      } @else {
+        <app-catalog-table/>
+      }
     </div>
   </section>
 </section>
