@@ -18,6 +18,8 @@ export class CatalogHeaderComponent {
   private volumesService: VolumesService = inject(VolumesService);
   private filtersService: FiltersService = inject(FiltersService);
 
+  gridViewModeMssg = "Mostrar vista de grilla";
+  tableViewModeMssg = "Mostrar vista de tabla";
   noFiltersAppliedMssg = "Sin filtros aplicados";
   removeAppliedFiltersMssg = "Quitar todos los filtros";
 
@@ -34,5 +36,15 @@ export class CatalogHeaderComponent {
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();
     this.filtersService.removeAllFilters();
+  }
+
+  onGridViewModeClick(event: MouseEvent) {
+    event.stopPropagation();
+    this.viewMode.set(CatalogViewMode.GridView);
+  }
+
+  onTableViewModeClick(event: MouseEvent) {
+    event.stopPropagation();
+    this.viewMode.set(CatalogViewMode.TableView);
   }
 }
