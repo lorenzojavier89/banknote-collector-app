@@ -8,8 +8,7 @@ import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
-import { Volume } from '../models/volume.enum';
-import { Orientation } from '../models/orientation.enum';
+import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-service.mappers';
 
 @Injectable({
   providedIn: 'root',
@@ -20,102 +19,23 @@ export class CatalogService {
   private issuersJsonUrl = 'assets/data/issuers.json';
 
   private regions$ = this.http.get<Region[]>(this.issuersJsonUrl).pipe(shareReplay(1));
-  private issuers$ = this.regions$.pipe(
-    map((data) => {
-      const issuerLookup = new Map<string, Issuer>();
-
-      data.forEach((region) => {
-        region.subregions.forEach((subregion) => {
-          subregion.issuers.forEach((country) => {
-            issuerLookup.set(country.code, {
-              country,
-              subregionCode: subregion.code,
-              subregionName: subregion.name,
-              regionCode: region.code,
-              regionName: region.name,
-            });
-          });
-        });
-      });
-
-      return issuerLookup;
-    }),
+  private issuersLookup$ = this.regions$.pipe(
+    map((regions) => mapIssuersLookup(regions)),
     shareReplay(1)
   );
   
   private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
   private catalog$ = forkJoin([
-    this.issuers$,
+    this.issuersLookup$,
     this.catalogApiResponse$,
   ])
     .pipe<Banknote[]>(
-      map(([issuerLookup, apiResponse]) => {
-        return apiResponse.map((item) => {
-          const issuer = issuerLookup.get(item.issuerCode);
-          const volume = this.getVolume(item.volume);
-          const orientation = this.getOrientation(item.orientation);
-          const { name, flagIcons } = this.getNameAndFlags(issuer,item.issuerCode,item.issuerSubcode);
-
-          return {
-            ...item,
-            name,
-            volume,
-            flagIcons,
-            regionCode: issuer?.regionCode,
-            subregionCode: issuer?.subregionCode,
-            orientation
-          } as Banknote;
-        });
-      })
+      map(([issuersLookup, apiResponse]) => mapBanknotes(issuersLookup, apiResponse))
     );
-
-  private getNameAndFlags(
-    issuer: Issuer | undefined,
-    issuerCode: string,
-    issuerSubcode?: string
-  ): { name: string; flagIcons: string[] } {
-    if (!issuer) {
-      return { name: '', flagIcons: [] };
-    }
-  
-    if (!issuerSubcode) {
-      return {
-        name: issuer.country.name,
-        flagIcons: issuer.country.flagIcons,
-      };
-    }
-  
-    if (issuerSubcode.startsWith(issuerCode)) {
-      const historicalPeriod = issuer.country.historicalPeriods.find((x) => x.code === issuerSubcode);
-      return {
-        name: historicalPeriod?.name ?? '',
-        flagIcons: historicalPeriod?.flagIcons ?? [],
-      };
-    }
-  
-    const subgroup = issuer.country.subgroups.find((x) => x.code === issuerSubcode);
-    return {
-      name: subgroup?.name ?? '',
-      flagIcons: subgroup?.flagIcons ?? [],
-    };
-  }
-
-  private getOrientation(value: string): Orientation {
-    return value === 'v'? Orientation.Vertical : Orientation.Horizontal;
-  }
-  
-  private getVolume(value: string): Volume | null {
-    const isValidStatus = Object.values(Volume).includes(value as Volume);
-    if(isValidStatus) {
-      return value as Volume;
-    }
-
-    return null;
-  }
 
   banknotes = toSignal(this.catalog$, { initialValue: [] });
   regions = toSignal(this.regions$, { initialValue: []});
-  issuersLookup = toSignal(this.issuers$, { initialValue: new Map<string, Issuer>()});
+  issuersLookup = toSignal(this.issuersLookup$, { initialValue: new Map<string, Issuer>()});
   issuers = computed<Issuer[]>(() => 
     Array.from(this.issuersLookup().values())
     .sort((a, b) => a.country.name.localeCompare(b.country.name)));
