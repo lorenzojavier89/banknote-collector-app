@@ -2,6 +2,8 @@
   <mat-expansion-panel class="outlined-expansion-panel" hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>Mostrando {{ count() }} billetes</mat-panel-title>
+      <mat-icon>table_view</mat-icon>
+      <mat-icon>grid_view</mat-icon>
       @if (appliedFilter().noFiltersApplied) {
         <mat-icon class="material-symbols-outlined" [matTooltip]="noFiltersAppliedMssg">filter_alt</mat-icon>
       } @else {

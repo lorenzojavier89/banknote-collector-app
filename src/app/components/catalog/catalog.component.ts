@@ -1,10 +1,11 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FiltersComponent } from "./filters/filters.component";
 import { FiltersService } from '../../services/filters.service';
 import { BanknoteCardComponent } from './banknote-card/banknote-card.component';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { NgFor } from '@angular/common';
 import { CatalogHeaderComponent } from "./catalog-header/catalog-header.component";
+import { CatalogViewMode } from '../../models/catalog-view-mode.enum';
 
 @Component({
   selector: 'app-catalog',
@@ -22,5 +23,6 @@ import { CatalogHeaderComponent } from "./catalog-header/catalog-header.componen
 export class CatalogComponent {
   private filtersService: FiltersService = inject(FiltersService);
 
+  viewMode = signal<CatalogViewMode>(CatalogViewMode.GridView);
   banknotes = this.filtersService.banknotes;
 }
