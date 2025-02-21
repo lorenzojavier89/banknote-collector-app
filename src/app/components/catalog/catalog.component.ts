@@ -14,12 +14,12 @@ import { CatalogTableComponent } from './catalog-table/catalog-table.component';
   imports: [BanknoteCardComponent, FiltersComponent, NgFor, CatalogHeaderComponent, CatalogTableComponent],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.scss',
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
-      transition(':leave', [animate('250ms', style({opacity: 0}))]),
-    ]),
-  ]
+  // animations: [
+  //   trigger('fadeInOut', [
+  //     transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
+  //     transition(':leave', [animate('250ms', style({opacity: 0}))]),
+  //   ]),
+  // ]
 })
 export class CatalogComponent {
   private filtersService: FiltersService = inject(FiltersService);
