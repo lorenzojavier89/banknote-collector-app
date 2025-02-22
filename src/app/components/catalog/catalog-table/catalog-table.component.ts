@@ -25,7 +25,7 @@ class CatalogTableDataSource extends DataSource<Banknote> {
   styleUrl: './catalog-table.component.scss',
 })
 export class CatalogTableComponent {
-  displayedColumns: string[] = ['order', 'denomination', 'issuerName', 'issuerSubname', 'issueDate'];
+  displayedColumns: string[] = ['order', 'denomination', 'issueDate', 'issuerName', 'issuerSubname'];
   dataSource = new CatalogTableDataSource();
 }
 
