@@ -30,7 +30,7 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
     const issuer = issuersLookup.get(item.issuerCode);
     const volume = getVolume(item.volume);
     const orientation = getOrientation(item.orientation);
-    const { name, issuerName, issuerSubname, flagIcons } = getNameAndFlags(
+    const { name, issuerName, issuerSubname, flagIcons } = getNamesAndFlags(
       issuer,
       item.issuerCode,
       item.issuerSubcode
@@ -50,7 +50,7 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
   });
 }
 
-function getNameAndFlags(issuer: Issuer | undefined, issuerCode: string, issuerSubcode?: string): 
+function getNamesAndFlags(issuer: Issuer | undefined, issuerCode: string, issuerSubcode?: string): 
   { name: string; issuerName: string, issuerSubname: string, flagIcons: string[] } {
   if (!issuer) {
     return { name: '', issuerName: '', issuerSubname: '', flagIcons: [] };
