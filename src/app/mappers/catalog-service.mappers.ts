@@ -44,7 +44,9 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       volume,
       flagIcons,
       regionCode: issuer?.regionCode,
+      regionName: issuer?.regionName,
       subregionCode: issuer?.subregionCode,
+      subregionName: issuer?.subregionName,
       orientation,
     } as Banknote;
   });
