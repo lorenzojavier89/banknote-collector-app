@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
@@ -25,7 +25,7 @@ class CatalogTableDataSource extends DataSource<Banknote> {
   styleUrl: './catalog-table.component.scss',
 })
 export class CatalogTableComponent {
-  displayedColumns: string[] = ['order', 'denomination', 'name', 'issueDate'];
+  displayedColumns: string[] = ['order', 'denomination', 'issuerName', 'issuerSubname', 'issueDate'];
   dataSource = new CatalogTableDataSource();
 }
 

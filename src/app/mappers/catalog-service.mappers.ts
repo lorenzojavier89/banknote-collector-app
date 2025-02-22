@@ -30,7 +30,7 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
     const issuer = issuersLookup.get(item.issuerCode);
     const volume = getVolume(item.volume);
     const orientation = getOrientation(item.orientation);
-    const { name, flagIcons } = getNameAndFlags(
+    const { name, issuerName, issuerSubname, flagIcons } = getNameAndFlags(
       issuer,
       item.issuerCode,
       item.issuerSubcode
@@ -39,6 +39,8 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
     return {
       ...item,
       name,
+      issuerName,
+      issuerSubname,
       volume,
       flagIcons,
       regionCode: issuer?.regionCode,
@@ -48,14 +50,17 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
   });
 }
 
-function getNameAndFlags(issuer: Issuer | undefined, issuerCode: string, issuerSubcode?: string): { name: string; flagIcons: string[] } {
+function getNameAndFlags(issuer: Issuer | undefined, issuerCode: string, issuerSubcode?: string): 
+  { name: string; issuerName: string, issuerSubname: string, flagIcons: string[] } {
   if (!issuer) {
-    return { name: '', flagIcons: [] };
+    return { name: '', issuerName: '', issuerSubname: '', flagIcons: [] };
   }
 
   if (!issuerSubcode) {
     return {
       name: issuer.country.name,
+      issuerName: issuer.country.name,
+      issuerSubname: '',
       flagIcons: issuer.country.flagIcons,
     };
   }
@@ -66,6 +71,8 @@ function getNameAndFlags(issuer: Issuer | undefined, issuerCode: string, issuerS
     );
     return {
       name: historicalPeriod?.name ?? '',
+      issuerName: issuer.country.name,
+      issuerSubname: historicalPeriod?.name ?? '',
       flagIcons: historicalPeriod?.flagIcons ?? [],
     };
   }
@@ -75,6 +82,8 @@ function getNameAndFlags(issuer: Issuer | undefined, issuerCode: string, issuerS
   );
   return {
     name: subgroup?.name ?? '',
+    issuerName: issuer.country.name,
+    issuerSubname: subgroup?.name ?? '',
     flagIcons: subgroup?.flagIcons ?? [],
   };
 }

@@ -9,9 +9,14 @@
     <td mat-cell *matCellDef="let element">{{ element.denomination }}</td>
   </ng-container>
 
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Emisor</th>
-    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  <ng-container matColumnDef="issuerName">
+    <th mat-header-cell *matHeaderCellDef>Estado Emisor</th>
+    <td mat-cell *matCellDef="let element">{{ element.issuerName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="issuerSubname">
+    <th mat-header-cell *matHeaderCellDef>Subgrupo / Período Histórico</th>
+    <td mat-cell *matCellDef="let element">{{ element.issuerSubname }}</td>
   </ng-container>
 
   <ng-container matColumnDef="issueDate">

@@ -10,7 +10,9 @@ export interface Banknote {
   regionCode: string;
   subregionCode: string;
   issuerCode: string;
+  issuerName: string;
   issuerSubcode: string;
+  issuerSubname: string;
   issueDate: string;
   denomination: string;
   onlineCatalog: string;
