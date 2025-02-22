@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { FiltersComponent } from "./filters/filters.component";
 import { FiltersService } from '../../services/filters.service';
 import { BanknoteCardComponent } from './banknote-card/banknote-card.component';
@@ -24,8 +24,14 @@ import { CatalogTableComponent } from './catalog-table/catalog-table.component';
 export class CatalogComponent {
   private filtersService: FiltersService = inject(FiltersService);
 
-  viewMode = signal<CatalogViewMode>(CatalogViewMode.GridView);
+  viewMode = signal<CatalogViewMode>((localStorage.getItem('viewMode') as CatalogViewMode) ?? CatalogViewMode.GridView);
   displayGridViewMode = computed(() => this.viewMode() === CatalogViewMode.GridView);
 
   banknotes = this.filtersService.banknotes;
+
+  constructor() {
+    effect(() => {
+      localStorage.setItem('viewMode', this.viewMode());
+    });
+  }
 }
