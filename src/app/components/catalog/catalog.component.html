@@ -6,7 +6,7 @@
     <app-catalog-header [(viewMode)]="viewMode"></app-catalog-header>
     <div id="catalog-body" class="row">
       @if(displayGridViewMode()) {
-        <app-banknote-card class="catalog-card col-12 col-xl-6 col-customxxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b" @fadeInOut />
+        <app-banknote-card class="catalog-card col-12 col-xl-6 col-customxxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b"/>
       } @else {
         <app-catalog-table/>
       }
