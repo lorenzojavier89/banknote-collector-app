@@ -1,46 +1,33 @@
 import { Component, computed, inject } from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
-import {DataSource} from '@angular/cdk/collections';
+import { MatTableModule } from '@angular/material/table';
+import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
 import { FiltersService } from '../../../services/filters.service';
 import { toObservable } from '@angular/core/rxjs-interop';
-
-export interface TableRow {
-  name: string;
-  position: number;
-}
-
-const DATA: TableRow[] = [
-  {position: 1, name: 'Hydrogen' },
-  {position: 2, name: 'Helium' },
-  {position: 3, name: 'Lithium' },
-  {position: 4, name: 'Beryllium' },
-];
+import { CatalogTableElement } from '../../../models/catalog-table-element.model';
 
 @Component({
   selector: 'app-catalog-table',
   standalone: true,
   imports: [MatTableModule],
   templateUrl: './catalog-table.component.html',
-  styleUrl: './catalog-table.component.scss'
+  styleUrl: './catalog-table.component.scss',
 })
 export class CatalogTableComponent {
-  displayedColumns: string[] = ['position', 'name'];
-  dataSource = new ExampleDataSource();
+  displayedColumns: string[] = ['order', 'denomination', 'name', 'issueDate'];
+  dataSource = new CatalogTableDataSource();
 }
 
-class ExampleDataSource extends DataSource<TableRow> {
+class CatalogTableDataSource extends DataSource<CatalogTableElement> {
   private filtersService: FiltersService = inject(FiltersService);
 
-  tableRows = computed<TableRow[]>(() => this.filtersService.banknotes().map((b) => ({
-    position: b.order,
-    name: b.name
-  })))
+  tableRows = computed<CatalogTableElement[]>(() => 
+    this.filtersService.banknotes().map((b) => ({ ...b }))
+  );
 
-  connect(): Observable<TableRow[]> {
+  connect(): Observable<CatalogTableElement[]> {
     return toObservable(this.tableRows);
   }
 
   disconnect() {}
-
 }
