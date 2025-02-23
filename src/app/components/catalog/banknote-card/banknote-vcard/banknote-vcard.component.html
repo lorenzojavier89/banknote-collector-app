@@ -13,7 +13,7 @@
                     <small class="text-body-secondary">{{ banknote().issueDate }}</small>
                 </div>
                 <div class="vcard-desc-column-row vcard-desc-column-row-title d-flex justify-content-center align-items-center">
-                    <a class="card-title" [routerLink]="['/catalog', banknote().id]">
+                    <a class="card-title" [href]="banknote().onlineCatalog" target="_blank" rel="noopener noreferrer">
                         <span class="card-text">{{ banknote().denomination }}</span>
                     </a>
                 </div>

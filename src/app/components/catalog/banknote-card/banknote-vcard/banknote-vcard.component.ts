@@ -1,6 +1,5 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { Banknote } from '../../../../models/banknote.model';
-import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { VolumesService } from '../../../../services/volumes.service';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,7 +8,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-banknote-vcard',
   standalone: true,
-  imports: [RouterLink, MatIconModule, MatTooltipModule, NgFor],
+  imports: [MatIconModule, MatTooltipModule, NgFor],
   templateUrl: './banknote-vcard.component.html',
   styleUrl: './banknote-vcard.component.scss'
 })
