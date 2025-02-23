@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { FiltersService } from '../../../services/filters.service';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { Banknote } from '../../../models/banknote.model';
+import { NgFor } from '@angular/common';
 
 class CatalogTableDataSource extends DataSource<Banknote> {
   private filtersService: FiltersService = inject(FiltersService);
@@ -20,12 +21,12 @@ class CatalogTableDataSource extends DataSource<Banknote> {
 @Component({
   selector: 'app-catalog-table',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule, NgFor],
   templateUrl: './catalog-table.component.html',
   styleUrl: './catalog-table.component.scss',
 })
 export class CatalogTableComponent {
-  displayedColumns: string[] = ['order', 'denomination', 'issueDate', 'issuerName', 'issuerSubname', 'subregionName'];
+  displayedColumns: string[] = ['order', 'denomination', 'issueDate', 'flagIcons', 'issuerName', 'issuerSubname', 'subregionName'];
   dataSource = new CatalogTableDataSource();
 }
 
