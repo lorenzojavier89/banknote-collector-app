@@ -1,8 +1,21 @@
 .catalog-table.mat-mdc-table {
   background-color: transparent;
+  width: 100%;
 
   .mat-mdc-header-row {
     font-weight: bold;
+  }
+
+  td {
+    border-right: 1px solid black; //TO DO: Remove this border at the end
+  }
+
+  .mat-column-order {
+    width: 70px;
+  }
+
+  .mat-column-denomination {
+    width: 300px;
   }
   
   .mat-column-flagIcons {
