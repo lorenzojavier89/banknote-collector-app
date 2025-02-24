@@ -5,3 +5,13 @@
 .mat-mdc-header-row {
   font-weight: bold;
 }
+
+td.mat-column-flagIcons {
+  img {
+    margin-right: 2px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
