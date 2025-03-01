@@ -38,6 +38,15 @@
             "flagIcons": [
               "assets/images/flags/4x3/dj.svg"
             ]
+          },
+          {
+            "code": "ETH",
+            "name": "Etiopía",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/et.svg"
+            ]
           }
         ]
       },
@@ -109,6 +118,15 @@
             "historicalPeriods": [],
             "flagIcons": [
               "assets/images/flags/4x3/gn.svg"
+            ]
+          },
+          {
+            "code": "MRT",
+            "name": "Mauritania",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/mr.svg"
             ]
           }
         ]
@@ -453,6 +471,15 @@
             ]
           },
           {
+            "code": "TWN",
+            "name": "Taiwán (República de China)",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/tw.svg"
+            ]
+          },
+          {
             "code": "JPN",
             "name": "Japón",
             "subgroups": [],
@@ -687,6 +714,13 @@
                 "flagIcons": [
                   "assets/images/flags/4x3/ru.svg"
                 ]
+              },
+              {
+                "code": "RUS1922",
+                "name": "[1922-1991] Unión Soviética",
+                "flagIcons": [
+                  "assets/images/flags/4x3/urss.svg"
+                ]
               }
             ],
             "flagIcons": [
@@ -844,6 +878,15 @@
             "flagIcons": [
               "assets/images/flags/4x3/ee.svg"
             ]
+          },
+          {
+            "code": "ISL",
+            "name": "Islandia",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/is.svg"
+            ]
           }
         ]
       },
@@ -851,6 +894,15 @@
         "code": "SEU",
         "name": "Europa Meridional",
         "issuers": [
+          {
+            "code": "PRT",
+            "name": "Portugal",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/pt.svg"
+            ]
+          },
           {
             "code": "ESP",
             "name": "España",
@@ -867,6 +919,32 @@
             "historicalPeriods": [],
             "flagIcons": [
               "assets/images/flags/4x3/it.svg"
+            ]
+          },
+          {
+            "code": "SVN",
+            "name": "Eslovenia",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/si.svg"
+            ]
+          },
+          {
+            "code": "SRB",
+            "name": "Serbia",
+            "subgroups": [],
+            "historicalPeriods": [
+              {
+                "code": "SRB1941",
+                "name": "[1941-1944] Ocupación Alemana WWII",
+                "flagIcons": [
+                  "assets/images/flags/4x3/rs.svg"
+                ]
+              }
+            ],
+            "flagIcons": [
+              "assets/images/flags/4x3/rs.svg"
             ]
           },
           {
@@ -909,7 +987,22 @@
             "code": "YUCS",
             "name": "[1918-1992] Yugoslavia",
             "subgroups": [],
-            "historicalPeriods": [],
+            "historicalPeriods": [
+              {
+                "code": "YUCS1963",
+                "name": "[1963-1992] Republica Federativa Socialista de Yugoslavia",
+                "flagIcons": [
+                  "assets/images/flags/4x3/.svg"
+                ]
+              },
+              {
+                "code": "YUCS1992",
+                "name": "[1992-2003] República Federal de Yugoslavia",
+                "flagIcons": [
+                  "assets/images/flags/4x3/.svg"
+                ]
+              }
+            ],
             "flagIcons": [
               "assets/images/flags/4x3/yu1918.svg",
               "assets/images/flags/4x3/yu1946.svg"
