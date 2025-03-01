@@ -1,9 +1,16 @@
+@import "../../../../styles_constants.scss"; 
+
+
 .catalog-table.mat-mdc-table {
   background-color: transparent;
   width: 100%;
 
   .mat-mdc-header-row {
     font-weight: bold;
+
+    th {
+      background-color: $appCardBackgroundColor;
+    }
   }
 
   td, th {
