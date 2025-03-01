@@ -4,14 +4,14 @@
 
   .mat-mdc-header-row {
     font-weight: bold;
-
-    th {
-      text-align: center;
-    }
   }
 
-  td {
+  td, th {
     text-align: center;
+
+    &.mat-column-order {
+      border-right: 1px solid;
+    }
   }
 
   .mat-column-order {
