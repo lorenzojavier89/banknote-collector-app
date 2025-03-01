@@ -14,11 +14,19 @@
     width: 70px;
   }
 
-  .mat-column-denomination {
+  .mat-column-denomination,
+  .mat-column-issuerName,
+  .mat-column-issuerSubname,
+  .mat-column-subregionName {
     width: 300px;
   }
-  
+
+  .mat-column-issueDate {
+    width: 150px;
+  }
+
   .mat-column-flagIcons {
+    width: 150px;
     img {
       margin-right: 2px;
   
