@@ -4,14 +4,18 @@
 
   .mat-mdc-header-row {
     font-weight: bold;
+
+    th {
+      text-align: center;
+    }
   }
 
   td {
-    border-right: 1px solid black; //TO DO: Remove this border at the end
+    text-align: center;
   }
 
   .mat-column-order {
-    width: 70px;
+    width: 100px;
   }
 
   .mat-column-denomination,
@@ -26,7 +30,7 @@
   }
 
   .mat-column-flagIcons {
-    width: 150px;
+    width: 100px;
     img {
       margin-right: 2px;
   
