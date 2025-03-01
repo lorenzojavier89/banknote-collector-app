@@ -11,6 +11,7 @@ export class VolumesService {
       case Volume.Black: return 'text-bg-dark';
       case Volume.Red: return 'text-bg-danger';
       case Volume.Green: return 'text-bg-success';
+      case Volume.Blue: return 'text-bg-primary';
       default: return 'text-bg-secondary';
     }
   }  
