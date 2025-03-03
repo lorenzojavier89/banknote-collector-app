@@ -10,6 +10,18 @@ hr {
   }
 }
 
+.icon-view-mode {
+  opacity: 0.5;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .badge-row {
   display: flex;
   overflow: hidden;

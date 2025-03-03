@@ -10,6 +10,11 @@ body {
   overflow: hidden;
 }
 
+// table global styles
+thead, tbody, tfoot, tr, td, th {
+  border-color: $appbordercolor !important;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

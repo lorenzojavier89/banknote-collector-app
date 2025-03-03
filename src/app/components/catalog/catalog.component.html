@@ -3,9 +3,15 @@
     <app-filters></app-filters>
   </section>
   <section id="catalog" class="col-12 col-md-8 col-xl-9 col-xxl-9 col-customxxl-10">
-    <app-catalog-header></app-catalog-header>
-    <div id="catalog-body" class="row">
-      <app-banknote-card class="catalog-card col-12 col-xl-6 col-customxxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b" @fadeInOut />
-    </div>
+    <app-catalog-header [(viewMode)]="viewMode"></app-catalog-header>
+      @if(displayGridViewMode()) {
+        <div id="catalog-grid-body" class="row">
+          <app-banknote-card class="catalog-card col-12 col-xl-6 col-customxxl-4 mb-3" *ngFor="let b of banknotes()" [banknote]="b"/>
+        </div>
+      } @else {
+        <div id="catalog-table-body">
+          <app-catalog-table/>
+        </div>
+      }
   </section>
 </section>

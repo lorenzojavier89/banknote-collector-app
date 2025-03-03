@@ -8,9 +8,13 @@ export interface Banknote {
   name: string;
   flagIcons: string[];
   regionCode: string;
+  regionName: string;
   subregionCode: string;
+  subregionName: string;
   issuerCode: string;
+  issuerName: string;
   issuerSubcode: string;
+  issuerSubname: string;
   issueDate: string;
   denomination: string;
   onlineCatalog: string;

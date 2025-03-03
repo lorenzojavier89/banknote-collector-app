@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, computed, ElementRef, inject, input, signal, viewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Banknote } from '../../../models/banknote.model';
 import { ImageLoaderComponent } from "../../utils/image-loader/image-loader.component";
 import { NgFor } from '@angular/common';
@@ -12,7 +11,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-banknote-card',
   standalone: true,
-  imports: [RouterLink, MatIconModule, MatTooltipModule, BanknoteVCardComponent, ImageLoaderComponent, NgFor],
+  imports: [MatIconModule, MatTooltipModule, BanknoteVCardComponent, ImageLoaderComponent, NgFor],
   templateUrl: './banknote-card.component.html',
   styleUrl: './banknote-card.component.scss',
 })

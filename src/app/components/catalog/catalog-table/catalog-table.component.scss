@@ -1,0 +1,50 @@
+@import "../../../../styles_constants.scss"; 
+
+
+.catalog-table.mat-mdc-table {
+  background-color: transparent;
+  width: 100%;
+
+  .mat-mdc-header-row {
+    font-weight: bold;
+
+    th {
+      background-color: $appCardBackgroundColor;
+    }
+  }
+
+  td, th {
+    text-align: center;
+
+    &.mat-column-order {
+      border-right: 1px solid;
+    }
+  }
+
+  .mat-column-order {
+    width: 100px;
+  }
+
+  .mat-column-denomination,
+  .mat-column-issuerName,
+  .mat-column-issuerSubname,
+  .mat-column-subregionName {
+    width: 300px;
+  }
+
+  .mat-column-issueDate {
+    width: 150px;
+  }
+
+  .mat-column-flagIcons {
+    width: 100px;
+    img {
+      margin-right: 2px;
+  
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+

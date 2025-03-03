@@ -5,7 +5,7 @@
   height: 90vh;
 }
 
-#catalog-body {
+#catalog-grid-body {
   overflow-y: auto;
   height: 80vh;
   margin-right: 0px;
@@ -17,6 +17,13 @@
     justify-content: center;
     height: fit-content;
   }
+}
+
+#catalog-table-body {
+  overflow-y: auto;
+  height: 80vh;
+  margin-right: 0px;
+  padding-bottom: 50px;
 }
 
 @media (max-width: $mediumWidth) {

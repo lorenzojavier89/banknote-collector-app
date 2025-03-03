@@ -1,11 +1,13 @@
 $appwhite: ghostwhite;
 $appblack: #212529;
-$appborder: 1px solid rgba(0, 0, 0, 0.175);
+$appbordercolor: rgba(0, 0, 0, 0.175);
+$appborder: 1px solid $appbordercolor;
 $appboxshadow: 2px 2px 4px lightgray;
 
 $appActiveFilterBackgroudColor: #ebf2ff;
 $appActiveFilterBorderColor: #b6c7e0;
 $appPartialActiveFilterBackgroundColor: #f6ffd982;
+$appCardBackgroundColor: #f8f9fa;
 
 $mediumWidth: 768px;
 
