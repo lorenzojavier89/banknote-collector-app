@@ -992,14 +992,14 @@
                 "code": "YUCS1963",
                 "name": "[1963-1992] Republica Federativa Socialista de Yugoslavia",
                 "flagIcons": [
-                  "assets/images/flags/4x3/.svg"
+                  "assets/images/flags/4x3/yu1946.svg"
                 ]
               },
               {
                 "code": "YUCS1992",
-                "name": "[1992-2003] República Federal de Yugoslavia",
+                "name": "[1992-2003] República Federativa de Yugoslavia",
                 "flagIcons": [
-                  "assets/images/flags/4x3/.svg"
+                  "assets/images/flags/4x3/yu1918.svg"
                 ]
               }
             ],
