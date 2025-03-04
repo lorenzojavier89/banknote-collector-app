@@ -2,16 +2,16 @@
   <mat-expansion-panel class="outlined-expansion-panel" hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>Mostrando {{ count() }} billetes</mat-panel-title>
-      <button mat-icon-button>
-        <mat-icon (click)="onGridViewModeClick($event)" 
+      <button mat-icon-button (click)="onGridViewModeClick($event)" >
+        <mat-icon 
           class="catalog-header-icon" 
           [class.active]="viewMode() === 'GridView'" 
           [matTooltip]="gridViewModeMssg">
             grid_view
         </mat-icon>
       </button>
-      <button mat-icon-button>
-        <mat-icon (click)="onTableViewModeClick($event)" 
+      <button mat-icon-button (click)="onTableViewModeClick($event)" >
+        <mat-icon 
           class="catalog-header-icon material-symbols-outlined" 
           [class.active]="viewMode() === 'TableView'" 
           [matTooltip]="tableViewModeMssg">
@@ -19,24 +19,27 @@
         </mat-icon>
       </button>
       @if (appliedFilter().noFiltersApplied) {
-        <button mat-icon-button>
-          <mat-icon (click)="onRemoveFiltersClick($event)" 
+        <button mat-icon-button (click)="onRemoveFiltersClick($event)" >
+          <mat-icon 
             class="catalog-header-icon material-symbols-outlined" 
             [matTooltip]="noFiltersAppliedMssg">
             filter_alt
           </mat-icon>
         </button>
       } @else {
-        <button mat-icon-button>
-          <mat-icon (click)="onRemoveFiltersClick($event)" 
-            class="catalog-header-icon" 
+        <button mat-icon-button (click)="onRemoveFiltersClick($event)">
+          <mat-icon 
+            class="catalog-header-icon active" 
             [matTooltip]="removeAppliedFiltersMssg">
             filter_alt
           </mat-icon>
         </button>
       }
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
+      <button mat-icon-button [matMenuTriggerFor]="menu" (click)="onSortMenuClick($event)">
+        <mat-icon
+          class="catalog-header-icon">
+          swap_vert
+        </mat-icon>
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
