@@ -4,7 +4,7 @@
       <mat-panel-title>Mostrando {{ count() }} billetes</mat-panel-title>
       <button mat-icon-button>
         <mat-icon (click)="onGridViewModeClick($event)" 
-          class="icon-view-mode" 
+          class="catalog-header-icon" 
           [class.active]="viewMode() === 'GridView'" 
           [matTooltip]="gridViewModeMssg">
             grid_view
@@ -12,7 +12,7 @@
       </button>
       <button mat-icon-button>
         <mat-icon (click)="onTableViewModeClick($event)" 
-          class="icon-view-mode" 
+          class="catalog-header-icon" 
           [class.active]="viewMode() === 'TableView'" 
           [matTooltip]="tableViewModeMssg">
             table_view
@@ -21,7 +21,7 @@
       @if (appliedFilter().noFiltersApplied) {
         <button mat-icon-button>
           <mat-icon (click)="onRemoveFiltersClick($event)" 
-            class="icon-no-filters material-symbols-outlined" 
+            class="catalog-header-icon material-symbols-outlined" 
             [matTooltip]="noFiltersAppliedMssg">
             filter_alt
           </mat-icon>
@@ -29,7 +29,7 @@
       } @else {
         <button mat-icon-button>
           <mat-icon (click)="onRemoveFiltersClick($event)" 
-            class="icon-remove-filters" 
+            class="catalog-header-icon" 
             [matTooltip]="removeAppliedFiltersMssg">
             filter_alt
           </mat-icon>
