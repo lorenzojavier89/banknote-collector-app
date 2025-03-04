@@ -24,6 +24,7 @@ export class CatalogHeaderComponent {
   tableViewModeMssg = "Mostrar vista de tabla";
   noFiltersAppliedMssg = "Sin filtros aplicados";
   removeAppliedFiltersMssg = "Quitar todos los filtros";
+  sortCatalogMssg = "Ordenar catálogo";
 
   viewMode = model.required<CatalogViewMode>();
   banknotes = this.filtersService.banknotes;
