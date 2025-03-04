@@ -12,10 +12,10 @@
       </button>
       <button mat-icon-button>
         <mat-icon (click)="onTableViewModeClick($event)" 
-          class="catalog-header-icon" 
+          class="catalog-header-icon material-symbols-outlined" 
           [class.active]="viewMode() === 'TableView'" 
           [matTooltip]="tableViewModeMssg">
-            table_view
+            table_rows
         </mat-icon>
       </button>
       @if (appliedFilter().noFiltersApplied) {
