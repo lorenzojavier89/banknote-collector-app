@@ -2,7 +2,9 @@ import { Component, computed, inject, model } from '@angular/core';
 import { FiltersService } from '../../../services/filters.service';
 import { NgFor, NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { VolumesService } from '../../../services/volumes.service';
 import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
@@ -10,7 +12,7 @@ import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
 @Component({
   selector: 'app-catalog-header',
   standalone: true,
-  imports: [MatExpansionModule, MatIconModule, MatTooltipModule, NgFor, NgIf],
+  imports: [MatExpansionModule, MatButtonModule, MatMenuModule, MatIconModule, MatTooltipModule, NgFor, NgIf],
   templateUrl: './catalog-header.component.html',
   styleUrl: './catalog-header.component.scss'
 })
