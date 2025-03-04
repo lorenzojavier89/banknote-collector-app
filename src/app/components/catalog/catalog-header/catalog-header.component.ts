@@ -37,7 +37,9 @@ export class CatalogHeaderComponent {
 
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();
-    this.filtersService.removeAllFilters();
+    if(this.appliedFilter().someFiltersApplied){
+      this.filtersService.removeAllFilters();
+    }
   }
 
   onGridViewModeClick(event: MouseEvent) {
