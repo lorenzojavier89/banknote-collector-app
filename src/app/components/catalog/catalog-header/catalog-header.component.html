@@ -35,24 +35,6 @@
           </mat-icon>
         </button>
       }
-      <button mat-icon-button [matMenuTriggerFor]="menu" (click)="onSortMenuClick($event)">
-        <mat-icon
-          class="catalog-header-icon"
-          [matTooltip]="sortCatalogMssg">
-          swap_vert
-        </mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="onSortByClick(0)">
-          <span>Orden en álbums</span>
-        </button>
-        <button mat-menu-item (click)="onSortByClick(1)">
-          <span>Fecha de emisión (más antiguos primero)</span>
-        </button>
-        <button mat-menu-item (click)="onSortByClick(2)">
-          <span>Fecha de emisión (más recientes primero)</span>
-        </button>
-      </mat-menu>  
     </mat-expansion-panel-header>
     @if (appliedFilter().someFiltersApplied)
       {

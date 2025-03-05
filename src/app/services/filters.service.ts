@@ -6,7 +6,6 @@ import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
 import { Volume } from '../models/volume.enum';
-import { SortType } from '../models/sort-type.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -20,8 +19,6 @@ export class FiltersService {
     return this._appliedFilter() ?? this.builderService.buildEmtpy();
   });
 
-  private readonly _sortType = signal<SortType>(SortType.Order);
-  
   constructor() {
     effect(() => {
       localStorage.setItem('appliedFilter', JSON.stringify(this.appliedFilter()));
@@ -98,10 +95,9 @@ export class FiltersService {
   banknotes = computed<Banknote[]>(() => {
     const appliedFilter = this.appliedFilter();
     const banknotes = this.catalogService.banknotes();
-    const sortType = this._sortType();
 
     if(appliedFilter.noFiltersApplied) {
-      return banknotes.sort((a,b) => this.sortBanknotes(a,b, sortType));
+      return banknotes;
     }
 
     return banknotes.filter((b) => {
@@ -111,7 +107,7 @@ export class FiltersService {
         const matchesVolume = appliedFilter.volumeFilter && appliedFilter.volumeFilterCode === b.volume;
 
         return matchesRegion || matchesSubregion || matchesIssuer || matchesVolume;
-    }).sort((a,b) => this.sortBanknotes(a,b, sortType));;
+    });
   });
 
   applyRegionFilter(selected: boolean, clickedRegionFilter: FilterItem) {
@@ -157,24 +153,21 @@ export class FiltersService {
     this._appliedFilter.set(this.builderService.buildEmtpy());
   }
 
-  setSortType(value: SortType){
-    this._sortType.set(value);
-  }
-  
-  sortBanknotes(a: Banknote, b: Banknote, sortType: SortType): number {
-    if(sortType === SortType.Order) {
-      return a.order < b.order ? -1 : 1;
-    }
+  //  Move this logic to catalog-table
+  // sortBanknotes(a: Banknote, b: Banknote, sortType: SortType): number {
+  //   if(sortType === SortType.Order) {
+  //     return a.order < b.order ? -1 : 1;
+  //   }
 
-    if(sortType === SortType.Oldest) {
-      return a.issueMinDate < b.issueMinDate ? -1 : 1;
-    }
+  //   if(sortType === SortType.Oldest) {
+  //     return a.issueMinDate < b.issueMinDate ? -1 : 1;
+  //   }
 
-    if(sortType === SortType.Newest) {
-      return a.issueMaxDate > b.issueMaxDate ? -1 : 1;
-    }
+  //   if(sortType === SortType.Newest) {
+  //     return a.issueMaxDate > b.issueMaxDate ? -1 : 1;
+  //   }
 
-    return 0;
-  }
+  //   return 0;
+  // }
 }
 
