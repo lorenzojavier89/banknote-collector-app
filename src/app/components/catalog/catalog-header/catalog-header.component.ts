@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { VolumesService } from '../../../services/volumes.service';
 import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
+import { SortType } from '../../../models/sort-type.enum';
 
 @Component({
   selector: 'app-catalog-header',
@@ -57,7 +58,7 @@ export class CatalogHeaderComponent {
     event.stopPropagation();
   }
 
-  onSortByClick(value: number) {
-    console.log(value);
+  onSortByClick(value: SortType) {
+    this.filtersService.setSortType(value);
   }
 }
