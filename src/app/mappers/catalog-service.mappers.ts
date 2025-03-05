@@ -35,6 +35,7 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       item.issuerCode,
       item.issuerSubcode
     );
+    const { issueMinDate, issueMaxDate } = getDates(item.issueDate);
 
     return {
       ...item,
@@ -48,6 +49,8 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       subregionCode: issuer?.subregionCode,
       subregionName: issuer?.subregionName,
       orientation,
+      issueMinDate,
+      issueMaxDate
     } as Banknote;
   });
 }
@@ -101,4 +104,14 @@ function getVolume(value: string): Volume | null {
   }
 
   return null;
+}
+
+function getDates(issueDate: string): { issueMinDate: number, issueMaxDate: number } {
+  const issueDateNumber = Number(issueDate);
+  if(isNaN(issueDateNumber)){
+    const [issueMinDate, issueMaxDate] = issueDate.split('-').map(Number);
+    return { issueMinDate, issueMaxDate };  
+  }
+  
+  return { issueMinDate: issueDateNumber, issueMaxDate: issueDateNumber };
 }
