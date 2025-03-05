@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
@@ -7,13 +7,14 @@ import { toObservable } from '@angular/core/rxjs-interop';
 import { Banknote } from '../../../models/banknote.model';
 import { NgFor } from '@angular/common';
 import { VolumesService } from '../../../services/volumes.service';
+import { MatSortModule, Sort } from '@angular/material/sort';
 
 class CatalogTableDataSource extends DataSource<Banknote> {
   private filtersService: FiltersService = inject(FiltersService);
-  banknotes = this.filtersService.banknotes;
+  sortedBanknotes = computed(() => this.filtersService.banknotes());
   
   connect(): Observable<Banknote[]> {
-    return toObservable(this.banknotes);
+    return toObservable(this.sortedBanknotes);
   }
 
   disconnect() {}
@@ -22,7 +23,7 @@ class CatalogTableDataSource extends DataSource<Banknote> {
 @Component({
   selector: 'app-catalog-table',
   standalone: true,
-  imports: [MatTableModule, NgFor],
+  imports: [MatTableModule, MatSortModule, NgFor],
   templateUrl: './catalog-table.component.html',
   styleUrl: './catalog-table.component.scss',
 })
@@ -34,6 +35,10 @@ export class CatalogTableComponent {
 
   badgeClass(element: Banknote): string {
     return this.volumesService.getBadgeClass(element.volume);
+  }
+
+  onSortChange(sortState: Sort) {
+    debugger;
   }
 }
 
