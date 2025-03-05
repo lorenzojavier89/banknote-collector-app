@@ -50,8 +50,4 @@ export class CatalogHeaderComponent {
     event.stopPropagation();
     this.viewMode.set(CatalogViewMode.TableView);
   }
-
-  onSortMenuClick(event: MouseEvent) {
-    event.stopPropagation();
-  }
 }
