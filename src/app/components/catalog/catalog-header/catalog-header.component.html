@@ -43,13 +43,13 @@
         </mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="onSortByClick(1)">
           <span>Orden en álbums</span>
         </button>
-        <button mat-menu-item disabled>
+        <button mat-menu-item (click)="onSortByClick(2)">
           <span>Fecha de emisión (más antiguos primero)</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="onSortByClick(3)">
           <span>Fecha de emisión (más recientes primero)</span>
         </button>
       </mat-menu>  

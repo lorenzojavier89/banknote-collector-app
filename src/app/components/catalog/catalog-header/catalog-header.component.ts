@@ -56,4 +56,8 @@ export class CatalogHeaderComponent {
   onSortMenuClick(event: MouseEvent) {
     event.stopPropagation();
   }
+
+  onSortByClick(value: number) {
+    console.log(value);
+  }
 }
