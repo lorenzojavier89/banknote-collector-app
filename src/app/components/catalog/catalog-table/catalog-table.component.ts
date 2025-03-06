@@ -11,9 +11,9 @@ import { MatSortModule, Sort } from '@angular/material/sort';
 
 class CatalogTableDataSource extends DataSource<Banknote> {
   private filtersService: FiltersService = inject(FiltersService);
-  sortState = signal<Sort>({ active: 'order', direction: ''});  
-  sortedBanknotes = computed(() => {
-    const { active, direction } = this.sortState();  
+  private sort = signal<Sort>({ active: 'order', direction: ''});  
+  banknotes = computed(() => {
+    const { active, direction } = this.sort();  
     const banknotes = this.filtersService.banknotes();
     
     const sortedBanknotes = banknotes.sort((a, b) => {
@@ -33,10 +33,14 @@ class CatalogTableDataSource extends DataSource<Banknote> {
   );
   
   connect(): Observable<Banknote[]> {
-    return toObservable(this.sortedBanknotes);
+    return toObservable(this.banknotes);
   }
 
   disconnect() {}
+
+  setSort(sort: Sort) {
+    this.sort.set(sort);
+  }
 }
 
 @Component({
@@ -56,8 +60,8 @@ export class CatalogTableComponent {
     return this.volumesService.getBadgeClass(element.volume);
   }
 
-  onSortChange(sortState: Sort) {
-    this.dataSource.sortState.set(sortState);
+  onSortChange(sort: Sort) {
+    this.dataSource.setSort(sort);
   }
 }
 
