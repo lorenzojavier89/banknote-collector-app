@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
@@ -11,7 +11,26 @@ import { MatSortModule, Sort } from '@angular/material/sort';
 
 class CatalogTableDataSource extends DataSource<Banknote> {
   private filtersService: FiltersService = inject(FiltersService);
-  sortedBanknotes = computed(() => this.filtersService.banknotes());
+  sortState = signal<Sort>({ active: 'order', direction: ''});  
+  sortedBanknotes = computed(() => {
+    const { active, direction } = this.sortState();  
+    const banknotes = this.filtersService.banknotes();
+    
+    const sortedBanknotes = banknotes.sort((a, b) => {
+      if(active === 'order' && direction === 'asc') {
+        return a.order - b.order;
+      }
+
+      if(active === 'order' && direction === 'desc') {
+        return b.order - a.order;
+      }
+
+      return 0;
+    });
+
+    return [...sortedBanknotes];
+  }
+  );
   
   connect(): Observable<Banknote[]> {
     return toObservable(this.sortedBanknotes);
@@ -38,7 +57,7 @@ export class CatalogTableComponent {
   }
 
   onSortChange(sortState: Sort) {
-    debugger;
+    this.dataSource.sortState.set(sortState);
   }
 }
 
