@@ -26,11 +26,21 @@ class CatalogTableDataSource extends DataSource<Banknote> {
         }
 
         if(active === 'issueDate' && direction === 'asc') {
-          return a.issueMinDate - b.issueMinDate;
+          const issueMinDateDifference = a.issueMinDate - b.issueMinDate;
+          if(issueMinDateDifference !== 0) {
+            return issueMinDateDifference;
+          }
+          
+          return a.issueMaxDate - b.issueMaxDate;
         }
 
         if(active === 'issueDate' && direction === 'desc') {
-          return b.issueMaxDate - a.issueMaxDate;
+          const issueMaxDateDifference = b.issueMaxDate - a.issueMaxDate;
+          if(issueMaxDateDifference !== 0) {
+            return issueMaxDateDifference;
+          }
+
+          return b.issueMinDate - a.issueMinDate;
         }
   
         return 0;

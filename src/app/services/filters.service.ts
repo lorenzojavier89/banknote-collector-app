@@ -152,22 +152,5 @@ export class FiltersService {
   removeAllFilters() {
     this._appliedFilter.set(this.builderService.buildEmtpy());
   }
-
-  //  Move this logic to catalog-table
-  // sortBanknotes(a: Banknote, b: Banknote, sortType: SortType): number {
-  //   if(sortType === SortType.Order) {
-  //     return a.order < b.order ? -1 : 1;
-  //   }
-
-  //   if(sortType === SortType.Oldest) {
-  //     return a.issueMinDate < b.issueMinDate ? -1 : 1;
-  //   }
-
-  //   if(sortType === SortType.Newest) {
-  //     return a.issueMaxDate > b.issueMaxDate ? -1 : 1;
-  //   }
-
-  //   return 0;
-  // }
 }
 
