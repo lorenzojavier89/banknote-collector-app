@@ -24,6 +24,14 @@ class CatalogTableDataSource extends DataSource<Banknote> {
         if(active === 'order' && direction === 'desc') {
           return b.order - a.order;
         }
+
+        if(active === 'issueDate' && direction === 'asc') {
+          return a.issueMinDate - b.issueMinDate;
+        }
+
+        if(active === 'issueDate' && direction === 'desc') {
+          return b.issueMaxDate - a.issueMaxDate;
+        }
   
         return 0;
       });
