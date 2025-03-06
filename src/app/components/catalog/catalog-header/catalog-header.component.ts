@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { VolumesService } from '../../../services/volumes.service';
 import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
+import { SortService } from '../../../services/sort.service';
 
 @Component({
   selector: 'app-catalog-header',
@@ -18,6 +19,7 @@ import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
 export class CatalogHeaderComponent {
   private volumesService: VolumesService = inject(VolumesService);
   private filtersService: FiltersService = inject(FiltersService);
+  private sortService: SortService = inject(SortService);
 
   gridViewModeMssg = "Mostrar vista de grilla";
   tableViewModeMssg = "Mostrar vista de tabla";
@@ -25,7 +27,7 @@ export class CatalogHeaderComponent {
   removeAppliedFiltersMssg = "Quitar todos los filtros";
 
   viewMode = model.required<CatalogViewMode>();
-  banknotes = this.filtersService.banknotes;
+  banknotes = this.sortService.banknotes;
   appliedFilter = this.filtersService.appliedFilter;
   
   count = computed(() => this.banknotes().length);
