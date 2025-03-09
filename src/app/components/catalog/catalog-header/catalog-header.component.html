@@ -36,35 +36,38 @@
         </button>
       }
     </mat-expansion-panel-header>
+    <div class="badge-row">
+      <h6><span class="badge badge-sort-state">{{ 'Ordenado segun criterio' }}</span></h6>
+    </div>
     @if (appliedFilter().someFiltersApplied)
-      {
-        <div class="badge-row">
-          <h6 *ngFor="let f of appliedFilter().regionFilters">
-            <span class="badge badge-region">{{ f.name }}</span>
-          </h6>
-        </div>
-        <div class="badge-row">
-          <h6 *ngFor="let f of appliedFilter().subregionFilters">
-            <span class="badge badge-subregion">{{ f.name }}</span>
-          </h6>
-        </div>
-        <div class="badge-row">
-          <h5 *ngIf="appliedFilter().issuerFilter !== null">
-            <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
-          </h5>
-        </div>
-        <div class="badge-row">
-          <h5 *ngIf="appliedFilter().volumeFilter !== null">
-            <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
-              {{ "Álbum " + appliedFilter().volumeFilter?.name }}
-            </span>
-          </h5>
-        </div>
-      } @else {
-        <div class="badge-row">
-          <h5><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h5>
-        </div>
-      }
+    {
+      <div class="badge-row">
+        <h6 *ngFor="let f of appliedFilter().regionFilters">
+          <span class="badge badge-region">{{ f.name }}</span>
+        </h6>
+      </div>
+      <div class="badge-row">
+        <h6 *ngFor="let f of appliedFilter().subregionFilters">
+          <span class="badge badge-subregion">{{ f.name }}</span>
+        </h6>
+      </div>
+      <div class="badge-row">
+        <h5 *ngIf="appliedFilter().issuerFilter !== null">
+          <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
+        </h5>
+      </div>
+      <div class="badge-row">
+        <h5 *ngIf="appliedFilter().volumeFilter !== null">
+          <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
+            {{ "Álbum " + appliedFilter().volumeFilter?.name }}
+          </span>
+        </h5>
+      </div>
+    } @else {
+      <div class="badge-row">
+        <h5><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h5>
+      </div>
+    }
   </mat-expansion-panel>
   <hr />
 </div>
