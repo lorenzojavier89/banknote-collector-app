@@ -6,6 +6,7 @@ import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
 import { Volume } from '../models/volume.enum';
+import { SortState } from '../models/sort-state.model';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,9 @@ export class CatalogService {
   appliedFilter = computed<AppliedFilter>(() => {
     return this._appliedFilter() ?? this.filtersBuilder.buildEmtpy();
   });
+
+  private readonly _sortState = signal<SortState>({ active: 'order', direction: '' });
+  sortState = computed(() => this._sortState());
 
   constructor() {
     effect(() => {
@@ -110,6 +114,43 @@ export class CatalogService {
     });
   });
 
+  sortedBanknotes = computed<Banknote[]>(() => {
+    const { active, direction } = this._sortState();
+    const banknotesCopy = [...this.banknotes()];
+
+    const sortedBanknotes = banknotesCopy.sort((a, b) => {
+      if (active === 'order' && direction === 'asc') {
+        return a.order - b.order;
+      }
+
+      if (active === 'order' && direction === 'desc') {
+        return b.order - a.order;
+      }
+
+      if (active === 'issueDate' && direction === 'asc') {
+        const issueMinDateDifference = a.issueMinDate - b.issueMinDate;
+        if (issueMinDateDifference !== 0) {
+          return issueMinDateDifference;
+        }
+
+        return a.issueMaxDate - b.issueMaxDate;
+      }
+
+      if (active === 'issueDate' && direction === 'desc') {
+        const issueMaxDateDifference = b.issueMaxDate - a.issueMaxDate;
+        if (issueMaxDateDifference !== 0) {
+          return issueMaxDateDifference;
+        }
+
+        return b.issueMinDate - a.issueMinDate;
+      }
+
+      return 0;
+    });
+
+    return sortedBanknotes;
+  });
+
   applyRegionFilter(selected: boolean, clickedRegionFilter: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
@@ -151,6 +192,10 @@ export class CatalogService {
 
   removeAllFilters() {
     this._appliedFilter.set(this.filtersBuilder.buildEmtpy());
+  }
+
+  setSortState(sortState: SortState) {
+    this._sortState.set(sortState);
   }
 }
 

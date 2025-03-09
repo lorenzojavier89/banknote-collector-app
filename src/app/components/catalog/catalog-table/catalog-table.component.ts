@@ -7,20 +7,20 @@ import { Banknote } from '../../../models/banknote.model';
 import { NgFor } from '@angular/common';
 import { VolumesService } from '../../../services/volumes.service';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { SortService } from '../../../services/sort.service';
 import { SortState } from '../../../models/sort-state.model';
+import { CatalogService } from '../../../services/catalog.service';
 
 class CatalogTableDataSource extends DataSource<Banknote> {
-  private sortService: SortService = inject(SortService);
+  private catalogService: CatalogService = inject(CatalogService);
     
   connect(): Observable<Banknote[]> {
-    return toObservable(this.sortService.banknotes);
+    return toObservable(this.catalogService.sortedBanknotes);
   }
 
   disconnect() {}
 
   setSort(sort: Sort) {
-    this.sortService.setSortState(sort as SortState);
+    this.catalogService.setSortState(sort as SortState);
   }
 }
 

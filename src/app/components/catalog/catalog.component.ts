@@ -6,7 +6,7 @@ import { NgFor } from '@angular/common';
 import { CatalogHeaderComponent } from "./catalog-header/catalog-header.component";
 import { CatalogViewMode } from '../../models/catalog-view-mode.enum';
 import { CatalogTableComponent } from './catalog-table/catalog-table.component';
-import { SortService } from '../../services/sort.service';
+import { CatalogService } from '../../services/catalog.service';
 
 @Component({
   selector: 'app-catalog',
@@ -22,12 +22,12 @@ import { SortService } from '../../services/sort.service';
   ]
 })
 export class CatalogComponent {
-  private sortService: SortService = inject(SortService);
+  private catalogService: CatalogService = inject(CatalogService);
 
   viewMode = signal<CatalogViewMode>((localStorage.getItem('viewMode') as CatalogViewMode) ?? CatalogViewMode.GridView);
   displayGridViewMode = computed(() => this.viewMode() === CatalogViewMode.GridView);
 
-  banknotes = this.sortService.banknotes;
+  banknotes = this.catalogService.sortedBanknotes;
 
   constructor() {
     effect(() => {
