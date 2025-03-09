@@ -8,12 +8,12 @@ import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
-import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-service.mappers';
+import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-api-service.mappers';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CatalogService {
+export class CatalogApiService {
   private http: HttpClient = inject(HttpClient);
   private catalogJsonUrl = 'assets/data/catalog.json';
   private issuersJsonUrl = 'assets/data/issuers.json';

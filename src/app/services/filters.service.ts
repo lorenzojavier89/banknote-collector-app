@@ -1,5 +1,5 @@
 import { computed, inject, Injectable, signal, effect } from '@angular/core';
-import { CatalogService } from './catalog.service';
+import { CatalogApiService } from './catalog-api.service';
 import { FiltersBuilderService } from './filters-builder.service';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
@@ -11,7 +11,7 @@ import { Volume } from '../models/volume.enum';
   providedIn: 'root',
 })
 export class FiltersService {
-  private catalogService: CatalogService = inject(CatalogService);
+  private catalogService: CatalogApiService = inject(CatalogApiService);
   private builderService: FiltersBuilderService = inject(FiltersBuilderService);
 
   private readonly _appliedFilter = signal<AppliedFilter>(JSON.parse(localStorage.getItem('appliedFilter')!) as AppliedFilter);

@@ -7,10 +7,11 @@ import { SortState } from '../models/sort-state.model';
 })
 export class SortService {
   private filtersService: FiltersService = inject(FiltersService);
-  private readonly _sort = signal<SortState>({ active: 'order', direction: '' });
-
+  private readonly _sortState = signal<SortState>({ active: 'order', direction: '' });
+  
+  sortState = computed(() => this._sortState());
   banknotes = computed(() => {
-    const { active, direction } = this._sort();
+    const { active, direction } = this._sortState();
     const banknotesCopy = [...this.filtersService.banknotes()];
 
     const sortedBanknotes = banknotesCopy.sort((a, b) => {
@@ -47,6 +48,6 @@ export class SortService {
   });
 
   setSortState(sortState: SortState) {
-    this._sort.set(sortState);
+    this._sortState.set(sortState);
   }
 }
