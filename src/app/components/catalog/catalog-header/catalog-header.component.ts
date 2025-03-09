@@ -1,5 +1,5 @@
 import { Component, computed, inject, model } from '@angular/core';
-import { FiltersService } from '../../../services/filters.service';
+import { CatalogService } from '../../../services/catalog.service';
 import { NgFor, NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +18,7 @@ import { SortService } from '../../../services/sort.service';
 })
 export class CatalogHeaderComponent {
   private volumesService: VolumesService = inject(VolumesService);
-  private filtersService: FiltersService = inject(FiltersService);
+  private catalogService: CatalogService = inject(CatalogService);
   private sortService: SortService = inject(SortService);
 
   gridViewModeMssg = "Mostrar vista de grilla";
@@ -28,7 +28,7 @@ export class CatalogHeaderComponent {
 
   viewMode = model.required<CatalogViewMode>();
   banknotes = this.sortService.banknotes;
-  appliedFilter = this.filtersService.appliedFilter;
+  appliedFilter = this.catalogService.appliedFilter;
   
   count = computed(() => this.banknotes().length);
 
@@ -39,7 +39,7 @@ export class CatalogHeaderComponent {
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();
     if(this.appliedFilter().someFiltersApplied){
-      this.filtersService.removeAllFilters();
+      this.catalogService.removeAllFilters();
     }
   }
 

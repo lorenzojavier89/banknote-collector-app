@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { FiltersService } from '../../../../services/filters.service';
+import { CatalogService } from '../../../../services/catalog.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 import { VolumesService } from '../../../../services/volumes.service';
 
@@ -12,16 +12,16 @@ import { VolumesService } from '../../../../services/volumes.service';
   styleUrl: './volumes-filter-panel.component.scss'
 })
 export class VolumesFilterPanelComponent {
-  private filtersService: FiltersService = inject(FiltersService);
+  private catalogService: CatalogService = inject(CatalogService);
   private volumesService: VolumesService = inject(VolumesService);
   
-  volumes = this.filtersService.volumes;
+  volumes = this.catalogService.volumes;
 
   badgeClass(code: string): string  {
     return this.volumesService.getBadgeClass(code);
   }  
 
   applyVolumeFilter(volumeFilterItem: FilterItem) {
-    this.filtersService.applyVolumeFilter(volumeFilterItem);
+    this.catalogService.applyVolumeFilter(volumeFilterItem);
   }
 }

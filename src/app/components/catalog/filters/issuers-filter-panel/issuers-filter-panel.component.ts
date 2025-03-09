@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { FiltersService } from '../../../../services/filters.service';
+import { CatalogService } from '../../../../services/catalog.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 import { NgFor } from '@angular/common';
 
@@ -12,11 +12,11 @@ import { NgFor } from '@angular/common';
   styleUrl: './issuers-filter-panel.component.scss'
 })
 export class IssuersFilterPanelComponent {
-  private filtersService: FiltersService = inject(FiltersService);
+  private catalogService: CatalogService = inject(CatalogService);
   
-  issuers = this.filtersService.issuers;
+  issuers = this.catalogService.issuers;
 
   applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
-    this.filtersService.applyIssuerFilter(selected, issuerFilterItem);
+    this.catalogService.applyIssuerFilter(selected, issuerFilterItem);
   }
 }

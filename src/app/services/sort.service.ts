@@ -1,12 +1,12 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { FiltersService } from './filters.service';
+import { CatalogService } from './catalog.service';
 import { SortState } from '../models/sort-state.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SortService {
-  private filtersService: FiltersService = inject(FiltersService);
+  private filtersService: CatalogService = inject(CatalogService);
   private readonly _sortState = signal<SortState>({ active: 'order', direction: '' });
   
   sortState = computed(() => this._sortState());

@@ -10,13 +10,13 @@ import { Volume } from '../models/volume.enum';
 @Injectable({
   providedIn: 'root',
 })
-export class FiltersService {
-  private catalogService: CatalogApiService = inject(CatalogApiService);
-  private builderService: FiltersBuilderService = inject(FiltersBuilderService);
+export class CatalogService {
+  private catalogApiService: CatalogApiService = inject(CatalogApiService);
+  private filtersBuilder: FiltersBuilderService = inject(FiltersBuilderService);
 
   private readonly _appliedFilter = signal<AppliedFilter>(JSON.parse(localStorage.getItem('appliedFilter')!) as AppliedFilter);
   appliedFilter = computed<AppliedFilter>(() => {
-    return this._appliedFilter() ?? this.builderService.buildEmtpy();
+    return this._appliedFilter() ?? this.filtersBuilder.buildEmtpy();
   });
 
   constructor() {
@@ -26,14 +26,14 @@ export class FiltersService {
   }
 
   private _loadedRegions = computed<FilterItem[]>(() => {
-    const counters = this.catalogService.counters();
+    const counters = this.catalogApiService.counters();
     
-    return this.catalogService.regions().map<FilterItem>((r) => ({
+    return this.catalogApiService.regions().map<FilterItem>((r) => ({
       ...r,
-      counter: counters.get(this.catalogService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
       subItems: r.subregions.map<FilterItem>((sr) => ({
         ...sr,
-        counter: counters.get(this.catalogService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
+        counter: counters.get(this.catalogApiService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
       })),
     }))
   });
@@ -52,11 +52,11 @@ export class FiltersService {
   });
 
   private _loadedIssuers = computed<FilterItem[]>(() => {
-    const counters = this.catalogService.counters();
+    const counters = this.catalogApiService.counters();
 
-    return this.catalogService.issuers().map<FilterItem>(i => ({
+    return this.catalogApiService.issuers().map<FilterItem>(i => ({
       ...i.country,
-      counter: counters.get(this.catalogService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
       subItems: [
         ...i.country.historicalPeriods.map<FilterItem>(hp => ({ ...hp })),
         ...i.country.subgroups.map<FilterItem>(sg => ({ ...sg }))
@@ -74,12 +74,12 @@ export class FiltersService {
   });
 
   private _loadedVolumes = computed<FilterItem[]>(() => {
-    const counters = this.catalogService.counters();
+    const counters = this.catalogApiService.counters();
     
     return Object.values(Volume).map<FilterItem>(v => ({
       code: v,
       name: v,
-      counter: counters.get(this.catalogService.getCounterKey(CounterType.VolumeCode, v)) ?? 0
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0
     }));
   });
 
@@ -94,7 +94,7 @@ export class FiltersService {
 
   banknotes = computed<Banknote[]>(() => {
     const appliedFilter = this.appliedFilter();
-    const banknotes = this.catalogService.banknotes();
+    const banknotes = this.catalogApiService.banknotes();
 
     if(appliedFilter.noFiltersApplied) {
       return banknotes;
@@ -122,7 +122,7 @@ export class FiltersService {
       subregionFilters = subregionFilters.filter(srf => !clickedRegionFilter.subItems?.map(i => i.code).includes(srf.code));
     }
     
-    this._appliedFilter.set(this.builderService.buildFromRegions(regionFilters, subregionFilters));
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
   applySubregionFilter(selected: boolean, clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
@@ -136,21 +136,21 @@ export class FiltersService {
       subregionFilters = subregionFilters.filter(srf => srf.code != clickedSubregionFilter.code);
     }
 
-    this._appliedFilter.set(this.builderService.buildFromRegions(regionFilters, subregionFilters));
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
   applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
     const issuerFilter = selected ? issuerFilterItem : null;
     
-    this._appliedFilter.set(this.builderService.buildFromIssuer(issuerFilter));
+    this._appliedFilter.set(this.filtersBuilder.buildFromIssuer(issuerFilter));
   }
 
   applyVolumeFilter(volumeFilterItem: FilterItem) {
-    this._appliedFilter.set(this.builderService.buildFromVolume(volumeFilterItem))
+    this._appliedFilter.set(this.filtersBuilder.buildFromVolume(volumeFilterItem))
   }
 
   removeAllFilters() {
-    this._appliedFilter.set(this.builderService.buildEmtpy());
+    this._appliedFilter.set(this.filtersBuilder.buildEmtpy());
   }
 }
 

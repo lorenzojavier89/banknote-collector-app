@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { FiltersService } from '../../../../services/filters.service';
+import { CatalogService } from '../../../../services/catalog.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 
 @Component({
@@ -11,18 +11,18 @@ import { FilterItem } from '../../../../models/filters/filter-item.model';
   styleUrl: './regions-filter-panel.component.scss'
 })
 export class RegionsFilterPanelComponent {
-  private filtersService: FiltersService = inject(FiltersService);
+  private catalogService: CatalogService = inject(CatalogService);
 
-  regions = this.filtersService.regions;
+  regions = this.catalogService.regions;
 
   applyRegionFilter(ev: Event, regionFilterItem: FilterItem) {
     const selected = (ev.target as HTMLInputElement).checked;
-    this.filtersService.applyRegionFilter(selected, regionFilterItem);
+    this.catalogService.applyRegionFilter(selected, regionFilterItem);
   }
 
   applySubregionFilter(ev: Event, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
     const selected = (ev.target as HTMLInputElement).checked;
-    this.filtersService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
+    this.catalogService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
   }
 
   isActive(regionFilterItem: FilterItem): boolean {
