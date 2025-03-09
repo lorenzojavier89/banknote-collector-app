@@ -21,7 +21,10 @@ export class CatalogService {
   });
 
   private readonly _sortState = signal<SortState>({ active: 'order', direction: '' });
-  sortState = computed(() => this._sortState());
+  sortStateKey = computed<string>(() => {
+    const { active, direction } = this._sortState();
+    return `${active}-${direction}`;
+  });
 
   constructor() {
     effect(() => {

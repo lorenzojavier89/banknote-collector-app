@@ -35,10 +35,8 @@ export class CatalogHeaderComponent {
   }
   
   sortStateMssg = computed<string>(() => {
-    const { active, direction } = this.catalogService.sortState();
-    const mssgKey = `${active}-${direction}`;
-
-    switch(mssgKey){
+    const sortStateKey = this.catalogService.sortStateKey();
+    switch(sortStateKey){
       case 'order-asc': return "Ordenado por ubicación en álbum (asc)";
       case 'order-desc': return "Ordenado por ubicación en álbum (desc)";
       case 'issueDate-asc': return "Odernado por fecha de emisión (más antiguos primero)";
