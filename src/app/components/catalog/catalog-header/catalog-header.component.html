@@ -54,20 +54,20 @@
         </h6>
       </div>
       <div class="badge-row">
-        <h5 *ngIf="appliedFilter().issuerFilter !== null">
+        <h6 *ngIf="appliedFilter().issuerFilter !== null">
           <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
-        </h5>
+        </h6>
       </div>
       <div class="badge-row">
-        <h5 *ngIf="appliedFilter().volumeFilter !== null">
+        <h6 *ngIf="appliedFilter().volumeFilter !== null">
           <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
             {{ "Álbum " + appliedFilter().volumeFilter?.name }}
           </span>
-        </h5>
+        </h6>
       </div>
     } @else {
       <div class="badge-row">
-        <h5><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h5>
+        <h6><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h6>
       </div>
     }
   </mat-expansion-panel>
