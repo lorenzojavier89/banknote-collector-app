@@ -36,9 +36,11 @@
         </button>
       }
     </mat-expansion-panel-header>
-    <div class="badge-row">
-      <h6><span class="badge badge-sort-state">{{ 'Ordenado segun criterio' }}</span></h6>
-    </div>
+    @if (sortStateMssg()) {
+      <div class="badge-row">
+        <h6><span class="badge badge-sort-state">{{ sortStateMssg() }}</span></h6>
+      </div>
+    }
     @if (appliedFilter().someFiltersApplied)
     {
       <div class="badge-row">

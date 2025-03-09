@@ -32,7 +32,20 @@ export class CatalogHeaderComponent {
 
   badgeClass(code: string | null): string  {
     return this.volumesService.getBadgeClass(code);
-  }  
+  }
+  
+  sortStateMssg = computed<string>(() => {
+    const { active, direction } = this.catalogService.sortState();
+    const mssgKey = `${active}-${direction}`;
+
+    switch(mssgKey){
+      case 'order-asc': return "Ordenado por ubicación en álbum (asc)";
+      case 'order-desc': return "Ordenado por ubicación en álbum (desc)";
+      case 'issueDate-asc': return "Odernado por fecha de emisión (más antiguos primero)";
+      case 'issueDate-desc': return "Ordenado por fecha de emisión (más recientes primero)";
+      default: return '';
+    }
+  });
 
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();
