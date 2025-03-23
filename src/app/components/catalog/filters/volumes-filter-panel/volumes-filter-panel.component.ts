@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { CatalogService } from '../../../../services/catalog.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { CatalogService } from '../../../../services/catalog.service';
 import { VolumesService } from '../../../../services/volumes.service';
+import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 
 @Component({
   selector: 'app-volumes-filter-panel',
@@ -22,6 +22,6 @@ export class VolumesFilterPanelComponent {
   }  
 
   applyVolumeFilter(volumeFilterItem: FilterItem) {
-    this.catalogService.applyVolumeFilter(volumeFilterItem);
+    this.catalogService.changeVolume(volumeFilterItem);
   }
 }

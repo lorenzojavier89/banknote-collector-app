@@ -147,57 +147,57 @@ export class CatalogService {
     return sortedBanknotes;
   });
 
-  replaceRegionFilter(clickedRegionFilter: FilterItem) {
-    this._appliedFilter.set(this.filtersBuilder.buildFromRegion(clickedRegionFilter));
+  changeRegion(region: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegion(region));
   }
 
-  appendRegionFilter(clickedRegionFilter: FilterItem) {
+  addAnotherRegion(region: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
-    regionFilters.push(clickedRegionFilter);
-    subregionFilters.push(...clickedRegionFilter.subItems || []);
+    regionFilters.push(region);
+    subregionFilters.push(...region.subItems || []);
     
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  removeRegionFilter(clickedRegionFilter: FilterItem) {
+  removeRegion(region: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
 
-    regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code)
-    subregionFilters = subregionFilters.filter(srf => !clickedRegionFilter.subItems?.map(i => i.code).includes(srf.code));
+    regionFilters = regionFilters.filter(rf => rf.code != region.code)
+    subregionFilters = subregionFilters.filter(srf => !region.subItems?.map(i => i.code).includes(srf.code));
 
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  replaceSubregionFilter(clickedSubregionFilter: FilterItem) {
-    this._appliedFilter.set(this.filtersBuilder.buildFromSubregion(clickedSubregionFilter));
+  changeSubregion(subregion: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromSubregion(subregion));
   }
 
-  appendSubregionFilter(clickedSubregionFilter: FilterItem) {
+  addAnotherSubregion(subregion: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
-    subregionFilters.push(clickedSubregionFilter);
+    subregionFilters.push(subregion);
     
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  removeSubregionFilter(clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
+  removeSubregion(region: FilterItem, subregion: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
         
-    regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code);
-    subregionFilters = subregionFilters.filter(srf => srf.code != clickedSubregionFilter.code);
+    regionFilters = regionFilters.filter(rf => rf.code != region.code);
+    subregionFilters = subregionFilters.filter(srf => srf.code != subregion.code);
     
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
-    const issuerFilter = selected ? issuerFilterItem : null;
+  changeIssuer(selected: boolean, issuer: FilterItem) {
+    const issuerFilter = selected ? issuer : null;
     
     this._appliedFilter.set(this.filtersBuilder.buildFromIssuer(issuerFilter));
   }
 
-  applyVolumeFilter(volumeFilterItem: FilterItem) {
-    this._appliedFilter.set(this.filtersBuilder.buildFromVolume(volumeFilterItem))
+  changeVolume(volume: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromVolume(volume))
   }
 
   removeAllFilters() {

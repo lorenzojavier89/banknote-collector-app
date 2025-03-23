@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { CatalogService } from '../../../../services/catalog.service';
-import { FilterItem } from '../../../../models/filters/filter-item.model';
 import { NgFor } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { CatalogService } from '../../../../services/catalog.service';
+import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 
 @Component({
   selector: 'app-issuers-filter-panel',
@@ -17,6 +17,6 @@ export class IssuersFilterPanelComponent {
   issuers = this.catalogService.issuers;
 
   applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
-    this.catalogService.applyIssuerFilter(selected, issuerFilterItem);
+    this.catalogService.changeIssuer(selected, issuerFilterItem);
   }
 }
