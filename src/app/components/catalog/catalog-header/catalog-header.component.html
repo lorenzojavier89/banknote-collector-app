@@ -35,6 +35,20 @@
           </mat-icon>
         </button>
       }
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>Ordenar por ubicación</span>
+        </button>
+        <button mat-menu-item>
+          <span>Ordenar más antiguos primero</span>
+        </button>
+        <button mat-menu-item>
+          <span>Ordernar más recientes primero</span>
+        </button>
+      </mat-menu>
     </mat-expansion-panel-header>
     @if (sortStateMssg()) {
       <div class="badge-row">
