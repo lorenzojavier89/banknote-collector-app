@@ -39,13 +39,13 @@
         <mat-icon class="catalog-header-icon">more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="onSortChange({ active: 'order', direction: 'asc' })">
           <span>{{ sortByOrderMenuItemMssg }}</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="onSortChange({ active: 'issueDate', direction: 'asc' })">
           <span>{{ sortByIssueDateAscMenuItemMssg }}</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="onSortChange({ active: 'issueDate', direction: 'desc' })">
           <span>{{ sortByIssueDateDescMenuItemMssg }}</span>
         </button>
       </mat-menu>

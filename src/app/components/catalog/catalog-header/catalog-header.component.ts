@@ -8,6 +8,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { VolumesService } from '../../../services/volumes.service';
 import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
+import { Sort } from '@angular/material/sort';
+import { SortState } from '../../../models/sort-state.model';
 
 @Component({
   selector: 'app-catalog-header',
@@ -67,5 +69,9 @@ export class CatalogHeaderComponent {
 
   onMenuClick(event: MouseEvent) {
     event.stopPropagation();
+  }
+
+  onSortChange(sort: SortState) {
+    this.catalogService.setSortState(sort);
   }
 }
