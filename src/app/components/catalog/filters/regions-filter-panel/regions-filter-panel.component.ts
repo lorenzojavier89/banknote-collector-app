@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { CatalogService } from '../../../../services/catalog.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { CatalogService } from '../../../../services/catalog.service';
+import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 
 @Component({
   selector: 'app-regions-filter-panel',
@@ -15,9 +15,18 @@ export class RegionsFilterPanelComponent {
 
   regions = this.catalogService.regions;
 
-  applyRegionFilter(ev: Event, regionFilterItem: FilterItem) {
+  applyRegionFilter(ev: MouseEvent, regionFilterItem: FilterItem) {
     const selected = (ev.target as HTMLInputElement).checked;
-    this.catalogService.applyRegionFilter(selected, regionFilterItem);
+    if(!selected) {
+      this.catalogService.removeRegionFilter(regionFilterItem);
+      return;
+    }
+    
+    if(ev.ctrlKey) {
+      this.catalogService.appendRegionFilter(regionFilterItem);
+    } else {
+      this.catalogService.replaceRegionFilter(regionFilterItem); 
+    }
   }
 
   applySubregionFilter(ev: Event, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {

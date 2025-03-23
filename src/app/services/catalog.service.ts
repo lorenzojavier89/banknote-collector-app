@@ -1,12 +1,12 @@
-import { computed, inject, Injectable, signal, effect } from '@angular/core';
-import { CatalogApiService } from './catalog-api.service';
-import { FiltersBuilderService } from './filters-builder.service';
-import { FilterItem } from '../models/filters/filter-item.model';
-import { AppliedFilter } from '../models/filters/applied-filter.model';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
-import { Volume } from '../models/volume.enum';
+import { AppliedFilter } from '../models/filters/applied-filter.model';
+import { FilterItem } from '../models/filters/filter-item.model';
 import { SortState, SortStateKey } from '../models/sort-state.model';
+import { Volume } from '../models/volume.enum';
+import { CatalogApiService } from './catalog-api.service';
+import { FiltersBuilderService } from './filters-builder.service';
 
 @Injectable({
   providedIn: 'root',
@@ -147,18 +147,25 @@ export class CatalogService {
     return sortedBanknotes;
   });
 
-  applyRegionFilter(selected: boolean, clickedRegionFilter: FilterItem) {
+  replaceRegionFilter(clickedRegionFilter: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions([clickedRegionFilter], [...clickedRegionFilter.subItems || []]));
+  }
+
+  appendRegionFilter(clickedRegionFilter: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
-    if(selected) {
-      regionFilters.push(clickedRegionFilter);
-      subregionFilters.push(...clickedRegionFilter.subItems || []);
-    }
-    else {
-      regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code)
-      subregionFilters = subregionFilters.filter(srf => !clickedRegionFilter.subItems?.map(i => i.code).includes(srf.code));
-    }
+    regionFilters.push(clickedRegionFilter);
+    subregionFilters.push(...clickedRegionFilter.subItems || []);
     
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
+  }
+
+  removeRegionFilter(clickedRegionFilter: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
+
+    regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code)
+    subregionFilters = subregionFilters.filter(srf => !clickedRegionFilter.subItems?.map(i => i.code).includes(srf.code));
+
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
