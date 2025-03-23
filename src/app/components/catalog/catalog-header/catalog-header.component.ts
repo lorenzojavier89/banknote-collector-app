@@ -24,17 +24,6 @@ export class CatalogHeaderComponent {
   tableViewModeMssg = "Mostrar vista de tabla";
   noFiltersAppliedMssg = "Sin filtros aplicados";
   removeAppliedFiltersMssg = "Quitar todos los filtros";
-
-  viewMode = model.required<CatalogViewMode>();
-  banknotes = this.catalogService.sortedBanknotes;
-  appliedFilter = this.catalogService.appliedFilter;
-  
-  count = computed(() => this.banknotes().length);
-
-  badgeClass(code: string | null): string  {
-    return this.volumesService.getBadgeClass(code);
-  }
-  
   sortStateMssg = computed<string>(() => {
     const sortStateKey = this.catalogService.sortStateKey();
     switch(sortStateKey){
@@ -45,6 +34,16 @@ export class CatalogHeaderComponent {
       default: return '';
     }
   });
+
+  viewMode = model.required<CatalogViewMode>();
+  banknotes = this.catalogService.sortedBanknotes;
+  appliedFilter = this.catalogService.appliedFilter;
+  
+  count = computed(() => this.banknotes().length);
+
+  badgeClass(code: string | null): string  {
+    return this.volumesService.getBadgeClass(code);
+  }  
 
   onRemoveFiltersClick(event: MouseEvent) {
     event.stopPropagation();
