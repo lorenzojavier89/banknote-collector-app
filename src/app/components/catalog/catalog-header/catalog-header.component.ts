@@ -1,15 +1,14 @@
-import { Component, computed, inject, model } from '@angular/core';
-import { CatalogService } from '../../../services/catalog.service';
 import { NgFor, NgIf } from '@angular/common';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { Component, computed, inject, model } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { VolumesService } from '../../../services/volumes.service';
 import { CatalogViewMode } from '../../../models/catalog-view-mode.enum';
-import { Sort } from '@angular/material/sort';
 import { SortState } from '../../../models/sort-state.model';
+import { CatalogService } from '../../../services/catalog.service';
+import { VolumesService } from '../../../services/volumes.service';
 
 @Component({
   selector: 'app-catalog-header',
