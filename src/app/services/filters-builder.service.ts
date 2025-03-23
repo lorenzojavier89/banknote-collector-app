@@ -8,9 +8,11 @@ import { FilterItem } from '../models/filters/filter-item.model';
 export class FiltersBuilderService {
 
   buildFromRegion(regionFilter: FilterItem): AppliedFilter {
-    const subregionFilters = regionFilter.subItems ?? [];
+    return this.buildFromRegions([regionFilter], regionFilter.subItems ?? []);
+  }
 
-    return this.buildFromRegions([regionFilter], subregionFilters);
+  buildFromSubregion(subregionFilter: FilterItem): AppliedFilter {
+    return this.buildFromRegions([], [subregionFilter]);
   }
 
   buildFromRegions(regionFilters: FilterItem[], subregionFilters: FilterItem[]): AppliedFilter {

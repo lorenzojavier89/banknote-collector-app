@@ -169,17 +169,24 @@ export class CatalogService {
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  applySubregionFilter(selected: boolean, clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
+  replaceSubregionFilter(clickedSubregionFilter: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromSubregion(clickedSubregionFilter));
+  }
+
+  appendSubregionFilter(clickedSubregionFilter: FilterItem) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
-    if(selected) {
-      subregionFilters.push(clickedSubregionFilter);
-    }
-    else {
-      regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code);
-      subregionFilters = subregionFilters.filter(srf => srf.code != clickedSubregionFilter.code);
-    }
+    subregionFilters.push(clickedSubregionFilter);
+    
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
+  }
 
+  removeSubregionFilter(clickedRegionFilter: FilterItem, clickedSubregionFilter: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
+        
+    regionFilters = regionFilters.filter(rf => rf.code != clickedRegionFilter.code);
+    subregionFilters = subregionFilters.filter(srf => srf.code != clickedSubregionFilter.code);
+    
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 

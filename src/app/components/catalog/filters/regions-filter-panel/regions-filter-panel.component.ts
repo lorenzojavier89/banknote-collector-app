@@ -29,9 +29,18 @@ export class RegionsFilterPanelComponent {
     }
   }
 
-  applySubregionFilter(ev: Event, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+  applySubregionFilter(ev: MouseEvent, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
     const selected = (ev.target as HTMLInputElement).checked;
-    this.catalogService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
+    if(!selected) {
+      this.catalogService.removeSubregionFilter(regionFilterItem, subregionFilterItem);
+      return;
+    }
+
+    if(ev.ctrlKey) {
+      this.catalogService.appendSubregionFilter(subregionFilterItem);
+    } else {
+      this.catalogService.replaceSubregionFilter(subregionFilterItem);
+    }
   }
 
   isActive(regionFilterItem: FilterItem): boolean {
