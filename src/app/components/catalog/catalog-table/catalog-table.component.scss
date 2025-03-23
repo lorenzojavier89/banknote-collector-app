@@ -10,7 +10,7 @@
 
     th {
       background-color: $appCardBackgroundColor;
-    }
+    }    
   }
 
   td, th {
@@ -46,5 +46,10 @@
       }
     }
   }
+}
+
+::ng-deep .mat-sort-header-content {
+  padding-left: 10px;
+  font-weight: bold;
 }
 
