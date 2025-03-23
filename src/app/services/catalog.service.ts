@@ -1,81 +1,211 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CatalogApiResponse } from '../models/catalog-api-response.model';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { map, shareReplay } from 'rxjs/operators';
-import { Region } from '../models/region.model';
-import { Issuer } from '../models/issuer.model';
-import { forkJoin } from 'rxjs';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
-import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-service.mappers';
+import { AppliedFilter } from '../models/filters/applied-filter.model';
+import { FilterItem } from '../models/filters/filter-item.model';
+import { SortState, SortStateKey } from '../models/sort-state.model';
+import { Volume } from '../models/volume.enum';
+import { CatalogApiService } from './catalog-api.service';
+import { FiltersBuilderService } from './filters-builder.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CatalogService {
-  private http: HttpClient = inject(HttpClient);
-  private catalogJsonUrl = 'assets/data/catalog.json';
-  private issuersJsonUrl = 'assets/data/issuers.json';
+  private catalogApiService: CatalogApiService = inject(CatalogApiService);
+  private filtersBuilder: FiltersBuilderService = inject(FiltersBuilderService);
 
-  private regions$ = this.http.get<Region[]>(this.issuersJsonUrl).pipe(shareReplay(1));
-  private issuersLookup$ = this.regions$.pipe(
-    map((regions) => mapIssuersLookup(regions)),
-    shareReplay(1)
-  );
-  
-  private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
-  private catalog$ = forkJoin([
-    this.issuersLookup$,
-    this.catalogApiResponse$,
-  ])
-    .pipe<Banknote[]>(
-      map(([issuersLookup, apiResponse]) => mapBanknotes(issuersLookup, apiResponse))
-    );
-
-  banknotes = toSignal(this.catalog$, { initialValue: [] });
-  regions = toSignal(this.regions$, { initialValue: []});
-  issuersLookup = toSignal(this.issuersLookup$, { initialValue: new Map<string, Issuer>()});
-  issuers = computed<Issuer[]>(() => 
-    Array.from(this.issuersLookup().values())
-    .sort((a, b) => a.country.name.localeCompare(b.country.name)));
-
-  counters = computed<Map<string,number>>(() => {
-    const countMap = new Map<string, number>();
-    
-    this.banknotes().forEach(b => {
-
-      const regionKey = this.getCounterKey(CounterType.RegionCode, b.regionCode);
-      const subregionKey = this.getCounterKey(CounterType.SubregionCode, b.subregionCode);
-      const issuerKey = this.getCounterKey(CounterType.IssuerCode, b.issuerCode);
-      const issuerSubcodeKey = this.getCounterKey(CounterType.IssuerSubcode, b.issuerSubcode);
-      const volumeKey = this.getCounterKey(CounterType.VolumeCode, b.volume ?? "unclassified");
-
-      countMap.set(regionKey, (countMap.get(regionKey) || 0) + 1);
-      countMap.set(subregionKey, (countMap.get(subregionKey) || 0) + 1);
-      countMap.set(issuerKey, (countMap.get(issuerKey) || 0) + 1);
-      countMap.set(issuerSubcodeKey, (countMap.get(issuerSubcodeKey) || 0) + 1);
-      countMap.set(volumeKey, (countMap.get(volumeKey) || 0) + 1)
-    });
-
-    return countMap;
+  private readonly _appliedFilter = signal<AppliedFilter>(JSON.parse(localStorage.getItem('appliedFilter')!) as AppliedFilter);
+  appliedFilter = computed<AppliedFilter>(() => {
+    return this._appliedFilter() ?? this.filtersBuilder.buildEmtpy();
   });
 
-  getCounterKey(type: CounterType, code: string): string {
-    switch(type) {
-      case CounterType.RegionCode: return `rc_${code}`;
-      case CounterType.SubregionCode: return `src_${code}`;
-      case CounterType.IssuerCode: return `ic_${code}`;
-      case CounterType.IssuerSubcode: return `isc_${code}`;
-      case CounterType.VolumeCode: return `vc_${code}`;
-    }  
-  }
-    
-  private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
-  readonly selectedBanknote = this._selectedBanknote.asReadonly();
+  private readonly _sortState = signal<SortState>({ active: 'order', direction: '' });
+  sortStateKey = computed<SortStateKey>(() => {
+    const { active, direction } = this._sortState();
+    return `${active}-${direction}`;
+  });
 
-  selectBanknote(id: string) {
-    const foundBanknote = this.banknotes().find((x) => x.id === id);
-    this._selectedBanknote.set(foundBanknote);
+  constructor() {
+    effect(() => {
+      localStorage.setItem('appliedFilter', JSON.stringify(this.appliedFilter()));
+    });
+  }
+
+  private _loadedRegions = computed<FilterItem[]>(() => {
+    const counters = this.catalogApiService.counters();
+    
+    return this.catalogApiService.regions().map<FilterItem>((r) => ({
+      ...r,
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
+      subItems: r.subregions.map<FilterItem>((sr) => ({
+        ...sr,
+        counter: counters.get(this.catalogApiService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
+      })),
+    }))
+  });
+
+  regions = computed<FilterItem[]>(() =>{
+    const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
+
+    return this._loadedRegions().map((r) => ({
+      ...r,
+      selected: regionFilterCodes.includes(r.code),
+      subItems: r.subItems?.map<FilterItem>((si) => ({ 
+        ...si,
+        selected: subregionFilterCodes.includes(si.code)
+      }))
+    }))
+  });
+
+  private _loadedIssuers = computed<FilterItem[]>(() => {
+    const counters = this.catalogApiService.counters();
+
+    return this.catalogApiService.issuers().map<FilterItem>(i => ({
+      ...i.country,
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
+      subItems: [
+        ...i.country.historicalPeriods.map<FilterItem>(hp => ({ ...hp })),
+        ...i.country.subgroups.map<FilterItem>(sg => ({ ...sg }))
+      ]
+    }))  
+  });
+
+  issuers = computed<FilterItem[]>(() => {
+    const { issuerFilterCode } = { ...this.appliedFilter() };
+
+    return this._loadedIssuers().map<FilterItem>(i => ({
+      ...i,
+      selected: issuerFilterCode === i.code,
+    }))  
+  });
+
+  private _loadedVolumes = computed<FilterItem[]>(() => {
+    const counters = this.catalogApiService.counters();
+    
+    return Object.values(Volume).map<FilterItem>(v => ({
+      code: v,
+      name: v,
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0
+    }));
+  });
+
+  volumes = computed<FilterItem[]>(() => { 
+    const { volumeFilterCode } = { ...this.appliedFilter() };
+
+    return this._loadedVolumes().map<FilterItem>(i => ({
+      ...i,
+      selected: volumeFilterCode === i.code,
+    }))  
+  });
+
+  banknotes = computed<Banknote[]>(() => {
+    const appliedFilter = this.appliedFilter();
+    const banknotes = this.catalogApiService.banknotes();
+
+    if(appliedFilter.noFiltersApplied) {
+      return banknotes;
+    }
+
+    return banknotes.filter((b) => {
+        const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.regionCode);
+        const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.subregionCode);
+        const matchesIssuer = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuerCode;
+        const matchesVolume = appliedFilter.volumeFilter && appliedFilter.volumeFilterCode === b.volume;
+
+        return matchesRegion || matchesSubregion || matchesIssuer || matchesVolume;
+    });
+  });
+
+  sortedBanknotes = computed<Banknote[]>(() => {
+    const sortKey = this.sortStateKey();
+    const banknotesCopy = [...this.banknotes()];
+
+    const sortedBanknotes = banknotesCopy.sort((a, b) => {
+      switch (sortKey) {
+        case 'order-asc':
+          return a.order - b.order;
+        case 'order-desc':
+          return b.order - a.order;
+        case 'issueDate-asc':
+          const issueMinDateDifference = a.issueMinDate - b.issueMinDate;
+          if (issueMinDateDifference !== 0) {
+            return issueMinDateDifference;
+          }
+          return a.issueMaxDate - b.issueMaxDate;
+        case 'issueDate-desc':
+          const issueMaxDateDifference = b.issueMaxDate - a.issueMaxDate;
+          if (issueMaxDateDifference !== 0) {
+            return issueMaxDateDifference;
+          }
+          return b.issueMinDate - a.issueMinDate;
+        default:
+          return 0;
+      }
+    });
+
+    return sortedBanknotes;
+  });
+
+  changeRegion(region: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegion(region));
+  }
+
+  addAnotherRegion(region: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
+    
+    regionFilters.push(region);
+    subregionFilters.push(...region.subItems || []);
+    
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
+  }
+
+  removeRegion(region: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
+
+    regionFilters = regionFilters.filter(rf => rf.code != region.code)
+    subregionFilters = subregionFilters.filter(srf => !region.subItems?.map(i => i.code).includes(srf.code));
+
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
+  }
+
+  changeSubregion(subregion: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromSubregion(subregion));
+  }
+
+  addAnotherSubregion(subregion: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
+    
+    subregionFilters.push(subregion);
+    
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
+  }
+
+  removeSubregion(region: FilterItem, subregion: FilterItem) {
+    let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
+        
+    regionFilters = regionFilters.filter(rf => rf.code != region.code);
+    subregionFilters = subregionFilters.filter(srf => srf.code != subregion.code);
+    
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
+  }
+
+  changeIssuer(selected: boolean, issuer: FilterItem) {
+    const issuerFilter = selected ? issuer : null;
+    
+    this._appliedFilter.set(this.filtersBuilder.buildFromIssuer(issuerFilter));
+  }
+
+  changeVolume(volume: FilterItem) {
+    this._appliedFilter.set(this.filtersBuilder.buildFromVolume(volume))
+  }
+
+  removeAllFilters() {
+    this._appliedFilter.set(this.filtersBuilder.buildEmtpy());
+  }
+
+  setSortState(sortState: SortState) {
+    this._sortState.set(sortState);
   }
 }
+

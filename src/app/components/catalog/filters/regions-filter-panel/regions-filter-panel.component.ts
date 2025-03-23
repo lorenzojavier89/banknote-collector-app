@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
-import { FiltersService } from '../../../../services/filters.service';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { CatalogService } from '../../../../services/catalog.service';
+import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 
 @Component({
   selector: 'app-regions-filter-panel',
@@ -11,18 +11,36 @@ import { FilterItem } from '../../../../models/filters/filter-item.model';
   styleUrl: './regions-filter-panel.component.scss'
 })
 export class RegionsFilterPanelComponent {
-  private filtersService: FiltersService = inject(FiltersService);
+  private catalogService: CatalogService = inject(CatalogService);
 
-  regions = this.filtersService.regions;
+  regions = this.catalogService.regions;
 
-  applyRegionFilter(ev: Event, regionFilterItem: FilterItem) {
+  applyRegionFilter(ev: MouseEvent, regionFilterItem: FilterItem) {
     const selected = (ev.target as HTMLInputElement).checked;
-    this.filtersService.applyRegionFilter(selected, regionFilterItem);
+    if(!selected) {
+      this.catalogService.removeRegion(regionFilterItem);
+      return;
+    }
+    
+    if(ev.ctrlKey) {
+      this.catalogService.addAnotherRegion(regionFilterItem);
+    } else {
+      this.catalogService.changeRegion(regionFilterItem); 
+    }
   }
 
-  applySubregionFilter(ev: Event, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+  applySubregionFilter(ev: MouseEvent, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
     const selected = (ev.target as HTMLInputElement).checked;
-    this.filtersService.applySubregionFilter(selected, regionFilterItem, subregionFilterItem);
+    if(!selected) {
+      this.catalogService.removeSubregion(regionFilterItem, subregionFilterItem);
+      return;
+    }
+
+    if(ev.ctrlKey) {
+      this.catalogService.addAnotherSubregion(subregionFilterItem);
+    } else {
+      this.catalogService.changeSubregion(subregionFilterItem);
+    }
   }
 
   isActive(regionFilterItem: FilterItem): boolean {

@@ -2,15 +2,7 @@ hr {
   margin-bottom: 0px;
 }
 
-.icon-remove-filters {
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: rgb(206, 0, 0);
-  }
-}
-
-.icon-view-mode {
+.catalog-header-icon {
   opacity: 0.5;
 
   &.active {
@@ -56,6 +48,10 @@ hr {
 
 .badge-no-filter {
   background-color: #6c757d;
+}
+
+.badge-sort-state {
+  background-color: #ba1a1a;
 }
 
 mat-expansion-panel.outlined-expansion-panel {

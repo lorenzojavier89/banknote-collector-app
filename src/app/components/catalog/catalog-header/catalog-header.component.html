@@ -2,53 +2,88 @@
   <mat-expansion-panel class="outlined-expansion-panel" hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>Mostrando {{ count() }} billetes</mat-panel-title>
-      <mat-icon (click)="onGridViewModeClick($event)" 
-        class="icon-view-mode" 
-        [class.active]="viewMode() === 'GridView'" 
-        [matTooltip]="gridViewModeMssg">
-          grid_view
-      </mat-icon>
-      <mat-icon (click)="onTableViewModeClick($event)" 
-        class="icon-view-mode" 
-        [class.active]="viewMode() === 'TableView'" 
-        [matTooltip]="tableViewModeMssg">
-          table_view
-      </mat-icon>
+      <button mat-icon-button (click)="onGridViewModeClick($event)" >
+        <mat-icon 
+          class="catalog-header-icon" 
+          [class.active]="viewMode() === 'GridView'" 
+          [matTooltip]="gridViewModeMssg">
+            grid_view
+        </mat-icon>
+      </button>
+      <button mat-icon-button (click)="onTableViewModeClick($event)" >
+        <mat-icon 
+          class="catalog-header-icon material-symbols-outlined" 
+          [class.active]="viewMode() === 'TableView'" 
+          [matTooltip]="tableViewModeMssg">
+            table_rows
+        </mat-icon>
+      </button>
       @if (appliedFilter().noFiltersApplied) {
-        <mat-icon class="material-symbols-outlined" [matTooltip]="noFiltersAppliedMssg">filter_alt</mat-icon>
+        <button mat-icon-button (click)="onRemoveFiltersClick($event)" >
+          <mat-icon 
+            class="catalog-header-icon material-symbols-outlined" 
+            [matTooltip]="noFiltersAppliedMssg">
+            filter_alt
+          </mat-icon>
+        </button>
       } @else {
-        <mat-icon (click)="onRemoveFiltersClick($event)" class="icon-remove-filters" [matTooltip]="removeAppliedFiltersMssg">filter_alt</mat-icon>
-      }  
-    </mat-expansion-panel-header>
-    @if (appliedFilter().someFiltersApplied)
-      {
-        <div class="badge-row">
-          <h6 *ngFor="let f of appliedFilter().regionFilters">
-            <span class="badge badge-region">{{ f.name }}</span>
-          </h6>
-        </div>
-        <div class="badge-row">
-          <h6 *ngFor="let f of appliedFilter().subregionFilters">
-            <span class="badge badge-subregion">{{ f.name }}</span>
-          </h6>
-        </div>
-        <div class="badge-row">
-          <h5 *ngIf="appliedFilter().issuerFilter !== null">
-            <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
-          </h5>
-        </div>
-        <div class="badge-row">
-          <h5 *ngIf="appliedFilter().volumeFilter !== null">
-            <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
-              {{ "Álbum " + appliedFilter().volumeFilter?.name }}
-            </span>
-          </h5>
-        </div>
-      } @else {
-        <div class="badge-row">
-          <h5><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h5>
-        </div>
+        <button mat-icon-button (click)="onRemoveFiltersClick($event)">
+          <mat-icon 
+            class="catalog-header-icon active" 
+            [matTooltip]="removeAppliedFiltersMssg">
+            filter_alt
+          </mat-icon>
+        </button>
       }
+      <button mat-icon-button [matMenuTriggerFor]="menu" (click)="onMenuClick($event)">
+        <mat-icon class="catalog-header-icon">more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onSortChange({ active: 'order', direction: 'asc' })">
+          <span>{{ sortByOrderMenuItemMssg }}</span>
+        </button>
+        <button mat-menu-item (click)="onSortChange({ active: 'issueDate', direction: 'asc' })">
+          <span>{{ sortByIssueDateAscMenuItemMssg }}</span>
+        </button>
+        <button mat-menu-item (click)="onSortChange({ active: 'issueDate', direction: 'desc' })">
+          <span>{{ sortByIssueDateDescMenuItemMssg }}</span>
+        </button>
+      </mat-menu>
+    </mat-expansion-panel-header>
+    @if (sortStateMssg()) {
+      <div class="badge-row">
+        <h6><span class="badge badge-sort-state">{{ sortStateMssg() }}</span></h6>
+      </div>
+    }
+    @if (appliedFilter().someFiltersApplied)
+    {
+      <div class="badge-row">
+        <h6 *ngFor="let f of appliedFilter().regionFilters">
+          <span class="badge badge-region">{{ f.name }}</span>
+        </h6>
+      </div>
+      <div class="badge-row">
+        <h6 *ngFor="let f of appliedFilter().subregionFilters">
+          <span class="badge badge-subregion">{{ f.name }}</span>
+        </h6>
+      </div>
+      <div class="badge-row">
+        <h6 *ngIf="appliedFilter().issuerFilter !== null">
+          <span class="badge badge-issuer">{{ appliedFilter().issuerFilter?.name }}</span>
+        </h6>
+      </div>
+      <div class="badge-row">
+        <h6 *ngIf="appliedFilter().volumeFilter !== null">
+          <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
+            {{ "Álbum " + appliedFilter().volumeFilter?.name }}
+          </span>
+        </h6>
+      </div>
+    } @else {
+      <div class="badge-row">
+        <h6><span class="badge badge-no-filter">{{ noFiltersAppliedMssg }}</span></h6>
+      </div>
+    }
   </mat-expansion-panel>
   <hr />
 </div>

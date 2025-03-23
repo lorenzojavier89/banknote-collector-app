@@ -16,6 +16,8 @@ export interface Banknote {
   issuerSubcode: string;
   issuerSubname: string;
   issueDate: string;
+  issueMinDate: number;
+  issueMaxDate: number;
   denomination: string;
   onlineCatalog: string;
   imageUrl: string;

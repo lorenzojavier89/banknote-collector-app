@@ -1,12 +1,12 @@
 import { Component, computed, effect, inject, signal } from '@angular/core';
 import { FiltersComponent } from "./filters/filters.component";
-import { FiltersService } from '../../services/filters.service';
 import { BanknoteCardComponent } from './banknote-card/banknote-card.component';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { NgFor } from '@angular/common';
 import { CatalogHeaderComponent } from "./catalog-header/catalog-header.component";
 import { CatalogViewMode } from '../../models/catalog-view-mode.enum';
 import { CatalogTableComponent } from './catalog-table/catalog-table.component';
+import { CatalogService } from '../../services/catalog.service';
 
 @Component({
   selector: 'app-catalog',
@@ -22,12 +22,12 @@ import { CatalogTableComponent } from './catalog-table/catalog-table.component';
   ]
 })
 export class CatalogComponent {
-  private filtersService: FiltersService = inject(FiltersService);
+  private catalogService: CatalogService = inject(CatalogService);
 
   viewMode = signal<CatalogViewMode>((localStorage.getItem('viewMode') as CatalogViewMode) ?? CatalogViewMode.GridView);
   displayGridViewMode = computed(() => this.viewMode() === CatalogViewMode.GridView);
 
-  banknotes = this.filtersService.banknotes;
+  banknotes = this.catalogService.sortedBanknotes;
 
   constructor() {
     effect(() => {

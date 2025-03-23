@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
-import { FilterItem } from '../models/filters/filter-item.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
+import { FilterItem } from '../models/filters/filter-item.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FiltersBuilderService {
+
+  buildFromRegion(regionFilter: FilterItem): AppliedFilter {
+    return this.buildFromRegions([regionFilter], regionFilter.subItems ?? []);
+  }
+
+  buildFromSubregion(subregionFilter: FilterItem): AppliedFilter {
+    return this.buildFromRegions([], [subregionFilter]);
+  }
 
   buildFromRegions(regionFilters: FilterItem[], subregionFilters: FilterItem[]): AppliedFilter {
     const dRegionFilters = this.Distinct(regionFilters);
