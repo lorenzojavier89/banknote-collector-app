@@ -148,7 +148,7 @@ export class CatalogService {
   });
 
   replaceRegionFilter(clickedRegionFilter: FilterItem) {
-    this._appliedFilter.set(this.filtersBuilder.buildFromRegions([clickedRegionFilter], [...clickedRegionFilter.subItems || []]));
+    this._appliedFilter.set(this.filtersBuilder.buildFromRegion(clickedRegionFilter));
   }
 
   appendRegionFilter(clickedRegionFilter: FilterItem) {
