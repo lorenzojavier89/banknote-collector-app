@@ -24,6 +24,9 @@ export class CatalogHeaderComponent {
   tableViewModeMssg = "Mostrar vista de tabla";
   noFiltersAppliedMssg = "Sin filtros aplicados";
   removeAppliedFiltersMssg = "Quitar todos los filtros";
+  sortByOrderMenuItemMssg = "Ordenar por ubicación en álbum";
+  sortByIssueDateAscMenuItemMssg = "Ordenar más antiguos primero";
+  sortByIssueDateDescMenuItemMssg = "Ordernar más recientes primero";
   sortStateMssg = computed<string>(() => {
     const sortStateKey = this.catalogService.sortStateKey();
     switch(sortStateKey){

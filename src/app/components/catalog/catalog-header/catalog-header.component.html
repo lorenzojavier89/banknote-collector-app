@@ -40,13 +40,13 @@
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
-          <span>Ordenar por ubicación en álbum</span>
+          <span>{{ sortByOrderMenuItemMssg }}</span>
         </button>
         <button mat-menu-item>
-          <span>Ordenar más antiguos primero</span>
+          <span>{{ sortByIssueDateAscMenuItemMssg }}</span>
         </button>
         <button mat-menu-item>
-          <span>Ordernar más recientes primero</span>
+          <span>{{ sortByIssueDateDescMenuItemMssg }}</span>
         </button>
       </mat-menu>
     </mat-expansion-panel-header>
