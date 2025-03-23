@@ -6,7 +6,7 @@ import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
 import { Volume } from '../models/volume.enum';
-import { SortState } from '../models/sort-state.model';
+import { SortState, SortStateKey } from '../models/sort-state.model';
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +21,7 @@ export class CatalogService {
   });
 
   private readonly _sortState = signal<SortState>({ active: 'order', direction: '' });
-  sortStateKey = computed<string>(() => {
+  sortStateKey = computed<SortStateKey>(() => {
     const { active, direction } = this._sortState();
     return `${active}-${direction}`;
   });
@@ -118,37 +118,30 @@ export class CatalogService {
   });
 
   sortedBanknotes = computed<Banknote[]>(() => {
-    const { active, direction } = this._sortState();
+    const sortKey = this.sortStateKey();
     const banknotesCopy = [...this.banknotes()];
 
     const sortedBanknotes = banknotesCopy.sort((a, b) => {
-      if (active === 'order' && direction === 'asc') {
-        return a.order - b.order;
+      switch (sortKey) {
+        case 'order-asc':
+          return a.order - b.order;
+        case 'order-desc':
+          return b.order - a.order;
+        case 'issueDate-asc':
+          const issueMinDateDifference = a.issueMinDate - b.issueMinDate;
+          if (issueMinDateDifference !== 0) {
+            return issueMinDateDifference;
+          }
+          return a.issueMaxDate - b.issueMaxDate;
+        case 'issueDate-desc':
+          const issueMaxDateDifference = b.issueMaxDate - a.issueMaxDate;
+          if (issueMaxDateDifference !== 0) {
+            return issueMaxDateDifference;
+          }
+          return b.issueMinDate - a.issueMinDate;
+        default:
+          return 0;
       }
-
-      if (active === 'order' && direction === 'desc') {
-        return b.order - a.order;
-      }
-
-      if (active === 'issueDate' && direction === 'asc') {
-        const issueMinDateDifference = a.issueMinDate - b.issueMinDate;
-        if (issueMinDateDifference !== 0) {
-          return issueMinDateDifference;
-        }
-
-        return a.issueMaxDate - b.issueMaxDate;
-      }
-
-      if (active === 'issueDate' && direction === 'desc') {
-        const issueMaxDateDifference = b.issueMaxDate - a.issueMaxDate;
-        if (issueMaxDateDifference !== 0) {
-          return issueMaxDateDifference;
-        }
-
-        return b.issueMinDate - a.issueMinDate;
-      }
-
-      return 0;
     });
 
     return sortedBanknotes;
