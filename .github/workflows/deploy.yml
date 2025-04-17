@@ -1,4 +1,4 @@
-name: Automatic Deployment from Master
+name: Automatic Deployment on Master
 
 on:
   push:
