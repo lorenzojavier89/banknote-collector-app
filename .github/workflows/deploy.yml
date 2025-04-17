@@ -1,12 +1,18 @@
-name: Automatic Deployment from Master
+name: Automatic Deployment on Master
 
 on:
   push:
     branches:
       - master
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
 
 jobs:
   deploy:
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
