@@ -656,6 +656,15 @@
             ]
           },
           {
+            "code": "SYR",
+            "name": "Siria",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/sy.svg"
+            ]
+          },
+          {
             "code": "JOR",
             "name": "Jordania",
             "subgroups": [],
@@ -690,6 +699,21 @@
     "code": "EU",
     "name": "Europa",
     "subregions": [
+      {
+        "code": "EU",
+        "name": "Unión Europea",
+        "issuers": [
+          {
+            "code": "EU",
+            "name": "Unión Europea",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/eu.svg"
+            ]
+          }
+        ]
+      },
       {
         "code": "EEU",
         "name": "Europa Oriental",
