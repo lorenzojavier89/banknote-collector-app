@@ -23,6 +23,29 @@ thead, tbody, tfoot, tr, td, th {
   'opsz' 24
 }
 
+// custom styles
+.badge {
+  &.badge-condition-unc {
+    background-color: #1D5161;
+  }
+  
+  &.badge-condition-vgood {
+    background-color: #41744D;
+  }
+
+  &.badge-condition-good {
+    background-color: #D4EDBC;
+  }
+
+  &.badge-condition-reg {
+    background-color: #FFE5A0;
+  }
+
+  &.badge-condition-bad{
+    background-color: #B10202;
+  }
+}
+
 @media (max-width: $mediumWidth) {
   body {
     overflow: auto;
