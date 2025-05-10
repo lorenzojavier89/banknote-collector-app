@@ -26,22 +26,27 @@ thead, tbody, tfoot, tr, td, th {
 // custom styles
 .badge {
   &.badge-condition-unc {
+    color: #CCDBCF;
     background-color: #1D5161;
   }
   
   &.badge-condition-vgood {
+    color: #D3EFBF;
     background-color: #41744D;
   }
 
   &.badge-condition-good {
+    color: #5F744E;
     background-color: #D4EDBC;
   }
 
   &.badge-condition-reg {
+    color: #44374D;
     background-color: #FFE5A0;
   }
 
   &.badge-condition-bad{
+    color: #DFBFC9;
     background-color: #B10202;
   }
 }
