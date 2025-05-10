@@ -2,7 +2,7 @@
   <ng-container matColumnDef="order">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>Orden</th>
     <td mat-cell *matCellDef="let element">
-      <span class="badge" [class]="badgeClass(element)">#{{element.order}}</span>
+      <span class="badge" [class]="volumeBadgeClass(element)">#{{element.order}}</span>
     </td>
   </ng-container>
 
@@ -42,7 +42,9 @@
 
   <ng-container matColumnDef="condition">
     <th mat-header-cell *matHeaderCellDef>Condición</th>
-    <td mat-cell *matCellDef="let element">{{ element.condition?.name }}</td>
+    <td mat-cell *matCellDef="let element">
+      <span class="badge" [class]="element.condition?.badgeClass">{{ element.condition?.name }}</span>
+    </td>
   </ng-container>
 
   <ng-container matColumnDef="rarityIndex">

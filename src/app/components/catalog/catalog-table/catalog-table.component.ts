@@ -37,7 +37,7 @@ export class CatalogTableComponent {
   displayedColumns: string[] = ['order', 'denomination', 'issueDate', 'flagIcons', 'issuerName', 'issuerSubname', 'subregionName', 'condition', 'rarityIndex'];
   dataSource = new CatalogTableDataSource();
 
-  badgeClass(element: Banknote): string {
+  volumeBadgeClass(element: Banknote): string {
     return this.volumesService.getBadgeClass(element.volume);
   }
 

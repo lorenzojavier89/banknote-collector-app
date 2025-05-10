@@ -127,15 +127,15 @@ function getCondition(value: string): Condition | null {
   
   switch (value) {
     case 'Sin Circular':
-      return { type: ConditionType.UNC, name: 'Sin Circular', shortName: 'SC' };
+      return { type: ConditionType.UNC, name: 'Sin Circular', shortName: 'SC', badgeClass: 'badge-condition-unc' };
     case 'Muy bueno':
-      return { type: ConditionType.VeryGood, name: 'Muy bueno', shortName: 'MB' };
+      return { type: ConditionType.VeryGood, name: 'Muy bueno', shortName: 'MB', badgeClass: 'badge-condition-vg' };
     case 'Bueno':
-      return { type: ConditionType.Good, name: 'Bueno', shortName: 'B' };
+      return { type: ConditionType.Good, name: 'Bueno', shortName: 'B', badgeClass: 'badge-condition-g' };
     case 'Regular':
-      return { type: ConditionType.Regular, name: 'Regular', shortName: 'R' };
+      return { type: ConditionType.Regular, name: 'Regular', shortName: 'R', badgeClass: 'badge-condition-r' };
     case 'Malo':
-      return { type: ConditionType.Bad, name: 'Malo', shortName: 'M' };
+      return { type: ConditionType.Bad, name: 'Malo', shortName: 'M', badgeClass: 'badge-condition-b' };
     default:
       return null;
   }
