@@ -40,6 +40,11 @@
     <td mat-cell *matCellDef="let element">{{ element.subregionName }}</td>
   </ng-container>
 
+  <ng-container matColumnDef="condition">
+    <th mat-header-cell *matHeaderCellDef>Condición</th>
+    <td mat-cell *matCellDef="let element">{{ element.condition?.name }}</td>
+  </ng-container>
+
   <ng-container matColumnDef="rarityIndex">
     <th mat-header-cell *matHeaderCellDef>Índice rareza (Numista)</th>
     <td mat-cell *matCellDef="let element">{{ element.rarityIndex }}</td>

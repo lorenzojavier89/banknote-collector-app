@@ -34,7 +34,7 @@ class CatalogTableDataSource extends DataSource<Banknote> {
 export class CatalogTableComponent {
   private volumesService: VolumesService = inject(VolumesService); 
 
-  displayedColumns: string[] = ['order', 'denomination', 'issueDate', 'flagIcons', 'issuerName', 'issuerSubname', 'subregionName', 'rarityIndex'];
+  displayedColumns: string[] = ['order', 'denomination', 'issueDate', 'flagIcons', 'issuerName', 'issuerSubname', 'subregionName', 'condition', 'rarityIndex'];
   dataSource = new CatalogTableDataSource();
 
   badgeClass(element: Banknote): string {
