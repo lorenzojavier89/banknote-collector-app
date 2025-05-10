@@ -11,4 +11,7 @@ export interface CatalogApiResponse {
   comment: string;
   info: string;
   orientation: string;
+  condition: string;
+  rarityIndex: number;
+  uncUSD: number;
 }

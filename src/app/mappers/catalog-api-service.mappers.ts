@@ -1,5 +1,7 @@
 import { Banknote } from '../models/banknote.model';
 import { CatalogApiResponse } from '../models/catalog-api-response.model';
+import { ConditionType } from '../models/condition-type.enum';
+import { Condition } from '../models/condition.model';
 import { Issuer } from '../models/issuer.model';
 import { Orientation } from '../models/orientation.enum';
 import { Region } from '../models/region.model';
@@ -36,6 +38,7 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       item.issuerSubcode
     );
     const { issueMinDate, issueMaxDate } = getDates(item.issueDate);
+    const condition = getCondition(item.condition);
 
     return {
       ...item,
@@ -50,7 +53,8 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       subregionName: issuer?.subregionName,
       orientation,
       issueMinDate,
-      issueMaxDate
+      issueMaxDate,
+      condition
     } as Banknote;
   });
 }
@@ -114,4 +118,25 @@ function getDates(issueDate: string): { issueMinDate: number, issueMaxDate: numb
   }
   
   return { issueMinDate: issueDateNumber, issueMaxDate: issueDateNumber };
+}
+
+function getCondition(value: string): Condition | null {
+  if (!value) {
+    return null;
+  }
+  
+  switch (value) {
+    case 'Sin Circular':
+      return { type: ConditionType.UNC, name: 'Sin Circular', shortName: 'SC' };
+    case 'Muy bueno':
+      return { type: ConditionType.VeryGood, name: 'Muy bueno', shortName: 'MB' };
+    case 'Bueno':
+      return { type: ConditionType.Good, name: 'Bueno', shortName: 'B' };
+    case 'Regular':
+      return { type: ConditionType.Regular, name: 'Regular', shortName: 'R' };
+    case 'Malo':
+      return { type: ConditionType.Bad, name: 'Malo', shortName: 'M' };
+    default:
+      return null;
+  }
 }

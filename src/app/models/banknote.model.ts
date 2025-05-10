@@ -1,5 +1,6 @@
-import { Volume } from "./volume.enum";
+import { Condition } from './condition.model';
 import { Orientation } from './orientation.enum';
+import { Volume } from "./volume.enum";
 
 export interface Banknote {
   id: string;
@@ -23,5 +24,8 @@ export interface Banknote {
   imageUrl: string;
   comment: string;
   info: string;
-  orientation: Orientation
+  orientation: Orientation;
+  condition: Condition | null;
+  rarityIndex: number;
+  uncUSD: number;
 }
