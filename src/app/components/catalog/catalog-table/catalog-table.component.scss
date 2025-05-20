@@ -21,8 +21,7 @@
     }
   }
 
-  .mat-column-order,
-  .mat-column-rarityIndex {
+  .mat-column-order {
     width: 100px;
   }
 
@@ -34,7 +33,8 @@
   }
 
   .mat-column-issueDate,
-  .mat-column-condition {
+  .mat-column-condition,
+  .mat-column-rarityIndex {
     width: 150px;
   }
 
