@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { Banknote } from '../../../models/banknote.model';
 import { SortState } from '../../../models/sort-state.model';
+import { RarityIndexPipe } from '../../../pipes/rarity-index.pipe';
 import { CatalogService } from '../../../services/catalog.service';
 import { VolumesService } from '../../../services/volumes.service';
 
@@ -27,7 +28,7 @@ class CatalogTableDataSource extends DataSource<Banknote> {
 @Component({
   selector: 'app-catalog-table',
   standalone: true,
-  imports: [MatTableModule, MatSortModule, NgFor],
+  imports: [MatTableModule, MatSortModule, NgFor, RarityIndexPipe],
   templateUrl: './catalog-table.component.html',
   styleUrl: './catalog-table.component.scss',
 })
