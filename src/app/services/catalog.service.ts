@@ -140,8 +140,14 @@ export class CatalogService {
           }
           return b.issueMinDate - a.issueMinDate;
         case 'rarityIndex-asc':
+          if (a.rarityIndex == null && b.rarityIndex == null) return 0;
+          if (a.rarityIndex == null) return 1;
+          if (b.rarityIndex == null) return -1;
           return a.rarityIndex - b.rarityIndex;
         case 'rarityIndex-desc':
+          if (a.rarityIndex == null && b.rarityIndex == null) return 0;
+          if (a.rarityIndex == null) return 1;
+          if (b.rarityIndex == null) return -1;
           return b.rarityIndex - a.rarityIndex;
         default:
           return 0;
