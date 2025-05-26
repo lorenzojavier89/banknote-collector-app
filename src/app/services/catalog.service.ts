@@ -139,6 +139,10 @@ export class CatalogService {
             return issueMaxDateDifference;
           }
           return b.issueMinDate - a.issueMinDate;
+        case 'rarityIndex-asc':
+          return a.rarityIndex - b.rarityIndex;
+        case 'rarityIndex-desc':
+          return b.rarityIndex - a.rarityIndex;
         default:
           return 0;
       }
