@@ -35,6 +35,8 @@ export class CatalogHeaderComponent {
       case 'order-desc': return "Ordenado por ubicación en álbum (desc)";
       case 'issueDate-asc': return "Ordenado por fecha de emisión (más antiguos primero)";
       case 'issueDate-desc': return "Ordenado por fecha de emisión (más recientes primero)";
+      case 'rarityIndex-asc': return "Ordenado por rareza (más comunes primero)";
+      case 'rarityIndex-desc': return "Ordenado por rareza (más raros primero)";
       default: return '';
     }
   });
