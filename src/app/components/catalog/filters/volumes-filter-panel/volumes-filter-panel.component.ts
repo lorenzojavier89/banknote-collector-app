@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FilterItem } from '../../../../models/filters/filter-item.model';
 import { CatalogService } from '../../../../services/catalog.service';
@@ -7,7 +8,7 @@ import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-
 @Component({
   selector: 'app-volumes-filter-panel',
   standalone: true,
-  imports: [FilterExpansionPanelComponent],
+  imports: [FilterExpansionPanelComponent, NgFor],
   templateUrl: './volumes-filter-panel.component.html',
   styleUrl: './volumes-filter-panel.component.scss'
 })

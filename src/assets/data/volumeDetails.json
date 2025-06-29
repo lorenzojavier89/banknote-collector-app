@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Negro",
+        "details": [
+            "Argentina",
+            "Sudamérica"
+        ]
+    },
+	{
+		"name": "Rojo",
+        "details": [
+            "Europa"
+        ]
+    },
+	{
+		"name": "Verde",
+        "details": [
+            "Sudamérica",
+			"América Central y del Norte",
+			"África"
+        ]
+    },
+	{
+		"name": "Azul",
+        "details": [
+            "Europa Oriental",
+			"Asia"
+        ]
+    }
+]

@@ -7,6 +7,7 @@ import { SortState, SortStateKey } from '../models/sort-state.model';
 import { VolumeType } from '../models/volume-type.enum';
 import { CatalogApiService } from './catalog-api.service';
 import { FiltersBuilderService } from './filters-builder.service';
+import { VolumesService } from './volumes.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,7 @@ import { FiltersBuilderService } from './filters-builder.service';
 export class CatalogService {
   private catalogApiService: CatalogApiService = inject(CatalogApiService);
   private filtersBuilder: FiltersBuilderService = inject(FiltersBuilderService);
+  private volumeService: VolumesService = inject(VolumesService);
 
   private readonly _appliedFilter = signal<AppliedFilter>(JSON.parse(localStorage.getItem('appliedFilter')!) as AppliedFilter);
   appliedFilter = computed<AppliedFilter>(() => {
@@ -82,12 +84,17 @@ export class CatalogService {
 
   private _loadedVolumes = computed<FilterItem[]>(() => {
     const counters = this.catalogApiService.counters();
+    const volumeDetails = this.volumeService.volumeDetails();
     
     return Object.values(VolumeType).map<FilterItem>(v => ({
       code: v,
       name: v,
-      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0
-    }));
+      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0,
+      subItems: volumeDetails.find(d => d.name === v)?.details.map<FilterItem>(d => ({
+        code: d,
+        name: d,
+      })) || [],
+    }))
   });
 
   volumes = computed<FilterItem[]>(() => { 
