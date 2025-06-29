@@ -1,11 +1,11 @@
 import { Condition } from './condition.model';
 import { Orientation } from './orientation.enum';
-import { Volume } from "./volume.enum";
+import { VolumeType } from "./volume-type.enum";
 
 export interface Banknote {
   id: string;
   order: number;
-  volume: Volume | null;
+  volume: VolumeType | null;
   name: string;
   flagIcons: string[];
   regionCode: string;

@@ -4,7 +4,7 @@ import { CounterType } from '../models/counter-type.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { SortState, SortStateKey } from '../models/sort-state.model';
-import { Volume } from '../models/volume.enum';
+import { VolumeType } from '../models/volume-type.enum';
 import { CatalogApiService } from './catalog-api.service';
 import { FiltersBuilderService } from './filters-builder.service';
 
@@ -83,7 +83,7 @@ export class CatalogService {
   private _loadedVolumes = computed<FilterItem[]>(() => {
     const counters = this.catalogApiService.counters();
     
-    return Object.values(Volume).map<FilterItem>(v => ({
+    return Object.values(VolumeType).map<FilterItem>(v => ({
       code: v,
       name: v,
       counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0

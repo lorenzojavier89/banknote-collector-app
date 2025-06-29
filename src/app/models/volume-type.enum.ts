@@ -1,4 +1,4 @@
-export enum Volume {
+export enum VolumeType {
   Black = 'Negro',
   Red = 'Rojo',
   Green = 'Verde',

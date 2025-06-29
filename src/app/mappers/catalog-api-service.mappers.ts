@@ -5,7 +5,7 @@ import { Condition } from '../models/condition.model';
 import { Issuer } from '../models/issuer.model';
 import { Orientation } from '../models/orientation.enum';
 import { Region } from '../models/region.model';
-import { Volume } from '../models/volume.enum';
+import { VolumeType } from '../models/volume-type.enum';
 
 export function mapIssuersLookup(regions: Region[]): Map<string, Issuer> {
   const issuerLookup = new Map<string, Issuer>();
@@ -101,10 +101,10 @@ function getOrientation(value: string): Orientation {
   return value === 'v' ? Orientation.Vertical : Orientation.Horizontal;
 }
 
-function getVolume(value: string): Volume | null {
-  const isValidStatus = Object.values(Volume).includes(value as Volume);
+function getVolume(value: string): VolumeType | null {
+  const isValidStatus = Object.values(VolumeType).includes(value as VolumeType);
   if (isValidStatus) {
-    return value as Volume;
+    return value as VolumeType;
   }
 
   return null;
