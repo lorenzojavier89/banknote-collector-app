@@ -51,6 +51,15 @@ thead, tbody, tfoot, tr, td, th {
   }
 }
 
+.multiline-tooltip {
+  white-space: pre-line;
+  
+  .mdc-tooltip__surface {
+    max-width: unset !important;
+  }
+}
+
+
 @media (max-width: $mediumWidth) {
   body {
     overflow: auto;
