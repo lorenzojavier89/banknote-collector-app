@@ -74,7 +74,7 @@
       </div>
       <div class="badge-row">
         <h6 *ngIf="appliedFilter().volumeFilter !== null">
-          <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterCode)">
+          <span class="badge" [class]="badgeClass(appliedFilter().volumeFilterName)">
             {{ "Álbum " + appliedFilter().volumeFilter?.name }}
           </span>
         </h6>

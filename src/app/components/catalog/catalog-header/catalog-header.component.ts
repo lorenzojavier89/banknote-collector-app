@@ -47,8 +47,8 @@ export class CatalogHeaderComponent {
   
   count = computed(() => this.banknotes().length);
 
-  badgeClass(code: string | null): string  {
-    return this.volumesService.getBadgeClass(code);
+  badgeClass(name: string | null): string  {
+    return this.volumesService.getBadgeClass(name);
   }  
 
   onRemoveFiltersClick(event: MouseEvent) {
