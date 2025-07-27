@@ -35,25 +35,12 @@ export class CatalogService {
     effect(() => {
       localStorage.setItem('appliedFilter', JSON.stringify(this.appliedFilter()));
     });
-  }
-
-  private _loadedRegions = computed<Region[]>(() => {
-    const counters = this.catalogProvider.counters();
-    
-    return this.catalogProvider.regions().map<Region>((r) => ({
-      ...r,
-      counter: counters.get(this.catalogProvider.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
-      subregions: r.subregions.map<Subregion>((sr) => ({
-        ...sr,
-        counter: counters.get(this.catalogProvider.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
-      })),
-    }))
-  });
+  } 
 
   regions = computed<Region[]>(() =>{
     const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
 
-    return this._loadedRegions().map((r) => ({
+    return this.catalogProvider.regions().map((r) => ({
       ...r,
       selected: regionFilterCodes.includes(r.code),
       subregions: r.subregions?.map<Subregion>((sr) => ({ 
@@ -63,19 +50,10 @@ export class CatalogService {
     }))
   });
 
-  private _loadedCountries = computed<Country[]>(() => {
-    const counters = this.catalogProvider.counters();
-
-    return this.catalogProvider.issuers().map<Country>(i => ({
-      ...i.country,
-      counter: counters.get(this.catalogProvider.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
-    }))  
-  });
-
   countries = computed<Country[]>(() => {
     const { issuerFilterCode } = { ...this.appliedFilter() };
 
-    return this._loadedCountries().map<Country>(i => ({
+    return this.catalogProvider.countries().map<Country>(i => ({
       ...i,
       selected: issuerFilterCode === i.code,
     }))  
@@ -94,11 +72,11 @@ export class CatalogService {
   });
 
   volumes = computed<VolumeDetails[]>(() => { 
-    const { volumeFilterName: volumeFilterCode } = { ...this.appliedFilter() };
+    const { volumeFilterName } = { ...this.appliedFilter() };
 
     return this._loadedVolumes().map<VolumeDetails>(v => ({
       ...v,
-      selected: volumeFilterCode === v.name,
+      selected: volumeFilterName === v.name,
     }))  
   });
 
