@@ -64,7 +64,6 @@ export class CatalogService {
     const volumeDetails = this.volumeService.volumeDetails();
     
     return Object.values(VolumeType).map<VolumeDetails>(v => ({
-      code: v,
       name: v,
       counter: counters.get(this.catalogProvider.getCounterKey(CounterType.VolumeCode, v)) ?? 0,
       details: volumeDetails.find(d => d.name === v)?.details ?? [],

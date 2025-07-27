@@ -62,8 +62,8 @@ export class CatalogProvider {
     .pipe<Banknote[]>(
       map(([issuersLookup, apiResponse]) => mapBanknotes(issuersLookup, apiResponse))
     );
-
-  banknotes = toSignal(this.catalog$, { initialValue: [] });
+  public banknotes = toSignal(this.catalog$, { initialValue: [] });
+  
   
 
   counters = computed<Map<string,number>>(() => {
