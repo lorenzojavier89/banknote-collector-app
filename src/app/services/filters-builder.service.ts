@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Country } from '../models/country.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
-import { FilterItem } from '../models/filters/filter-item.model';
 import { Region } from '../models/region.model';
 import { Subregion } from '../models/subregion.model';
+import { VolumeDetails } from '../models/volume-details.model';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +32,7 @@ export class FiltersBuilderService {
       issuerFilter: null,
       issuerFilterCode: null,
       volumeFilter: null,
-      volumeFilterCode: null,
+      volumeFilterName: null,
       someFiltersApplied,
       noFiltersApplied
     }    
@@ -47,13 +47,13 @@ export class FiltersBuilderService {
       issuerFilter: issuerFilter,
       issuerFilterCode: issuerFilter? issuerFilter.code : null,
       volumeFilter: null,
-      volumeFilterCode: null,
+      volumeFilterName: null,
       someFiltersApplied: issuerFilter !== null,
       noFiltersApplied: issuerFilter === null
     }    
   }
 
-  buildFromVolume(volumeFilterItem: FilterItem): AppliedFilter {
+  buildFromVolume(volumeFilter: VolumeDetails): AppliedFilter {
     return {
       regionFilters: [],
       regionFilterCodes: [],
@@ -61,8 +61,8 @@ export class FiltersBuilderService {
       subregionFilterCodes: [],
       issuerFilter: null,
       issuerFilterCode: null,
-      volumeFilter: volumeFilterItem,
-      volumeFilterCode: volumeFilterItem.code,
+      volumeFilter: volumeFilter,
+      volumeFilterName: volumeFilter.name,
       someFiltersApplied: true,
       noFiltersApplied: false
     }  
@@ -77,7 +77,7 @@ export class FiltersBuilderService {
       issuerFilter: null,
       issuerFilterCode: null,
       volumeFilter: null,
-      volumeFilterCode: null,
+      volumeFilterName: null,
       someFiltersApplied: false,
       noFiltersApplied: true
     }  

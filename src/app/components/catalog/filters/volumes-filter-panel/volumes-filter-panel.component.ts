@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { VolumeDetails } from '../../../../models/volume-details.model';
 import { CatalogService } from '../../../../services/catalog.service';
 import { VolumesService } from '../../../../services/volumes.service';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
@@ -18,11 +18,11 @@ export class VolumesFilterPanelComponent {
   
   volumes = this.catalogService.volumes;
 
-  badgeClass(code: string): string  {
-    return this.volumesService.getBadgeClass(code);
+  badgeClass(name: string): string  {
+    return this.volumesService.getBadgeClass(name);
   }  
 
-  applyVolumeFilter(volumeFilterItem: FilterItem) {
-    this.catalogService.changeVolume(volumeFilterItem);
+  applyVolumeFilter(volume: VolumeDetails) {
+    this.catalogService.changeVolume(volume);
   }
 }

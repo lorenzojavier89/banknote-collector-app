@@ -3,10 +3,10 @@ import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
 import { Country } from '../models/country.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
-import { FilterItem } from '../models/filters/filter-item.model';
 import { Region } from '../models/region.model';
 import { SortState, SortStateKey } from '../models/sort-state.model';
 import { Subregion } from '../models/subregion.model';
+import { VolumeDetails } from '../models/volume-details.model';
 import { VolumeType } from '../models/volume-type.enum';
 import { CatalogApiService } from './catalog-api.service';
 import { FiltersBuilderService } from './filters-builder.service';
@@ -81,27 +81,24 @@ export class CatalogService {
     }))  
   });
 
-  private _loadedVolumes = computed<FilterItem[]>(() => {
+  private _loadedVolumes = computed<VolumeDetails[]>(() => {
     const counters = this.catalogApiService.counters();
     const volumeDetails = this.volumeService.volumeDetails();
     
-    return Object.values(VolumeType).map<FilterItem>(v => ({
+    return Object.values(VolumeType).map<VolumeDetails>(v => ({
       code: v,
       name: v,
       counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0,
-      subItems: volumeDetails.find(d => d.name === v)?.details.map<FilterItem>(d => ({
-        code: d,
-        name: d,
-      })) || [],
+      details: volumeDetails.find(d => d.name === v)?.details ?? [],
     }))
   });
 
-  volumes = computed<FilterItem[]>(() => { 
-    const { volumeFilterCode } = { ...this.appliedFilter() };
+  volumes = computed<VolumeDetails[]>(() => { 
+    const { volumeFilterName: volumeFilterCode } = { ...this.appliedFilter() };
 
-    return this._loadedVolumes().map<FilterItem>(i => ({
-      ...i,
-      selected: volumeFilterCode === i.code,
+    return this._loadedVolumes().map<VolumeDetails>(v => ({
+      ...v,
+      selected: volumeFilterCode === v.name,
     }))  
   });
 
@@ -117,7 +114,7 @@ export class CatalogService {
         const matchesRegion = appliedFilter.regionFilters && appliedFilter.regionFilterCodes.includes(b.regionCode);
         const matchesSubregion = appliedFilter.subregionFilters && appliedFilter.subregionFilterCodes.includes(b.subregionCode);
         const matchesIssuer = appliedFilter.issuerFilter && appliedFilter.issuerFilterCode === b.issuerCode;
-        const matchesVolume = appliedFilter.volumeFilter && appliedFilter.volumeFilterCode === b.volume;
+        const matchesVolume = appliedFilter.volumeFilter && appliedFilter.volumeFilterName === b.volume;
 
         return matchesRegion || matchesSubregion || matchesIssuer || matchesVolume;
     });
@@ -212,7 +209,7 @@ export class CatalogService {
     this._appliedFilter.set(this.filtersBuilder.buildFromIssuer(issuerFilter));
   }
 
-  changeVolume(volume: FilterItem) {
+  changeVolume(volume: VolumeDetails) {
     this._appliedFilter.set(this.filtersBuilder.buildFromVolume(volume))
   }
 

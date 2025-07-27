@@ -1,7 +1,7 @@
 import { Country } from "../country.model";
 import { Region } from "../region.model";
 import { Subregion } from "../subregion.model";
-import { FilterItem } from "./filter-item.model";
+import { VolumeDetails } from "../volume-details.model";
 
 export interface AppliedFilter {
     regionFilters: Region[];
@@ -10,8 +10,8 @@ export interface AppliedFilter {
     subregionFilterCodes: string[];
     issuerFilter: Country | null;
     issuerFilterCode: string | null;
-    volumeFilter: FilterItem | null;
-    volumeFilterCode: string | null;
+    volumeFilter: VolumeDetails | null;
+    volumeFilterName: string | null;
     someFiltersApplied: boolean;
     noFiltersApplied: boolean;
 }
