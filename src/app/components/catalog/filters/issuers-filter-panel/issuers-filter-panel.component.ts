@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { Country } from '../../../../models/country.model';
 import { CatalogService } from '../../../../services/catalog.service';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 
@@ -15,13 +15,15 @@ import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-
 export class IssuersFilterPanelComponent {
   private catalogService: CatalogService = inject(CatalogService);
   
-  issuers = this.catalogService.issuers;
+  countries = this.catalogService.countries;
 
-  applyIssuerFilter(selected: boolean, issuerFilterItem: FilterItem) {
-    this.catalogService.changeIssuer(selected, issuerFilterItem);
+  applyIssuerFilter(selected: boolean, issuer: Country) {
+    this.catalogService.changeIssuer(selected, issuer);
   }
 
-  getIssuerTooltip(issuer: FilterItem): string {
-    return issuer.subItems?.map(si => si.name).join("\n") || '';
+  getIssuerTooltip(issuer: Country): string {
+    const historicalPeriods = issuer.historicalPeriods?.map(si => si.name) || [];
+    const subgroups = issuer.subgroups?.map(sg => sg.name) || [];
+    return [...historicalPeriods, ...subgroups].join("\n");
   }
 }

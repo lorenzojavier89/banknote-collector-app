@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Country } from '../models/country.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { Region } from '../models/region.model';
@@ -37,18 +38,18 @@ export class FiltersBuilderService {
     }    
   }
 
-  buildFromIssuer(issuerFilterItem: FilterItem | null): AppliedFilter {
+  buildFromIssuer(issuerFilter: Country | null): AppliedFilter {
     return {
       regionFilters: [],
       regionFilterCodes: [],
       subregionFilters: [],
       subregionFilterCodes: [],
-      issuerFilter: issuerFilterItem,
-      issuerFilterCode: issuerFilterItem? issuerFilterItem.code : null,
+      issuerFilter: issuerFilter,
+      issuerFilterCode: issuerFilter? issuerFilter.code : null,
       volumeFilter: null,
       volumeFilterCode: null,
-      someFiltersApplied: issuerFilterItem !== null,
-      noFiltersApplied: issuerFilterItem === null
+      someFiltersApplied: issuerFilter !== null,
+      noFiltersApplied: issuerFilter === null
     }    
   }
 

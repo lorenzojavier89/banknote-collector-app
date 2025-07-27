@@ -1,6 +1,7 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
+import { Country } from '../models/country.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { FilterItem } from '../models/filters/filter-item.model';
 import { Region } from '../models/region.model';
@@ -62,23 +63,19 @@ export class CatalogService {
     }))
   });
 
-  private _loadedIssuers = computed<FilterItem[]>(() => {
+  private _loadedCountries = computed<Country[]>(() => {
     const counters = this.catalogApiService.counters();
 
-    return this.catalogApiService.issuers().map<FilterItem>(i => ({
+    return this.catalogApiService.issuers().map<Country>(i => ({
       ...i.country,
       counter: counters.get(this.catalogApiService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
-      subItems: [
-        ...i.country.historicalPeriods.map<FilterItem>(hp => ({ ...hp })),
-        ...i.country.subgroups.map<FilterItem>(sg => ({ ...sg }))
-      ]
     }))  
   });
 
-  issuers = computed<FilterItem[]>(() => {
+  countries = computed<Country[]>(() => {
     const { issuerFilterCode } = { ...this.appliedFilter() };
 
-    return this._loadedIssuers().map<FilterItem>(i => ({
+    return this._loadedCountries().map<Country>(i => ({
       ...i,
       selected: issuerFilterCode === i.code,
     }))  
@@ -209,7 +206,7 @@ export class CatalogService {
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  changeIssuer(selected: boolean, issuer: FilterItem) {
+  changeIssuer(selected: boolean, issuer: Country) {
     const issuerFilter = selected ? issuer : null;
     
     this._appliedFilter.set(this.filtersBuilder.buildFromIssuer(issuerFilter));
