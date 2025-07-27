@@ -1,5 +1,5 @@
 import { Banknote } from '../models/banknote.model';
-import { CatalogApiResponse } from '../models/catalog-api-response.model';
+import { CatalogProviderResponse } from '../models/catalog-provider-response.model';
 import { ConditionType } from '../models/condition-type.enum';
 import { Condition } from '../models/condition.model';
 import { Issuer } from '../models/issuer.model';
@@ -27,7 +27,7 @@ export function mapIssuersLookup(regions: Region[]): Map<string, Issuer> {
   return issuerLookup;
 }
 
-export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiResponse: CatalogApiResponse[]): Banknote[] {
+export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiResponse: CatalogProviderResponse[]): Banknote[] {
   return catalogApiResponse.map((item) => {
     const issuer = issuersLookup.get(item.issuerCode);
     const volume = getVolume(item.volume);

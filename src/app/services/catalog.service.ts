@@ -8,7 +8,7 @@ import { SortState, SortStateKey } from '../models/sort-state.model';
 import { Subregion } from '../models/subregion.model';
 import { VolumeDetails } from '../models/volume-details.model';
 import { VolumeType } from '../models/volume-type.enum';
-import { CatalogApiService } from './catalog-api.service';
+import { CatalogProvider } from './catalog-provider.service';
 import { FiltersBuilderService } from './filters-builder.service';
 import { VolumesService } from './volumes.service';
 
@@ -16,7 +16,7 @@ import { VolumesService } from './volumes.service';
   providedIn: 'root',
 })
 export class CatalogService {
-  private catalogApiService: CatalogApiService = inject(CatalogApiService);
+  private catalogProvider: CatalogProvider = inject(CatalogProvider);
   private filtersBuilder: FiltersBuilderService = inject(FiltersBuilderService);
   private volumeService: VolumesService = inject(VolumesService);
 
@@ -38,14 +38,14 @@ export class CatalogService {
   }
 
   private _loadedRegions = computed<Region[]>(() => {
-    const counters = this.catalogApiService.counters();
+    const counters = this.catalogProvider.counters();
     
-    return this.catalogApiService.regions().map<Region>((r) => ({
+    return this.catalogProvider.regions().map<Region>((r) => ({
       ...r,
-      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
+      counter: counters.get(this.catalogProvider.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
       subregions: r.subregions.map<Subregion>((sr) => ({
         ...sr,
-        counter: counters.get(this.catalogApiService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
+        counter: counters.get(this.catalogProvider.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
       })),
     }))
   });
@@ -64,11 +64,11 @@ export class CatalogService {
   });
 
   private _loadedCountries = computed<Country[]>(() => {
-    const counters = this.catalogApiService.counters();
+    const counters = this.catalogProvider.counters();
 
-    return this.catalogApiService.issuers().map<Country>(i => ({
+    return this.catalogProvider.issuers().map<Country>(i => ({
       ...i.country,
-      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
+      counter: counters.get(this.catalogProvider.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
     }))  
   });
 
@@ -82,13 +82,13 @@ export class CatalogService {
   });
 
   private _loadedVolumes = computed<VolumeDetails[]>(() => {
-    const counters = this.catalogApiService.counters();
+    const counters = this.catalogProvider.counters();
     const volumeDetails = this.volumeService.volumeDetails();
     
     return Object.values(VolumeType).map<VolumeDetails>(v => ({
       code: v,
       name: v,
-      counter: counters.get(this.catalogApiService.getCounterKey(CounterType.VolumeCode, v)) ?? 0,
+      counter: counters.get(this.catalogProvider.getCounterKey(CounterType.VolumeCode, v)) ?? 0,
       details: volumeDetails.find(d => d.name === v)?.details ?? [],
     }))
   });
@@ -104,7 +104,7 @@ export class CatalogService {
 
   banknotes = computed<Banknote[]>(() => {
     const appliedFilter = this.appliedFilter();
-    const banknotes = this.catalogApiService.banknotes();
+    const banknotes = this.catalogProvider.banknotes();
 
     if(appliedFilter.noFiltersApplied) {
       return banknotes;

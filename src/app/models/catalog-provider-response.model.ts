@@ -1,4 +1,4 @@
-export interface CatalogApiResponse {
+export interface CatalogProviderResponse {
   id: string;
   order: number;
   volume: string;

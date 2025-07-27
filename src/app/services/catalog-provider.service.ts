@@ -1,30 +1,36 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CatalogApiResponse } from '../models/catalog-api-response.model';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { map, shareReplay } from 'rxjs/operators';
-import { Region } from '../models/region.model';
-import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-provider.mappers';
 import { Banknote } from '../models/banknote.model';
+import { CatalogProviderResponse } from '../models/catalog-provider-response.model';
 import { CounterType } from '../models/counter-type.model';
-import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-api-service.mappers';
+import { Issuer } from '../models/issuer.model';
+import { Region } from '../models/region.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CatalogApiService {
+export class CatalogProvider {
   private http: HttpClient = inject(HttpClient);
   private catalogJsonUrl = 'assets/data/catalog.json';
   private issuersJsonUrl = 'assets/data/issuers.json';
 
   private regions$ = this.http.get<Region[]>(this.issuersJsonUrl).pipe(shareReplay(1));
+  
+  
+  
+  
+  
+  
   private issuersLookup$ = this.regions$.pipe(
     map((regions) => mapIssuersLookup(regions)),
     shareReplay(1)
   );
   
-  private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
+  private catalogApiResponse$ = this.http.get<CatalogProviderResponse[]>(this.catalogJsonUrl);
   private catalog$ = forkJoin([
     this.issuersLookup$,
     this.catalogApiResponse$,

@@ -1,6 +1,6 @@
-import { Component, effect, inject, input, OnInit } from '@angular/core';
-import { CatalogApiService } from '../../../services/catalog-api.service';
 import { JsonPipe } from '@angular/common';
+import { Component, inject, input, OnInit } from '@angular/core';
+import { CatalogProvider } from '../../../services/catalog-provider.service';
 
 @Component({
   selector: 'app-banknote',
@@ -11,11 +11,11 @@ import { JsonPipe } from '@angular/common';
 })
 export class BanknoteComponent implements OnInit {
   id = input.required<string>();
-  private catalogService: CatalogApiService = inject(CatalogApiService);
+  private catalogProvider: CatalogProvider = inject(CatalogProvider);
 
-  selectedBanknote = this.catalogService.selectedBanknote;
+  selectedBanknote = this.catalogProvider.selectedBanknote;
 
   ngOnInit(): void {
-    this.catalogService.selectBanknote(this.id());
+    this.catalogProvider.selectBanknote(this.id());
   }
 }
