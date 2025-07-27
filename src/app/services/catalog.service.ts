@@ -8,7 +8,7 @@ import { SortState, SortStateKey } from '../models/sort-state.model';
 import { Subregion } from '../models/subregion.model';
 import { VolumeDetails } from '../models/volume-details.model';
 import { VolumeType } from '../models/volume-type.enum';
-import { CatalogProvider } from './catalog-provider.service';
+import { CatalogProvider } from '../providers/catalog.provider';
 import { FiltersBuilderService } from './filters-builder.service';
 import { VolumesService } from './volumes.service';
 

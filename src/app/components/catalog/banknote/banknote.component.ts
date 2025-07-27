@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component, inject, input, OnInit } from '@angular/core';
-import { CatalogProvider } from '../../../services/catalog-provider.service';
+import { CatalogProvider } from '../../../providers/catalog.provider';
 
 @Component({
   selector: 'app-banknote',
