@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { FilterItem } from '../../../../models/filters/filter-item.model';
+import { FilterItemV2 } from '../../../../models/filters/filter-item-v2.model';
+import { Region } from '../../../../models/region.model';
+import { Subregion } from '../../../../models/subregion.model';
 import { CatalogService } from '../../../../services/catalog.service';
 import { FilterExpansionPanelComponent } from '../filter-expansion-panel/filter-expansion-panel.component';
 
@@ -15,43 +17,43 @@ export class RegionsFilterPanelComponent {
 
   regions = this.catalogService.regions;
 
-  applyRegionFilter(ev: MouseEvent, regionFilterItem: FilterItem) {
+  applyRegionFilter(ev: MouseEvent, region: Region) {
     const selected = (ev.target as HTMLInputElement).checked;
     if(!selected) {
-      this.catalogService.removeRegion(regionFilterItem);
+      this.catalogService.removeRegion(region);
       return;
     }
     
     if(ev.ctrlKey) {
-      this.catalogService.addAnotherRegion(regionFilterItem);
+      this.catalogService.addAnotherRegion(region);
     } else {
-      this.catalogService.changeRegion(regionFilterItem); 
+      this.catalogService.changeRegion(region); 
     }
   }
 
-  applySubregionFilter(ev: MouseEvent, regionFilterItem: FilterItem, subregionFilterItem: FilterItem) {
+  applySubregionFilter(ev: MouseEvent, region: Region, subregion: Subregion) {
     const selected = (ev.target as HTMLInputElement).checked;
     if(!selected) {
-      this.catalogService.removeSubregion(regionFilterItem, subregionFilterItem);
+      this.catalogService.removeSubregion(region, subregion);
       return;
     }
 
     if(ev.ctrlKey) {
-      this.catalogService.addAnotherSubregion(subregionFilterItem);
+      this.catalogService.addAnotherSubregion(subregion);
     } else {
-      this.catalogService.changeSubregion(subregionFilterItem);
+      this.catalogService.changeSubregion(subregion);
     }
   }
 
-  isActive(regionFilterItem: FilterItem): boolean {
-    return !!regionFilterItem.selected;
+  isActive(region: Region): boolean {
+    return !!region.selected;
   }
 
-  isPartiallyActive(regionFilterItem: FilterItem): boolean {
-    return !!(!regionFilterItem.selected && regionFilterItem.subItems?.some(si => si.selected));
+  isPartiallyActive(region: Region): boolean {
+    return !!(!region.selected && region.subregions?.some(sr => sr.selected));
   }
 
-  isDisabled(filterItem: FilterItem): boolean {
-    return filterItem.counter === 0;
+  isDisabled(item: FilterItemV2): boolean {
+    return item.counter === 0;
   }
 }

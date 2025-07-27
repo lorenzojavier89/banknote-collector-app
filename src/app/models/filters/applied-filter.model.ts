@@ -1,9 +1,11 @@
+import { Region } from "../region.model";
+import { Subregion } from "../subregion.model";
 import { FilterItem } from "./filter-item.model";
 
 export interface AppliedFilter {
-    regionFilters: FilterItem[];
+    regionFilters: Region[];
     regionFilterCodes: string[];
-    subregionFilters: FilterItem[];
+    subregionFilters: Subregion[];
     subregionFilterCodes: string[];
     issuerFilter: FilterItem | null;
     issuerFilterCode: string | null;

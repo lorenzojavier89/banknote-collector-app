@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { FilterItem } from '../models/filters/filter-item.model';
+import { Region } from '../models/region.model';
+import { Subregion } from '../models/subregion.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FiltersBuilderService {
 
-  buildFromRegion(regionFilter: FilterItem): AppliedFilter {
-    return this.buildFromRegions([regionFilter], regionFilter.subItems ?? []);
+  buildFromRegion(regionFilter: Region): AppliedFilter {
+    return this.buildFromRegions([regionFilter], regionFilter.subregions ?? []);
   }
 
-  buildFromSubregion(subregionFilter: FilterItem): AppliedFilter {
+  buildFromSubregion(subregionFilter: Subregion): AppliedFilter {
     return this.buildFromRegions([], [subregionFilter]);
   }
 
-  buildFromRegions(regionFilters: FilterItem[], subregionFilters: FilterItem[]): AppliedFilter {
+  buildFromRegions(regionFilters: Region[], subregionFilters: Subregion[]): AppliedFilter {
     const dRegionFilters = this.Distinct(regionFilters);
     const dSubregionFilters = this.Distinct(subregionFilters);
     const someFiltersApplied = dRegionFilters.length > 0 || dSubregionFilters.length > 0;
@@ -80,9 +82,9 @@ export class FiltersBuilderService {
     }  
   }
 
-  private Distinct(filters: FilterItem[]): FilterItem[] {
+  private Distinct(filters: any[]): any[] {
     let codes = new Set<string>();
-    let results: FilterItem[] = []; 
+    let results: any[] = []; 
 
     filters.forEach(f => {
         if(!codes.has(f.code)) {

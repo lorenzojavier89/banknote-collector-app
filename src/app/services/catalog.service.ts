@@ -3,7 +3,9 @@ import { Banknote } from '../models/banknote.model';
 import { CounterType } from '../models/counter-type.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { FilterItem } from '../models/filters/filter-item.model';
+import { Region } from '../models/region.model';
 import { SortState, SortStateKey } from '../models/sort-state.model';
+import { Subregion } from '../models/subregion.model';
 import { VolumeType } from '../models/volume-type.enum';
 import { CatalogApiService } from './catalog-api.service';
 import { FiltersBuilderService } from './filters-builder.service';
@@ -34,28 +36,28 @@ export class CatalogService {
     });
   }
 
-  private _loadedRegions = computed<FilterItem[]>(() => {
+  private _loadedRegions = computed<Region[]>(() => {
     const counters = this.catalogApiService.counters();
     
-    return this.catalogApiService.regions().map<FilterItem>((r) => ({
+    return this.catalogApiService.regions().map<Region>((r) => ({
       ...r,
       counter: counters.get(this.catalogApiService.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
-      subItems: r.subregions.map<FilterItem>((sr) => ({
+      subregions: r.subregions.map<Subregion>((sr) => ({
         ...sr,
         counter: counters.get(this.catalogApiService.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
       })),
     }))
   });
 
-  regions = computed<FilterItem[]>(() =>{
+  regions = computed<Region[]>(() =>{
     const { regionFilterCodes, subregionFilterCodes } = { ...this.appliedFilter() };
 
     return this._loadedRegions().map((r) => ({
       ...r,
       selected: regionFilterCodes.includes(r.code),
-      subItems: r.subItems?.map<FilterItem>((si) => ({ 
-        ...si,
-        selected: subregionFilterCodes.includes(si.code)
+      subregions: r.subregions?.map<Subregion>((sr) => ({ 
+        ...sr,
+        selected: subregionFilterCodes.includes(sr.code)
       }))
     }))
   });
@@ -164,33 +166,33 @@ export class CatalogService {
     return sortedBanknotes;
   });
 
-  changeRegion(region: FilterItem) {
+  changeRegion(region: Region) {
     this._appliedFilter.set(this.filtersBuilder.buildFromRegion(region));
   }
 
-  addAnotherRegion(region: FilterItem) {
+  addAnotherRegion(region: Region) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
     regionFilters.push(region);
-    subregionFilters.push(...region.subItems || []);
+    subregionFilters.push(...region.subregions || []);
     
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  removeRegion(region: FilterItem) {
+  removeRegion(region: Region) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
 
     regionFilters = regionFilters.filter(rf => rf.code != region.code)
-    subregionFilters = subregionFilters.filter(srf => !region.subItems?.map(i => i.code).includes(srf.code));
+    subregionFilters = subregionFilters.filter(srf => !region.subregions?.map(i => i.code).includes(srf.code));
 
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  changeSubregion(subregion: FilterItem) {
+  changeSubregion(subregion: Subregion) {
     this._appliedFilter.set(this.filtersBuilder.buildFromSubregion(subregion));
   }
 
-  addAnotherSubregion(subregion: FilterItem) {
+  addAnotherSubregion(subregion: Subregion) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
     
     subregionFilters.push(subregion);
@@ -198,7 +200,7 @@ export class CatalogService {
     this._appliedFilter.set(this.filtersBuilder.buildFromRegions(regionFilters, subregionFilters));
   }
 
-  removeSubregion(region: FilterItem, subregion: FilterItem) {
+  removeSubregion(region: Region, subregion: Subregion) {
     let { regionFilters, subregionFilters } = { ...this.appliedFilter() };
         
     regionFilters = regionFilters.filter(rf => rf.code != region.code);
