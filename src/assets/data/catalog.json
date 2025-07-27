@@ -714,30 +714,13 @@
     "rarityIndex": 36
   },
   {
-    "id": "ARG0045",
-    "order": 43,
-    "volume": "Negro",
-    "issuerCode": "ARG",
-    "issuerSubcode": "CHACHO",
-    "issueDate": "2024",
-    "denomination": "2.000 Chachos",
-    "onlineCatalog": "https://es.numista.com/catalogue/note423419.html",
-    "imageUrl": "assets/images/banknotes/ARG0045-sm-front.jpg",
-    "comment": "Ángel Vicente Peñaloza, conocido como \"Chacho Peñaloza\", nació a finales del siglo XVIII en Malanzán, localidad de la Costa Alta de la Sierra de los Llanos, al sur de la actual provincia de La Rioja. Llegó a ser uno de los líderes más importantes de la historia argentina.\r\n\r\nPeñaloza fue uno de los principales jefes de la escolta de Juan Facundo Quiroga, quien lo ascendió al grado de mayor. Debido a sus diferencias con los unitarios liderados por Juan Manuel de Rosas, Peñaloza fue nombrado comandante de armas de la provincia. Al año siguiente, el presidente Justo José de Urquiza lo ascendió a general.\r\n\r\nEn 1862, Peñaloza encabezó la resistencia con un gran ejército, aunque fue derrotado en varias ocasiones. Tras firmar un armisticio con el gobierno de Bartolomé Mitre, volvió a sublevarse en mayo de 1863.\r\n\r\nA pesar de haberse rendido, fue brutalmente asesinado el 12 de noviembre de 1863. Su cabeza fue expuesta en una pica en la Plaza de Olta como advertencia a otros posibles insurgentes.",
-    "info": "Regalo de Gazpi. Numismática Kurchan, Buenos Aires, Oct 2024",
-    "orientation": "h",
-    "condition": "Sin Circular",
-    "uncUSD": 10,
-    "rarityIndex": 86
-  },
-  {
     "id": "ARG0046",
-    "order": 44,
+    "order": 43,
     "volume": "Negro",
     "issuerCode": "ARG",
     "issuerSubcode": "",
     "issueDate": "2024",
-    "denomination": "20000 Pesos",
+    "denomination": "20.000 Pesos",
     "onlineCatalog": "https://es.numista.com/catalogue/note441514.html",
     "imageUrl": "assets/images/banknotes/ARG0046-sm-front.jpg",
     "comment": "Serie Heroínas y Heroes de la Patria.\nAnverso: Juan Bautista Alberdi, escritor, periodista, filósofo, economista, diplomático y político argentino.\nReverso: Casa natal de Juan Bautista Alberdi.",
@@ -749,7 +732,7 @@
   },
   {
     "id": "ARG0042",
-    "order": 45,
+    "order": 44,
     "volume": "Negro",
     "issuerCode": "ARG",
     "issuerSubcode": "PAT",
@@ -766,7 +749,7 @@
   },
   {
     "id": "ARG0043",
-    "order": 46,
+    "order": 45,
     "volume": "Negro",
     "issuerCode": "ARG",
     "issuerSubcode": "PAT",
@@ -783,7 +766,7 @@
   },
   {
     "id": "ARG0044",
-    "order": 47,
+    "order": 46,
     "volume": "Negro",
     "issuerCode": "ARG",
     "issuerSubcode": "LECOP",
@@ -799,8 +782,59 @@
     "rarityIndex": 40
   },
   {
-    "id": "BRA0001",
+    "id": "ARG0047",
+    "order": 47,
+    "volume": "Negro",
+    "issuerCode": "ARG",
+    "issuerSubcode": "QUEBRACHO",
+    "issueDate": "2001",
+    "denomination": "10 Pesos (Bono Quebracho)",
+    "onlineCatalog": "https://es.numista.com/catalogue/note303317.html",
+    "imageUrl": "assets/images/banknotes/ARG0047-sm-front.jpg",
+    "comment": "",
+    "info": "Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 3.9,
+    "rarityIndex": 62
+  },
+  {
+    "id": "ARG0045",
     "order": 48,
+    "volume": "Negro",
+    "issuerCode": "ARG",
+    "issuerSubcode": "CHACHO",
+    "issueDate": "2024",
+    "denomination": "2.000 Chachos",
+    "onlineCatalog": "https://es.numista.com/catalogue/note423419.html",
+    "imageUrl": "assets/images/banknotes/ARG0045-sm-front.jpg",
+    "comment": "Ángel Vicente Peñaloza, conocido como \"Chacho Peñaloza\", nació a finales del siglo XVIII en Malanzán, localidad de la Costa Alta de la Sierra de los Llanos, al sur de la actual provincia de La Rioja. Llegó a ser uno de los líderes más importantes de la historia argentina.\r\n\r\nPeñaloza fue uno de los principales jefes de la escolta de Juan Facundo Quiroga, quien lo ascendió al grado de mayor. Debido a sus diferencias con los unitarios liderados por Juan Manuel de Rosas, Peñaloza fue nombrado comandante de armas de la provincia. Al año siguiente, el presidente Justo José de Urquiza lo ascendió a general.\r\n\r\nEn 1862, Peñaloza encabezó la resistencia con un gran ejército, aunque fue derrotado en varias ocasiones. Tras firmar un armisticio con el gobierno de Bartolomé Mitre, volvió a sublevarse en mayo de 1863.\r\n\r\nA pesar de haberse rendido, fue brutalmente asesinado el 12 de noviembre de 1863. Su cabeza fue expuesta en una pica en la Plaza de Olta como advertencia a otros posibles insurgentes.",
+    "info": "Regalo de Gazpi. Numismática Kurchan, Buenos Aires, Oct 2024",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 10,
+    "rarityIndex": 86
+  },
+  {
+    "id": "ARG0048",
+    "order": 49,
+    "volume": "Negro",
+    "issuerCode": "ARG",
+    "issuerSubcode": "ARGOTROS",
+    "issueDate": "1996",
+    "denomination": "1 Valor (Menem)",
+    "onlineCatalog": "https://es.numista.com/catalogue/exonumia262613.html",
+    "imageUrl": "assets/images/banknotes/ARG0048-sm-front.jpg",
+    "comment": "Billete de fantasía",
+    "info": "",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 0,
+    "rarityIndex": 65
+  },
+  {
+    "id": "BRA0001",
+    "order": 50,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "BRA1889",
@@ -817,7 +851,7 @@
   },
   {
     "id": "BRA0002",
-    "order": 49,
+    "order": 51,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "BRA1889",
@@ -834,7 +868,7 @@
   },
   {
     "id": "BRA0003",
-    "order": 50,
+    "order": 52,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "BRA1889",
@@ -851,7 +885,7 @@
   },
   {
     "id": "BRA0004",
-    "order": 51,
+    "order": 53,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -868,7 +902,7 @@
   },
   {
     "id": "BRA0005",
-    "order": 52,
+    "order": 54,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -885,7 +919,7 @@
   },
   {
     "id": "BRA0006",
-    "order": 53,
+    "order": 55,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -902,7 +936,7 @@
   },
   {
     "id": "BRA0007",
-    "order": 54,
+    "order": 56,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -919,7 +953,7 @@
   },
   {
     "id": "BRA0008",
-    "order": 55,
+    "order": 57,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -936,7 +970,7 @@
   },
   {
     "id": "BRA0009",
-    "order": 56,
+    "order": 58,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -953,7 +987,7 @@
   },
   {
     "id": "BRA0010",
-    "order": 57,
+    "order": 59,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -970,7 +1004,7 @@
   },
   {
     "id": "BRA0011",
-    "order": 58,
+    "order": 60,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -987,7 +1021,7 @@
   },
   {
     "id": "BRA0012",
-    "order": 59,
+    "order": 61,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1004,7 +1038,7 @@
   },
   {
     "id": "BRA0028",
-    "order": 60,
+    "order": 62,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1021,7 +1055,7 @@
   },
   {
     "id": "BRA0013",
-    "order": 61,
+    "order": 63,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1033,12 +1067,12 @@
     "info": "",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.2,
+    "rarityIndex": 12
   },
   {
     "id": "BRA0014",
-    "order": 62,
+    "order": 64,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1050,16 +1084,16 @@
     "info": "",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.7,
+    "rarityIndex": 14
   },
   {
     "id": "BRA0015",
-    "order": 63,
+    "order": 65,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
-    "issueDate": "1990-1991",
+    "issueDate": "1990",
     "denomination": "1000 Cruzeiros",
     "onlineCatalog": "https://es.numista.com/catalogue/note206098.html",
     "imageUrl": "assets/images/banknotes/BRA0015-sm-front.jpg",
@@ -1067,16 +1101,16 @@
     "info": "",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.5,
+    "rarityIndex": 10
   },
   {
     "id": "BRA0016",
-    "order": 64,
+    "order": 66,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
-    "issueDate": "1990-1993",
+    "issueDate": "1992",
     "denomination": "5000 Cruzeiros",
     "onlineCatalog": "https://es.numista.com/catalogue/note206099.html",
     "imageUrl": "assets/images/banknotes/BRA0016-sm-front.jpg",
@@ -1084,12 +1118,12 @@
     "info": "",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.7,
+    "rarityIndex": 12
   },
   {
     "id": "BRA0017",
-    "order": 65,
+    "order": 67,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1101,12 +1135,12 @@
     "info": "",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 3.4,
+    "rarityIndex": 11
   },
   {
     "id": "BRA0018",
-    "order": 66,
+    "order": 68,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1118,12 +1152,12 @@
     "info": "",
     "orientation": "h",
     "condition": "Regular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 2,
+    "rarityIndex": 10
   },
   {
     "id": "BRA0019",
-    "order": 67,
+    "order": 69,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1135,12 +1169,12 @@
     "info": "",
     "orientation": "h",
     "condition": "Regular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 4.9,
+    "rarityIndex": 13
   },
   {
     "id": "BRA0020",
-    "order": 68,
+    "order": 70,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1152,16 +1186,16 @@
     "info": "",
     "orientation": "h",
     "condition": "Regular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 10,
+    "rarityIndex": 15
   },
   {
     "id": "BRA0021",
-    "order": 69,
+    "order": 71,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
-    "issueDate": "2000-2001",
+    "issueDate": "2000",
     "denomination": "10 Reais",
     "onlineCatalog": "https://es.numista.com/catalogue/note202403.html",
     "imageUrl": "assets/images/banknotes/BRA0021-sm-front.jpg",
@@ -1169,12 +1203,12 @@
     "info": "",
     "orientation": "h",
     "condition": "Muy bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 20,
+    "rarityIndex": 18
   },
   {
     "id": "BRA0022",
-    "order": 70,
+    "order": 72,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1186,12 +1220,12 @@
     "info": "Viaje a Río de Janeiro con Emi Lucero, Marzo 2017",
     "orientation": "h",
     "condition": "Muy bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.8,
+    "rarityIndex": 9
   },
   {
     "id": "BRA0023",
-    "order": 71,
+    "order": 73,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1203,12 +1237,12 @@
     "info": "Viaje a Río de Janeiro con Emi Lucero, Marzo 2017",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 2.8,
+    "rarityIndex": 11
   },
   {
     "id": "BRA0024",
-    "order": 72,
+    "order": 74,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1220,12 +1254,12 @@
     "info": "Viaje a Río de Janeiro con Emi Lucero, Marzo 2017",
     "orientation": "h",
     "condition": "Muy bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 4.8,
+    "rarityIndex": 13
   },
   {
     "id": "BRA0025",
-    "order": 73,
+    "order": 75,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1237,12 +1271,12 @@
     "info": "Viaje a Río de Janeiro con Emi Lucero, Marzo 2017",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 13,
+    "rarityIndex": 15
   },
   {
     "id": "BRA0026",
-    "order": 74,
+    "order": 76,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1254,12 +1288,12 @@
     "info": "Viaje a Río de Janeiro con Emi Lucero, Marzo 2017",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 20,
+    "rarityIndex": 18
   },
   {
     "id": "BRA0027",
-    "order": 75,
+    "order": 77,
     "volume": "Negro",
     "issuerCode": "BRA",
     "issuerSubcode": "",
@@ -1271,12 +1305,12 @@
     "info": "Viaje a Río de Janeiro con Emi Lucero, Marzo 2017",
     "orientation": "h",
     "condition": "Bueno",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 50,
+    "rarityIndex": 23
   },
   {
     "id": "CHL0001",
-    "order": 76,
+    "order": 78,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1293,7 +1327,7 @@
   },
   {
     "id": "CHL0002",
-    "order": 77,
+    "order": 79,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1310,7 +1344,7 @@
   },
   {
     "id": "CHL0003",
-    "order": 78,
+    "order": 80,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1327,7 +1361,7 @@
   },
   {
     "id": "CHL0004",
-    "order": 79,
+    "order": 81,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1344,7 +1378,7 @@
   },
   {
     "id": "CHL0005",
-    "order": 80,
+    "order": 82,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1361,7 +1395,7 @@
   },
   {
     "id": "CHL0006",
-    "order": 81,
+    "order": 83,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1378,7 +1412,7 @@
   },
   {
     "id": "CHL0007",
-    "order": 82,
+    "order": 84,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1395,7 +1429,7 @@
   },
   {
     "id": "CHL0008",
-    "order": 83,
+    "order": 85,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1412,7 +1446,7 @@
   },
   {
     "id": "CHL0009",
-    "order": 84,
+    "order": 86,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1429,7 +1463,7 @@
   },
   {
     "id": "CHL0010",
-    "order": 85,
+    "order": 87,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1446,7 +1480,7 @@
   },
   {
     "id": "CHL0011",
-    "order": 86,
+    "order": 88,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1463,7 +1497,7 @@
   },
   {
     "id": "CHL0012",
-    "order": 87,
+    "order": 89,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1480,7 +1514,7 @@
   },
   {
     "id": "CHL0013",
-    "order": 88,
+    "order": 90,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1497,7 +1531,7 @@
   },
   {
     "id": "CHL0014",
-    "order": 89,
+    "order": 91,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1514,7 +1548,7 @@
   },
   {
     "id": "CHL0015",
-    "order": 90,
+    "order": 92,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1531,7 +1565,7 @@
   },
   {
     "id": "CHL0016",
-    "order": 91,
+    "order": 93,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1548,7 +1582,7 @@
   },
   {
     "id": "CHL0017",
-    "order": 92,
+    "order": 94,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1565,7 +1599,7 @@
   },
   {
     "id": "CHL0018",
-    "order": 93,
+    "order": 95,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1582,7 +1616,7 @@
   },
   {
     "id": "CHL0019",
-    "order": 94,
+    "order": 96,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1599,7 +1633,7 @@
   },
   {
     "id": "CHL0020",
-    "order": 95,
+    "order": 97,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1616,7 +1650,7 @@
   },
   {
     "id": "CHL0021",
-    "order": 96,
+    "order": 98,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1633,7 +1667,7 @@
   },
   {
     "id": "CHL0022",
-    "order": 97,
+    "order": 99,
     "volume": "Negro",
     "issuerCode": "CHL",
     "issuerSubcode": "",
@@ -1650,7 +1684,7 @@
   },
   {
     "id": "URY0001",
-    "order": 98,
+    "order": 100,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1667,7 +1701,7 @@
   },
   {
     "id": "URY0002",
-    "order": 99,
+    "order": 101,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1684,7 +1718,7 @@
   },
   {
     "id": "URY0003",
-    "order": 100,
+    "order": 102,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1701,7 +1735,7 @@
   },
   {
     "id": "URY0004",
-    "order": 101,
+    "order": 103,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1718,7 +1752,7 @@
   },
   {
     "id": "URY0005",
-    "order": 102,
+    "order": 104,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1735,7 +1769,7 @@
   },
   {
     "id": "URY0006",
-    "order": 103,
+    "order": 105,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1752,7 +1786,7 @@
   },
   {
     "id": "URY0007",
-    "order": 104,
+    "order": 106,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1769,7 +1803,7 @@
   },
   {
     "id": "URY0014",
-    "order": 105,
+    "order": 107,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1786,7 +1820,7 @@
   },
   {
     "id": "URY0008",
-    "order": 106,
+    "order": 108,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1803,7 +1837,7 @@
   },
   {
     "id": "URY0009",
-    "order": 107,
+    "order": 109,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1820,7 +1854,7 @@
   },
   {
     "id": "URY0010",
-    "order": 108,
+    "order": 110,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1837,7 +1871,7 @@
   },
   {
     "id": "URY0011",
-    "order": 109,
+    "order": 111,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1854,7 +1888,7 @@
   },
   {
     "id": "URY0012",
-    "order": 110,
+    "order": 112,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1871,7 +1905,7 @@
   },
   {
     "id": "URY0013",
-    "order": 111,
+    "order": 113,
     "volume": "Negro",
     "issuerCode": "URY",
     "issuerSubcode": "",
@@ -1887,8 +1921,59 @@
     "rarityIndex": null
   },
   {
+    "id": "EU0001",
+    "order": 114,
+    "volume": "Rojo",
+    "issuerCode": "EU",
+    "issuerSubcode": "",
+    "issueDate": "2013",
+    "denomination": "5 Euros",
+    "onlineCatalog": "https://es.numista.com/catalogue/note201658.html",
+    "imageUrl": "assets/images/banknotes/EU0001-sm-front.jpg",
+    "comment": "",
+    "info": "Viaje a Europa con la Gazpi. Enero 2025",
+    "orientation": "h",
+    "condition": "Muy bueno",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "EU0002",
+    "order": 115,
+    "volume": "Rojo",
+    "issuerCode": "EU",
+    "issuerSubcode": "",
+    "issueDate": "2002",
+    "denomination": "10 Euros",
+    "onlineCatalog": "https://es.numista.com/catalogue/note201660.html",
+    "imageUrl": "assets/images/banknotes/EU0002-sm-front.jpg",
+    "comment": "",
+    "info": "Viaje a Europa con la Gazpi. Enero 2025",
+    "orientation": "h",
+    "condition": "Muy bueno",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "FRA0008",
+    "order": 116,
+    "volume": "Rojo",
+    "issuerCode": "FRA",
+    "issuerSubcode": "FRAOTROS",
+    "issueDate": "2024",
+    "denomination": "0 Euros",
+    "onlineCatalog": "https://es.numista.com/catalogue/exonumia350664.html",
+    "imageUrl": "assets/images/banknotes/FRA0008-sm-front.jpg",
+    "comment": "Billete de fantasía. Recuerdo de la Ópera Garnier",
+    "info": "Viaje a Europa con la Gazpi. Ópera Garnier. Enero 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 3.5,
+    "rarityIndex": null
+  },
+  {
     "id": "ESP0001",
-    "order": 112,
+    "order": 117,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -1905,7 +1990,7 @@
   },
   {
     "id": "ESP0002",
-    "order": 113,
+    "order": 118,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -1922,7 +2007,7 @@
   },
   {
     "id": "ESP0011",
-    "order": 114,
+    "order": 119,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -1939,7 +2024,7 @@
   },
   {
     "id": "ESP0012",
-    "order": 115,
+    "order": 120,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -1956,7 +2041,7 @@
   },
   {
     "id": "ESP0013",
-    "order": 116,
+    "order": 121,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -1973,7 +2058,7 @@
   },
   {
     "id": "ESP0014",
-    "order": 117,
+    "order": 122,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -1990,7 +2075,7 @@
   },
   {
     "id": "ESP0003",
-    "order": 118,
+    "order": 123,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2007,7 +2092,7 @@
   },
   {
     "id": "ESP0004",
-    "order": 119,
+    "order": 124,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2024,7 +2109,7 @@
   },
   {
     "id": "ESP0005",
-    "order": 120,
+    "order": 125,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2041,7 +2126,7 @@
   },
   {
     "id": "ESP0006",
-    "order": 121,
+    "order": 126,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2058,7 +2143,7 @@
   },
   {
     "id": "ESP0007",
-    "order": 122,
+    "order": 127,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2075,7 +2160,7 @@
   },
   {
     "id": "ESP0008",
-    "order": 123,
+    "order": 128,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2092,7 +2177,7 @@
   },
   {
     "id": "PRT0001",
-    "order": 124,
+    "order": 129,
     "volume": "Rojo",
     "issuerCode": "PRT",
     "issuerSubcode": "",
@@ -2109,7 +2194,7 @@
   },
   {
     "id": "ESP0009",
-    "order": 125,
+    "order": 130,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2126,7 +2211,7 @@
   },
   {
     "id": "ESP0010",
-    "order": 126,
+    "order": 131,
     "volume": "Rojo",
     "issuerCode": "ESP",
     "issuerSubcode": "",
@@ -2143,7 +2228,7 @@
   },
   {
     "id": "FRA0005",
-    "order": 127,
+    "order": 132,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2160,7 +2245,7 @@
   },
   {
     "id": "FRA0001",
-    "order": 128,
+    "order": 133,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2177,7 +2262,7 @@
   },
   {
     "id": "FRA0006",
-    "order": 129,
+    "order": 134,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2194,7 +2279,7 @@
   },
   {
     "id": "FRA0003",
-    "order": 130,
+    "order": 135,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2211,7 +2296,7 @@
   },
   {
     "id": "FRA0002",
-    "order": 131,
+    "order": 136,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2228,7 +2313,7 @@
   },
   {
     "id": "FRA0007",
-    "order": 132,
+    "order": 137,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2245,7 +2330,7 @@
   },
   {
     "id": "BEL0002",
-    "order": 133,
+    "order": 138,
     "volume": "Rojo",
     "issuerCode": "BEL",
     "issuerSubcode": "",
@@ -2262,7 +2347,7 @@
   },
   {
     "id": "FRA0004",
-    "order": 134,
+    "order": 139,
     "volume": "Rojo",
     "issuerCode": "FRA",
     "issuerSubcode": "",
@@ -2279,7 +2364,7 @@
   },
   {
     "id": "BEL0001",
-    "order": 135,
+    "order": 140,
     "volume": "Rojo",
     "issuerCode": "BEL",
     "issuerSubcode": "",
@@ -2296,7 +2381,7 @@
   },
   {
     "id": "GBR0001",
-    "order": 136,
+    "order": 141,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "ENG",
@@ -2313,7 +2398,7 @@
   },
   {
     "id": "GBR0002",
-    "order": 137,
+    "order": 142,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "ENG",
@@ -2330,7 +2415,7 @@
   },
   {
     "id": "GBR0003",
-    "order": 138,
+    "order": 143,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "ENG",
@@ -2347,7 +2432,7 @@
   },
   {
     "id": "GBR0004",
-    "order": 139,
+    "order": 144,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "SCT",
@@ -2364,7 +2449,7 @@
   },
   {
     "id": "GBR0005",
-    "order": 140,
+    "order": 145,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "SCT",
@@ -2381,7 +2466,7 @@
   },
   {
     "id": "GBR0006",
-    "order": 141,
+    "order": 146,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "SCT",
@@ -2398,7 +2483,7 @@
   },
   {
     "id": "ITA0001",
-    "order": 142,
+    "order": 147,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2415,7 +2500,7 @@
   },
   {
     "id": "ITA0002",
-    "order": 143,
+    "order": 148,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2432,7 +2517,7 @@
   },
   {
     "id": "ITA0008",
-    "order": 144,
+    "order": 149,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2449,7 +2534,7 @@
   },
   {
     "id": "ITA0003",
-    "order": 145,
+    "order": 150,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2466,7 +2551,7 @@
   },
   {
     "id": "ITA0009",
-    "order": 146,
+    "order": 151,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2483,7 +2568,7 @@
   },
   {
     "id": "ITA0004",
-    "order": 147,
+    "order": 152,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2500,7 +2585,7 @@
   },
   {
     "id": "ITA0005",
-    "order": 148,
+    "order": 153,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2517,7 +2602,7 @@
   },
   {
     "id": "ITA0006",
-    "order": 149,
+    "order": 154,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2534,7 +2619,7 @@
   },
   {
     "id": "ITA0007",
-    "order": 150,
+    "order": 155,
     "volume": "Rojo",
     "issuerCode": "ITA",
     "issuerSubcode": "",
@@ -2551,7 +2636,7 @@
   },
   {
     "id": "LIE0001",
-    "order": 151,
+    "order": 156,
     "volume": "Rojo",
     "issuerCode": "LIE",
     "issuerSubcode": "",
@@ -2568,7 +2653,7 @@
   },
   {
     "id": "CHE0001",
-    "order": 152,
+    "order": 157,
     "volume": "Rojo",
     "issuerCode": "CHE",
     "issuerSubcode": "",
@@ -2585,7 +2670,7 @@
   },
   {
     "id": "CHE0002",
-    "order": 153,
+    "order": 158,
     "volume": "Rojo",
     "issuerCode": "CHE",
     "issuerSubcode": "",
@@ -2602,7 +2687,7 @@
   },
   {
     "id": "DEU0007",
-    "order": 154,
+    "order": 159,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1871",
@@ -2619,7 +2704,7 @@
   },
   {
     "id": "DEU0002",
-    "order": 155,
+    "order": 160,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1871",
@@ -2636,7 +2721,7 @@
   },
   {
     "id": "DEU0003",
-    "order": 156,
+    "order": 161,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1918",
@@ -2653,7 +2738,7 @@
   },
   {
     "id": "DEU0001",
-    "order": 157,
+    "order": 162,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1918",
@@ -2670,7 +2755,7 @@
   },
   {
     "id": "DEU0004",
-    "order": 158,
+    "order": 163,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1918",
@@ -2687,7 +2772,7 @@
   },
   {
     "id": "DEU0005",
-    "order": 159,
+    "order": 164,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1918",
@@ -2704,7 +2789,7 @@
   },
   {
     "id": "DEU0006",
-    "order": 160,
+    "order": 165,
     "volume": "Rojo",
     "issuerCode": "DEU",
     "issuerSubcode": "DEU1933",
@@ -2721,7 +2806,7 @@
   },
   {
     "id": "AUT0001",
-    "order": 161,
+    "order": 166,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "issuerSubcode": "AUT1918",
@@ -2738,7 +2823,7 @@
   },
   {
     "id": "AUT0002",
-    "order": 162,
+    "order": 167,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "issuerSubcode": "AUT1918",
@@ -2755,7 +2840,7 @@
   },
   {
     "id": "AUT0003",
-    "order": 163,
+    "order": 168,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "issuerSubcode": "AUT1918",
@@ -2772,7 +2857,7 @@
   },
   {
     "id": "AUT0004",
-    "order": 164,
+    "order": 169,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "issuerSubcode": "AUT1918",
@@ -2789,7 +2874,7 @@
   },
   {
     "id": "AUT0005",
-    "order": 165,
+    "order": 170,
     "volume": "Rojo",
     "issuerCode": "AUT",
     "issuerSubcode": "AUT1918",
@@ -2806,7 +2891,7 @@
   },
   {
     "id": "HUN0001",
-    "order": 166,
+    "order": 171,
     "volume": "Rojo",
     "issuerCode": "HUN",
     "issuerSubcode": "",
@@ -2823,7 +2908,7 @@
   },
   {
     "id": "HUN0003",
-    "order": 167,
+    "order": 172,
     "volume": "Rojo",
     "issuerCode": "HUN",
     "issuerSubcode": "",
@@ -2840,7 +2925,7 @@
   },
   {
     "id": "HUN0004",
-    "order": 168,
+    "order": 173,
     "volume": "Rojo",
     "issuerCode": "HUN",
     "issuerSubcode": "",
@@ -2857,7 +2942,7 @@
   },
   {
     "id": "HUN0002",
-    "order": 169,
+    "order": 174,
     "volume": "Rojo",
     "issuerCode": "HUN",
     "issuerSubcode": "",
@@ -2874,7 +2959,7 @@
   },
   {
     "id": "SVK0001",
-    "order": 170,
+    "order": 175,
     "volume": "Rojo",
     "issuerCode": "SVK",
     "issuerSubcode": "",
@@ -2891,7 +2976,7 @@
   },
   {
     "id": "CSHH0001",
-    "order": 171,
+    "order": 176,
     "volume": "Rojo",
     "issuerCode": "CSHH",
     "issuerSubcode": "CSHH1960",
@@ -2908,7 +2993,7 @@
   },
   {
     "id": "CSHH0002",
-    "order": 172,
+    "order": 177,
     "volume": "Rojo",
     "issuerCode": "CSHH",
     "issuerSubcode": "CSHH1960",
@@ -2925,7 +3010,7 @@
   },
   {
     "id": "POL0001",
-    "order": 173,
+    "order": 178,
     "volume": "Rojo",
     "issuerCode": "POL",
     "issuerSubcode": "",
@@ -2942,7 +3027,7 @@
   },
   {
     "id": "POL0002",
-    "order": 174,
+    "order": 179,
     "volume": "Rojo",
     "issuerCode": "POL",
     "issuerSubcode": "",
@@ -2959,7 +3044,7 @@
   },
   {
     "id": "POL0003",
-    "order": 175,
+    "order": 180,
     "volume": "Rojo",
     "issuerCode": "POL",
     "issuerSubcode": "",
@@ -2976,7 +3061,7 @@
   },
   {
     "id": "POL0004",
-    "order": 176,
+    "order": 181,
     "volume": "Rojo",
     "issuerCode": "POL",
     "issuerSubcode": "",
@@ -2993,7 +3078,7 @@
   },
   {
     "id": "GRC0006",
-    "order": 177,
+    "order": 182,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "issuerSubcode": "",
@@ -3010,7 +3095,7 @@
   },
   {
     "id": "BGR0001",
-    "order": 178,
+    "order": 183,
     "volume": "Rojo",
     "issuerCode": "BGR",
     "issuerSubcode": "",
@@ -3027,7 +3112,7 @@
   },
   {
     "id": "GRC0001",
-    "order": 179,
+    "order": 184,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "issuerSubcode": "",
@@ -3044,7 +3129,7 @@
   },
   {
     "id": "GRC0002",
-    "order": 180,
+    "order": 185,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "issuerSubcode": "",
@@ -3061,7 +3146,7 @@
   },
   {
     "id": "GRC0003",
-    "order": 181,
+    "order": 186,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "issuerSubcode": "",
@@ -3078,7 +3163,7 @@
   },
   {
     "id": "GRC0004",
-    "order": 182,
+    "order": 187,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "issuerSubcode": "",
@@ -3095,7 +3180,7 @@
   },
   {
     "id": "MKD0001",
-    "order": 183,
+    "order": 188,
     "volume": "Rojo",
     "issuerCode": "MKD",
     "issuerSubcode": "",
@@ -3112,7 +3197,7 @@
   },
   {
     "id": "MKD0002",
-    "order": 184,
+    "order": 189,
     "volume": "Rojo",
     "issuerCode": "MKD",
     "issuerSubcode": "",
@@ -3129,7 +3214,7 @@
   },
   {
     "id": "GRC0005",
-    "order": 185,
+    "order": 190,
     "volume": "Rojo",
     "issuerCode": "GRC",
     "issuerSubcode": "",
@@ -3146,7 +3231,7 @@
   },
   {
     "id": "HRV0002",
-    "order": 186,
+    "order": 191,
     "volume": "Rojo",
     "issuerCode": "HRV",
     "issuerSubcode": "",
@@ -3163,7 +3248,7 @@
   },
   {
     "id": "HRV0001",
-    "order": 187,
+    "order": 192,
     "volume": "Rojo",
     "issuerCode": "HRV",
     "issuerSubcode": "",
@@ -3180,7 +3265,7 @@
   },
   {
     "id": "SVN0001",
-    "order": 188,
+    "order": 193,
     "volume": "Rojo",
     "issuerCode": "SVN",
     "issuerSubcode": "",
@@ -3197,7 +3282,7 @@
   },
   {
     "id": "SVN0002",
-    "order": 189,
+    "order": 194,
     "volume": "Rojo",
     "issuerCode": "SVN",
     "issuerSubcode": "",
@@ -3214,7 +3299,7 @@
   },
   {
     "id": "SVN0003",
-    "order": 190,
+    "order": 195,
     "volume": "Rojo",
     "issuerCode": "SVN",
     "issuerSubcode": "",
@@ -3231,7 +3316,7 @@
   },
   {
     "id": "SVN0004",
-    "order": 191,
+    "order": 196,
     "volume": "Rojo",
     "issuerCode": "SVN",
     "issuerSubcode": "",
@@ -3248,7 +3333,7 @@
   },
   {
     "id": "SVN0005",
-    "order": 192,
+    "order": 197,
     "volume": "Rojo",
     "issuerCode": "SVN",
     "issuerSubcode": "",
@@ -3265,7 +3350,7 @@
   },
   {
     "id": "ALB0001",
-    "order": 193,
+    "order": 198,
     "volume": "Rojo",
     "issuerCode": "ALB",
     "issuerSubcode": "",
@@ -3282,7 +3367,7 @@
   },
   {
     "id": "YUCS0001",
-    "order": 194,
+    "order": 199,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "issuerSubcode": "YUCS1963",
@@ -3299,7 +3384,7 @@
   },
   {
     "id": "YUCS0006",
-    "order": 195,
+    "order": 200,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "issuerSubcode": "YUCS1992",
@@ -3316,7 +3401,7 @@
   },
   {
     "id": "SVN0006",
-    "order": 196,
+    "order": 201,
     "volume": "Rojo",
     "issuerCode": "SVN",
     "issuerSubcode": "",
@@ -3333,7 +3418,7 @@
   },
   {
     "id": "YUCS0005",
-    "order": 197,
+    "order": 202,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "issuerSubcode": "YUCS1963",
@@ -3350,7 +3435,7 @@
   },
   {
     "id": "GBR0007",
-    "order": 198,
+    "order": 203,
     "volume": "Rojo",
     "issuerCode": "GBR",
     "issuerSubcode": "BAF",
@@ -3367,7 +3452,7 @@
   },
   {
     "id": "YUCS0002",
-    "order": 199,
+    "order": 204,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "issuerSubcode": "YUCS1963",
@@ -3384,7 +3469,7 @@
   },
   {
     "id": "YUCS0003",
-    "order": 200,
+    "order": 205,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "issuerSubcode": "YUCS1963",
@@ -3401,7 +3486,7 @@
   },
   {
     "id": "YUCS0004",
-    "order": 201,
+    "order": 206,
     "volume": "Rojo",
     "issuerCode": "YUCS",
     "issuerSubcode": "YUCS1963",
@@ -3418,7 +3503,7 @@
   },
   {
     "id": "SRB0004",
-    "order": 202,
+    "order": 207,
     "volume": "Rojo",
     "issuerCode": "SRB",
     "issuerSubcode": "SRB1941",
@@ -3435,7 +3520,7 @@
   },
   {
     "id": "SRB0001",
-    "order": 203,
+    "order": 208,
     "volume": "Rojo",
     "issuerCode": "SRB",
     "issuerSubcode": "",
@@ -3452,7 +3537,7 @@
   },
   {
     "id": "SRB0002",
-    "order": 204,
+    "order": 209,
     "volume": "Rojo",
     "issuerCode": "SRB",
     "issuerSubcode": "",
@@ -3469,7 +3554,7 @@
   },
   {
     "id": "SRB0003",
-    "order": 205,
+    "order": 210,
     "volume": "Rojo",
     "issuerCode": "SRB",
     "issuerSubcode": "",
@@ -3486,7 +3571,7 @@
   },
   {
     "id": "ISL0001",
-    "order": 206,
+    "order": 211,
     "volume": "Rojo",
     "issuerCode": "ISL",
     "issuerSubcode": "",
@@ -3503,7 +3588,7 @@
   },
   {
     "id": "NOR0001",
-    "order": 207,
+    "order": 212,
     "volume": "Rojo",
     "issuerCode": "NOR",
     "issuerSubcode": "",
@@ -3520,7 +3605,7 @@
   },
   {
     "id": "NOR0002",
-    "order": 208,
+    "order": 213,
     "volume": "Rojo",
     "issuerCode": "NOR",
     "issuerSubcode": "",
@@ -3537,7 +3622,7 @@
   },
   {
     "id": "LTU0001",
-    "order": 209,
+    "order": 214,
     "volume": "Rojo",
     "issuerCode": "LTU",
     "issuerSubcode": "",
@@ -3554,7 +3639,7 @@
   },
   {
     "id": "LTU0002",
-    "order": 210,
+    "order": 215,
     "volume": "Rojo",
     "issuerCode": "LTU",
     "issuerSubcode": "",
@@ -3571,7 +3656,7 @@
   },
   {
     "id": "BOL0004",
-    "order": 211,
+    "order": 216,
     "volume": "Verde",
     "issuerCode": "BOL",
     "issuerSubcode": "",
@@ -3588,7 +3673,7 @@
   },
   {
     "id": "BOL0005",
-    "order": 212,
+    "order": 217,
     "volume": "Verde",
     "issuerCode": "BOL",
     "issuerSubcode": "",
@@ -3605,7 +3690,7 @@
   },
   {
     "id": "BOL0001",
-    "order": 213,
+    "order": 218,
     "volume": "Verde",
     "issuerCode": "BOL",
     "issuerSubcode": "",
@@ -3622,7 +3707,7 @@
   },
   {
     "id": "BOL0002",
-    "order": 214,
+    "order": 219,
     "volume": "Verde",
     "issuerCode": "BOL",
     "issuerSubcode": "",
@@ -3639,7 +3724,7 @@
   },
   {
     "id": "BOL0003",
-    "order": 215,
+    "order": 220,
     "volume": "Verde",
     "issuerCode": "BOL",
     "issuerSubcode": "",
@@ -3656,7 +3741,7 @@
   },
   {
     "id": "PRY0001",
-    "order": 216,
+    "order": 221,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3673,7 +3758,7 @@
   },
   {
     "id": "PRY0002",
-    "order": 217,
+    "order": 222,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3690,7 +3775,7 @@
   },
   {
     "id": "PRY0003",
-    "order": 218,
+    "order": 223,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3707,7 +3792,7 @@
   },
   {
     "id": "PRY0004",
-    "order": 219,
+    "order": 224,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3724,7 +3809,7 @@
   },
   {
     "id": "PRY0005",
-    "order": 220,
+    "order": 225,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3741,7 +3826,7 @@
   },
   {
     "id": "PRY0006",
-    "order": 221,
+    "order": 226,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3758,7 +3843,7 @@
   },
   {
     "id": "PRY0007",
-    "order": 222,
+    "order": 227,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3775,7 +3860,7 @@
   },
   {
     "id": "PRY0008",
-    "order": 223,
+    "order": 228,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3792,7 +3877,7 @@
   },
   {
     "id": "PRY0009",
-    "order": 224,
+    "order": 229,
     "volume": "Verde",
     "issuerCode": "PRY",
     "issuerSubcode": "",
@@ -3809,7 +3894,7 @@
   },
   {
     "id": "PER0001",
-    "order": 225,
+    "order": 230,
     "volume": "Verde",
     "issuerCode": "PER",
     "issuerSubcode": "",
@@ -3820,13 +3905,13 @@
     "comment": "",
     "info": "Numismática El Bizantino, Rosario",
     "orientation": "h",
-    "condition": "",
+    "condition": "Sin Circular",
     "uncUSD": null,
     "rarityIndex": null
   },
   {
     "id": "PER0002",
-    "order": 226,
+    "order": 231,
     "volume": "Verde",
     "issuerCode": "PER",
     "issuerSubcode": "",
@@ -3837,13 +3922,30 @@
     "comment": "",
     "info": "",
     "orientation": "h",
-    "condition": "",
+    "condition": "Sin Circular",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "PER0008",
+    "order": 232,
+    "volume": "Verde",
+    "issuerCode": "PER",
+    "issuerSubcode": "",
+    "issueDate": "1987",
+    "denomination": "500 Intis",
+    "onlineCatalog": "https://es.numista.com/catalogue/note203771.html",
+    "imageUrl": "assets/images/banknotes/PER0008-sm-front.jpg",
+    "comment": "",
+    "info": "Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
     "uncUSD": null,
     "rarityIndex": null
   },
   {
     "id": "PER0003",
-    "order": 227,
+    "order": 233,
     "volume": "Verde",
     "issuerCode": "PER",
     "issuerSubcode": "",
@@ -3854,13 +3956,30 @@
     "comment": "",
     "info": "Primera colección de billetes",
     "orientation": "h",
-    "condition": "",
+    "condition": "Bueno",
     "uncUSD": null,
     "rarityIndex": null
   },
   {
+    "id": "PER0007",
+    "order": 234,
+    "volume": "Verde",
+    "issuerCode": "PER",
+    "issuerSubcode": "",
+    "issueDate": "1991",
+    "denomination": "5000000 Intis",
+    "onlineCatalog": "https://es.numista.com/catalogue/note205638.html",
+    "imageUrl": "assets/images/banknotes/PER0007-sm-front.jpg",
+    "comment": "Anverso: Retrato de Giovanni Antonio Raimondi (Milán, 19 de septiembre de 1824-San Pedro de Lloc, 26 de octubre de 1890) fue un prominente investigador, naturalista, geógrafo, explorador, escritor y catedrático italiano naturalizado peruano, su especialidad consistió en un profundo y esmerado estudio de la fauna, la flora y la geología peruana. Radicando en Perú, fue catedrático de la Universidad de San Marcos en Lima.\nReverso: Asistente inca Antonio Raimondi en el centro.",
+    "info": "Regalo de la tía Federica (traído de sus viajes con el tío Alberto) en nuestro viaje a Europa con la Gazpi. Milán, Enero 2025",
+    "orientation": "h",
+    "condition": "Regular",
+    "uncUSD": null,
+    "rarityIndex": 57
+  },
+  {
     "id": "PER0004",
-    "order": 228,
+    "order": 235,
     "volume": "Verde",
     "issuerCode": "PER",
     "issuerSubcode": "",
@@ -3877,7 +3996,7 @@
   },
   {
     "id": "PER0005",
-    "order": 229,
+    "order": 236,
     "volume": "Verde",
     "issuerCode": "PER",
     "issuerSubcode": "",
@@ -3893,25 +4012,8 @@
     "rarityIndex": null
   },
   {
-    "id": "PER0007",
-    "order": 230,
-    "volume": "Verde",
-    "issuerCode": "PER",
-    "issuerSubcode": "",
-    "issueDate": "1991",
-    "denomination": "5000000 Intis",
-    "onlineCatalog": "https://es.numista.com/catalogue/note205638.html",
-    "imageUrl": "assets/images/banknotes/PER0007-sm-front.jpg",
-    "comment": "Anverso: Retrato de Giovanni Antonio Raimondi (Milán, 19 de septiembre de 1824-San Pedro de Lloc, 26 de octubre de 1890) fue un prominente investigador, naturalista, geógrafo, explorador, escritor y catedrático italiano naturalizado peruano, su especialidad consistió en un profundo y esmerado estudio de la fauna, la flora y la geología peruana. Radicando en Perú, fue catedrático de la Universidad de San Marcos en Lima.\nReverso: Asistente inca Antonio Raimondi en el centro.",
-    "info": "Regalo de la tía Federica (traído de sus viajes con el tío Alberto) en nuestro viaje a Europa con la Gazpi. Milán, Enero 2025",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": 57
-  },
-  {
     "id": "COL0012",
-    "order": 231,
+    "order": 237,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -3928,7 +4030,7 @@
   },
   {
     "id": "COL0013",
-    "order": 232,
+    "order": 238,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -3945,7 +4047,7 @@
   },
   {
     "id": "COL0014",
-    "order": 233,
+    "order": 239,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -3962,7 +4064,7 @@
   },
   {
     "id": "COL0015",
-    "order": 234,
+    "order": 240,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -3979,7 +4081,7 @@
   },
   {
     "id": "COL0016",
-    "order": 235,
+    "order": 241,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -3996,7 +4098,7 @@
   },
   {
     "id": "COL0017",
-    "order": 236,
+    "order": 242,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4013,7 +4115,7 @@
   },
   {
     "id": "COL0018",
-    "order": 237,
+    "order": 243,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4030,7 +4132,7 @@
   },
   {
     "id": "COL0019",
-    "order": 238,
+    "order": 244,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4047,7 +4149,7 @@
   },
   {
     "id": "COL0020",
-    "order": 239,
+    "order": 245,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4064,7 +4166,7 @@
   },
   {
     "id": "COL0001",
-    "order": 240,
+    "order": 246,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4081,7 +4183,7 @@
   },
   {
     "id": "COL0002",
-    "order": 241,
+    "order": 247,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4098,7 +4200,7 @@
   },
   {
     "id": "COL0003",
-    "order": 242,
+    "order": 248,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4115,7 +4217,7 @@
   },
   {
     "id": "COL0004",
-    "order": 243,
+    "order": 249,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4132,7 +4234,7 @@
   },
   {
     "id": "COL0005",
-    "order": 244,
+    "order": 250,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4149,7 +4251,7 @@
   },
   {
     "id": "COL0006",
-    "order": 245,
+    "order": 251,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4166,7 +4268,7 @@
   },
   {
     "id": "COL0007",
-    "order": 246,
+    "order": 252,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4183,7 +4285,7 @@
   },
   {
     "id": "COL0008",
-    "order": 247,
+    "order": 253,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4200,7 +4302,7 @@
   },
   {
     "id": "COL0009",
-    "order": 248,
+    "order": 254,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4217,7 +4319,7 @@
   },
   {
     "id": "COL0010",
-    "order": 249,
+    "order": 255,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4234,7 +4336,7 @@
   },
   {
     "id": "COL0011",
-    "order": 250,
+    "order": 256,
     "volume": "Verde",
     "issuerCode": "COL",
     "issuerSubcode": "",
@@ -4251,7 +4353,7 @@
   },
   {
     "id": "ECU0001",
-    "order": 251,
+    "order": 257,
     "volume": "Verde",
     "issuerCode": "ECU",
     "issuerSubcode": "",
@@ -4268,7 +4370,7 @@
   },
   {
     "id": "GUY0001",
-    "order": 252,
+    "order": 258,
     "volume": "Verde",
     "issuerCode": "GUY",
     "issuerSubcode": "",
@@ -4285,7 +4387,7 @@
   },
   {
     "id": "GUY0002",
-    "order": 253,
+    "order": 259,
     "volume": "Verde",
     "issuerCode": "GUY",
     "issuerSubcode": "",
@@ -4302,7 +4404,7 @@
   },
   {
     "id": "VEN0001",
-    "order": 254,
+    "order": 260,
     "volume": "Verde",
     "issuerCode": "VEN",
     "issuerSubcode": "",
@@ -4319,7 +4421,7 @@
   },
   {
     "id": "VEN0002",
-    "order": 255,
+    "order": 261,
     "volume": "Verde",
     "issuerCode": "VEN",
     "issuerSubcode": "",
@@ -4336,7 +4438,7 @@
   },
   {
     "id": "VEN0003",
-    "order": 256,
+    "order": 262,
     "volume": "Verde",
     "issuerCode": "VEN",
     "issuerSubcode": "",
@@ -4353,7 +4455,7 @@
   },
   {
     "id": "VEN0004",
-    "order": 257,
+    "order": 263,
     "volume": "Verde",
     "issuerCode": "VEN",
     "issuerSubcode": "",
@@ -4370,7 +4472,7 @@
   },
   {
     "id": "VEN0005",
-    "order": 258,
+    "order": 264,
     "volume": "Verde",
     "issuerCode": "VEN",
     "issuerSubcode": "",
@@ -4387,7 +4489,7 @@
   },
   {
     "id": "VEN0006",
-    "order": 259,
+    "order": 265,
     "volume": "Verde",
     "issuerCode": "VEN",
     "issuerSubcode": "",
@@ -4404,7 +4506,7 @@
   },
   {
     "id": "CUB0001",
-    "order": 260,
+    "order": 266,
     "volume": "Verde",
     "issuerCode": "CUB",
     "issuerSubcode": "CUB1959",
@@ -4421,7 +4523,7 @@
   },
   {
     "id": "CUB0002",
-    "order": 261,
+    "order": 267,
     "volume": "Verde",
     "issuerCode": "CUB",
     "issuerSubcode": "CUB1959",
@@ -4438,7 +4540,7 @@
   },
   {
     "id": "CUB0003",
-    "order": 262,
+    "order": 268,
     "volume": "Verde",
     "issuerCode": "CUB",
     "issuerSubcode": "CUB1959",
@@ -4455,7 +4557,7 @@
   },
   {
     "id": "CUB0004",
-    "order": 263,
+    "order": 269,
     "volume": "Verde",
     "issuerCode": "CUB",
     "issuerSubcode": "CUB1959",
@@ -4472,7 +4574,7 @@
   },
   {
     "id": "CUB0005",
-    "order": 264,
+    "order": 270,
     "volume": "Verde",
     "issuerCode": "CUB",
     "issuerSubcode": "CUB1902",
@@ -4489,7 +4591,7 @@
   },
   {
     "id": "HND0001",
-    "order": 265,
+    "order": 271,
     "volume": "Verde",
     "issuerCode": "HND",
     "issuerSubcode": "",
@@ -4506,7 +4608,7 @@
   },
   {
     "id": "NIC0001",
-    "order": 266,
+    "order": 272,
     "volume": "Verde",
     "issuerCode": "NIC",
     "issuerSubcode": "",
@@ -4517,13 +4619,30 @@
     "comment": "",
     "info": "",
     "orientation": "h",
-    "condition": "",
+    "condition": "Sin Circular",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "NIC0004",
+    "order": 273,
+    "volume": "Verde",
+    "issuerCode": "NIC",
+    "issuerSubcode": "",
+    "issueDate": "1991-1992",
+    "denomination": "5 Centavos de Córdoba",
+    "onlineCatalog": "https://es.numista.com/catalogue/note203908.html",
+    "imageUrl": "assets/images/banknotes/NIC0004-sm-front.jpg",
+    "comment": "",
+    "info": "Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
     "uncUSD": null,
     "rarityIndex": null
   },
   {
     "id": "NIC0002",
-    "order": 267,
+    "order": 274,
     "volume": "Verde",
     "issuerCode": "NIC",
     "issuerSubcode": "",
@@ -4534,13 +4653,13 @@
     "comment": "",
     "info": "",
     "orientation": "h",
-    "condition": "",
+    "condition": "Sin Circular",
     "uncUSD": null,
     "rarityIndex": null
   },
   {
     "id": "NIC0003",
-    "order": 268,
+    "order": 275,
     "volume": "Verde",
     "issuerCode": "NIC",
     "issuerSubcode": "",
@@ -4551,13 +4670,13 @@
     "comment": "",
     "info": "",
     "orientation": "h",
-    "condition": "",
+    "condition": "Sin Circular",
     "uncUSD": null,
     "rarityIndex": null
   },
   {
     "id": "DOM0001",
-    "order": 269,
+    "order": 276,
     "volume": "Verde",
     "issuerCode": "DOM",
     "issuerSubcode": "",
@@ -4574,7 +4693,7 @@
   },
   {
     "id": "DOM0002",
-    "order": 270,
+    "order": 277,
     "volume": "Verde",
     "issuerCode": "DOM",
     "issuerSubcode": "",
@@ -4591,7 +4710,7 @@
   },
   {
     "id": "DOM0003",
-    "order": 271,
+    "order": 278,
     "volume": "Verde",
     "issuerCode": "DOM",
     "issuerSubcode": "",
@@ -4608,7 +4727,7 @@
   },
   {
     "id": "DOM0004",
-    "order": 272,
+    "order": 279,
     "volume": "Verde",
     "issuerCode": "DOM",
     "issuerSubcode": "",
@@ -4625,7 +4744,7 @@
   },
   {
     "id": "GTM0001",
-    "order": 273,
+    "order": 280,
     "volume": "Verde",
     "issuerCode": "GTM",
     "issuerSubcode": "",
@@ -4642,7 +4761,7 @@
   },
   {
     "id": "GTM0002",
-    "order": 274,
+    "order": 281,
     "volume": "Verde",
     "issuerCode": "GTM",
     "issuerSubcode": "",
@@ -4659,7 +4778,7 @@
   },
   {
     "id": "MEX0005",
-    "order": 275,
+    "order": 282,
     "volume": "Verde",
     "issuerCode": "MEX",
     "issuerSubcode": "",
@@ -4676,7 +4795,7 @@
   },
   {
     "id": "MEX0004",
-    "order": 276,
+    "order": 283,
     "volume": "Verde",
     "issuerCode": "MEX",
     "issuerSubcode": "",
@@ -4693,7 +4812,7 @@
   },
   {
     "id": "MEX0006",
-    "order": 277,
+    "order": 284,
     "volume": "Verde",
     "issuerCode": "MEX",
     "issuerSubcode": "",
@@ -4710,7 +4829,7 @@
   },
   {
     "id": "MEX0001",
-    "order": 278,
+    "order": 285,
     "volume": "Verde",
     "issuerCode": "MEX",
     "issuerSubcode": "",
@@ -4727,7 +4846,7 @@
   },
   {
     "id": "MEX0002",
-    "order": 279,
+    "order": 286,
     "volume": "Verde",
     "issuerCode": "MEX",
     "issuerSubcode": "",
@@ -4744,7 +4863,7 @@
   },
   {
     "id": "MEX0003",
-    "order": 280,
+    "order": 287,
     "volume": "Verde",
     "issuerCode": "MEX",
     "issuerSubcode": "",
@@ -4761,7 +4880,7 @@
   },
   {
     "id": "USA0002",
-    "order": 281,
+    "order": 288,
     "volume": "Verde",
     "issuerCode": "USA",
     "issuerSubcode": "",
@@ -4778,7 +4897,7 @@
   },
   {
     "id": "USA0003",
-    "order": 282,
+    "order": 289,
     "volume": "Verde",
     "issuerCode": "USA",
     "issuerSubcode": "",
@@ -4795,7 +4914,7 @@
   },
   {
     "id": "USA0001",
-    "order": 283,
+    "order": 290,
     "volume": "Verde",
     "issuerCode": "USA",
     "issuerSubcode": "",
@@ -4812,7 +4931,7 @@
   },
   {
     "id": "USA0004",
-    "order": 284,
+    "order": 291,
     "volume": "Verde",
     "issuerCode": "USA",
     "issuerSubcode": "",
@@ -4829,7 +4948,7 @@
   },
   {
     "id": "CAN0001",
-    "order": 285,
+    "order": 292,
     "volume": "Verde",
     "issuerCode": "CAN",
     "issuerSubcode": "",
@@ -4846,7 +4965,7 @@
   },
   {
     "id": "EASTCAR0001",
-    "order": 286,
+    "order": 293,
     "volume": "Verde",
     "issuerCode": "EASTCAR",
     "issuerSubcode": "",
@@ -4863,7 +4982,7 @@
   },
   {
     "id": "EASTCAR0002",
-    "order": 287,
+    "order": 294,
     "volume": "Verde",
     "issuerCode": "EASTCAR",
     "issuerSubcode": "",
@@ -4880,7 +4999,7 @@
   },
   {
     "id": "MAR0001",
-    "order": 288,
+    "order": 295,
     "volume": "Verde",
     "issuerCode": "MAR",
     "issuerSubcode": "",
@@ -4897,7 +5016,7 @@
   },
   {
     "id": "MAR0002",
-    "order": 289,
+    "order": 296,
     "volume": "Verde",
     "issuerCode": "MAR",
     "issuerSubcode": "",
@@ -4914,7 +5033,7 @@
   },
   {
     "id": "MAR0003",
-    "order": 290,
+    "order": 297,
     "volume": "Verde",
     "issuerCode": "MAR",
     "issuerSubcode": "",
@@ -4931,7 +5050,7 @@
   },
   {
     "id": "MAR0004",
-    "order": 291,
+    "order": 298,
     "volume": "Verde",
     "issuerCode": "MAR",
     "issuerSubcode": "",
@@ -4948,7 +5067,7 @@
   },
   {
     "id": "MRT0001",
-    "order": 292,
+    "order": 299,
     "volume": "Verde",
     "issuerCode": "MRT",
     "issuerSubcode": "",
@@ -4965,7 +5084,7 @@
   },
   {
     "id": "GNB0001",
-    "order": 293,
+    "order": 300,
     "volume": "Verde",
     "issuerCode": "GNB",
     "issuerSubcode": "",
@@ -4982,7 +5101,7 @@
   },
   {
     "id": "GIN0001",
-    "order": 294,
+    "order": 301,
     "volume": "Verde",
     "issuerCode": "GIN",
     "issuerSubcode": "",
@@ -4999,7 +5118,7 @@
   },
   {
     "id": "ZMB0001",
-    "order": 295,
+    "order": 302,
     "volume": "Verde",
     "issuerCode": "ZMB",
     "issuerSubcode": "",
@@ -5016,7 +5135,7 @@
   },
   {
     "id": "ZMB0002",
-    "order": 296,
+    "order": 303,
     "volume": "Verde",
     "issuerCode": "ZMB",
     "issuerSubcode": "",
@@ -5033,7 +5152,7 @@
   },
   {
     "id": "COD0001",
-    "order": 297,
+    "order": 304,
     "volume": "Verde",
     "issuerCode": "COD",
     "issuerSubcode": "COD1971",
@@ -5050,7 +5169,7 @@
   },
   {
     "id": "EGY0002",
-    "order": 298,
+    "order": 305,
     "volume": "Verde",
     "issuerCode": "EGY",
     "issuerSubcode": "",
@@ -5067,7 +5186,7 @@
   },
   {
     "id": "EGY0003",
-    "order": 299,
+    "order": 306,
     "volume": "Verde",
     "issuerCode": "EGY",
     "issuerSubcode": "",
@@ -5084,7 +5203,7 @@
   },
   {
     "id": "EGY0001",
-    "order": 300,
+    "order": 307,
     "volume": "Verde",
     "issuerCode": "EGY",
     "issuerSubcode": "",
@@ -5101,7 +5220,7 @@
   },
   {
     "id": "EGY0004",
-    "order": 301,
+    "order": 308,
     "volume": "Verde",
     "issuerCode": "EGY",
     "issuerSubcode": "",
@@ -5118,7 +5237,7 @@
   },
   {
     "id": "ETH0001",
-    "order": 302,
+    "order": 309,
     "volume": "Verde",
     "issuerCode": "ETH",
     "issuerSubcode": "",
@@ -5135,7 +5254,7 @@
   },
   {
     "id": "ZAF0001",
-    "order": 303,
+    "order": 310,
     "volume": "Verde",
     "issuerCode": "ZAF",
     "issuerSubcode": "",
@@ -5152,7 +5271,7 @@
   },
   {
     "id": "DJI0001",
-    "order": 304,
+    "order": 311,
     "volume": "Verde",
     "issuerCode": "DJI",
     "issuerSubcode": "",
@@ -5169,7 +5288,7 @@
   },
   {
     "id": "ROU0001",
-    "order": 305,
+    "order": 312,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5186,7 +5305,7 @@
   },
   {
     "id": "ROU0002",
-    "order": 306,
+    "order": 313,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5203,7 +5322,7 @@
   },
   {
     "id": "ROU0003",
-    "order": 307,
+    "order": 314,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5220,7 +5339,7 @@
   },
   {
     "id": "ROU0004",
-    "order": 308,
+    "order": 315,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5237,7 +5356,7 @@
   },
   {
     "id": "ROU0005",
-    "order": 309,
+    "order": 316,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "ROU1965",
@@ -5254,7 +5373,7 @@
   },
   {
     "id": "ROU0015",
-    "order": 310,
+    "order": 317,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5271,7 +5390,7 @@
   },
   {
     "id": "ROU0016",
-    "order": 311,
+    "order": 318,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5288,7 +5407,7 @@
   },
   {
     "id": "ROU0006",
-    "order": 312,
+    "order": 319,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5305,7 +5424,7 @@
   },
   {
     "id": "ROU0007",
-    "order": 313,
+    "order": 320,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5322,7 +5441,7 @@
   },
   {
     "id": "ROU0008",
-    "order": 314,
+    "order": 321,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5339,7 +5458,7 @@
   },
   {
     "id": "ROU0009",
-    "order": 315,
+    "order": 322,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5356,7 +5475,7 @@
   },
   {
     "id": "ROU0010",
-    "order": 316,
+    "order": 323,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5373,7 +5492,7 @@
   },
   {
     "id": "ROU0011",
-    "order": 317,
+    "order": 324,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5390,7 +5509,7 @@
   },
   {
     "id": "ROU0012",
-    "order": 318,
+    "order": 325,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5407,7 +5526,7 @@
   },
   {
     "id": "ROU0013",
-    "order": 319,
+    "order": 326,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5424,7 +5543,7 @@
   },
   {
     "id": "ROU0014",
-    "order": 320,
+    "order": 327,
     "volume": "Azul",
     "issuerCode": "ROU",
     "issuerSubcode": "",
@@ -5441,7 +5560,7 @@
   },
   {
     "id": "MDA-TRAN0001",
-    "order": 321,
+    "order": 328,
     "volume": "Azul",
     "issuerCode": "MDA-TRAN",
     "issuerSubcode": "",
@@ -5458,7 +5577,7 @@
   },
   {
     "id": "MDA-TRAN0002",
-    "order": 322,
+    "order": 329,
     "volume": "Azul",
     "issuerCode": "MDA-TRAN",
     "issuerSubcode": "",
@@ -5475,7 +5594,7 @@
   },
   {
     "id": "UKR0001",
-    "order": 323,
+    "order": 330,
     "volume": "Azul",
     "issuerCode": "UKR",
     "issuerSubcode": "",
@@ -5492,7 +5611,7 @@
   },
   {
     "id": "UKR0002",
-    "order": 324,
+    "order": 331,
     "volume": "Azul",
     "issuerCode": "UKR",
     "issuerSubcode": "",
@@ -5509,7 +5628,7 @@
   },
   {
     "id": "RUS0002",
-    "order": 325,
+    "order": 332,
     "volume": "Azul",
     "issuerCode": "RUS",
     "issuerSubcode": "",
@@ -5526,7 +5645,7 @@
   },
   {
     "id": "EST0001",
-    "order": 326,
+    "order": 333,
     "volume": "Azul",
     "issuerCode": "EST",
     "issuerSubcode": "",
@@ -5543,7 +5662,7 @@
   },
   {
     "id": "RUS0001",
-    "order": 327,
+    "order": 334,
     "volume": "Azul",
     "issuerCode": "RUS",
     "issuerSubcode": "RUS1919",
@@ -5560,7 +5679,7 @@
   },
   {
     "id": "TUR0001",
-    "order": 328,
+    "order": 335,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5577,7 +5696,7 @@
   },
   {
     "id": "TUR0002",
-    "order": 329,
+    "order": 336,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5594,7 +5713,7 @@
   },
   {
     "id": "TUR0003",
-    "order": 330,
+    "order": 337,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5611,7 +5730,7 @@
   },
   {
     "id": "TUR0004",
-    "order": 331,
+    "order": 338,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5628,7 +5747,7 @@
   },
   {
     "id": "TUR0005",
-    "order": 332,
+    "order": 339,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5645,7 +5764,7 @@
   },
   {
     "id": "TUR0006",
-    "order": 333,
+    "order": 340,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5662,7 +5781,7 @@
   },
   {
     "id": "TUR0007",
-    "order": 334,
+    "order": 341,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5679,7 +5798,7 @@
   },
   {
     "id": "TUR0008",
-    "order": 335,
+    "order": 342,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5696,7 +5815,7 @@
   },
   {
     "id": "TUR0009",
-    "order": 336,
+    "order": 343,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5713,7 +5832,7 @@
   },
   {
     "id": "TUR0010",
-    "order": 337,
+    "order": 344,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5730,7 +5849,7 @@
   },
   {
     "id": "TUR0011",
-    "order": 338,
+    "order": 345,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5747,7 +5866,7 @@
   },
   {
     "id": "TUR0012",
-    "order": 339,
+    "order": 346,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5764,7 +5883,7 @@
   },
   {
     "id": "TUR0013",
-    "order": 340,
+    "order": 347,
     "volume": "Azul",
     "issuerCode": "TUR",
     "issuerSubcode": "",
@@ -5781,7 +5900,7 @@
   },
   {
     "id": "SYR0001",
-    "order": 341,
+    "order": 348,
     "volume": "Azul",
     "issuerCode": "SYR",
     "issuerSubcode": "",
@@ -5798,7 +5917,7 @@
   },
   {
     "id": "JOR0001",
-    "order": 342,
+    "order": 349,
     "volume": "Azul",
     "issuerCode": "JOR",
     "issuerSubcode": "",
@@ -5815,7 +5934,7 @@
   },
   {
     "id": "JOR0002",
-    "order": 343,
+    "order": 350,
     "volume": "Azul",
     "issuerCode": "JOR",
     "issuerSubcode": "",
@@ -5832,7 +5951,7 @@
   },
   {
     "id": "ISR0001",
-    "order": 344,
+    "order": 351,
     "volume": "Azul",
     "issuerCode": "ISR",
     "issuerSubcode": "",
@@ -5849,7 +5968,7 @@
   },
   {
     "id": "ISR0002",
-    "order": 345,
+    "order": 352,
     "volume": "Azul",
     "issuerCode": "ISR",
     "issuerSubcode": "",
@@ -5866,7 +5985,7 @@
   },
   {
     "id": "ISR0003",
-    "order": 346,
+    "order": 353,
     "volume": "Azul",
     "issuerCode": "ISR",
     "issuerSubcode": "",
@@ -5883,7 +6002,7 @@
   },
   {
     "id": "ISR0004",
-    "order": 347,
+    "order": 354,
     "volume": "Azul",
     "issuerCode": "ISR",
     "issuerSubcode": "",
@@ -5900,7 +6019,7 @@
   },
   {
     "id": "ISR0005",
-    "order": 348,
+    "order": 355,
     "volume": "Azul",
     "issuerCode": "ISR",
     "issuerSubcode": "",
@@ -5917,7 +6036,7 @@
   },
   {
     "id": "QAT0001",
-    "order": 349,
+    "order": 356,
     "volume": "Azul",
     "issuerCode": "QAT",
     "issuerSubcode": "",
@@ -5934,7 +6053,7 @@
   },
   {
     "id": "QAT0002",
-    "order": 350,
+    "order": 357,
     "volume": "Azul",
     "issuerCode": "QAT",
     "issuerSubcode": "",
@@ -5951,7 +6070,7 @@
   },
   {
     "id": "QAT0003",
-    "order": 351,
+    "order": 358,
     "volume": "Azul",
     "issuerCode": "QAT",
     "issuerSubcode": "",
@@ -5968,7 +6087,7 @@
   },
   {
     "id": "ARE0001",
-    "order": 352,
+    "order": 359,
     "volume": "Azul",
     "issuerCode": "ARE",
     "issuerSubcode": "",
@@ -5985,7 +6104,7 @@
   },
   {
     "id": "AFG0001",
-    "order": 353,
+    "order": 360,
     "volume": "Azul",
     "issuerCode": "AFG",
     "issuerSubcode": "AFG1978",
@@ -6002,7 +6121,7 @@
   },
   {
     "id": "AFG0002",
-    "order": 354,
+    "order": 361,
     "volume": "Azul",
     "issuerCode": "AFG",
     "issuerSubcode": "AFG1978",
@@ -6019,7 +6138,7 @@
   },
   {
     "id": "AFG0003",
-    "order": 355,
+    "order": 362,
     "volume": "Azul",
     "issuerCode": "AFG",
     "issuerSubcode": "AFG1978",
@@ -6036,7 +6155,7 @@
   },
   {
     "id": "GEO0001",
-    "order": 356,
+    "order": 363,
     "volume": "Azul",
     "issuerCode": "GEO",
     "issuerSubcode": "",
@@ -6053,7 +6172,7 @@
   },
   {
     "id": "RUS0003",
-    "order": 357,
+    "order": 364,
     "volume": "Azul",
     "issuerCode": "RUS",
     "issuerSubcode": "RUS1922",
@@ -6070,7 +6189,7 @@
   },
   {
     "id": "TJK0001",
-    "order": 358,
+    "order": 365,
     "volume": "Azul",
     "issuerCode": "TJK",
     "issuerSubcode": "",
@@ -6087,7 +6206,7 @@
   },
   {
     "id": "TJK0002",
-    "order": 359,
+    "order": 366,
     "volume": "Azul",
     "issuerCode": "TJK",
     "issuerSubcode": "",
@@ -6104,7 +6223,7 @@
   },
   {
     "id": "UZB0001",
-    "order": 360,
+    "order": 367,
     "volume": "Azul",
     "issuerCode": "UZB",
     "issuerSubcode": "",
@@ -6121,7 +6240,7 @@
   },
   {
     "id": "UZB0002",
-    "order": 361,
+    "order": 368,
     "volume": "Azul",
     "issuerCode": "UZB",
     "issuerSubcode": "",
@@ -6138,7 +6257,7 @@
   },
   {
     "id": "TKM0001",
-    "order": 362,
+    "order": 369,
     "volume": "Azul",
     "issuerCode": "TKM",
     "issuerSubcode": "",
@@ -6155,7 +6274,7 @@
   },
   {
     "id": "PAK0001",
-    "order": 363,
+    "order": 370,
     "volume": "Azul",
     "issuerCode": "PAK",
     "issuerSubcode": "",
@@ -6172,7 +6291,7 @@
   },
   {
     "id": "PAK0002",
-    "order": 364,
+    "order": 371,
     "volume": "Azul",
     "issuerCode": "PAK",
     "issuerSubcode": "",
@@ -6189,7 +6308,7 @@
   },
   {
     "id": "IND0001",
-    "order": 365,
+    "order": 372,
     "volume": "Azul",
     "issuerCode": "IND",
     "issuerSubcode": "",
@@ -6206,7 +6325,7 @@
   },
   {
     "id": "IND0002",
-    "order": 366,
+    "order": 373,
     "volume": "Azul",
     "issuerCode": "IND",
     "issuerSubcode": "",
@@ -6223,7 +6342,7 @@
   },
   {
     "id": "MDV0001",
-    "order": 367,
+    "order": 374,
     "volume": "Azul",
     "issuerCode": "MDV",
     "issuerSubcode": "",
@@ -6240,75 +6359,109 @@
   },
   {
     "id": "NPL0001",
-    "order": 368,
+    "order": 375,
     "volume": "Azul",
     "issuerCode": "NPL",
-    "issuerSubcode": "",
-    "issueDate": "1974-1992",
+    "issuerSubcode": "NPL1972",
+    "issueDate": "1986-1990",
     "denomination": "1 Rupee",
     "onlineCatalog": "https://es.numista.com/catalogue/note203567.html",
     "imageUrl": "assets/images/banknotes/NPL0001-sm-front.jpg",
-    "comment": "",
+    "comment": "Anverso: Retrato del rey Birendra con gorra militar (izq.), templo de Pashupatinath (c.), ventana con filigrana. (R.)\nReverso: Ventana de filigrana (izq.), pareja de ciervos almizcleros del Himalaya con el monte Ama Dablam (región de Khumbu, Himalaya) (dcha.), escudo de armas (dcha.)",
     "info": "Regalo de Mari Llasen",
     "orientation": "h",
     "condition": "Sin Circular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.1,
+    "rarityIndex": 10
+  },
+  {
+    "id": "NPL0005",
+    "order": 376,
+    "volume": "Azul",
+    "issuerCode": "NPL",
+    "issuerSubcode": "NPL1972",
+    "issueDate": "1991-1994",
+    "denomination": "2 Rupees",
+    "onlineCatalog": "https://es.numista.com/catalogue/note204590.html",
+    "imageUrl": "assets/images/banknotes/NPL0005-sm-front.jpg",
+    "comment": "Anverso: Retrato del rey Birendra con corona emplumada a la izquierda, templo Bajrayogini en el centro y ventana con filigrana a la derecha\nReverso: A la izquierda una ventana con marca de agua, leopardo moteado en el centro y escudo nacional a la derecha.",
+    "info": "Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 1,
+    "rarityIndex": 8
   },
   {
     "id": "NPL0002",
-    "order": 369,
+    "order": 377,
     "volume": "Azul",
     "issuerCode": "NPL",
-    "issuerSubcode": "",
-    "issueDate": "1986-2001",
+    "issuerSubcode": "NPL1972",
+    "issueDate": "1993-1995",
     "denomination": "5 Rupees",
     "onlineCatalog": "https://es.numista.com/catalogue/note204112.html",
     "imageUrl": "assets/images/banknotes/NPL0002-sm-front.jpg",
-    "comment": "",
+    "comment": "Anverso: Retrato del rey Birendra (Izq.), Templo de Taleju (C.), Ventana de filigrana (D.)\nReverso: Ventana con filigrana (izq.), una pareja de yaks, monte Everest al fondo",
     "info": "Regalo de Mari Llasen",
     "orientation": "h",
     "condition": "Sin Circular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 0.7,
+    "rarityIndex": 14
   },
   {
     "id": "NPL0003",
-    "order": 370,
+    "order": 378,
     "volume": "Azul",
     "issuerCode": "NPL",
-    "issuerSubcode": "",
+    "issuerSubcode": "NPL2001",
     "issueDate": "2002",
     "denomination": "10 Rupees",
     "onlineCatalog": "https://es.numista.com/catalogue/note203502.html",
     "imageUrl": "assets/images/banknotes/NPL0003-sm-front.jpg",
-    "comment": "Billete conmemorativo: Ascenso al trono de Su Majestad el Rey Gyanendra",
+    "comment": "Billete conmemorativo: Ascenso al trono de Su Majestad el Rey Gyanendra.\nAnverso: Retrato del rey Gyanendra con corona emplumada (izq.), imagen del Señor Changunarayan (c.), ventana de filigrana - filigrana de la corona (dcha.\nReverso: Ventana de filigrana (izq.), Familia Buck negro (c.), Escudo de armas (dcha.)",
     "info": "",
     "orientation": "h",
     "condition": "Sin Circular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.7,
+    "rarityIndex": 16
   },
   {
     "id": "NPL0004",
-    "order": 371,
+    "order": 379,
     "volume": "Azul",
     "issuerCode": "NPL",
-    "issuerSubcode": "",
+    "issuerSubcode": "NPL2001",
     "issueDate": "2002-2005",
     "denomination": "20 Rupees",
     "onlineCatalog": "https://es.numista.com/catalogue/note204613.html",
     "imageUrl": "assets/images/banknotes/NPL0004-sm-front.jpg",
-    "comment": "",
+    "comment": "Anverso: A la izquierda un retrato del rey Gyanendra, en el centro el templo de Patan Krishna y a la derecha una ventana en filigrana\nReverso: A la izquierda una ventana wtermark, en el centro un ciervo sambar y a la derecha el escudo nacional.",
     "info": "",
     "orientation": "h",
     "condition": "Sin Circular",
-    "uncUSD": null,
-    "rarityIndex": null
+    "uncUSD": 1.7,
+    "rarityIndex": 31
+  },
+  {
+    "id": "NPL0006",
+    "order": 380,
+    "volume": "Azul",
+    "issuerCode": "NPL",
+    "issuerSubcode": "NPL2008",
+    "issueDate": "2017",
+    "denomination": "5 Rupees",
+    "onlineCatalog": "https://es.numista.com/catalogue/note204030.html",
+    "imageUrl": "assets/images/banknotes/NPL0006-sm-front.jpg",
+    "comment": "Anverso: Monte Everest (Izq.), Templo Kastamandap (C.), Watermark Windo (D.)\nReverso: Ventana de filigrana (L.), Yak salvaje, Limi Himal de Humla al fondo",
+    "info": "Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 0.65,
+    "rarityIndex": 9
   },
   {
     "id": "BTN0001",
-    "order": 372,
+    "order": 381,
     "volume": "Azul",
     "issuerCode": "BTN",
     "issuerSubcode": "",
@@ -6325,7 +6478,7 @@
   },
   {
     "id": "MMR0001",
-    "order": 373,
+    "order": 382,
     "volume": "Azul",
     "issuerCode": "MMR",
     "issuerSubcode": "",
@@ -6342,7 +6495,7 @@
   },
   {
     "id": "MMR0002",
-    "order": 374,
+    "order": 383,
     "volume": "Azul",
     "issuerCode": "MMR",
     "issuerSubcode": "",
@@ -6359,7 +6512,7 @@
   },
   {
     "id": "THA0001",
-    "order": 375,
+    "order": 384,
     "volume": "Azul",
     "issuerCode": "THA",
     "issuerSubcode": "",
@@ -6376,7 +6529,7 @@
   },
   {
     "id": "THA0002",
-    "order": 376,
+    "order": 385,
     "volume": "Azul",
     "issuerCode": "THA",
     "issuerSubcode": "",
@@ -6393,7 +6546,7 @@
   },
   {
     "id": "VNM0001",
-    "order": 377,
+    "order": 386,
     "volume": "Azul",
     "issuerCode": "VNM",
     "issuerSubcode": "",
@@ -6410,7 +6563,7 @@
   },
   {
     "id": "VNM0002",
-    "order": 378,
+    "order": 387,
     "volume": "Azul",
     "issuerCode": "VNM",
     "issuerSubcode": "",
@@ -6427,7 +6580,7 @@
   },
   {
     "id": "VNM0003",
-    "order": 379,
+    "order": 388,
     "volume": "Azul",
     "issuerCode": "VNM",
     "issuerSubcode": "",
@@ -6444,7 +6597,7 @@
   },
   {
     "id": "VNM0004",
-    "order": 380,
+    "order": 389,
     "volume": "Azul",
     "issuerCode": "VNM",
     "issuerSubcode": "",
@@ -6461,7 +6614,7 @@
   },
   {
     "id": "LAO0001",
-    "order": 381,
+    "order": 390,
     "volume": "Azul",
     "issuerCode": "LAO",
     "issuerSubcode": "",
@@ -6478,7 +6631,7 @@
   },
   {
     "id": "KHM0003",
-    "order": 382,
+    "order": 391,
     "volume": "Azul",
     "issuerCode": "KHM",
     "issuerSubcode": "KHM1979",
@@ -6495,7 +6648,7 @@
   },
   {
     "id": "IDN0001",
-    "order": 383,
+    "order": 392,
     "volume": "Azul",
     "issuerCode": "IDN",
     "issuerSubcode": "",
@@ -6512,7 +6665,7 @@
   },
   {
     "id": "LAO0002",
-    "order": 384,
+    "order": 393,
     "volume": "Azul",
     "issuerCode": "LAO",
     "issuerSubcode": "",
@@ -6529,7 +6682,7 @@
   },
   {
     "id": "KHM0004",
-    "order": 385,
+    "order": 394,
     "volume": "Azul",
     "issuerCode": "KHM",
     "issuerSubcode": "",
@@ -6546,7 +6699,7 @@
   },
   {
     "id": "KHM0001",
-    "order": 386,
+    "order": 395,
     "volume": "Azul",
     "issuerCode": "KHM",
     "issuerSubcode": "KHM1970",
@@ -6563,7 +6716,7 @@
   },
   {
     "id": "KHM0002",
-    "order": 387,
+    "order": 396,
     "volume": "Azul",
     "issuerCode": "KHM",
     "issuerSubcode": "KHM1970",
@@ -6580,7 +6733,7 @@
   },
   {
     "id": "MNG0001",
-    "order": 388,
+    "order": 397,
     "volume": "Azul",
     "issuerCode": "MNG",
     "issuerSubcode": "",
@@ -6597,7 +6750,7 @@
   },
   {
     "id": "MNG0002",
-    "order": 389,
+    "order": 398,
     "volume": "Azul",
     "issuerCode": "MNG",
     "issuerSubcode": "",
@@ -6614,7 +6767,7 @@
   },
   {
     "id": "MNG0003",
-    "order": 390,
+    "order": 399,
     "volume": "Azul",
     "issuerCode": "MNG",
     "issuerSubcode": "",
@@ -6630,127 +6783,8 @@
     "rarityIndex": null
   },
   {
-    "id": "CHN0001",
-    "order": 391,
-    "volume": "Azul",
-    "issuerCode": "CHN",
-    "issuerSubcode": "CHN1949",
-    "issueDate": "1980",
-    "denomination": "1 Jiao",
-    "onlineCatalog": "https://es.numista.com/catalogue/note202068.html",
-    "imageUrl": "assets/images/banknotes/CHN0001-sm-front.jpg",
-    "comment": "",
-    "info": "Feria de calle Oroño, Rosario, Julio 2024",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
-    "id": "CHN0002",
-    "order": 392,
-    "volume": "Azul",
-    "issuerCode": "CHN",
-    "issuerSubcode": "CHN1949",
-    "issueDate": "1980",
-    "denomination": "2 Jiao",
-    "onlineCatalog": "https://es.numista.com/catalogue/note203707.html",
-    "imageUrl": "assets/images/banknotes/CHN0002-sm-front.jpg",
-    "comment": "",
-    "info": "Feria de calle Oroño, Rosario, Julio 2024",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
-    "id": "CHN0003",
-    "order": 393,
-    "volume": "Azul",
-    "issuerCode": "CHN",
-    "issuerSubcode": "CHN1949",
-    "issueDate": "1980",
-    "denomination": "5 Jiao",
-    "onlineCatalog": "https://es.numista.com/catalogue/note203904.html",
-    "imageUrl": "assets/images/banknotes/CHN0003-sm-front.jpg",
-    "comment": "",
-    "info": "Feria de calle Oroño, Rosario, Julio 2024",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
-    "id": "JPN0002",
-    "order": 394,
-    "volume": "Azul",
-    "issuerCode": "JPN",
-    "issuerSubcode": "",
-    "issueDate": "2019-2020",
-    "denomination": "1.000 Yen",
-    "onlineCatalog": "https://es.numista.com/catalogue/note202070.html",
-    "imageUrl": "assets/images/banknotes/JPN0002-sm-front.jpg",
-    "comment": "",
-    "info": "Primer regalo de Gazpi, Tokio, Enero 2023",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
-    "id": "CHN0004",
-    "order": 395,
-    "volume": "Azul",
-    "issuerCode": "CHN",
-    "issuerSubcode": "CHN1949",
-    "issueDate": "1999",
-    "denomination": "1 Yuan",
-    "onlineCatalog": "https://es.numista.com/catalogue/note202688.html",
-    "imageUrl": "assets/images/banknotes/CHN0004-sm-front.jpg",
-    "comment": "",
-    "info": "",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
-    "id": "JPN0001",
-    "order": 396,
-    "volume": "Azul",
-    "issuerCode": "JPN",
-    "issuerSubcode": "",
-    "issueDate": "1930",
-    "denomination": "5 Yen",
-    "onlineCatalog": "https://es.numista.com/catalogue/note206987.html",
-    "imageUrl": "assets/images/banknotes/JPN0001-sm-front.jpg",
-    "comment": "",
-    "info": "Primera colección de billetes",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
-    "id": "TWN0001",
-    "order": 397,
-    "volume": "Azul",
-    "issuerCode": "TWN",
-    "issuerSubcode": "",
-    "issueDate": "2000",
-    "denomination": "100 Yuan",
-    "onlineCatalog": "https://es.numista.com/catalogue/note203019.html",
-    "imageUrl": "assets/images/banknotes/TWN0001-sm-front.jpg",
-    "comment": "Anverso: Retrato del Dr. Sun Yat-sen, fundador de la República de China, en primer plano y \"El Capítulo de la Gran Armonía\" de Confucio al fondo.\nReverso: Edificio Chung-Shan, parte del complejo Sun Yat-sen Memorial Hall en el Parque Nacional Yangmingshan en Beitou, Taipei, Taiwán.",
-    "info": "Regalo de la tía Federica (traído de sus viajes con el tío Alberto) en nuestro viaje a Europa con la Gazpi. Milán, Enero 2025",
-    "orientation": "h",
-    "condition": "",
-    "uncUSD": null,
-    "rarityIndex": null
-  },
-  {
     "id": "CHN0005",
-    "order": 398,
+    "order": 400,
     "volume": "Azul",
     "issuerCode": "CHN",
     "issuerSubcode": "CHN1912",
@@ -6761,8 +6795,161 @@
     "comment": "",
     "info": "Primera colección de billetes",
     "orientation": "v",
-    "condition": "",
+    "condition": "Bueno",
     "uncUSD": null,
     "rarityIndex": null
+  },
+  {
+    "id": "CHN0001",
+    "order": 401,
+    "volume": "Azul",
+    "issuerCode": "CHN",
+    "issuerSubcode": "CHN1949",
+    "issueDate": "1980",
+    "denomination": "1 Jiao",
+    "onlineCatalog": "https://es.numista.com/catalogue/note202068.html",
+    "imageUrl": "assets/images/banknotes/CHN0001-sm-front.jpg",
+    "comment": "",
+    "info": "Feria de calle Oroño, Rosario, Julio 2024",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "CHN0002",
+    "order": 402,
+    "volume": "Azul",
+    "issuerCode": "CHN",
+    "issuerSubcode": "CHN1949",
+    "issueDate": "1980",
+    "denomination": "2 Jiao",
+    "onlineCatalog": "https://es.numista.com/catalogue/note203707.html",
+    "imageUrl": "assets/images/banknotes/CHN0002-sm-front.jpg",
+    "comment": "",
+    "info": "Feria de calle Oroño, Rosario, Julio 2024",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "CHN0003",
+    "order": 403,
+    "volume": "Azul",
+    "issuerCode": "CHN",
+    "issuerSubcode": "CHN1949",
+    "issueDate": "1980",
+    "denomination": "5 Jiao",
+    "onlineCatalog": "https://es.numista.com/catalogue/note203904.html",
+    "imageUrl": "assets/images/banknotes/CHN0003-sm-front.jpg",
+    "comment": "",
+    "info": "Feria de calle Oroño, Rosario, Julio 2024",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "CHN0004",
+    "order": 404,
+    "volume": "Azul",
+    "issuerCode": "CHN",
+    "issuerSubcode": "CHN1949",
+    "issueDate": "1999",
+    "denomination": "1 Yuan",
+    "onlineCatalog": "https://es.numista.com/catalogue/note202688.html",
+    "imageUrl": "assets/images/banknotes/CHN0004-sm-front.jpg",
+    "comment": "",
+    "info": "",
+    "orientation": "h",
+    "condition": "Bueno",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "TWN0001",
+    "order": 405,
+    "volume": "Azul",
+    "issuerCode": "TWN",
+    "issuerSubcode": "",
+    "issueDate": "2000",
+    "denomination": "100 Yuan",
+    "onlineCatalog": "https://es.numista.com/catalogue/note203019.html",
+    "imageUrl": "assets/images/banknotes/TWN0001-sm-front.jpg",
+    "comment": "Anverso: Retrato del Dr. Sun Yat-sen, fundador de la República de China, en primer plano y \"El Capítulo de la Gran Armonía\" de Confucio al fondo.\nReverso: Edificio Chung-Shan, parte del complejo Sun Yat-sen Memorial Hall en el Parque Nacional Yangmingshan en Beitou, Taipei, Taiwán.",
+    "info": "Regalo de la tía Federica (traído de sus viajes con el tío Alberto) en nuestro viaje a Europa con la Gazpi. Milán, Enero 2025",
+    "orientation": "h",
+    "condition": "Bueno",
+    "uncUSD": null,
+    "rarityIndex": null
+  },
+  {
+    "id": "JPN0001",
+    "order": 406,
+    "volume": "Azul",
+    "issuerCode": "JPN",
+    "issuerSubcode": "JPN1926",
+    "issueDate": "1930",
+    "denomination": "5 Yen",
+    "onlineCatalog": "https://es.numista.com/catalogue/note206987.html",
+    "imageUrl": "assets/images/banknotes/JPN0001-sm-front.jpg",
+    "comment": "Anverso: Santuario de Kitano a la izquierda. Retrato de Sugawara Michizane a la derecha.",
+    "info": "Primera colección de billetes",
+    "orientation": "h",
+    "condition": "Bueno",
+    "uncUSD": 4.5,
+    "rarityIndex": 30
+  },
+  {
+    "id": "JPN0003",
+    "order": 407,
+    "volume": "Azul",
+    "issuerCode": "JPN",
+    "issuerSubcode": "JPN1926",
+    "issueDate": "1953-1974",
+    "denomination": "100 Yen",
+    "onlineCatalog": "https://es.numista.com/catalogue/note202546.html",
+    "imageUrl": "assets/images/banknotes/JPN0003-sm-front.jpg",
+    "comment": "Anverso: Retrato de Taisuke Itagaki a la derecha.\nReverso: El edificio de la Dieta de Japón en el centro a la derecha",
+    "info": "Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 3.6,
+    "rarityIndex": 11
+  },
+  {
+    "id": "JPN0002",
+    "order": 408,
+    "volume": "Azul",
+    "issuerCode": "JPN",
+    "issuerSubcode": "JPN2019",
+    "issueDate": "2019-2022",
+    "denomination": "1.000 Yen",
+    "onlineCatalog": "https://es.numista.com/catalogue/note202070.html",
+    "imageUrl": "assets/images/banknotes/JPN0002-sm-front.jpg",
+    "comment": "Anverso: Busto de NOGUCHI Hideyo, de frente, a la derecha. Constelaciones EURion (flores de cerezo Sakura) a la izquierda de la ventana central.\nReverso: Reproducción de \"Kohan no haru\" (湖畔の春), fotografiada por OKADA Kōyō el 2 de mayo de 1935, desde el paso de montaña de Nakanokura-touge, al noroeste del lago, que representa el monte Fuji y su reflejo en el lago Motosu, a la izquierda. Cerezos en flor de Sakura abajo a la izquierda.",
+    "info": "Primer regalo de Gazpi, Tokio, Enero 2023",
+    "orientation": "h",
+    "condition": "Muy bueno",
+    "uncUSD": 13,
+    "rarityIndex": 9
+  },
+  {
+    "id": "WSM0001",
+    "order": 409,
+    "volume": "Azul",
+    "issuerCode": "WSM",
+    "issuerSubcode": "",
+    "issueDate": "2020",
+    "denomination": "5 Pounds",
+    "onlineCatalog": "https://es.numista.com/catalogue/note215578.html",
+    "imageUrl": "assets/images/banknotes/WSM0001-sm-front.jpg",
+    "comment": "Anverso: Bandera de Samoa Occidental, escudo nacional y cuenco de kava.\nReverso: Palmeras y el Océano Pacífico.",
+    "info": "Regalo de la Gazpi. Feria de calle Oroño, Rosario, Mayo 2025",
+    "orientation": "h",
+    "condition": "Sin Circular",
+    "uncUSD": 3.8,
+    "rarityIndex": 20
   }
 ]

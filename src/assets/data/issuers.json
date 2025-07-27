@@ -286,9 +286,24 @@
                 "flagIcons": [
                   "assets/images/flags/4x3/ar-lr.svg"
                 ]
+              },
+              {
+                "code": "QUEBRACHO",
+                "name": "Cuasimonedas Argentinas (Chaco)",
+                "flagIcons": [
+                  "assets/images/flags/4x3/ar-ch.svg"
+                ]
               }
             ],
-            "historicalPeriods": [],
+            "historicalPeriods": [
+              {
+                "code": "ARGOTROS",
+                "name": "Argentina (Otros)",
+                "flagIcons": [
+                  "assets/images/flags/4x3/ar.svg"
+                ]
+              }
+            ],
             "flagIcons": [
               "assets/images/flags/4x3/ar.svg"
             ]
@@ -483,7 +498,22 @@
             "code": "JPN",
             "name": "Japón",
             "subgroups": [],
-            "historicalPeriods": [],
+            "historicalPeriods": [
+              {
+                "code": "JPN1926",
+                "name": "[1926-1989] Emperador Showa",
+                "flagIcons": [
+                  "assets/images/flags/4x3/jp.svg"
+                ]
+              },
+              {
+                "code": "JPN2019",
+                "name": "[2019-Presente] Emperador Reiwa",
+                "flagIcons": [
+                  "assets/images/flags/4x3/jp.svg"
+                ]
+              }
+            ],
             "flagIcons": [
               "assets/images/flags/4x3/jp.svg"
             ]
@@ -542,7 +572,29 @@
             "code": "NPL",
             "name": "Nepal",
             "subgroups": [],
-            "historicalPeriods": [],
+            "historicalPeriods": [
+              {
+                "code": "NPL1972",
+                "name": "[1972-2001] Rey Birendra Bir Bikram Shah",
+                "flagIcons": [
+                  "assets/images/flags/4x3/np.svg"
+                ]
+              },
+              {
+                "code": "NPL2001",
+                "name": "[2001-2008] Rey Gyanendra Bir Bikram Shah",
+                "flagIcons": [
+                  "assets/images/flags/4x3/np.svg"
+                ]
+              },
+              {
+                "code": "NPL2008",
+                "name": "[2008-Presente] República Federal",
+                "flagIcons": [
+                  "assets/images/flags/4x3/np.svg"
+                ]
+              }
+            ],
             "flagIcons": [
               "assets/images/flags/4x3/np.svg"
             ]
@@ -1042,7 +1094,15 @@
             "code": "FRA",
             "name": "Francia",
             "subgroups": [],
-            "historicalPeriods": [],
+            "historicalPeriods": [
+              {
+                "code": "FRAOTROS",
+                "name": "Francia (Otros)",
+                "flagIcons": [
+                  "assets/images/flags/4x3/fr.svg"
+                ]
+              }
+            ],
             "flagIcons": [
               "assets/images/flags/4x3/fr.svg"
             ]
@@ -1148,7 +1208,17 @@
       {
         "code": "POL",
         "name": "Polinesia",
-        "issuers": []
+        "issuers": [
+          {
+            "code": "WSM",
+            "name": "Samoa Occidental",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/ws.svg"
+            ]
+          }
+        ]
       }
     ]
   }
