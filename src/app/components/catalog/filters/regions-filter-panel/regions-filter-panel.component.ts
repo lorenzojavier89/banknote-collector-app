@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FilterItemV2 } from '../../../../models/filters/filter-item-v2.model';
+import { FilterItem } from '../../../../models/filters/filter-item.model';
 import { Region } from '../../../../models/region.model';
 import { Subregion } from '../../../../models/subregion.model';
 import { CatalogService } from '../../../../services/catalog.service';
@@ -53,7 +53,7 @@ export class RegionsFilterPanelComponent {
     return !!(!region.selected && region.subregions?.some(sr => sr.selected));
   }
 
-  isDisabled(item: FilterItemV2): boolean {
+  isDisabled(item: FilterItem): boolean {
     return item.counter === 0;
   }
 }

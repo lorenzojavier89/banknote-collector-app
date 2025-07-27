@@ -1,7 +1,7 @@
-import { FilterItemV2 } from "./filters/filter-item-v2.model";
+import { FilterItem } from "./filters/filter-item.model";
 import { Subregion } from "./subregion.model";
 
-export interface Region extends FilterItemV2 {
+export interface Region extends FilterItem {
   code: string;
   name: string;
   subregions: Subregion[];

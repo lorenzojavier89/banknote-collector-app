@@ -1,8 +1,8 @@
-import { FilterItemV2 } from "./filters/filter-item-v2.model";
+import { FilterItem } from "./filters/filter-item.model";
 import { HistoricalPeriod } from "./historical-period.model";
 import { Subgroup } from "./subgroup.model";
 
-export interface Country extends FilterItemV2 {
+export interface Country extends FilterItem {
   code: string;
   name: string;
   flagIcons: string[];

@@ -1,6 +1,6 @@
-import { FilterItemV2 } from "./filters/filter-item-v2.model";
+import { FilterItem } from "./filters/filter-item.model";
 
-export interface VolumeDetails extends FilterItemV2 {
+export interface VolumeDetails extends FilterItem {
   name: string;
   details: string[];
 }
