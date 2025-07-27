@@ -1,13 +1,11 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Banknote } from '../models/banknote.model';
-import { CounterType } from '../models/counter-type.model';
 import { Country } from '../models/country.model';
 import { AppliedFilter } from '../models/filters/applied-filter.model';
 import { Region } from '../models/region.model';
 import { SortState, SortStateKey } from '../models/sort-state.model';
 import { Subregion } from '../models/subregion.model';
 import { VolumeDetails } from '../models/volume-details.model';
-import { VolumeType } from '../models/volume-type.enum';
 import { CatalogProvider } from '../providers/catalog.provider';
 import { FiltersBuilderService } from './filters-builder.service';
 import { VolumesService } from './volumes.service';
@@ -59,21 +57,10 @@ export class CatalogService {
     }))  
   });
 
-  private _loadedVolumes = computed<VolumeDetails[]>(() => {
-    const counters = this.catalogProvider.counters();
-    const volumeDetails = this.volumeService.volumeDetails();
-    
-    return Object.values(VolumeType).map<VolumeDetails>(v => ({
-      name: v,
-      counter: counters.get(this.catalogProvider.getCounterKey(CounterType.VolumeCode, v)) ?? 0,
-      details: volumeDetails.find(d => d.name === v)?.details ?? [],
-    }))
-  });
-
   volumes = computed<VolumeDetails[]>(() => { 
     const { volumeFilterName } = { ...this.appliedFilter() };
 
-    return this._loadedVolumes().map<VolumeDetails>(v => ({
+    return this.volumeService.volumeDetails().map<VolumeDetails>(v => ({
       ...v,
       selected: volumeFilterName === v.name,
     }))  
