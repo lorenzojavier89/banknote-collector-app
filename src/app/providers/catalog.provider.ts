@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { forkJoin } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -22,7 +22,7 @@ export class CatalogProvider {
 
   private regions$ = this.http.get<Region[]>(this.issuersJsonUrl).pipe(shareReplay(1));
   private _regions = toSignal(this.regions$, { initialValue: []});
-  public regions = computed<Region[]>(() => {
+  regions = computed<Region[]>(() => {
     const counters = this.counters();
     
     return this._regions().map<Region>((r) => ({
@@ -44,7 +44,7 @@ export class CatalogProvider {
   private _issuers = computed<Issuer[]>(() => 
     Array.from(this._issuersLookup().values())
     .sort((a, b) => a.country.name.localeCompare(b.country.name)));
-  public countries = computed<Country[]>(() => {
+  countries = computed<Country[]>(() => {
     const counters = this.counters();
 
     return this._issuers().map<Country>(i => ({
@@ -62,10 +62,8 @@ export class CatalogProvider {
     .pipe<Banknote[]>(
       map(([issuersLookup, apiResponse]) => mapBanknotes(issuersLookup, apiResponse))
     );
-  public banknotes = toSignal(this.catalog$, { initialValue: [] });
-  
-  
-
+  banknotes = toSignal(this.catalog$, { initialValue: [] });
+   
   counters = computed<Map<string,number>>(() => {
     const countMap = new Map<string, number>();
     
@@ -95,13 +93,5 @@ export class CatalogProvider {
       case CounterType.IssuerSubcode: return `isc_${code}`;
       case CounterType.VolumeCode: return `vc_${code}`;
     }  
-  }
-    
-  private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
-  readonly selectedBanknote = this._selectedBanknote.asReadonly();
-
-  selectBanknote(id: string) {
-    const foundBanknote = this.banknotes().find((x) => x.id === id);
-    this._selectedBanknote.set(foundBanknote);
-  }
+  } 
 }

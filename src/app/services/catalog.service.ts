@@ -29,6 +29,9 @@ export class CatalogService {
     return `${active}-${direction}`;
   });
 
+  private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
+  readonly selectedBanknote = this._selectedBanknote.asReadonly();
+
   constructor() {
     effect(() => {
       localStorage.setItem('appliedFilter', JSON.stringify(this.appliedFilter()));
@@ -183,6 +186,11 @@ export class CatalogService {
 
   setSortState(sortState: SortState) {
     this._sortState.set(sortState);
+  }
+
+  selectBanknote(id: string) {
+    const foundBanknote = this.banknotes().find((x) => x.id === id);
+    this._selectedBanknote.set(foundBanknote);
   }
 }
 
