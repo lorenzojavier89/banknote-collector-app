@@ -12,7 +12,7 @@
         <small class="text-body-secondary">{{ r.counter }}</small>
       </div>
       <ul>
-        @for (sr of r.subItems; track sr.code) {
+        @for (sr of r.subregions; track sr.code) {
         <li class="subregion-section">
           <input class="form-check-input" type="checkbox" [checked]="sr.selected" [disabled]="isDisabled(sr)" (click)="applySubregionFilter($event, r, sr)"/>
           <label class="form-check-label subregion-name">{{ sr.name }} ({{ sr.counter }})</label>

@@ -1,9 +1,11 @@
 import { Banknote } from '../models/banknote.model';
-import { CatalogApiResponse } from '../models/catalog-api-response.model';
+import { CatalogProviderResponse } from '../models/catalog-provider-response.model';
+import { ConditionType } from '../models/condition-type.enum';
+import { Condition } from '../models/condition.model';
 import { Issuer } from '../models/issuer.model';
 import { Orientation } from '../models/orientation.enum';
 import { Region } from '../models/region.model';
-import { Volume } from '../models/volume.enum';
+import { VolumeType } from '../models/volume-type.enum';
 
 export function mapIssuersLookup(regions: Region[]): Map<string, Issuer> {
   const issuerLookup = new Map<string, Issuer>();
@@ -25,7 +27,7 @@ export function mapIssuersLookup(regions: Region[]): Map<string, Issuer> {
   return issuerLookup;
 }
 
-export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiResponse: CatalogApiResponse[]): Banknote[] {
+export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiResponse: CatalogProviderResponse[]): Banknote[] {
   return catalogApiResponse.map((item) => {
     const issuer = issuersLookup.get(item.issuerCode);
     const volume = getVolume(item.volume);
@@ -36,6 +38,7 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       item.issuerSubcode
     );
     const { issueMinDate, issueMaxDate } = getDates(item.issueDate);
+    const condition = getCondition(item.condition);
 
     return {
       ...item,
@@ -50,7 +53,8 @@ export function mapBanknotes(issuersLookup: Map<string, Issuer>, catalogApiRespo
       subregionName: issuer?.subregionName,
       orientation,
       issueMinDate,
-      issueMaxDate
+      issueMaxDate,
+      condition
     } as Banknote;
   });
 }
@@ -97,10 +101,10 @@ function getOrientation(value: string): Orientation {
   return value === 'v' ? Orientation.Vertical : Orientation.Horizontal;
 }
 
-function getVolume(value: string): Volume | null {
-  const isValidStatus = Object.values(Volume).includes(value as Volume);
+function getVolume(value: string): VolumeType | null {
+  const isValidStatus = Object.values(VolumeType).includes(value as VolumeType);
   if (isValidStatus) {
-    return value as Volume;
+    return value as VolumeType;
   }
 
   return null;
@@ -114,4 +118,25 @@ function getDates(issueDate: string): { issueMinDate: number, issueMaxDate: numb
   }
   
   return { issueMinDate: issueDateNumber, issueMaxDate: issueDateNumber };
+}
+
+function getCondition(value: string): Condition | null {
+  if (!value) {
+    return null;
+  }
+  
+  switch (value) {
+    case 'Sin Circular':
+      return { type: ConditionType.UNC, name: 'Sin Circular', shortName: 'SC', badgeClass: 'badge-condition-unc' };
+    case 'Muy bueno':
+      return { type: ConditionType.VeryGood, name: 'Muy bueno', shortName: 'MB', badgeClass: 'badge-condition-vgood' };
+    case 'Bueno':
+      return { type: ConditionType.Good, name: 'Bueno', shortName: 'B', badgeClass: 'badge-condition-good' };
+    case 'Regular':
+      return { type: ConditionType.Regular, name: 'Regular', shortName: 'R', badgeClass: 'badge-condition-reg' };
+    case 'Malo':
+      return { type: ConditionType.Bad, name: 'Malo', shortName: 'M', badgeClass: 'badge-condition-bad' };
+    default:
+      return null;
+  }
 }

@@ -9,10 +9,20 @@ ul {
     &.active {
       background-color: $appActiveFilterBackgroudColor;
       border-color: $appActiveFilterBorderColor;
+    }
 
-      .issuer-name {
-        color: black;
-      }
+    .volume-badge-container {
+      margin-bottom: 2px;
+    }
+
+    .volume-details {
+      font-size: 12px;
+      margin-bottom: 0px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
+
+

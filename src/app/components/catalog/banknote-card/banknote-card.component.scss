@@ -18,6 +18,11 @@
       cursor: default;
     }
 
+    .badge-condition {
+      font-size: 9px;
+      margin-right: 4px;
+    }
+
     .card-title {
       text-decoration: none;
       margin-bottom: 0px;
@@ -54,11 +59,13 @@
       padding-left: 3px;
 
       img {
-        margin-right: 3px;
+        margin-right: 5px;
       }
 
       span {
-        font-family: cursive;
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 2px;
       }
     }
 

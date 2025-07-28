@@ -1,14 +1,17 @@
-import { FilterItem } from "./filter-item.model";
+import { Country } from "../country.model";
+import { Region } from "../region.model";
+import { Subregion } from "../subregion.model";
+import { VolumeDetails } from "../volume-details.model";
 
 export interface AppliedFilter {
-    regionFilters: FilterItem[];
+    regionFilters: Region[];
     regionFilterCodes: string[];
-    subregionFilters: FilterItem[];
+    subregionFilters: Subregion[];
     subregionFilterCodes: string[];
-    issuerFilter: FilterItem | null;
+    issuerFilter: Country | null;
     issuerFilterCode: string | null;
-    volumeFilter: FilterItem | null;
-    volumeFilterCode: string | null;
+    volumeFilter: VolumeDetails | null;
+    volumeFilterName: string | null;
     someFiltersApplied: boolean;
     noFiltersApplied: boolean;
 }

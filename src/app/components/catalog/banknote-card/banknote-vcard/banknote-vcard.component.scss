@@ -38,6 +38,11 @@
             cursor: default;
           }
 
+          .badge-condition {
+            font-size: 9px;
+            margin-right: 4px;
+          }
+
           .card-info {
             position: absolute;
             top: 0px;
@@ -71,11 +76,13 @@
             }
 
             img.vcard-flags {
-              margin-right: 3px;
+              margin-right: 5px;
             }
 
             span.vcard-subtitle {
-              font-family: cursive;
+              font-size: 14px;
+              font-weight: 400;
+              padding-top: 2px;
             }
           }
 

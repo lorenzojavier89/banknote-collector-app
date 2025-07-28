@@ -10,7 +10,10 @@
                 }
                 <div class="vcard-desc-column-row d-flex w-100 justify-content-between align-items-center">
                     <span class="badge" [class]="badgeClass()">#{{banknote().order}}</span>           
-                    <small class="text-body-secondary">{{ banknote().issueDate }}</small>
+                    <div class="d-flex align-items-center">
+                        <span class="badge badge-condition" [class]="banknote().condition?.badgeClass">{{banknote().condition?.shortName}}</span>
+                        <small class="text-body-secondary">{{ banknote().issueDate }}</small>
+                    </div>
                 </div>
                 <div class="vcard-desc-column-row vcard-desc-column-row-title d-flex justify-content-center align-items-center">
                     <a class="card-title" [href]="banknote().onlineCatalog" target="_blank" rel="noopener noreferrer">

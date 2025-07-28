@@ -1,30 +1,60 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CatalogApiResponse } from '../models/catalog-api-response.model';
+import { computed, inject, Injectable } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { map, shareReplay } from 'rxjs/operators';
-import { Region } from '../models/region.model';
-import { Issuer } from '../models/issuer.model';
 import { forkJoin } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-provider.mappers';
 import { Banknote } from '../models/banknote.model';
+import { CatalogProviderResponse } from '../models/catalog-provider-response.model';
 import { CounterType } from '../models/counter-type.model';
-import { mapBanknotes, mapIssuersLookup } from '../mappers/catalog-api-service.mappers';
+import { Country } from '../models/country.model';
+import { Issuer } from '../models/issuer.model';
+import { Region } from '../models/region.model';
+import { Subregion } from '../models/subregion.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CatalogApiService {
+export class CatalogProvider {
   private http: HttpClient = inject(HttpClient);
   private catalogJsonUrl = 'assets/data/catalog.json';
   private issuersJsonUrl = 'assets/data/issuers.json';
 
   private regions$ = this.http.get<Region[]>(this.issuersJsonUrl).pipe(shareReplay(1));
+  private _regions = toSignal(this.regions$, { initialValue: []});
+  regions = computed<Region[]>(() => {
+    const counters = this.counters();
+    
+    return this._regions().map<Region>((r) => ({
+      ...r,
+      counter: counters.get(this.getCounterKey(CounterType.RegionCode, r.code)) ?? 0,
+      subregions: r.subregions.map<Subregion>((sr) => ({
+        ...sr,
+        counter: counters.get(this.getCounterKey(CounterType.SubregionCode, sr.code)) ?? 0,
+      })),
+    }))
+  });
+    
+  
   private issuersLookup$ = this.regions$.pipe(
     map((regions) => mapIssuersLookup(regions)),
     shareReplay(1)
   );
+  private _issuersLookup = toSignal(this.issuersLookup$, { initialValue: new Map<string, Issuer>()});
+  private _issuers = computed<Issuer[]>(() => 
+    Array.from(this._issuersLookup().values())
+    .sort((a, b) => a.country.name.localeCompare(b.country.name)));
+  countries = computed<Country[]>(() => {
+    const counters = this.counters();
+
+    return this._issuers().map<Country>(i => ({
+      ...i.country,
+      counter: counters.get(this.getCounterKey(CounterType.IssuerCode, i.country.code)) ?? 0,
+    }))  
+  });
+     
   
-  private catalogApiResponse$ = this.http.get<CatalogApiResponse[]>(this.catalogJsonUrl);
+  private catalogApiResponse$ = this.http.get<CatalogProviderResponse[]>(this.catalogJsonUrl);
   private catalog$ = forkJoin([
     this.issuersLookup$,
     this.catalogApiResponse$,
@@ -32,14 +62,8 @@ export class CatalogApiService {
     .pipe<Banknote[]>(
       map(([issuersLookup, apiResponse]) => mapBanknotes(issuersLookup, apiResponse))
     );
-
   banknotes = toSignal(this.catalog$, { initialValue: [] });
-  regions = toSignal(this.regions$, { initialValue: []});
-  issuersLookup = toSignal(this.issuersLookup$, { initialValue: new Map<string, Issuer>()});
-  issuers = computed<Issuer[]>(() => 
-    Array.from(this.issuersLookup().values())
-    .sort((a, b) => a.country.name.localeCompare(b.country.name)));
-
+   
   counters = computed<Map<string,number>>(() => {
     const countMap = new Map<string, number>();
     
@@ -69,13 +93,5 @@ export class CatalogApiService {
       case CounterType.IssuerSubcode: return `isc_${code}`;
       case CounterType.VolumeCode: return `vc_${code}`;
     }  
-  }
-    
-  private readonly _selectedBanknote = signal<Banknote | undefined>(undefined);
-  readonly selectedBanknote = this._selectedBanknote.asReadonly();
-
-  selectBanknote(id: string) {
-    const foundBanknote = this.banknotes().find((x) => x.id === id);
-    this._selectedBanknote.set(foundBanknote);
-  }
+  } 
 }
