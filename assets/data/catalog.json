@@ -782,7 +782,7 @@
     "rarityIndex": 40
   },
   {
-    "id": "ARG0047",
+    "id": "ARG0049",
     "order": 47,
     "volume": "Negro",
     "issuerCode": "ARG",
@@ -790,7 +790,7 @@
     "issueDate": "2001",
     "denomination": "10 Pesos (Bono Quebracho)",
     "onlineCatalog": "https://es.numista.com/catalogue/note303317.html",
-    "imageUrl": "assets/images/banknotes/ARG0047-sm-front.jpg",
+    "imageUrl": "assets/images/banknotes/ARG0049-sm-front.jpg",
     "comment": "",
     "info": "Feria de calle Oroño, Rosario, Mayo 2025",
     "orientation": "h",
