@@ -463,7 +463,15 @@
           {
             "code": "CHN",
             "name": "China",
-            "subgroups": [],
+            "subgroups": [
+              {
+                "code": "MAC",
+                "name": "Región Administrativa Especial de Macao",
+                "flagIcons": [
+                  "assets/images/flags/4x3/mo.svg"
+                ]
+              }
+            ],
             "historicalPeriods": [
               {
                 "code": "CHN1912",
@@ -492,6 +500,15 @@
             "historicalPeriods": [],
             "flagIcons": [
               "assets/images/flags/4x3/tw.svg"
+            ]
+          },
+          {
+            "code": "PRK",
+            "name": "Corea del Norte",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/kp.svg"
             ]
           },
           {
@@ -741,6 +758,15 @@
             "historicalPeriods": [],
             "flagIcons": [
               "assets/images/flags/4x3/qa.svg"
+            ]
+          },
+          {
+            "code": "LBN",
+            "name": "Líbano",
+            "subgroups": [],
+            "historicalPeriods": [],
+            "flagIcons": [
+              "assets/images/flags/4x3/lb.svg"
             ]
           }
         ]
